@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-import AnimatedContent from './AnimatedContent';
-import PortfolioSummary from './PortfolioSummary';
+import AnimatedContent from '../common/AnimatedContent';
+import PortfolioSummary from '../PortfolioSummary';
 
 const PortfolioLayout = ({ children }: { children: React.ReactNode }) => {
   return (

@@ -6,7 +6,7 @@ const PortfolioSummary = () => {
     <div className="text-off-white text-sm">
       <h2 className="text-xl font-medium mb-4">Building Tomorrow&apos;s World with Human Creativity and AI Precision</h2>
 
-      <h3 className="text-lg font-medium mb-2">Key Focus Areas:</h3>
+      <h3 className="text-lg font-medium mb-2 bold underline">Key Focus Areas</h3>
 
       <ul className="list-disc pl-5 mb-4 space-y-2">
         <li><b>Digital Innovation:</b> Leveraging AI to amplify human-driven marketing strategies</li>
@@ -14,9 +14,7 @@ const PortfolioSummary = () => {
         <li><b>Strategic Foresight:</b> Translating complex data into actionable business insights</li>
       </ul>
       
-      <p className="mb-4">My approach: Transforming technological potential into tangible market success, responsibly and ethically.</p>
-      
-      <p className="mb-4">Ready to shape the future of your business? Let&apos;s collaborate.</p>
+      <p className="mb-4">I bridge the gap between visionary ideas and technological realities, crafting solutions that harness the best of human ingenuity and artificial intelligence.</p>
       
       <div className="flex space-x-4">
         <Link href="/projects" className="bg-[var(--primary-yellow)] text-[#0a192f] px-4 py-2 rounded text-sm font-medium hover:bg-[var(--primary-yellow-dark)] transition-colors">

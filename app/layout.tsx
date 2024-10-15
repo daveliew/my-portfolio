@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import '../styles/globals.css';
 import '../styles/fonts.css';
-import PortfolioLayout from "../components/PortfolioLayout";
+import PortfolioLayout from "../components/layout/PortfolioLayout";
 
 export const metadata: Metadata = {
   title: "daveliew.com",

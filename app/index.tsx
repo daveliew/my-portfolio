@@ -1,10 +1,10 @@
 import dynamic from 'next/dynamic';
 import Layout from './layout';
-import ExperienceSection from '@/components/ExperienceSection';
+import ExperienceSection from '../components/experience/ExperienceSection';
 import experiencesData from '../data/experiences.json';
 import Image from 'next/image';
 
-const SkillTree = dynamic(() => import('@/components/SkillTree'), { ssr: false });
+const SkillTree = dynamic(() => import('@/components/skills/SkillTree'), { ssr: false });
 
 export default function Home() {
   const skills = [
