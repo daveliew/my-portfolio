@@ -1,84 +1,96 @@
 {
-    "coreFocus": [
-      {
-        "area": "Digital Marketing & Growth",
-        "experiences": [
-          {
-            "role": "Technical Solutions Consultant",
-            "company": "Meta (Facebook)",
-            "highlight": "Optimized AdTech solutions for $1M+ monthly APAC client revenue"
-          },
-          {
-            "role": "Marketing Manager",
-            "company": "JobKred (HR SaaS Startup)",
-            "highlight": "Led digital marketing initiatives for HR tech startup"
-          },
-          {
-            "role": "Head, Business",
-            "company": "SG Code Campus",
-            "highlight": "Expanded marketing reach by 50% using Google and Facebook advertising"
-          }
-        ],
-        "keySkills": [
-          {"name": "AdTech", "score": 4},
-          {"name": "Digital Advertising", "score": 4},
-          {"name": "Content Marketing", "score": 3},
-          {"name": "Growth Strategy", "score": 4},
-          {"name": "SEO", "score": 3},
-          {"name": "Social Media Marketing", "score": 3}
-        ]
-      },
-      {
-        "area": "Startup Strategies & Operations",
-        "experiences": [
-          {
-            "role": "Alpha Growth Ops Associate",
-            "company": "Nansen Pte. Ltd.",
-            "highlight": "Drove 35% revenue growth through customer acquisition strategies"
-          },
-          {
-            "role": "Co-Founder",
-            "company": "Little Llama",
-            "highlight": "Built and maintained e-commerce platform from scratch"
-          },
-          {
-            "role": "Co-Founder",
-            "company": "Labyrinth Restaurant",
-            "highlight": "Scaled restaurant to Michelin recognition and top 50 lists"
-          }
-        ],
-        "keySkills": [
-          {"name": "Business Operations", "score": 4},
-          {"name": "Customer Acquisition", "score": 4},
-          {"name": "E-commerce", "score": 3},
-          {"name": "Entrepreneurship", "score": 4},
-          {"name": "Scaling Strategies", "score": 4}
-        ]
-      },
-      {
-        "area": "Business Analysis & Strategy",
-        "experiences": [
-          {
-            "role": "Business Analyst",
-            "company": "Unity Technologies",
-            "highlight": "Led financial modeling for transition to subscription-based revenue"
-          },
-          {
-            "role": "Head, Business",
-            "company": "SG Code Campus",
-            "highlight": "Scaled revenue 10x from S$100K to S$1M+ in three years"
-          }
-        ],
-        "keySkills": [
-          {"name": "Financial Modeling", "score": 3},
-          {"name": "Strategic Planning", "score": 4},
-          {"name": "Data Analysis", "score": 3},
-          {"name": "Business Growth", "score": 4},
-          {"name": "SaaS Strategies", "score": 3}
-        ]
-      }
-    ],
-    "technicalSkills": [
+  "professionalAreas": [
+    {
+      "id": "digital-marketing",
+      "title": "Digital Marketing & Growth",
+      "experiences": [
+        {
+          "id": "meta-consultant",
+          "role": "Technical Solutions Consultant",
+          "company": "Meta (Facebook)",
+          "highlight": "Optimized AdTech solutions for $1M+ monthly APAC client revenue"
+        },
+        {
+          "id": "jobkred-manager",
+          "role": "Marketing Manager",
+          "company": "JobKred (HR SaaS Startup)",
+          "highlight": "Led digital marketing initiatives for HR tech startup"
+        },
+        {
+          "id": "sgcodecampus-head",
+          "role": "Head, Business",
+          "company": "SG Code Campus",
+          "highlight": "Expanded marketing reach by 50% using Google and Facebook advertising"
+        }
+      ],
+      "skills": [
+        {"name": "AdTech", "score": 4},
+        {"name": "Digital Advertising", "score": 4},
+        {"name": "Content Marketing", "score": 3},
+        {"name": "Growth Strategy", "score": 4},
+        {"name": "SEO", "score": 3},
+        {"name": "Social Media Marketing", "score": 3}
+      ]
+    },
+    {
+      "id": "startup-strategies",
+      "title": "Startup Strategies & Operations",
+      "experiences": [
+        {
+          "id": "nansen-associate",
+          "role": "Alpha Growth Ops Associate",
+          "company": "Nansen Pte. Ltd.",
+          "highlight": "Drove 35% revenue growth through customer acquisition strategies"
+        },
+        {
+          "id": "little-llama-cofounder",
+          "role": "Co-Founder",
+          "company": "Little Llama",
+          "highlight": "Built and maintained e-commerce platform from scratch"
+        },
+        {
+          "id": "labyrinth-cofounder",
+          "role": "Co-Founder",
+          "company": "Labyrinth Restaurant",
+          "highlight": "Scaled restaurant to Michelin recognition and top 50 lists"
+        }
+      ],
+      "skills": [
+        {"name": "Business Operations", "score": 4},
+        {"name": "Customer Acquisition", "score": 4},
+        {"name": "E-commerce", "score": 3},
+        {"name": "Entrepreneurship", "score": 4},
+        {"name": "Scaling Strategies", "score": 4}
+      ]
+    },
+    {
+      "id": "business-analysis",
+      "title": "Business Analysis & Strategy",
+      "experiences": [
+        {
+          "id": "unity-analyst",
+          "role": "Business Analyst",
+          "company": "Unity Technologies",
+          "highlight": "Led financial modeling for transition to subscription-based revenue"
+        },
+        {
+          "id": "sgcodecampus-head-business",
+          "role": "Head, Business",
+          "company": "SG Code Campus",
+          "highlight": "Scaled revenue 10x from S$100K to S$1M+ in three years"
+        }
+      ],
+      "skills": [
+        {"name": "Financial Modeling", "score": 3},
+        {"name": "Strategic Planning", "score": 4},
+        {"name": "Data Analysis", "score": 3},
+        {"name": "Business Growth", "score": 4},
+        {"name": "SaaS Strategies", "score": 3}
+      ]
+    }
+  ],
+  "skills": {
+    "technical": [
       {"name": "JavaScript/TypeScript", "score": 3},
       {"name": "Python", "score": 3},
       {"name": "React", "score": 3},
@@ -90,7 +102,7 @@
       {"name": "Retool", "score": 2},
       {"name": "Zapier", "score": 3}
     ],
-    "softSkills": [
+    "soft": [
       {"name": "Leadership", "score": 4},
       {"name": "Communication", "score": 4},
       {"name": "Problem Solving", "score": 4},
@@ -99,3 +111,4 @@
       {"name": "Continuous Learning", "score": 5}
     ]
   }
+}
