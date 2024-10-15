@@ -14,7 +14,7 @@ interface SkillsChartProps {
 
 const SkillsChart: React.FC<SkillsChartProps> = ({ skills }) => {
   return (
-    <ResponsiveContainer width="100%" height={400}>
+    <ResponsiveContainer width="100%" height={300}>
       <BarChart
         data={skills}
         layout="vertical"
@@ -22,12 +22,12 @@ const SkillsChart: React.FC<SkillsChartProps> = ({ skills }) => {
       >
         <CartesianGrid strokeDasharray="3 3" stroke="var(--lightest-navy)" />
         <XAxis type="number" domain={[0, 5]} stroke="var(--lightest-slate)" />
-        <YAxis dataKey="name" type="category" width={150} stroke="var(--lightest-slate)" />
+        <YAxis dataKey="name" type="category" width={120} stroke="var(--lightest-slate)" />
         <Tooltip 
           contentStyle={{ backgroundColor: 'var(--light-navy)', border: 'none' }}
           labelStyle={{ color: 'var(--lightest-slate)' }}
         />
-        <Bar dataKey="score" fill="var(--green)" />
+        <Bar dataKey="score" fill="var(--burgundy)" />
       </BarChart>
     </ResponsiveContainer>
   );
