@@ -16,10 +16,6 @@ module.exports = {
         'primary-yellow-dark': 'var(--primary-yellow-dark)',
         'primary-yellow-10': 'var(--primary-yellow-10)',
       },
-      fontFamily: {
-        'raleway': ['"Raleway"', 'sans-serif'],
-        'helvetica': ['"Helvetica World"', 'sans-serif'],
-      },
     },
   },
   plugins: [],

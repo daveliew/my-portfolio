@@ -1,5 +1,3 @@
-@import './fonts.css';
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,11 +15,11 @@
 
 @layer base {
   body {
-    @apply bg-[var(--space-black)] text-[var(--off-white)] font-helvetica;
+    @apply bg-[var(--space-black)] text-[var(--off-white)];
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-raleway font-bold;
+    @apply font-bold;
   }
 }
 

@@ -1,7 +1,10 @@
+import { Raleway, Merriweather } from 'next/font/google'
 import type { Metadata } from "next";
 import '../styles/globals.css';
-import '../styles/fonts.css';
 import PortfolioLayout from "../components/layout/PortfolioLayout";
+
+const raleway = Raleway({ subsets: ['latin'] })
+const merriweather = Merriweather({ subsets: ['latin'], weight: ['400', '700'] })
 
 export const metadata: Metadata = {
   title: "daveliew.com",
@@ -17,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${raleway.className} ${merriweather.className}`}>
       <head>
         {/* Add any additional meta tags or links here */}
       </head>
