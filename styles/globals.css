@@ -1,0 +1,71 @@
+@import './fonts.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --space-black: #1C1C1E;
+  --burgundy: #8d263b;
+  --light-burgundy: #C8102E;
+  --off-white: #f0f0f0;
+  --dark-gray: #1A1A1A;
+  --primary-yellow: #D4AF37;
+  --primary-yellow-dark: #B8960C;
+  --primary-yellow-10: rgba(212, 175, 55, 0.1);
+}
+
+@layer base {
+  @font-face {
+    font-family: 'Helvetica World';
+    src: url('/path/to/HelveticaWorld.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Amsterdam';
+    src: url('/path/to/Amsterdam.woff2') format('woff2');
+  }
+
+  body {
+    @apply bg-[var(--space-black)] text-[var(--off-white)] font-helvetica;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-amsterdam;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn {
+    @apply px-4 py-2 rounded-md bg-[var(--burgundy)] text-[var(--off-white)] hover:bg-[var(--light-burgundy)] transition-colors duration-200;
+  }
+  
+  .card {
+    @apply bg-[var(--dark-gray)] rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-200;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .accent-text {
+    @apply text-[var(--burgundy)];
+  }
+  
+  .logo-text {
+    @apply font-bold text-3xl;
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari and Opera */
+  }
+}

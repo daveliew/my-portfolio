@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-
-const inter = Inter({ subsets: ["latin"] });
+import '../styles/globals.css';
+import '../styles/fonts.css';
+import PortfolioLayout from "../components/PortfolioLayout";
 
 export const metadata: Metadata = {
-  title: "Your Name - Portfolio",
-  description: "Professional portfolio showcasing my experiences and skills",
+  title: "daveliew.com",
+  description: "Human Creativity fused with Tomorrow's Technology",
+  icons: {
+    icon: "/images/logo.png",
+  },
 };
 
 export default function RootLayout({
@@ -18,10 +18,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-dark-bg text-light-text`}>
-        <Header />
-        <main className="container">{children}</main>
-        <Footer />
+      <head>
+        {/* Add any additional meta tags or links here */}
+      </head>
+      <body>
+        <PortfolioLayout>{children}</PortfolioLayout>
       </body>
     </html>
   );

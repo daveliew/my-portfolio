@@ -1,6 +1,5 @@
-import Layout from '@/components/Layout';
+import Layout from './layout'
 import ExperienceSection from '@/components/ExperienceSection';
-import SkillsSection from "../components/SkillsSection";
 import experiencesData from '../data/experiences.json';
 
 export default function Home() {

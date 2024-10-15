@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Helvetica World';
+    src: url('/path/to/HelveticaWorld.woff2') format('woff2');
+    /* Add more src lines for different font formats if needed */
+  }
+  
+  @font-face {
+    font-family: 'Amsterdam';
+    src: url('/path/to/Amsterdam.woff2') format('woff2');
+    /* Add more src lines for different font formats if needed */
+  }

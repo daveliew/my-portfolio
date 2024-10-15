@@ -7,10 +7,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'midnight-blue': 'var(--midnight-blue)',
-        'space-grey': 'var(--space-grey)',
-        'dark-bg': 'var(--dark-bg)',
-        'light-text': 'var(--light-text)',
+        'space-black': 'var(--space-black)',
+        'burgundy': 'var(--burgundy)',
+        'light-burgundy': 'var(--light-burgundy)',
+        'off-white': 'var(--off-white)',
+        'dark-gray': 'var(--dark-gray)',
+      },
+      fontFamily: {
+        'amsterdam': ['"Amsterdam Two"', 'sans-serif'],
+        'helvetica': ['"Helvetica World"', 'sans-serif'],
       },
     },
   },
