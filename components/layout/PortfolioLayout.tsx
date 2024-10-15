@@ -2,6 +2,8 @@ import React from 'react';
 import Image from 'next/image';
 import AnimatedContent from '../common/AnimatedContent';
 import PortfolioSummary from '../PortfolioSummary';
+import ImpactfulStatement from '../common/ImpactfulStatement';
+import Navigation from '../Navigation'; 
 
 const PortfolioLayout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -17,6 +19,7 @@ const PortfolioLayout = ({ children }: { children: React.ReactNode }) => {
           />
           <h1 className="text-4xl font-bold text-burgundy">daveliew</h1>
         </div>
+          <Navigation />
         <div className="h-full overflow-y-auto scrollbar-hide">
           <PortfolioSummary />
           <div className="mt-auto pt-20">
@@ -26,6 +29,7 @@ const PortfolioLayout = ({ children }: { children: React.ReactNode }) => {
       </nav>
       <main className="md:w-3/4 lg:w-4/5 md:ml-[25%] lg:ml-[20%] p-6 overflow-y-auto bg-space-black">
         <AnimatedContent>
+          <ImpactfulStatement />
           {children}
         </AnimatedContent>
       </main>

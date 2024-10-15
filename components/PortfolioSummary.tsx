@@ -4,7 +4,7 @@ import Link from 'next/link';
 const PortfolioSummary = () => {
   return (
     <div className="text-off-white text-sm">
-      <h3 className="text-xl font-medium mb-4 text-primary-yellow">Building Tomorrow&apos;s World with Human Creativity and AI Precision</h3>
+      
 
       <h3 className="text-lg font-medium mb-2 bold underline">Key Focus Areas</h3>
 

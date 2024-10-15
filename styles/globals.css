@@ -19,7 +19,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bold;
+    @apply font-bold font-merriweather;
   }
 }
 
@@ -56,5 +56,9 @@
   }
   .scrollbar-hide::-webkit-scrollbar {
     display: none;  /* Chrome, Safari and Opera */
+  }
+  
+  .font-merriweather {
+    font-family: var(--font-merriweather);
   }
 }

@@ -4,7 +4,11 @@ import '../styles/globals.css';
 import PortfolioLayout from "../components/layout/PortfolioLayout";
 
 const raleway = Raleway({ subsets: ['latin'] })
-const merriweather = Merriweather({ subsets: ['latin'], weight: ['400', '700'] })
+const merriweather = Merriweather({ 
+  subsets: ['latin'], 
+  weight: ['400', '700'],
+  variable: '--font-merriweather'  // Add this line
+})
 
 export const metadata: Metadata = {
   title: "daveliew.com",
@@ -20,11 +24,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${raleway.className} ${merriweather.className}`}>
-      <head>
-        {/* Add any additional meta tags or links here */}
-      </head>
-      <body>
+    <html lang="en" className={merriweather.variable}>  
+      <body className={raleway.className}>
         <PortfolioLayout>{children}</PortfolioLayout>
       </body>
     </html>

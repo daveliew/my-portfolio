@@ -16,6 +16,10 @@ module.exports = {
         'primary-yellow-dark': 'var(--primary-yellow-dark)',
         'primary-yellow-10': 'var(--primary-yellow-10)',
       },
+      fontFamily: {
+        sans: ['var(--font-raleway)', 'sans-serif'],
+        merriweather: ['var(--font-merriweather)', 'serif'],
+      },
     },
   },
   plugins: [],
