@@ -1,17 +1,26 @@
-import ExperienceSection from "../components/ExperienceSection";
+import Layout from '@/components/Layout';
+import ExperienceSection from '@/components/ExperienceSection';
 import SkillsSection from "../components/SkillsSection";
 import experiencesData from '../data/experiences.json';
 
 export default function Home() {
   return (
-    <div className="container mx-auto px-4">
-      <h1 className="text-3xl font-bold my-8">Welcome to My Portfolio</h1>
-      
-      {experiencesData.professionalAreas.map(area => (
-        <ExperienceSection key={area.id} area={area} />
-      ))}
-      
-      <SkillsSection skills={experiencesData.skills} />
-    </div>
+    <Layout>
+      <main>
+        <section id="about" className="mb-16">
+          <h2 className="text-3xl font-bold mb-4 heading">About Me</h2>
+          <p className="text-[var(--light-slate)] leading-relaxed">
+            {/* Your about content */}
+          </p>
+        </section>
+        
+        <ExperienceSection areas={experiencesData.professionalAreas} />
+        
+        <section id="skills" className="mt-16">
+          <h2 className="text-3xl font-bold mb-4 heading">Skills</h2>
+          {/* Render skills here */}
+        </section>
+      </main>
+    </Layout>
   );
 }

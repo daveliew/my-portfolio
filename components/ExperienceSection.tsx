@@ -1,4 +1,6 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 
 interface Skill {
   name: string;
@@ -20,18 +22,52 @@ interface ProfessionalArea {
 }
 
 interface ExperienceSectionProps {
-  area: ProfessionalArea;
+  areas: ProfessionalArea | ProfessionalArea[];
 }
 
-const ExperienceSection: React.FC<ExperienceSectionProps> = ({ area }) => {
+const ExperienceSection: React.FC<ExperienceSectionProps> = ({ areas }) => {
+  const areaArray = Array.isArray(areas) ? areas : [areas];
+
+  return (
+    <div>
+      {areaArray.map((area) => (
+        <CategorySection key={area.id} area={area} />
+      ))}
+    </div>
+  );
+};
+
+const CategorySection: React.FC<{ area: ProfessionalArea }> = ({ area }) => {
+  const [activeTab, setActiveTab] = useState(area.experiences?.[0]?.id || '');
+
+  if (!area.experiences || area.experiences.length === 0) {
+    return (
+      <section className="my-8">
+        <h2 className="text-2xl font-semibold mb-4">{area.title}</h2>
+        <p>No experiences available for this area.</p>
+      </section>
+    );
+  }
+
   return (
     <section className="my-8">
       <h2 className="text-2xl font-semibold mb-4">{area.title}</h2>
       
       <div className="mb-6">
         <h3 className="text-xl font-medium mb-2">Experiences</h3>
+        <div className="flex mb-4">
+          {area.experiences.map(exp => (
+            <button
+              key={exp.id}
+              className={`px-4 py-2 mr-2 rounded-t-lg ${activeTab === exp.id ? 'bg-[var(--midnight-blue)] text-[var(--light-text)]' : 'bg-[var(--space-grey)] bg-opacity-10'}`}
+              onClick={() => setActiveTab(exp.id)}
+            >
+              {exp.company}
+            </button>
+          ))}
+        </div>
         {area.experiences.map(exp => (
-          <div key={exp.id} className="mb-4">
+          <div key={exp.id} className={`card ${activeTab === exp.id ? 'block' : 'hidden'}`}>
             <h4 className="font-medium">{exp.role} at {exp.company}</h4>
             <p>{exp.highlight}</p>
           </div>
@@ -53,4 +89,3 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({ area }) => {
 };
 
 export default ExperienceSection;
-
