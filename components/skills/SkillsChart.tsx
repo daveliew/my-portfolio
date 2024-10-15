@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, Tooltip } from 'recharts';
+import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, Tooltip, TooltipProps } from 'recharts';
 
 interface Skill {
   name: string;
@@ -69,9 +69,9 @@ const SkillsChart: React.FC<SkillsChartProps> = ({ skills, onSkillClick, selecte
   );
 };
 
-const CustomTooltip = ({ active, payload }: any) => {
+const CustomTooltip: React.FC<TooltipProps<number, string>> = ({ active, payload }) => {
   if (active && payload && payload.length) {
-    const data = payload[0].payload;
+    const data = payload[0].payload as Skill;
     return (
       <div className="bg-dark-gray p-2 rounded shadow">
         <p className="text-off-white">{`${data.name}: ${data.score}`}</p>
