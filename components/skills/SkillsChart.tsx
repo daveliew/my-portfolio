@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from 'recharts';
+import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
 
 interface Skill {
   name: string;
@@ -14,21 +14,13 @@ interface SkillsChartProps {
 
 const SkillsChart: React.FC<SkillsChartProps> = ({ skills }) => {
   return (
-    <ResponsiveContainer width="100%" height={300}>
-      <BarChart
-        data={skills}
-        layout="vertical"
-        margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
-      >
-        <CartesianGrid strokeDasharray="3 3" stroke="var(--lightest-navy)" />
-        <XAxis type="number" domain={[0, 5]} stroke="var(--lightest-slate)" />
-        <YAxis dataKey="name" type="category" width={120} stroke="var(--lightest-slate)" />
-        <Tooltip 
-          contentStyle={{ backgroundColor: 'var(--light-navy)', border: 'none' }}
-          labelStyle={{ color: 'var(--lightest-slate)' }}
-        />
-        <Bar dataKey="score" fill="var(--burgundy)" />
-      </BarChart>
+    <ResponsiveContainer width="100%" height={400}>
+      <RadarChart cx="50%" cy="50%" outerRadius="80%" data={skills}>
+        <PolarGrid />
+        <PolarAngleAxis dataKey="name" />
+        <PolarRadiusAxis angle={30} domain={[0, 5]} />
+        <Radar name="Skills" dataKey="score" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
+      </RadarChart>
     </ResponsiveContainer>
   );
 };
