@@ -12,9 +12,12 @@ module.exports = {
         'light-burgundy': 'var(--light-burgundy)',
         'off-white': 'var(--off-white)',
         'dark-gray': 'var(--dark-gray)',
+        'primary-yellow': 'var(--primary-yellow)',
+        'primary-yellow-dark': 'var(--primary-yellow-dark)',
+        'primary-yellow-10': 'var(--primary-yellow-10)',
       },
       fontFamily: {
-        'amsterdam': ['"Amsterdam Two"', 'sans-serif'],
+        'raleway': ['"Raleway"', 'sans-serif'],
         'helvetica': ['"Helvetica World"', 'sans-serif'],
       },
     },

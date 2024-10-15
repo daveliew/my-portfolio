@@ -16,21 +16,12 @@
 }
 
 @layer base {
-  @font-face {
-    font-family: 'Helvetica World';
-    src: url('/path/to/HelveticaWorld.woff2') format('woff2');
-  }
-  @font-face {
-    font-family: 'Amsterdam';
-    src: url('/path/to/Amsterdam.woff2') format('woff2');
-  }
-
   body {
     @apply bg-[var(--space-black)] text-[var(--off-white)] font-helvetica;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-amsterdam;
+    @apply font-raleway font-bold;
   }
 }
 

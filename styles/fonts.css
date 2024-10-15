@@ -1,11 +1,21 @@
 @font-face {
-    font-family: 'Helvetica World';
-    src: url('/path/to/HelveticaWorld.woff2') format('woff2');
-    /* Add more src lines for different font formats if needed */
-  }
-  
-  @font-face {
-    font-family: 'Amsterdam';
-    src: url('/path/to/Amsterdam.woff2') format('woff2');
-    /* Add more src lines for different font formats if needed */
-  }
+  font-family: 'Helvetica World';
+  src: url('/fonts/HelveticaWorld.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('/fonts/Raleway-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('/fonts/Raleway-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
