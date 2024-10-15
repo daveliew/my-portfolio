@@ -1,0 +1,64 @@
+{
+  "skills": [
+    {
+      "name": "Digital Marketing",
+      "score": 4,
+      "subskills": [
+        { "name": "Content Marketing", "score": 4 },
+        { "name": "SEO", "score": 3 },
+        { "name": "Social Media Marketing", "score": 4 },
+        { "name": "Email Marketing", "score": 3 }
+      ]
+    },
+    {
+      "name": "Business Operations",
+      "score": 5,
+      "subskills": [
+        { "name": "Process Optimization", "score": 4 },
+        { "name": "Team Management", "score": 4 },
+        { "name": "Strategic Planning", "score": 3 },
+        { "name": "Resource Allocation", "score": 4 }
+      ]
+    },
+    {
+      "name": "Sales",
+      "score": 4,
+      "subskills": [
+        { "name": "Lead Generation", "score": 4 },
+        { "name": "Negotiation", "score": 3 },
+        { "name": "Client Relationship Management", "score": 3 },
+        { "name": "Sales Strategy", "score": 4 }
+      ]
+    },
+    {
+      "name": "Project Management",
+      "score": 3,
+      "subskills": [
+        { "name": "Agile Methodologies", "score": 2 },
+        { "name": "Risk Management", "score": 3 },
+        { "name": "Stakeholder Communication", "score": 4 },
+        { "name": "Resource Planning", "score": 3 }
+      ]
+    },
+    {
+      "name": "Data Analysis",
+      "score": 4,
+      "subskills": [
+        { "name": "Statistical Analysis", "score": 5 },
+        { "name": "Data Visualization", "score": 5 },
+        { "name": "SQL", "score": 5 },
+        { "name": "Python", "score": 5 }
+      ]
+    },
+    {
+      "name": "Web Development",
+      "score": 4,
+      "subskills": [
+        { "name": "Frontend (React, Next.js)", "score": 4 },
+        { "name": "Backend (Node.js, Express)", "score": 2 },
+        { "name": "Database Design", "score": 3 },
+        { "name": "API Development", "score": 2 }
+      ]
+    }
+  ]
+}

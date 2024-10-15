@@ -16,7 +16,6 @@ const SkillsVisualization: React.FC<SkillsVisualizationProps> = ({ skills }) => 
         <div key={skill.name} className="mb-2">
           <div className="flex justify-between mb-1">
             <span className="text-sm font-medium text-off-white">{skill.name}</span>
-            <span className="text-sm font-medium text-off-white">{skill.score}/5</span>
           </div>
           <div className="w-full bg-dark-gray rounded-full h-2.5">
             <div 

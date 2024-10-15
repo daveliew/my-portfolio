@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, Tooltip } from 'recharts';
 
 interface Skill {
@@ -12,24 +12,27 @@ interface Skill {
 interface SkillsChartProps {
   skills: Skill[];
   onSkillClick: (skill: Skill) => void;
+  selectedSkill: Skill | null;
 }
 
-const SkillsChart: React.FC<SkillsChartProps> = ({ skills, onSkillClick }) => {
-  const [activeSkill, setActiveSkill] = useState<string | null>(null);
-
+const SkillsChart: React.FC<SkillsChartProps> = ({ skills, onSkillClick, selectedSkill }) => {
   return (
     <div className="w-full h-[400px] relative">
       <ResponsiveContainer width="100%" height="100%">
         <RadarChart cx="50%" cy="50%" outerRadius="80%" data={skills}>
-          <PolarGrid stroke="var(--dark-gray)" />
+          <PolarGrid 
+            stroke="var(--primary-yellow-dark)" 
+          />
           <PolarAngleAxis 
             dataKey="name" 
-            tick={{ fill: 'var(--off-white)', fontSize: 12 }}
+            tick={false} // Hide the default labels
           />
           <PolarRadiusAxis 
             angle={30} 
             domain={[0, 5]} 
-            tick={{ fill: 'var(--off-white)' }}
+            axisLine={false}
+            tick={false}
+            tickCount={6}
           />
           <Radar 
             name="Skills" 
@@ -45,7 +48,9 @@ const SkillsChart: React.FC<SkillsChartProps> = ({ skills, onSkillClick }) => {
         {skills.map((skill, index) => (
           <div
             key={skill.name}
-            className="absolute cursor-pointer hover:text-burgundy transition-colors duration-200"
+            className={`absolute cursor-pointer transition-colors duration-200 ${
+              selectedSkill?.name === skill.name ? 'text-[var(--light-burgundy)] font-bold' : 'text-off-white hover:text-burgundy'
+            }`}
             style={{
               top: `${50 - 40 * Math.cos((index / skills.length) * Math.PI * 2 - Math.PI / 2)}%`,
               left: `${50 + 40 * Math.sin((index / skills.length) * Math.PI * 2 - Math.PI / 2)}%`,
@@ -53,10 +58,8 @@ const SkillsChart: React.FC<SkillsChartProps> = ({ skills, onSkillClick }) => {
               pointerEvents: 'auto',
             }}
             onClick={() => onSkillClick(skill)}
-            onMouseEnter={() => setActiveSkill(skill.name)}
-            onMouseLeave={() => setActiveSkill(null)}
           >
-            <span className={`text-sm font-semibold ${activeSkill === skill.name ? 'text-burgundy' : ''}`}>
+            <span className="text-sm">
               {skill.name}
             </span>
           </div>
