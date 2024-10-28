@@ -4,15 +4,16 @@ const ImpactfulStatement = () => {
   return (
     <div className="
       text-center 
-      pb-12 md:pb-24
-      mb-8 md:mb-20
+      pb-16 md:pb-24  /* Changed py- to pb- to remove top padding */
+      px-4 md:px-8
+      mb-12 md:mb-20
       border-b border-gray-800
     ">
       <h1 className="
-        text-2xl sm:text-3xl md:text-4xl lg:text-5xl
+        text-2xl sm:text-3xl md:text-4xl lg:text-5xl  /* Reduced font sizes */
         font-merriweather font-bold 
         leading-tight
-        mb-4 md:mb-6
+        mb-6
       ">
         Co-creating{' '}
         <span className="text-[var(--burgundy)]">Tomorrow</span>{' '}
@@ -26,7 +27,7 @@ const ImpactfulStatement = () => {
         </span>
       </h1>
       <p className="
-        text-sm md:text-lg 
+        text-base md:text-lg 
         max-w-2xl 
         mx-auto 
         text-gray-300

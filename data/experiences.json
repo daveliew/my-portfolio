@@ -1,114 +1,113 @@
 {
   "professionalAreas": [
     {
-      "id": "digital-marketing",
-      "title": "Digital Marketing & Growth",
+      "id": "strategic-growth",
+      "title": "Strategic Growth & Operations",
+      "description": "Building and scaling early-stage ventures through hands-on experience",
       "experiences": [
         {
-          "id": "meta-consultant",
-          "role": "Technical Solutions Consultant",
-          "company": "Meta (Facebook)",
-          "highlight": "Optimized AdTech solutions for $1M+ monthly APAC client revenue"
+          "role": "Early-Stage Operator",
+          "type": "Independent",
+          "period": "2022-Present",
+          "highlights": [
+            "Built and operated multiple small businesses from concept to execution",
+            "Developed practical frameworks from first-hand startup experience",
+            "Applied pattern recognition across different business models"
+          ],
+          "keySkills": ["Pattern Recognition", "Strategic Thinking", "Business Development"]
         },
         {
-          "id": "jobkred-manager",
-          "role": "Marketing Manager",
-          "company": "JobKred (HR SaaS Startup)",
-          "highlight": "Led digital marketing initiatives for HR tech startup"
-        },
-        {
-          "id": "sgcodecampus-head",
-          "role": "Head, Business",
-          "company": "SG Code Campus",
-          "highlight": "Expanded marketing reach by 50% using Google and Facebook advertising"
-        }
-      ],
-      "skills": [
-        {"name": "AdTech", "score": 4},
-        {"name": "Digital Advertising", "score": 4},
-        {"name": "Content Marketing", "score": 3},
-        {"name": "Growth Strategy", "score": 4},
-        {"name": "SEO", "score": 3},
-        {"name": "Social Media Marketing", "score": 3}
-      ]
-    },
-    {
-      "id": "startup-strategies",
-      "title": "Startup Strategies & Operations",
-      "experiences": [
-        {
-          "id": "nansen-associate",
           "role": "Alpha Growth Ops Associate",
           "company": "Nansen Pte. Ltd.",
-          "highlight": "Drove 35% revenue growth through customer acquisition strategies"
-        },
-        {
-          "id": "little-llama-cofounder",
-          "role": "Co-Founder",
-          "company": "Little Llama",
-          "highlight": "Built and maintained e-commerce platform from scratch"
-        },
-        {
-          "id": "labyrinth-cofounder",
-          "role": "Co-Founder",
-          "company": "Labyrinth Restaurant",
-          "highlight": "Scaled restaurant to Michelin recognition and top 50 lists"
+          "period": "2021-2022",
+          "highlights": [
+            "Early employee in fast-growing web3 analytics platform",
+            "Contributed to 35% revenue growth through strategic initiatives",
+            "Identified and executed key growth opportunities"
+          ],
+          "keySkills": ["Market Analysis", "Strategic Planning", "Partnership Building"]
         }
-      ],
-      "skills": [
-        {"name": "Business Operations", "score": 4},
-        {"name": "Customer Acquisition", "score": 4},
-        {"name": "E-commerce", "score": 3},
-        {"name": "Entrepreneurship", "score": 4},
-        {"name": "Scaling Strategies", "score": 4}
       ]
     },
     {
-      "id": "business-analysis",
-      "title": "Business Analysis & Strategy",
+      "id": "venture-building",
+      "title": "Venture Building & Operations",
+      "description": "Hands-on experience in building and scaling ventures",
       "experiences": [
         {
-          "id": "unity-analyst",
-          "role": "Business Analyst",
-          "company": "Unity Technologies",
-          "highlight": "Led financial modeling for transition to subscription-based revenue"
+          "role": "Co-Founder",
+          "company": "Labyrinth Restaurant",
+          "period": "2018-2021",
+          "highlights": [
+            "Built restaurant from concept to Michelin recognition",
+            "Led team of 20+ staff through rapid growth phase",
+            "Implemented systems for operational excellence"
+          ],
+          "keySkills": ["Leadership", "Business Development", "System Design"]
         },
         {
-          "id": "sgcodecampus-head-business",
-          "role": "Head, Business",
+          "role": "Head of Business",
           "company": "SG Code Campus",
-          "highlight": "Scaled revenue 10x from S$100K to S$1M+ in three years"
+          "period": "2016-2018",
+          "highlights": [
+            "Early team member in education startup",
+            "Contributed to growth from S$100K to S$1M+ in three years",
+            "Built key educational institution partnerships"
+          ],
+          "keySkills": ["Strategic Planning", "Business Development", "Leadership"]
         }
-      ],
-      "skills": [
-        {"name": "Financial Modeling", "score": 3},
-        {"name": "Strategic Planning", "score": 4},
-        {"name": "Data Analysis", "score": 3},
-        {"name": "Business Growth", "score": 4},
-        {"name": "SaaS Strategies", "score": 3}
+      ]
+    },
+    {
+      "id": "tech-implementation",
+      "title": "Technology & AI Implementation",
+      "description": "Practical experience implementing tech solutions for business growth",
+      "experiences": [
+        {
+          "role": "Independent Builder",
+          "type": "Independent",
+          "period": "2023-Present",
+          "highlights": [
+            "Building AI-enhanced tools for personal projects",
+            "Experimenting with AI integration in business workflows",
+            "Creating automated systems using no-code tools"
+          ],
+          "keySkills": ["AI Implementation", "Process Automation", "Strategic Planning"]
+        },
+        {
+          "role": "Technical Solutions Consultant",
+          "company": "Meta",
+          "period": "2019-2020",
+          "highlights": [
+            "Implemented AdTech solutions for enterprise clients",
+            "Developed technical solutions for business challenges",
+            "Created data-driven marketing strategies"
+          ],
+          "keySkills": ["Technical Skills", "Strategic Thinking", "Problem Solving"]
+        }
       ]
     }
   ],
-  "skills": {
-    "technical": [
-      {"name": "JavaScript/TypeScript", "score": 3},
-      {"name": "Python", "score": 3},
-      {"name": "React", "score": 3},
-      {"name": "Next.js", "score": 2},
-      {"name": "SQL", "score": 3},
-      {"name": "Webflow", "score": 3},
-      {"name": "Shopify", "score": 3},
-      {"name": "HubSpot", "score": 3},
-      {"name": "Retool", "score": 2},
-      {"name": "Zapier", "score": 3}
-    ],
-    "soft": [
-      {"name": "Leadership", "score": 4},
-      {"name": "Communication", "score": 4},
-      {"name": "Problem Solving", "score": 4},
-      {"name": "Adaptability", "score": 4},
-      {"name": "Team Management", "score": 4},
-      {"name": "Continuous Learning", "score": 5}
-    ]
-  }
+  "projectHighlights": [
+    {
+      "name": "Business Operation Systems",
+      "description": "Built and implemented systems for business operations across ventures",
+      "outcomes": [
+        "Improved operational efficiency",
+        "Created scalable processes",
+        "Reduced manual workload through automation"
+      ],
+      "keySkills": ["System Design", "Process Automation", "Leadership"]
+    },
+    {
+      "name": "Growth Frameworks",
+      "description": "Developed practical frameworks from hands-on business experience",
+      "outcomes": [
+        "Successfully applied across own ventures",
+        "Created repeatable processes for growth",
+        "Identified key patterns for success"
+      ],
+      "keySkills": ["Pattern Recognition", "Strategic Thinking", "Business Development"]
+    }
+  ]
 }

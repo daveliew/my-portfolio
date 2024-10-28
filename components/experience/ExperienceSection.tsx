@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import SkillsVisualization from '@/components/skills/SkillsVisualization';
 
 interface Skill {
   name: string;
@@ -70,7 +69,7 @@ const CategorySection: React.FC<{ area: ProfessionalArea }> = ({ area }) => {
   return (
     <section className="my-8">
       <div className="flex">
-        <div className="w-1/4 pr-4">
+        <div className="w-1/3 pr-4">
           {area.experiences.map(exp => (
             <button
               key={exp.id}
@@ -86,7 +85,7 @@ const CategorySection: React.FC<{ area: ProfessionalArea }> = ({ area }) => {
           ))}
         </div>
         
-        <div className="w-1/2 px-4">
+        <div className="w-2/3 px-4">
           {activeExperience && (
             <div className="card bg-dark-gray p-4 rounded-lg">
               <h4 className="font-medium text-xl mb-2">{activeExperience.role}</h4>
@@ -94,10 +93,6 @@ const CategorySection: React.FC<{ area: ProfessionalArea }> = ({ area }) => {
               <p>{activeExperience.highlight}</p>
             </div>
           )}
-        </div>
-        
-        <div className="w-1/4 pl-4">
-          <SkillsVisualization skills={area.skills} />
         </div>
       </div>
     </section>

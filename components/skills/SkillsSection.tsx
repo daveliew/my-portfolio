@@ -1,46 +1,41 @@
-import React from 'react';
+'use client';
 
-interface Skill {
-  name: string;
-  score: number;
-}
+import React, { useState } from 'react';
+import { SkillsData, Skill } from './types';
+import SkillsChart from './SkillsChart';
+import SkillDetails from './SkillDetails';
 
 interface SkillsSectionProps {
-  skills: {
-    technical: Skill[];
-    soft: Skill[];
-  };
+  data: SkillsData;
 }
 
-const SkillsSection: React.FC<SkillsSectionProps> = ({ skills }) => {
+const SkillsSection: React.FC<SkillsSectionProps> = ({ data }) => {
+  const [selectedSkill, setSelectedSkill] = useState<Skill | null>(data.skills[0] || null);
+
+  const handleSkillClick = (skill: Skill) => {
+    setSelectedSkill(skill);
+  };
+
   return (
-    <section className="my-8">
-      <h2 className="text-2xl font-semibold mb-4">Skills</h2>
-      
-      <div className="mb-6">
-        <h3 className="text-xl font-medium mb-2">Technical Skills</h3>
-        <ul className="list-disc list-inside">
-          {skills.technical.map(skill => (
-            <li key={skill.name}>
-              {skill.name} - Proficiency: {skill.score}/5
-            </li>
-          ))}
-        </ul>
-      </div>
-      
-      <div>
-        <h3 className="text-xl font-medium mb-2">Soft Skills</h3>
-        <ul className="list-disc list-inside">
-          {skills.soft.map(skill => (
-            <li key={skill.name}>
-              {skill.name} - Proficiency: {skill.score}/5
-            </li>
-          ))}
-        </ul>
+    <section className="py-16">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="min-h-[500px]">
+            <SkillsChart 
+              skills={data.skills} 
+              onSkillClick={handleSkillClick}
+              selectedSkill={selectedSkill}
+            />
+          </div>
+          {selectedSkill && (
+            <div>
+              <SkillDetails skill={selectedSkill} />
+            </div>
+          )}
+        </div>
       </div>
     </section>
   );
 };
 
 export default SkillsSection;
-

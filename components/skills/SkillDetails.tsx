@@ -1,16 +1,21 @@
 import React from 'react';
 import { Bar, BarChart, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
-import { Subskill } from '../../types/skills';
+import { Skill } from './types';
 
 interface SkillDetailsProps {
-  name: string;
-  subskills: Subskill[];
+  skill: Skill;
 }
 
-const SkillDetails: React.FC<SkillDetailsProps> = ({ name, subskills }) => {
+const SkillDetails: React.FC<SkillDetailsProps> = ({ skill }) => {
+  // Transform the subskills object into an array format matching your original structure
+  const subskills = Object.entries(skill.subskills).map(([name, score]) => ({
+    name,
+    score // Using score instead of proficiency to match original
+  }));
+
   return (
     <div className="mt-8">
-      <h3 className="text-2xl font-semibold mb-4 text-off-white">{name}</h3>
+      <h3 className="text-2xl font-semibold mb-4 text-off-white">{skill.name}</h3>
       <ResponsiveContainer width="100%" height={300}>
         <BarChart data={subskills} layout="vertical" margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
           <XAxis type="number" domain={[0, 5]} stroke="var(--off-white)" />
@@ -23,7 +28,7 @@ const SkillDetails: React.FC<SkillDetailsProps> = ({ name, subskills }) => {
               color: 'var(--off-white)'
             }} 
           />
-          <Bar dataKey="score" fill="var(--primary-yellow)" />
+          <Bar dataKey="score" fill="var(--primary-yellow)" /> {/* Changed from proficiency to score */}
         </BarChart>
       </ResponsiveContainer>
     </div>
