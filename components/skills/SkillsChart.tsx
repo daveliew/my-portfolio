@@ -2,12 +2,7 @@
 
 import React from 'react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, Tooltip, TooltipProps } from 'recharts';
-
-interface Skill {
-  name: string;
-  score: number;
-  subskills: { name: string; score: number }[];
-}
+import { Skill } from '../../types/skills';
 
 interface SkillsChartProps {
   skills: Skill[];

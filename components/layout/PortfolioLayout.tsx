@@ -7,8 +7,18 @@ import ImpactfulStatement from '../common/ImpactfulStatement';
 const PortfolioLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="flex flex-col md:flex-row min-h-screen bg-space-black text-off-white">
-      <nav className="md:w-1/4 lg:w-1/5 p-6 md:fixed md:h-screen md:overflow-hidden bg-dark-gray">
-        <div className="flex items-center mb-4">
+      {/* Sidebar */}
+      <nav className="
+        w-full md:w-[300px] lg:w-[350px] 
+        h-auto md:h-screen 
+        p-6 
+        bg-dark-gray
+        md:fixed 
+        md:overflow-y-auto
+        scrollbar-hide
+        border-b md:border-r border-gray-800
+      ">
+        <div className="flex items-center mb-8">
           <Image
             src="/images/logo.png"
             alt="David Liew Logo"
@@ -16,20 +26,30 @@ const PortfolioLayout = ({ children }: { children: React.ReactNode }) => {
             height={50}
             className="mr-3"
           />
-          <h1 className="text-4xl font-bold text-burgundy">daveliew</h1>
+          <h1 className="text-3xl font-bold text-burgundy">daveliew</h1>
         </div>
-        <div className="h-full overflow-y-auto scrollbar-hide">
+        <div className="flex flex-col h-[calc(100vh-120px)]">
           <PortfolioSummary />
-          <div className="mt-auto pt-20">
-            {/* Add social media icons here */}
+          <div className="mt-auto pt-8">
+            {/* Social media icons */}
           </div>
         </div>
       </nav>
-      <main className="md:w-3/4 lg:w-4/5 md:ml-[25%] lg:ml-[20%] p-6 overflow-y-auto bg-space-black">
-        <AnimatedContent>
-          <ImpactfulStatement />
-          {children}
-        </AnimatedContent>
+
+      {/* Main Content */}
+      <main className="
+        w-full 
+        md:ml-[300px] lg:ml-[350px]
+        min-h-screen
+        p-6 md:p-8 lg:p-12
+        bg-space-black
+      ">
+        <div className="max-w-4xl mx-auto">
+          <AnimatedContent>
+            <ImpactfulStatement />
+            {children}
+          </AnimatedContent>
+        </div>
       </main>
     </div>
   );

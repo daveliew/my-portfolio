@@ -1,10 +1,6 @@
 import React from 'react';
 import { Bar, BarChart, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
-
-interface Subskill {
-  name: string;
-  score: number;
-}
+import { Subskill } from '../../types/skills';
 
 interface SkillDetailsProps {
   name: string;
