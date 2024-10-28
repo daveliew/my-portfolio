@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, Tooltip } from 'recharts';
-import { Skill } from './types';
+import { Skill } from '@/types/skills';
 
 interface SkillsChartProps {
   skills: {

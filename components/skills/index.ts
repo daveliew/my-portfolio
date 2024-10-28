@@ -1,4 +1,3 @@
 export * from './SkillsSection';
-export * from './SkillCategory';
+export * from './SkillDetails';
 export * from './SkillCard';
-export * from './types';

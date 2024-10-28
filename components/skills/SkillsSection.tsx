@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { SkillsData, Skill } from './types';
+import { Skill } from '@/types/skills';
 import SkillsChart from './SkillsChart';
 import SkillDetails from './SkillDetails';
 

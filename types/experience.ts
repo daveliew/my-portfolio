@@ -12,14 +12,9 @@ export interface ProfessionalArea {
   title: string;
   description: string;
   experiences: Experience[];
-  skills: any;
+  skills: string[];
 }
 
 export interface ExperienceSectionProps {
-  areas: {
-    id: string;
-    title: string;
-    experiences: Experience[];
-    skills: any;
-  }[];
+  areas: ProfessionalArea[];
 } 

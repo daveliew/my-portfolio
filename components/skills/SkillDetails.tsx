@@ -1,6 +1,6 @@
 import React from 'react';
 import { Bar, BarChart, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
-import { Skill } from './types';
+import { Skill } from '@/types/skills';
 
 interface SkillDetailsProps {
   skill: Skill;
