@@ -6,11 +6,11 @@ import SkillsChart from './SkillsChart';
 import SkillDetails from './SkillDetails';
 
 interface SkillsSectionProps {
-  data: SkillsData;
+  data: Skill[];
 }
 
 const SkillsSection: React.FC<SkillsSectionProps> = ({ data }) => {
-  const [selectedSkill, setSelectedSkill] = useState<Skill | null>(data.skills[0] || null);
+  const [selectedSkill, setSelectedSkill] = useState<Skill | null>(data[0] || null);
 
   const handleSkillClick = (skill: Skill) => {
     setSelectedSkill(skill);
@@ -22,7 +22,7 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ data }) => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="min-h-[500px]">
             <SkillsChart 
-              skills={data.skills} 
+              skills={data}  // Pass data directly as skills
               onSkillClick={handleSkillClick}
               selectedSkill={selectedSkill}
             />

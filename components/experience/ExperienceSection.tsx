@@ -1,45 +1,68 @@
 'use client';
 
-import React, { useState } from 'react';
-
-interface Skill {
-  name: string;
-  score: number;
-}
+import React, { useState, useEffect } from 'react';
 
 interface Experience {
-  id: string;
   role: string;
-  company: string;
-  highlight: string;
+  company?: string;
+  type?: string;
+  period: string;
+  highlights: string[];
+  keySkills: string[];
 }
 
 interface ProfessionalArea {
   id: string;
   title: string;
+  description: string;
   experiences: Experience[];
-  skills: Skill[];
+  skills: any;
 }
 
 interface ExperienceSectionProps {
-  areas: ProfessionalArea[];
+  areas: {
+    id: string;
+    title: string;
+    experiences: Array<{
+      role: string;
+      company?: string;
+      type?: string;
+      period: string;
+      highlights: string[];
+      keySkills: string[];
+    }>;
+    skills: any;
+  }[];
 }
 
-const ExperienceSection: React.FC<ExperienceSectionProps> = ({ areas }) => {
-  const [selectedArea, setSelectedArea] = useState('startup-strategies');
+const ExperienceSection: React.FC<ExperienceSectionProps> = ({ areas = [] }) => {
+  const [selectedArea, setSelectedArea] = useState<string>('');
 
-  const getAreaById = (id: string) => areas.find(area => area.id === id);
+  // Set initial selected area after component mounts
+  useEffect(() => {
+    if (areas?.length > 0) {
+      setSelectedArea(areas[0].id);
+    }
+  }, [areas]);
+
+  if (!areas?.length) {
+    return null; // or return a loading state
+  }
 
   return (
-    <div className="mt-8">
-      <div className="flex justify-center mb-6">
+    <section className="w-full max-w-7xl mx-auto px-4 py-16">
+      <h2 className="text-4xl font-bold text-center mb-12 text-off-white">
+        Professional Experience
+      </h2>
+      
+      <div className="flex flex-wrap justify-center gap-8 mb-12">
         {areas.map((area) => (
           <button
             key={area.id}
-            className={`px-4 py-2 mx-2 rounded-md ${
+            className={`px-6 py-3 text-lg transition-colors duration-300 ${
               selectedArea === area.id
-                ? 'bg-burgundy text-off-white'
-                : 'bg-dark-gray text-off-white hover:bg-light-burgundy'
+                ? 'text-off-white border-b-2 border-burgundy'
+                : 'text-gray-400 hover:text-off-white'
             }`}
             onClick={() => setSelectedArea(area.id)}
           >
@@ -48,54 +71,74 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({ areas }) => {
         ))}
       </div>
       
-      {getAreaById(selectedArea) && (
-        <CategorySection area={getAreaById(selectedArea)!} />
+      {areas.find(area => area.id === selectedArea) && (
+        <CategorySection area={areas.find(area => area.id === selectedArea)!} />
       )}
-    </div>
+    </section>
   );
 };
 
 const CategorySection: React.FC<{ area: ProfessionalArea }> = ({ area }) => {
-  const [activeExperience, setActiveExperience] = useState(area.experiences?.[0] || null);
-
-  if (!area.experiences || area.experiences.length === 0) {
-    return (
-      <section className="my-8">
-        <p>No experiences available for this area.</p>
-      </section>
-    );
-  }
+  const [activeExperience, setActiveExperience] = useState(area.experiences[0]);
 
   return (
-    <section className="my-8">
-      <div className="flex">
-        <div className="w-1/3 pr-4">
-          {area.experiences.map(exp => (
-            <button
-              key={exp.id}
-              className={`w-full text-left px-4 py-2 mb-2 rounded-lg ${
-                activeExperience?.id === exp.id 
-                  ? 'bg-burgundy text-off-white' 
-                  : 'bg-dark-gray text-off-white hover:bg-light-burgundy'
-              }`}
-              onClick={() => setActiveExperience(exp)}
-            >
-              {exp.company}
-            </button>
-          ))}
-        </div>
-        
-        <div className="w-2/3 px-4">
-          {activeExperience && (
-            <div className="card bg-dark-gray p-4 rounded-lg">
-              <h4 className="font-medium text-xl mb-2">{activeExperience.role}</h4>
-              <h5 className="font-medium text-lg mb-2 text-burgundy">{activeExperience.company}</h5>
-              <p>{activeExperience.highlight}</p>
-            </div>
-          )}
-        </div>
+    <div className="space-y-8">
+      <p className="text-gray-300 text-center max-w-2xl mx-auto mb-8">
+        {area.description}
+      </p>
+      
+      {/* Add skills section if needed */}
+      <div className="flex flex-wrap gap-2 justify-center mb-8">
+        {area.skills?.map((skill: string, i: number) => (
+          <span
+            key={i}
+            className="text-xs px-2 py-1 bg-burgundy/20 rounded-full text-burgundy"
+          >
+            {skill}
+          </span>
+        ))}
       </div>
-    </section>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {area.experiences.map((exp, index) => (
+          <div
+            key={index}
+            className={`p-6 rounded-lg cursor-pointer transition-all duration-300 ${
+              activeExperience === exp
+                ? 'bg-burgundy ring-1 ring-burgundy'
+                : 'bg-dark-gray hover:bg-light-burgundy'
+            }`}
+            onClick={() => setActiveExperience(exp)}
+          >
+            <div className="mb-4">
+              <h3 className="text-xl font-medium mb-1">{exp.role}</h3>
+              <p className="text-gray-300 text-sm">
+                {exp.company || exp.type} • {exp.period}
+              </p>
+            </div>
+            
+            <ul className="text-sm text-gray-300 mb-4 space-y-2">
+              {exp.highlights.map((highlight, i) => (
+                <li key={i} className="list-disc ml-4">
+                  {highlight}
+                </li>
+              ))}
+            </ul>
+            
+            <div className="flex flex-wrap gap-2">
+              {exp.keySkills.map((skill, i) => (
+                <span
+                  key={i}
+                  className="text-xs px-2 py-1 bg-burgundy/20 rounded-full text-burgundy"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 };
 

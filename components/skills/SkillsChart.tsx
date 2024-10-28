@@ -5,7 +5,12 @@ import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Responsi
 import { Skill } from './types';
 
 interface SkillsChartProps {
-  skills: Skill[];
+  skills: {
+    name: string;
+    subskills: {
+      [key: string]: number;
+    };
+  }[];
   onSkillClick: (skill: Skill) => void;
   selectedSkill: Skill | null;
 }
