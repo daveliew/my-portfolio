@@ -1,39 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
-interface Experience {
-  role: string;
-  company?: string;
-  type?: string;
-  period: string;
-  highlights: string[];
-  keySkills: string[];
-}
-
-interface ProfessionalArea {
-  id: string;
-  title: string;
-  description: string;
-  experiences: Experience[];
-  skills: any;
-}
-
-interface ExperienceSectionProps {
-  areas: {
-    id: string;
-    title: string;
-    experiences: Array<{
-      role: string;
-      company?: string;
-      type?: string;
-      period: string;
-      highlights: string[];
-      keySkills: string[];
-    }>;
-    skills: any;
-  }[];
-}
+import { Experience, ProfessionalArea, ExperienceSectionProps } from '@/types/experience';
 
 const ExperienceSection: React.FC<ExperienceSectionProps> = ({ areas = [] }) => {
   const [selectedArea, setSelectedArea] = useState<string>('');
