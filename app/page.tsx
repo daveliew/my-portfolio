@@ -4,6 +4,7 @@ import ExperienceSection from '@/components/experience/ExperienceSection';
 import experiencesData from '../data/experiences.json';
 import SkillsSection from '@/components/skills/SkillsSection';
 import skillsData from '../data/skills.json';
+import Navigation from '@/components/Navigation';
 
 export default function HomeContent() {
   return (
