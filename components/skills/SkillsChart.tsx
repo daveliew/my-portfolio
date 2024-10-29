@@ -2,20 +2,9 @@
 
 import React from 'react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, Tooltip } from 'recharts';
-import { Skill } from '@/types/skills';
+import { Skill, SkillsChartProps, CustomTooltipProps } from '@/types/skills';
 
-interface SkillsChartProps {
-  skills: {
-    name: string;
-    subskills: {
-      [key: string]: number;
-    };
-  }[];
-  onSkillClick: (skill: Skill) => void;
-  selectedSkill: Skill | null;
-}
-
-const CustomTooltip = ({ active, payload }: any) => {
+const CustomTooltip = ({ active, payload }: CustomTooltipProps) => {
   if (active && payload && payload.length) {
     return (
       <div className="bg-dark-gray p-2 rounded border border-burgundy">

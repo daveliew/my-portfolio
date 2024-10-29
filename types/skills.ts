@@ -15,6 +15,22 @@ export interface SkillLevel {
   growth_path: string;
 }
 
+export interface SkillsChartProps {
+  skills: Skill[];
+  onSkillClick: (skill: Skill) => void;
+  selectedSkill: Skill | null;
+}
+
+export interface CustomTooltipProps {
+  active?: boolean;
+  payload?: {
+    value: number;
+    payload: {
+      name: string;
+    };
+  }[];
+}
+
 // Technical background section
 export interface TechnicalBackground {
   education: {
