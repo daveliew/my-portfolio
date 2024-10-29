@@ -1,8 +1,7 @@
 export interface Skill {
   name: string;
-  subskills: {
-    [key: string]: number | undefined;
-  };
+  subskills: Record<string, number | undefined>;
+  description?: string;
 }
 
 export interface SkillsData {
@@ -18,17 +17,21 @@ export interface SkillLevel {
 export interface SkillsChartProps {
   skills: Skill[];
   onSkillClick: (skill: Skill) => void;
-  selectedSkill: Skill | null;
+  selectedSkill?: Skill | null;
+}
+
+export interface ChartDataPoint {
+  name: string;
+  value: number;
+  originalSkill: Skill;
 }
 
 export interface CustomTooltipProps {
   active?: boolean;
-  payload?: {
+  payload?: Array<{
     value: number;
-    payload: {
-      name: string;
-    };
-  }[];
+    payload: ChartDataPoint;
+  }>;
 }
 
 // Technical background section

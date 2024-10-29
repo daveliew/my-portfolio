@@ -12,7 +12,7 @@ export interface ProfessionalArea {
   title: string;
   description: string;
   experiences: Experience[];
-  skills: string[];
+  skills?: string[];
 }
 
 export interface ExperienceSectionProps {

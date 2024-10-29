@@ -1,8 +1,8 @@
 'use client';
 
-import React from 'react';
+import React, { MouseEvent } from 'react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, Tooltip } from 'recharts';
-import { Skill, SkillsChartProps, CustomTooltipProps } from '@/types/skills';
+import { SkillsChartProps, CustomTooltipProps } from '@/types/skills';
 
 const CustomTooltip = ({ active, payload }: CustomTooltipProps) => {
   if (active && payload && payload.length) {
@@ -15,15 +15,34 @@ const CustomTooltip = ({ active, payload }: CustomTooltipProps) => {
   return null;
 };
 
+// Add proper typing for chart data
+interface ChartDataPoint {
+  name: string;
+  value: number;
+  originalSkill: SkillsChartProps['skills'][0]; // Use the skill type from props
+}
+
 const SkillsChart: React.FC<SkillsChartProps> = ({ skills, onSkillClick, selectedSkill }) => {
-  const chartData = skills.map(skill => ({
-    name: skill.name,
-    value: Math.round(
-      Object.values(skill.subskills).reduce((acc, val) => acc + val, 0) / 
-      Object.keys(skill.subskills).length
-    ),
-    originalSkill: skill
-  }));
+  const chartData: ChartDataPoint[] = skills.map(skill => {
+    const subskills = skill.subskills ?? {};
+    const values = Object.values(subskills) as number[];
+    const average = values.length ? values.reduce((sum, val) => sum + val, 0) / values.length : 0;
+
+    return {
+      name: skill.name,
+      value: Math.round(average),
+      originalSkill: skill
+    };
+  });
+
+  // Update the handler with proper typing
+  const handleClick = (event: MouseEvent<SVGElement>) => {
+    // Use proper typing for Recharts event target
+    const target = event.target as SVGElement & { payload?: ChartDataPoint };
+    if (target?.payload?.originalSkill) {
+      onSkillClick(target.payload.originalSkill);
+    }
+  };
 
   return (
     <div className="w-full h-[400px] relative">
@@ -47,7 +66,7 @@ const SkillsChart: React.FC<SkillsChartProps> = ({ skills, onSkillClick, selecte
             stroke="var(--burgundy)"
             fill="var(--primary-yellow)"
             fillOpacity={0.6}
-            onClick={(data) => onSkillClick(data.originalSkill)}
+            onClick={handleClick}
           />
           <Tooltip content={<CustomTooltip />} />
         </RadarChart>
