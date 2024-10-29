@@ -1,8 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
-import AnimatedContent from '../common/AnimatedContent';
-import PortfolioSummary from '../PortfolioSummary';
+import PortfolioSummary from '../common/PortfolioSummary';
 import ImpactfulStatement from '../common/ImpactfulStatement';
+import Link from 'next/link';
 
 const PortfolioLayout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -20,7 +20,7 @@ const PortfolioLayout = ({ children }: { children: React.ReactNode }) => {
         border-b md:border-r border-gray-800
       ">
         {/* Logo and title container */}
-        <div className="flex items-center mb-4 md:mb-8">
+        <Link href="/" className="flex items-center mb-4 md:mb-8">
           <Image
             src="/images/logo.png"
             alt="David Liew Logo"
@@ -29,7 +29,7 @@ const PortfolioLayout = ({ children }: { children: React.ReactNode }) => {
             className="mr-2"
           />
           <h1 className="text-xl md:text-3xl font-bold text-burgundy">daveliew</h1>
-        </div>
+        </Link>
 
         {/* Portfolio Summary */}
         <div className="md:flex md:flex-col md:h-[calc(100vh-240px)]">
@@ -40,18 +40,18 @@ const PortfolioLayout = ({ children }: { children: React.ReactNode }) => {
         <div className="mt-8">
           <ul className="space-y-4">
             <li>
-              <a href="#about" className="text-off-white hover:text-burgundy transition-colors duration-300 flex items-center">
+              <a href="#top" className="text-off-white hover:text-burgundy transition-colors duration-300 flex items-center">
                 <span className="text-sm">About</span>
+              </a>
+            </li>
+            <li>
+              <a href="#skills" className="text-off-white hover:text-burgundy transition-colors duration-300 flex items-center">
+                <span className="text-sm">Skills</span>
               </a>
             </li>
             <li>
               <a href="#experience" className="text-off-white hover:text-burgundy transition-colors duration-300 flex items-center">
                 <span className="text-sm">Experience</span>
-              </a>
-            </li>
-            <li>
-              <a href="#projects" className="text-off-white hover:text-burgundy transition-colors duration-300 flex items-center">
-                <span className="text-sm">Projects</span>
               </a>
             </li>
           </ul>
@@ -68,11 +68,9 @@ const PortfolioLayout = ({ children }: { children: React.ReactNode }) => {
         bg-space-black
         relative
       ">
-        <div className="max-w-4xl mx-auto">
-          <AnimatedContent>
-            <ImpactfulStatement />
-            {children}
-          </AnimatedContent>
+        <div className="max-w-4xl mx-auto"> 
+          <ImpactfulStatement />
+          {children}
         </div>
       </main>
     </div>

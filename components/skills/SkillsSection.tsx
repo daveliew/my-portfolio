@@ -18,6 +18,9 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ data }) => {
 
   return (
     <section className="py-16">
+      <h2 className="text-4xl font-bold text-center mb-12 text-off-white">
+        Skills Overview
+      </h2>
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="min-h-[500px]">

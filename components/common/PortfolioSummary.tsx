@@ -17,12 +17,12 @@ const PortfolioSummary = () => {
       <p className="mb-4">I bridge the gap between visionary ideas and technological realities, crafting solutions that harness the best of human ingenuity and artificial intelligence.</p>
       
       <div className="flex space-x-4">
-        <Link href="/projects" className="bg-[var(--primary-yellow)] text-[#0a192f] px-4 py-2 rounded text-sm font-medium hover:bg-[var(--primary-yellow-dark)] transition-colors">
-          Explore Projects
+        <Link href="#experience" className="bg-[var(--primary-yellow)] text-[#0a192f] px-4 py-2 rounded text-sm font-medium hover:bg-[var(--primary-yellow-dark)] transition-colors">
+          My Experience
         </Link>
-        <Link href="/contact" className="bg-transparent border border-[var(--primary-yellow)] text-[var(--primary-yellow)] px-4 py-2 rounded text-sm font-medium hover:bg-[var(--primary-yellow-10)] transition-colors">
+        {/* <Link href="/contact" className="bg-transparent border border-[var(--primary-yellow)] text-[var(--primary-yellow)] px-4 py-2 rounded text-sm font-medium hover:bg-[var(--primary-yellow-10)] transition-colors">
           Connect
-        </Link>
+        </Link> */}
       </div>
     </div>
   );

@@ -2,7 +2,6 @@ import { Raleway, Merriweather } from 'next/font/google'
 import type { Metadata } from "next";
 import '../styles/globals.css';
 import PortfolioLayout from "../components/layout/PortfolioLayout";
-import Navigation from '@/components/Navigation'
 
 const raleway = Raleway({ subsets: ['latin'] })
 const merriweather = Merriweather({ 
@@ -27,7 +26,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={merriweather.variable}>  
       <body className={raleway.className}>
-        <Navigation/>
         <PortfolioLayout>
           <main>
             {children}
