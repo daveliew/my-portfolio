@@ -1,7 +1,7 @@
 export interface Skill {
   name: string;
   subskills: {
-    [key: string]: number;
+    [key: string]: number | undefined;
   };
 }
 
