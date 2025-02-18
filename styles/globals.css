@@ -3,14 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --space-black: #1C1C1E;
+  --space-black: #1E1E22;
+  --space-black-light: #242428;
   --burgundy: #8d263b;
   --light-burgundy: #C8102E;
   --off-white: #f0f0f0;
-  --dark-gray: #1A1A1A;
+  --dark-gray: #1D1D1F;
   --primary-yellow: #D4AF37;
   --primary-yellow-dark: #B8960C;
   --primary-yellow-10: rgba(212, 175, 55, 0.1);
+  --gradient-dark: linear-gradient(to bottom, var(--space-black-light), var(--space-black));
 }
 
 @layer base {

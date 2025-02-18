@@ -17,22 +17,27 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ data }) => {
   };
 
   return (
-    <section className="py-16">
-      <h2 className="text-4xl font-bold text-center mb-12 text-off-white">
-        Skills Overview
-      </h2>
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div className="min-h-[500px]">
+    <section className="w-full bg-[var(--space-black)] pt-12 md:pt-16 pb-4 md:pb-8">
+      <div className="max-w-7xl mx-auto px-4">
+        <h2 className="text-4xl font-bold text-center mb-12 text-off-white">
+          Skills Overview
+        </h2>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="min-h-[300px] md:min-h-[400px]">
             <SkillsChart 
-              skills={data}  // Pass data directly as skills
+              skills={data}
               onSkillClick={handleSkillClick}
               selectedSkill={selectedSkill}
             />
           </div>
           {selectedSkill && (
             <div>
-              <SkillDetails skill={selectedSkill} />
+              <h3 className="text-2xl font-semibold mb-4 text-off-white md:hidden">
+                {selectedSkill.name}
+              </h3>
+              <div className="h-[300px] md:h-[400px]">
+                <SkillDetails skill={selectedSkill} />
+              </div>
             </div>
           )}
         </div>

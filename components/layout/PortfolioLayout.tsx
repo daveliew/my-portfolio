@@ -48,7 +48,7 @@ const PortfolioLayout = ({ children }: { children: React.ReactNode }) => {
         px-4 py-6
         md:px-8 md:py-8
         lg:px-12 lg:py-10
-        bg-space-black
+        bg-gradient-to-b from-[var(--space-black-light)] to-[var(--space-black)]
       ">
         <div className="max-w-4xl mx-auto">
           <ImpactfulStatement />
