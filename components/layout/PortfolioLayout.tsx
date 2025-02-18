@@ -6,70 +6,53 @@ import Link from 'next/link';
 
 const PortfolioLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="flex flex-col md:flex-row min-h-screen bg-space-black text-off-white relative">
-      {/* Sidebar */}
+    <div className="flex flex-col min-h-screen bg-space-black text-off-white">
+      {/* Mobile-first Navigation */}
       <nav className="
-        w-full md:w-[300px] lg:w-[350px] 
-        h-auto md:h-screen 
-        py-4 md:py-6
-        px-6 md:px-6
+        w-full
         bg-dark-gray
-        md:fixed 
-        md:overflow-y-auto
-        scrollbar-hide
-        border-b md:border-r border-gray-800
+        border-b border-gray-800
+        sticky top-0 z-50
+        py-3 px-4 md:py-6 md:px-6
       ">
-        {/* Logo and title container */}
-        <Link href="/" className="flex items-center mb-4 md:mb-8">
-          <Image
-            src="/images/logo.png"
-            alt="David Liew Logo"
-            width={32}
-            height={32}
-            className="mr-2"
-          />
-          <h1 className="text-xl md:text-3xl font-bold text-burgundy">daveliew</h1>
-        </Link>
+        <div className="max-w-6xl mx-auto flex justify-between items-center">
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/images/logo.png"
+              alt="David Liew Logo"
+              width={28}
+              height={28}
+              className="mr-2"
+            />
+            <h1 className="text-xl md:text-2xl font-bold text-burgundy">daveliew</h1>
+          </Link>
 
-        {/* Portfolio Summary */}
-        <div className="md:flex md:flex-col md:h-[calc(100vh-240px)]">
-          <PortfolioSummary />
-        </div>
-
-        {/* Section Navigation */}
-        <div className="mt-8">
-          <ul className="space-y-4">
-            <li>
-              <a href="#top" className="text-off-white hover:text-burgundy transition-colors duration-300 flex items-center">
-                <span className="text-sm">About</span>
-              </a>
-            </li>
-            <li>
-              <a href="#skills" className="text-off-white hover:text-burgundy transition-colors duration-300 flex items-center">
-                <span className="text-sm">Skills</span>
-              </a>
-            </li>
-            <li>
-              <a href="#experience" className="text-off-white hover:text-burgundy transition-colors duration-300 flex items-center">
-                <span className="text-sm">Experience</span>
-              </a>
-            </li>
-          </ul>
+          <div className="flex space-x-8 md:space-x-12">
+            <a href="#top" className="text-off-white hover:text-burgundy transition-colors duration-300">
+              <span className="text-sm md:text-base">About</span>
+            </a>
+            <a href="#skills" className="text-off-white hover:text-burgundy transition-colors duration-300">
+              <span className="text-sm md:text-base">Skills</span>
+            </a>
+            <a href="#experience" className="text-off-white hover:text-burgundy transition-colors duration-300">
+              <span className="text-sm md:text-base">Experience</span>
+            </a>
+          </div>
         </div>
       </nav>
 
       {/* Main Content */}
       <main className="
-        w-full 
-        md:ml-[300px] lg:ml-[350px]
-        min-h-screen
-        px-6 md:p-8 lg:p-12
-        pt-4 md:pt-8
+        flex-1
+        w-full
+        px-4 py-6
+        md:px-8 md:py-8
+        lg:px-12 lg:py-10
         bg-space-black
-        relative
       ">
-        <div className="max-w-4xl mx-auto"> 
+        <div className="max-w-4xl mx-auto">
           <ImpactfulStatement />
+          <PortfolioSummary className="mt-8 md:mt-12" />
           {children}
         </div>
       </main>
