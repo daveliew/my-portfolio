@@ -61,4 +61,8 @@
   .font-merriweather {
     font-family: var(--font-merriweather);
   }
+
+  .scroll-margin {
+    scroll-margin-top: 5rem;
+  }
 }

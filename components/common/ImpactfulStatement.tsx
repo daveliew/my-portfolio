@@ -8,6 +8,7 @@ const ImpactfulStatement = () => {
       px-4 md:px-8
       mb-12 md:mb-20
       border-b border-gray-800
+      scroll-margin
     " id="top">
       <h1 className="
         text-2xl sm:text-3xl md:text-4xl lg:text-5xl  /* Reduced font sizes */
