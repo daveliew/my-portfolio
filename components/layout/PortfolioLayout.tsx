@@ -16,7 +16,7 @@ const PortfolioLayout = ({ children }: { children: React.ReactNode }) => {
         py-3 px-4 md:py-6 md:px-6
       ">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
-          <Link href="/" className="flex items-center">
+          <Link href="#top" className="flex items-center">
             <Image
               src="/images/logo.png"
               alt="David Liew Logo"
