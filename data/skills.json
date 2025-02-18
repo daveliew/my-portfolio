@@ -3,46 +3,46 @@
     {
       "name": "Pattern Recognition",
       "subskills": {
-        "Market Analysis": 3,
-        "Business Opportunities": 4,
-        "System Design": 3,
+        "Market Analysis": 4,
+        "Business Opportunities": 5,
+        "System Design": 4,
         "Trend Identification": 4
       }
     },
     {
       "name": "Strategic Thinking",
       "subskills": {
-        "Business Modeling": 3,
-        "Risk Management": 2,
+        "Business Modeling": 4,
+        "Risk Management": 4,
         "Opportunity Analysis": 4,
-        "Strategic Planning": 3
+        "Strategic Planning": 4
       }
     },
     {
       "name": "AI Implementation",
       "subskills": {
-        "Solution Design": 2,
+        "Solution Design": 3,
         "Prompt Engineering": 4,
-        "Use Case Analysis": 3,
+        "Use Case Analysis": 4,
         "Tool Integration": 3
       }
     },
     {
       "name": "Technical Skills",
       "subskills": {
-        "Web Development": 3,
-        "Data Analysis": 4,
+        "Web Development": 4,
+        "Data Analysis": 5,
         "System Integration": 3,
-        "Technical Problem Solving": 3
+        "Technical Problem Solving": 4
       }
     },
     {
       "name": "Business Development",
       "subskills": {
-        "Networking": 5,
-        "Sales Strategy": 3,
-        "Negotiation": 3,
-        "Partnership Building": 4
+        "Networking": 4,
+        "Sales Strategy": 4,
+        "Negotiation": 4,
+        "Partnership Building": 3
       }
     },
     {
@@ -51,7 +51,7 @@
         "Project Coordination": 4,
         "Cross-functional Communication": 5,
         "Relationship Building": 4,
-        "Stakeholder Management": 4
+        "Stakeholder Management": 5
       }
     }
   ],

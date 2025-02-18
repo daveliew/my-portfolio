@@ -26,12 +26,63 @@
             "Created data-driven marketing strategies"
           ],
           "keySkills": ["Technical Skills", "Strategic Thinking", "Problem Solving"]
+        },
+        {
+          "role": "Software Engineering Student",
+          "company": "General Assembly",
+          "period": "2021-2021",
+          "highlights": [
+            "Completed 480-hour Full Stack Developer bootcamp",
+            "Built and deployed multiple portfolio projects",
+            "Mastered JavaScript, Python, and modern web technologies"
+          ],
+          "keySkills": ["Full Stack Development", "Problem Solving", "Technical Skills"]
         }
       ]
     }, {
       "id": "venture-building",
-      "title": "Venture Building & Operations",
+      "title": "Venture Building & Business Operations",
       "description": "Hands-on experience in building and scaling ventures",
+      "experiences": [
+        {
+          "role": "Founder",
+          "company": "daveliew.com",
+          "period": "2024-Present",
+          "highlights": [
+            "Building Next.js web apps to help SME owners accelerate growth in the AI era",
+            "Created personal platform as experimental launchpad for rapid 0-1 ventures",
+            "Supporting businesses like rayofjoytherapy.com with digital transformation"
+          ],
+          "keySkills": ["Next.js Development", "AI Integration", "Digital Transformation"]
+        },
+        {
+          "role": "Head of Business",
+          "company": "SG Code Campus",
+          "period": "2017-2020",
+          "highlights": [
+            "Early team member in education startup",
+            "Contributed to growth from S$100K to S$1M+ in three years",
+            "Built key educational institution partnerships"
+          ],
+          "keySkills": ["Strategic Planning", "Business Development", "Leadership"]
+        },
+        {
+          "role": "Co-Founder",
+          "company": "littlellama.sg",
+          "period": "2016-Present",
+          "highlights": [
+            "Built educational e-commerce platform from ground up",
+            "Curated and developed learning resources for children",
+            "Managed end-to-end operations and growth strategy"
+          ],
+          "keySkills": ["E-commerce", "Product Development", "Operations Management"]
+        }
+      ]
+    },
+    {
+      "id": "strategic-growth",
+      "title": "Strategic Growth & Business Analytics",
+      "description": "Building and scaling early-stage ventures through hands-on experience",
       "experiences": [
         {
           "role": "Co-Founder",
@@ -45,35 +96,6 @@
           "keySkills": ["Leadership", "Business Development", "System Design"]
         },
         {
-          "role": "Head of Business",
-          "company": "SG Code Campus",
-          "period": "2017-2020",
-          "highlights": [
-            "Early team member in education startup",
-            "Contributed to growth from S$100K to S$1M+ in three years",
-            "Built key educational institution partnerships"
-          ],
-          "keySkills": ["Strategic Planning", "Business Development", "Leadership"]
-        }
-      ]
-    },
-    {
-      "id": "strategic-growth",
-      "title": "Strategic Growth & Operations",
-      "description": "Building and scaling early-stage ventures through hands-on experience",
-      "experiences": [
-        {
-          "role": "Small Business Operator",
-          "type": "Independent",
-          "period": "2015-Present",
-          "highlights": [
-            "Built and operated multiple small businesses from concept to execution",
-            "Developed practical frameworks from first-hand startup experience",
-            "Applied pattern recognition across different business models"
-          ],
-          "keySkills": ["Pattern Recognition", "Strategic Thinking", "Business Development"]
-        },
-        {
           "role": "Alpha Growth Ops Associate",
           "company": "Nansen Pte. Ltd.",
           "period": "2021-2022",
@@ -83,6 +105,17 @@
             "Identified and executed key growth opportunities"
           ],
           "keySkills": ["Market Analysis", "Strategic Planning", "Partnership Building"]
+        },
+        {
+          "role": "Business Analyst",
+          "company": "Unity Technologies",
+          "period": "2013-2014",
+          "highlights": [
+            "Developed strategic transition to SaaS revenue model",
+            "Collaborated with global stakeholders on budget planning",
+            "Implemented business strategy under CFO/COO guidance"
+          ],
+          "keySkills": ["Strategic Planning", "Financial Analysis", "Stakeholder Management"]
         }
       ]
     }

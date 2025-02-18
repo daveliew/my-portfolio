@@ -24,7 +24,12 @@ const SkillDetails: React.FC<SkillDetailsProps> = ({ skill }) => {
           layout="vertical" 
           margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
         >
-          <XAxis type="number" domain={[0, 5]} stroke="var(--off-white)" />
+          <XAxis 
+            type="number" 
+            domain={[1, 5]} 
+            ticks={[1, 2, 3, 4, 5]} 
+            stroke="var(--off-white)" 
+          />
           <YAxis dataKey="name" type="category" width={150} stroke="var(--off-white)" />
           <Tooltip 
             contentStyle={{ 
