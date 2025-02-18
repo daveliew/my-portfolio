@@ -1,35 +1,34 @@
 {
   "professionalAreas": [
     {
-      "id": "strategic-growth",
-      "title": "Strategic Growth & Operations",
-      "description": "Building and scaling early-stage ventures through hands-on experience",
+      "id": "tech-implementation",
+      "title": "Technology & AI Implementation",
+      "description": "Practical experience implementing tech solutions for business growth",
       "experiences": [
         {
-          "role": "Small Business Operator",
+          "role": "Independent Builder",
           "type": "Independent",
-          "period": "2015-Present",
+          "period": "2023-Present",
           "highlights": [
-            "Built and operated multiple small businesses from concept to execution",
-            "Developed practical frameworks from first-hand startup experience",
-            "Applied pattern recognition across different business models"
+            "Building AI-enhanced tools for personal projects",
+            "Experimenting with AI integration in business workflows",
+            "Creating automated systems using no-code tools"
           ],
-          "keySkills": ["Pattern Recognition", "Strategic Thinking", "Business Development"]
+          "keySkills": ["AI Implementation", "Process Automation", "Strategic Planning"]
         },
         {
-          "role": "Alpha Growth Ops Associate",
-          "company": "Nansen Pte. Ltd.",
-          "period": "2021-2022",
+          "role": "Technical Solutions Consultant",
+          "company": "Meta",
+          "period": "2022-2024",
           "highlights": [
-            "Early employee in fast-growing web3 analytics platform",
-            "Contributed to 35% revenue growth through strategic initiatives",
-            "Identified and executed key growth opportunities"
+            "Implemented AdTech solutions for enterprise clients",
+            "Developed technical solutions for business challenges",
+            "Created data-driven marketing strategies"
           ],
-          "keySkills": ["Market Analysis", "Strategic Planning", "Partnership Building"]
+          "keySkills": ["Technical Skills", "Strategic Thinking", "Problem Solving"]
         }
       ]
-    },
-    {
+    }, {
       "id": "venture-building",
       "title": "Venture Building & Operations",
       "description": "Hands-on experience in building and scaling ventures",
@@ -59,34 +58,35 @@
       ]
     },
     {
-      "id": "tech-implementation",
-      "title": "Technology & AI Implementation",
-      "description": "Practical experience implementing tech solutions for business growth",
+      "id": "strategic-growth",
+      "title": "Strategic Growth & Operations",
+      "description": "Building and scaling early-stage ventures through hands-on experience",
       "experiences": [
         {
-          "role": "Independent Builder",
+          "role": "Small Business Operator",
           "type": "Independent",
-          "period": "2023-Present",
+          "period": "2015-Present",
           "highlights": [
-            "Building AI-enhanced tools for personal projects",
-            "Experimenting with AI integration in business workflows",
-            "Creating automated systems using no-code tools"
+            "Built and operated multiple small businesses from concept to execution",
+            "Developed practical frameworks from first-hand startup experience",
+            "Applied pattern recognition across different business models"
           ],
-          "keySkills": ["AI Implementation", "Process Automation", "Strategic Planning"]
+          "keySkills": ["Pattern Recognition", "Strategic Thinking", "Business Development"]
         },
         {
-          "role": "Technical Solutions Consultant",
-          "company": "Meta",
-          "period": "2022-2024",
+          "role": "Alpha Growth Ops Associate",
+          "company": "Nansen Pte. Ltd.",
+          "period": "2021-2022",
           "highlights": [
-            "Implemented AdTech solutions for enterprise clients",
-            "Developed technical solutions for business challenges",
-            "Created data-driven marketing strategies"
+            "Early employee in fast-growing web3 analytics platform",
+            "Contributed to 35% revenue growth through strategic initiatives",
+            "Identified and executed key growth opportunities"
           ],
-          "keySkills": ["Technical Skills", "Strategic Thinking", "Problem Solving"]
+          "keySkills": ["Market Analysis", "Strategic Planning", "Partnership Building"]
         }
       ]
     }
+   
   ],
   "projectHighlights": [
     {

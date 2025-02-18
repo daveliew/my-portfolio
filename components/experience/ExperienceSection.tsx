@@ -10,7 +10,9 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({ areas = [] }) => 
   // Set initial selected area and trigger default card selection
   useEffect(() => {
     if (areas?.length > 0) {
-      setSelectedArea(areas[0].id);
+      // Find the Tech & AI Implementation area
+      const techArea = areas.find(area => area.title.includes('Technology & AI'));
+      setSelectedArea(techArea?.id || areas[0].id);
     }
   }, [areas]);
 
@@ -31,11 +33,11 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({ areas = [] }) => 
         Professional Experience
       </h2>
       
-      <div className="flex flex-wrap justify-center gap-8 mb-12">
+      <div className="flex flex-wrap justify-between gap-4 mb-12 w-full">
         {areas.map((area) => (
           <button
             key={area.id}
-            className={`px-6 py-3 text-lg transition-colors duration-300 ${
+            className={`flex-1 px-6 py-3 text-lg transition-colors duration-300 min-w-[250px] ${
               selectedArea === area.id
                 ? 'text-off-white border-b-2 border-burgundy font-medium'
                 : 'text-gray-500 hover:text-gray-300'
