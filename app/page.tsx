@@ -37,11 +37,11 @@ const typedSkillsData = cleanSkillsData(skillsData);
 export default function HomeContent() {
   return (
     <main>
-      <section id="skills" className="mt-16 scroll-margin"> 
+      <section id="skills" className="mt-8 scroll-margin"> 
         <SkillsSection data={typedSkillsData.skills} /> 
       </section>
       
-      <section id="experience" className="mt-16 scroll-margin">
+      <section id="experience" className="mt-8 scroll-margin">
         <ExperienceSection areas={experiencesData.professionalAreas} /> 
       </section>
     </main>

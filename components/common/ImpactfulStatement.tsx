@@ -4,14 +4,14 @@ const ImpactfulStatement = () => {
   return (
     <div className="
       text-center 
-      pb-16 md:pb-24  /* Changed py- to pb- to remove top padding */
+      pb-16 md:pb-24  
       px-4 md:px-8
       mb-12 md:mb-20
       border-b border-gray-800
       scroll-margin
     " id="top">
       <h1 className="
-        text-2xl sm:text-3xl md:text-4xl lg:text-5xl  /* Reduced font sizes */
+        text-2xl sm:text-3xl md:text-4xl lg:text-5xl  
         font-merriweather font-bold 
         leading-tight
         mb-6

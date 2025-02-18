@@ -28,8 +28,8 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({ areas = [] }) => 
   }
 
   return (
-    <section className="w-full max-w-7xl mx-auto px-4 py-16">
-      <h2 className="text-4xl font-bold text-center mb-12 text-off-white">
+    <section className="w-full max-w-7xl mx-auto px-4 py-8">
+      <h2 className="text-4xl font-bold text-center mb-8 text-off-white">
         Professional Experience
       </h2>
       
