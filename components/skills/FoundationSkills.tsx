@@ -6,11 +6,11 @@ interface FoundationSkillsProps {
 }
 
 const FoundationSkills: React.FC<FoundationSkillsProps> = ({ foundationSkills }) => {
-  const [expandedSkill, setExpandedSkill] = useState<string | null>(null);
+  const [expandedSkill, setExpandedSkill] = useState<string>("Pattern Recognition");
 
   const toggleSkill = (skillName: string) => {
     if (expandedSkill === skillName) {
-      setExpandedSkill(null);
+      setExpandedSkill("");
     } else {
       setExpandedSkill(skillName);
     }

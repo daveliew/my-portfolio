@@ -272,21 +272,21 @@
     ],
     "casestudies": [
       {
-        "title": "AI Workflow Automation for Marketing Agency",
-        "date": "2024-01-15",
+        "title": "Marketing & Operations Automation - Ray of Joy Therapy",
+        "date": "2025-03-01",
         "phase": "Phase 2",
-        "description": "Implemented an n8n-based workflow system that automated content research and generation for a marketing agency",
+        "description": "Implementing comprehensive automation solutions for therapy practice management, marketing operations, and client engagement at rayofjoytherapy.com",
         "outcomes": [
-          "Reduced content research time by 70%",
-          "Improved content quality through systematic research process",
-          "Enabled scaling of content production with existing team"
+          "Streamlined client onboarding and scheduling processes",
+          "Automated marketing content distribution and engagement",
+          "Enhanced operational efficiency through integrated systems"
         ],
-        "technologies": ["n8n", "OpenAI API", "Airtable", "Zapier"],
+        "technologies": ["n8n", "OpenAI API", "Airtable", "Website Integration"],
         "foundationSkillsApplied": ["Technical Skills", "AI Implementation", "Business Development"]
       },
       {
         "title": "Autonomous Research Team for Market Analysis",
-        "date": "2024-03-10",
+        "date": "2025-01-15",
         "phase": "Phase 3",
         "description": "Built a CrewAI-based system of agents that collaboratively performed market research and trend analysis",
         "outcomes": [
@@ -296,6 +296,20 @@
         ],
         "technologies": ["CrewAI", "LangChain", "OpenAI API", "Vector Databases"],
         "foundationSkillsApplied": ["Pattern Recognition", "Strategic Thinking", "Technical Skills", "AI Implementation"]
+      },
+      {
+        "title": "B2B Corporate Gift Platform Transformation",
+        "date": "2025-04-01",
+        "phase": "Phase 2",
+        "status": "Planned",
+        "description": "Website rebuild and business intelligence implementation for Singapore's leading corporate gift company",
+        "outcomes": [
+          "Enhanced digital presence and user experience",
+          "Integrated business intelligence for data-driven decisions",
+          "Automated inventory and order management"
+        ],
+        "technologies": ["Next.js", "AI Analytics", "Business Intelligence Tools"],
+        "foundationSkillsApplied": ["Technical Skills", "Strategic Thinking", "Business Development"]
       }
     ]
   }

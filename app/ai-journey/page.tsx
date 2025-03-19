@@ -4,10 +4,10 @@ import { useState } from 'react';
 import Image from 'next/image';
 import journeyData from '../../data/ai-journey.json';
 import { AIJourneyData } from '../../types/ai-journey';
-import { PhaseProgressBar, SkillsMatrix, RoadmapTimeline, CaseStudyCard, FoundationSkills, CombinedCapabilities } from '../../components/skills';
+import { SkillsMatrix, RoadmapTimeline, CaseStudyCard, FoundationSkills, CombinedCapabilities } from '../../components/skills';
 
 export default function AIJourneyPage() {
-  const [activeTab, setActiveTab] = useState<string>('foundation');
+  const [activeTab, setActiveTab] = useState<string>('roadmap');
   const { journey } = journeyData as AIJourneyData;
 
   return (
@@ -42,6 +42,16 @@ export default function AIJourneyPage() {
       <div className="mb-6 border-b border-gray-700">
         <nav className="flex flex-wrap space-x-4 md:space-x-6">
           <button
+            onClick={() => setActiveTab('roadmap')}
+            className={`py-2 px-1 -mb-px font-medium text-sm ${
+              activeTab === 'roadmap'
+                ? 'border-b-2 border-burgundy text-burgundy'
+                : 'text-off-white hover:text-burgundy-light'
+            }`}
+          >
+            Roadmap
+          </button>
+          <button
             onClick={() => setActiveTab('foundation')}
             className={`py-2 px-1 -mb-px font-medium text-sm ${
               activeTab === 'foundation'
@@ -50,26 +60,6 @@ export default function AIJourneyPage() {
             }`}
           >
             Foundation Skills
-          </button>
-          <button
-            onClick={() => setActiveTab('combined')}
-            className={`py-2 px-1 -mb-px font-medium text-sm ${
-              activeTab === 'combined'
-                ? 'border-b-2 border-burgundy text-burgundy'
-                : 'text-off-white hover:text-burgundy-light'
-            }`}
-          >
-            Combined Capabilities
-          </button>
-          <button
-            onClick={() => setActiveTab('phases')}
-            className={`py-2 px-1 -mb-px font-medium text-sm ${
-              activeTab === 'phases'
-                ? 'border-b-2 border-burgundy text-burgundy'
-                : 'text-off-white hover:text-burgundy-light'
-            }`}
-          >
-            Phases & Progress
           </button>
           <button
             onClick={() => setActiveTab('skills')}
@@ -82,14 +72,14 @@ export default function AIJourneyPage() {
             AI Skills Matrix
           </button>
           <button
-            onClick={() => setActiveTab('roadmap')}
+            onClick={() => setActiveTab('combined')}
             className={`py-2 px-1 -mb-px font-medium text-sm ${
-              activeTab === 'roadmap'
+              activeTab === 'combined'
                 ? 'border-b-2 border-burgundy text-burgundy'
                 : 'text-off-white hover:text-burgundy-light'
             }`}
           >
-            Roadmap
+            Combined Capabilities
           </button>
           <button
             onClick={() => setActiveTab('casestudies')}
@@ -106,6 +96,13 @@ export default function AIJourneyPage() {
 
       {/* Tab Content */}
       <div className="mt-6">
+        {activeTab === 'roadmap' && (
+          <div>
+            <h2 className="text-2xl font-bold text-burgundy mb-4">Learning Roadmap</h2>
+            <RoadmapTimeline milestones={journey.roadmap} />
+          </div>
+        )}
+
         {activeTab === 'foundation' && (
           <div>
             <h2 className="text-2xl font-bold text-burgundy mb-4">Foundation Skills</h2>
@@ -117,6 +114,16 @@ export default function AIJourneyPage() {
           </div>
         )}
 
+        {activeTab === 'skills' && (
+          <div>
+            <h2 className="text-2xl font-bold text-burgundy mb-4">AI Skills Matrix</h2>
+            <p className="text-off-white mb-6">
+              Core skills needed across Cloud Infrastructure, Data Management, Workflow Implementation, and AI Applications.
+            </p>
+            <SkillsMatrix skillsMap={journey.skillsMap} />
+          </div>
+        )}
+
         {activeTab === 'combined' && (
           <div>
             <h2 className="text-2xl font-bold text-burgundy mb-4">Combined Capabilities</h2>
@@ -125,31 +132,6 @@ export default function AIJourneyPage() {
               that position me to deliver value across multiple phases of the AI S-curve.
             </p>
             <CombinedCapabilities combinedCapabilities={journey.combinedCapabilities} />
-          </div>
-        )}
-
-        {activeTab === 'phases' && (
-          <div>
-            <h2 className="text-2xl font-bold text-burgundy mb-4">AI S-Curve Phases</h2>
-            <div className="grid gap-6">
-              {journey.phasesOverview.map((phase, index) => (
-                <PhaseProgressBar key={index} phase={phase} />
-              ))}
-            </div>
-          </div>
-        )}
-
-        {activeTab === 'skills' && (
-          <div>
-            <h2 className="text-2xl font-bold text-burgundy mb-4">AI Skills Matrix</h2>
-            <SkillsMatrix skillsMap={journey.skillsMap} />
-          </div>
-        )}
-
-        {activeTab === 'roadmap' && (
-          <div>
-            <h2 className="text-2xl font-bold text-burgundy mb-4">Learning Roadmap</h2>
-            <RoadmapTimeline milestones={journey.roadmap} />
           </div>
         )}
 
