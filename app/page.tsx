@@ -1,5 +1,6 @@
 'use client';
 
+import React, { useEffect } from 'react';
 import ExperienceSection from '@/components/experience/ExperienceSection';
 import experiencesData from '../data/experiences.json';
 import SkillsSection from '@/components/skills/SkillsSection';
@@ -35,13 +36,30 @@ function cleanSkillsData(rawData: RawSkillsData): SkillsData {
 const typedSkillsData = cleanSkillsData(skillsData);
 
 export default function HomeContent() {
+  useEffect(() => {
+    // Handle initial page load with hash in URL
+    if (typeof window !== 'undefined') {
+      // Short timeout to ensure the page is fully loaded
+      setTimeout(() => {
+        const hash = window.location.hash;
+        if (hash) {
+          const elementId = hash.substring(1); // Remove the # character
+          const element = document.getElementById(elementId);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      }, 100);
+    }
+  }, []);
+
   return (
     <main>
-      <section id="skills" className="mt-8 scroll-margin"> 
+      <section id="skills" className="mt-8 scroll-mt-24 md:scroll-mt-32"> 
         <SkillsSection data={typedSkillsData.skills} /> 
       </section>
       
-      <section id="experience" className="mt-8 scroll-margin">
+      <section id="experience" className="mt-8 scroll-mt-24 md:scroll-mt-32">
         <ExperienceSection areas={experiencesData.professionalAreas} /> 
       </section>
     </main>

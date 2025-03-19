@@ -22,7 +22,16 @@ const PortfolioLayout = ({ children }: { children: React.ReactNode }) => {
         py-3 px-4 md:py-6 md:px-6
       ">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
-          <Link href="/" className="flex items-center">
+          <Link 
+            href="/" 
+            className="flex items-center"
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+              // Update URL without the hash
+              window.history.pushState({}, '', '/');
+            }}
+          >
             <Image
               src="/images/logo.png"
               alt="David Liew Logo"
@@ -34,13 +43,39 @@ const PortfolioLayout = ({ children }: { children: React.ReactNode }) => {
           </Link>
 
           <div className="flex space-x-6 md:space-x-10">
-            <Link href="/#top" className="text-off-white hover:text-burgundy transition-colors duration-300">
-              <span className="text-sm md:text-base">About</span>
-            </Link>
-            <Link href="/#skills" className="text-off-white hover:text-burgundy transition-colors duration-300">
+            <Link 
+              href="/#skills" 
+              className="text-off-white hover:text-burgundy transition-colors duration-300"
+              onClick={(e) => {
+                // Only use custom scroll behavior if already on the homepage
+                if (isHomePage) {
+                  e.preventDefault();
+                  const skillsSection = document.getElementById('skills');
+                  if (skillsSection) {
+                    skillsSection.scrollIntoView({ behavior: 'smooth' });
+                    window.history.pushState({}, '', '/#skills');
+                  }
+                }
+              }}
+            >
               <span className="text-sm md:text-base">Skills</span>
             </Link>
-            <Link href="/#experience" className="text-off-white hover:text-burgundy transition-colors duration-300">
+            <Link 
+              href="/#experience" 
+              className="text-off-white hover:text-burgundy transition-colors duration-300"
+              onClick={(e) => {
+                // Only use custom scroll behavior if already on the homepage
+                if (isHomePage) {
+                  e.preventDefault();
+                  const experienceSection = document.getElementById('experience');
+                  if (experienceSection) {
+                    experienceSection.scrollIntoView({ behavior: 'smooth' });
+                    window.history.pushState({}, '', '/#experience');
+                  }
+                }
+                // If not on homepage, default behavior will navigate to /#experience
+              }}
+            >
               <span className="text-sm md:text-base">Experience</span>
             </Link>
             <Link href="/ai-journey" className="text-off-white hover:text-burgundy transition-colors duration-300">
