@@ -2,13 +2,14 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import journeyData from '../../data/ai-journey.json';
-import { AIJourneyData } from '../../types/ai-journey';
+import journeyData from '@/data/ai-journey.json';
+import { AIJourneyData, CaseStudy } from '@/types/ai-journey';
 import { SkillsMatrix, RoadmapTimeline, CaseStudyCard, FoundationSkills, CombinedCapabilities } from '../../components/skills';
 
 export default function AIJourneyPage() {
   const [activeTab, setActiveTab] = useState<string>('roadmap');
-  const { journey } = journeyData as AIJourneyData;
+  const typedJourneyData = journeyData as AIJourneyData;
+  const { journey } = typedJourneyData;
 
   return (
     <div className="min-h-screen">
@@ -139,7 +140,7 @@ export default function AIJourneyPage() {
           <div>
             <h2 className="text-2xl font-bold text-burgundy mb-4">Case Studies</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {journey.casestudies.map((study, index) => (
+              {journey.casestudies.map((study: CaseStudy, index: number) => (
                 <CaseStudyCard key={index} casestudy={study} />
               ))}
             </div>

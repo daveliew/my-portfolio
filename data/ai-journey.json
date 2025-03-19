@@ -218,7 +218,7 @@
       {
         "name": "Technical Solution Design",
         "description": "Combining technical knowledge with AI to solve business problems",
-        "level": 4,
+        "level": 3,
         "foundation": ["Technical Skills", "AI Implementation", "Pattern Recognition"],
         "applications": [
           "Designing intelligent automation workflows",
@@ -229,7 +229,7 @@
       {
         "name": "AI Implementation Leadership",
         "description": "Guiding teams through AI transformation projects",
-        "level": 4,
+        "level": 2,
         "foundation": ["Team Collaboration", "Strategic Thinking", "AI Implementation"],
         "applications": [
           "Managing cross-functional AI implementation teams",
@@ -241,30 +241,30 @@
     "roadmap": [
       {
         "milestone": "Build Agent-based Research Assistant",
-        "phase": "Phase 3",
-        "targetDate": "2024-05-30",
+        "targetDate": "2025-03-01",
         "description": "Implement a system of autonomous agents that can perform market research and compile findings",
         "requiredSkills": ["Autonomous Agents", "AI Workflow Integration", "Data Management"],
+        "technologies": ["CrewAI", "LangChain", "OpenAI API", "Vector Databases", "n8n"],
         "status": "In Progress",
         "completionPercentage": 65,
         "foundationSkillsUtilized": ["Pattern Recognition", "Strategic Thinking", "Technical Skills"]
       },
       {
         "milestone": "Develop AI Strategy Workshop",
-        "phase": "Phase 2-3",
-        "targetDate": "2024-07-15",
+        "targetDate": "2025-06-01",
         "description": "Create a workshop framework to help businesses identify and implement AI opportunities",
         "requiredSkills": ["AI Workflow Integration", "Business Process Analysis", "Strategic Planning"],
+        "technologies": ["Asana", "LLM Integration", "Process Mapping Tools", "Analytics Dashboard"],
         "status": "Planning",
         "completionPercentage": 20,
         "foundationSkillsUtilized": ["Strategic Thinking", "Business Development", "Team Collaboration"]
       },
       {
         "milestone": "Create Custom Agent Framework",
-        "phase": "Phase 3",
-        "targetDate": "2024-09-01",
+        "targetDate": "2025-09-01",
         "description": "Develop a reusable framework for building industry-specific autonomous agents",
         "requiredSkills": ["Autonomous Agents", "Programming", "System Architecture"],
+        "technologies": ["Python", "LangChain", "CrewAI", "Docker", "FastAPI"],
         "status": "Not Started",
         "completionPercentage": 0,
         "foundationSkillsUtilized": ["Technical Skills", "AI Implementation", "Pattern Recognition"]
@@ -274,7 +274,6 @@
       {
         "title": "Marketing & Operations Automation - Ray of Joy Therapy",
         "date": "2025-03-01",
-        "phase": "Phase 2",
         "description": "Implementing comprehensive automation solutions for therapy practice management, marketing operations, and client engagement at rayofjoytherapy.com",
         "outcomes": [
           "Streamlined client onboarding and scheduling processes",
@@ -287,7 +286,6 @@
       {
         "title": "Autonomous Research Team for Market Analysis",
         "date": "2025-01-15",
-        "phase": "Phase 3",
         "description": "Built a CrewAI-based system of agents that collaboratively performed market research and trend analysis",
         "outcomes": [
           "Delivered comprehensive market reports in 1/3 of the time",
@@ -300,9 +298,8 @@
       {
         "title": "B2B Corporate Gift Platform Transformation",
         "date": "2025-04-01",
-        "phase": "Phase 2",
         "status": "Planned",
-        "description": "Website rebuild and business intelligence implementation for Singapore's leading corporate gift company",
+        "description": "Website rebuild and business intelligence implementation for leading Singapore corporate gift company",
         "outcomes": [
           "Enhanced digital presence and user experience",
           "Integrated business intelligence for data-driven decisions",

@@ -5,23 +5,19 @@ interface CaseStudyCardProps {
   casestudy: CaseStudy;
 }
 
-const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ casestudy }) => {
+export function CaseStudyCard({ casestudy }: CaseStudyCardProps) {
   return (
-    <div className="bg-dark-gray rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-      <div className="p-5">
-        <div className="flex justify-between items-start mb-3">
-          <h3 className="text-xl font-semibold text-burgundy">{casestudy.title}</h3>
-          <span className="bg-burgundy-dark text-white text-xs px-2 py-1 rounded-full">
-            {casestudy.phase}
-          </span>
-        </div>
-        
-        <div className="text-sm text-gray-400 mb-4">
-          {new Date(casestudy.date).toLocaleDateString(undefined, {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-          })}
+    <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+      <div className="p-6">
+        <div className="mb-2">
+          <h3 className="text-xl font-semibold text-off-white">{casestudy.title}</h3>
+          <div className="text-sm text-gray-400 mt-1">
+            {new Date(casestudy.date).toLocaleDateString(undefined, {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric'
+            })}
+          </div>
         </div>
 
         <p className="text-gray-300 mb-4">{casestudy.description}</p>
@@ -56,7 +52,7 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ casestudy }) => {
               {casestudy.foundationSkillsApplied.map((skill, index) => (
                 <span
                   key={index}
-                  className="px-2 py-1 text-xs bg-burgundy-dark text-white rounded-md"
+                  className="px-2 py-1 text-xs bg-gray-700 text-gray-300 rounded-md"
                 >
                   {skill}
                 </span>
@@ -67,6 +63,4 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ casestudy }) => {
       </div>
     </div>
   );
-};
-
-export default CaseStudyCard; 
+} 

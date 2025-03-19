@@ -1,9 +1,9 @@
-export { default as SkillsSection } from './SkillsSection';
-export { default as SkillDetails } from './SkillDetails';
-export { default as SkillCard } from './SkillCard';
-export { default as PhaseProgressBar } from './PhaseProgressBar';
-export { default as SkillsMatrix } from './SkillsMatrix';
-export { default as RoadmapTimeline } from './RoadmapTimeline';
-export { default as CaseStudyCard } from './CaseStudyCard';
-export { default as FoundationSkills } from './FoundationSkills';
-export { default as CombinedCapabilities } from './CombinedCapabilities';
+export { SkillsSection } from './SkillsSection';
+export { SkillDetails } from './SkillDetails';
+export { SkillCard } from './SkillCard';
+export { PhaseProgressBar } from './PhaseProgressBar';
+export { SkillsMatrix } from './SkillsMatrix';
+export { RoadmapTimeline } from './RoadmapTimeline';
+export { CaseStudyCard } from './CaseStudyCard';
+export { FoundationSkills } from './FoundationSkills';
+export { CombinedCapabilities } from './CombinedCapabilities';

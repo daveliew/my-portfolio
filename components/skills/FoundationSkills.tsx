@@ -5,7 +5,7 @@ interface FoundationSkillsProps {
   foundationSkills: FoundationCategory[];
 }
 
-const FoundationSkills: React.FC<FoundationSkillsProps> = ({ foundationSkills }) => {
+export function FoundationSkills({ foundationSkills }: FoundationSkillsProps) {
   const [expandedSkill, setExpandedSkill] = useState<string>("Pattern Recognition");
 
   const toggleSkill = (skillName: string) => {
@@ -69,6 +69,4 @@ const FoundationSkills: React.FC<FoundationSkillsProps> = ({ foundationSkills })
       ))}
     </div>
   );
-};
-
-export default FoundationSkills; 
+} 

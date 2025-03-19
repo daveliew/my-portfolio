@@ -1,19 +1,11 @@
 import React from 'react';
-
-interface SkillCategory {
-  category: string;
-  skills: Array<{
-    name: string;
-    description: string;
-    relatedTechnologies?: string[];
-  }>;
-}
+import { SkillCategory } from '@/types/ai-journey';
 
 interface SkillsMatrixProps {
   skillsMap: SkillCategory[];
 }
 
-const SkillsMatrix: React.FC<SkillsMatrixProps> = ({ skillsMap }) => {
+export function SkillsMatrix({ skillsMap }: SkillsMatrixProps) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
       {skillsMap.map((categoryData) => (
@@ -25,9 +17,9 @@ const SkillsMatrix: React.FC<SkillsMatrixProps> = ({ skillsMap }) => {
                 <h4 className="text-burgundy font-medium mb-2">{skill.name}</h4>
                 <p className="text-gray-300 text-sm mb-3">{skill.description}</p>
                 <div className="flex flex-wrap gap-2">
-                  {skill.relatedTechnologies?.map((tech, idx) => (
+                  {skill.keyLearnings.map((learning: string, idx: number) => (
                     <span key={idx} className="px-2 py-1 text-xs bg-gray-700 text-gray-300 rounded-md">
-                      {tech}
+                      {learning}
                     </span>
                   ))}
                 </div>
@@ -38,6 +30,4 @@ const SkillsMatrix: React.FC<SkillsMatrixProps> = ({ skillsMap }) => {
       ))}
     </div>
   );
-};
-
-export default SkillsMatrix; 
+} 
