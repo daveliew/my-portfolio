@@ -1,10 +1,16 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import PortfolioSummary from '../common/PortfolioSummary';
 import ImpactfulStatement from '../common/ImpactfulStatement';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const PortfolioLayout = ({ children }: { children: React.ReactNode }) => {
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
+
   return (
     <div className="flex flex-col min-h-screen bg-space-black text-off-white">
       {/* Mobile-first Navigation */}
@@ -16,7 +22,7 @@ const PortfolioLayout = ({ children }: { children: React.ReactNode }) => {
         py-3 px-4 md:py-6 md:px-6
       ">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
-          <Link href="#top" className="flex items-center">
+          <Link href="/" className="flex items-center">
             <Image
               src="/images/logo.png"
               alt="David Liew Logo"
@@ -27,16 +33,19 @@ const PortfolioLayout = ({ children }: { children: React.ReactNode }) => {
             <h1 className="text-xl md:text-2xl font-bold text-burgundy">daveliew</h1>
           </Link>
 
-          <div className="flex space-x-8 md:space-x-12">
-            <a href="#top" className="text-off-white hover:text-burgundy transition-colors duration-300">
+          <div className="flex space-x-6 md:space-x-10">
+            <Link href="/#top" className="text-off-white hover:text-burgundy transition-colors duration-300">
               <span className="text-sm md:text-base">About</span>
-            </a>
-            <a href="#skills" className="text-off-white hover:text-burgundy transition-colors duration-300">
+            </Link>
+            <Link href="/#skills" className="text-off-white hover:text-burgundy transition-colors duration-300">
               <span className="text-sm md:text-base">Skills</span>
-            </a>
-            <a href="#experience" className="text-off-white hover:text-burgundy transition-colors duration-300">
+            </Link>
+            <Link href="/#experience" className="text-off-white hover:text-burgundy transition-colors duration-300">
               <span className="text-sm md:text-base">Experience</span>
-            </a>
+            </Link>
+            <Link href="/ai-journey" className="text-off-white hover:text-burgundy transition-colors duration-300">
+              <span className="text-sm md:text-base">AI Journey</span>
+            </Link>
           </div>
         </div>
       </nav>
@@ -51,8 +60,12 @@ const PortfolioLayout = ({ children }: { children: React.ReactNode }) => {
         bg-gradient-to-b from-[var(--space-black-light)] to-[var(--space-black)]
       ">
         <div className="max-w-4xl mx-auto">
-          <ImpactfulStatement />
-          <PortfolioSummary className="mt-8 md:mt-12" />
+          {isHomePage && (
+            <>
+              <ImpactfulStatement />
+              <PortfolioSummary className="mt-8 md:mt-12" />
+            </>
+          )}
           {children}
         </div>
       </main>

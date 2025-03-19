@@ -1,3 +1,9 @@
-export * from './SkillsSection';
-export * from './SkillDetails';
-export * from './SkillCard';
+export { default as SkillsSection } from './SkillsSection';
+export { default as SkillDetails } from './SkillDetails';
+export { default as SkillCard } from './SkillCard';
+export { default as PhaseProgressBar } from './PhaseProgressBar';
+export { default as SkillsMatrix } from './SkillsMatrix';
+export { default as RoadmapTimeline } from './RoadmapTimeline';
+export { default as CaseStudyCard } from './CaseStudyCard';
+export { default as FoundationSkills } from './FoundationSkills';
+export { default as CombinedCapabilities } from './CombinedCapabilities';
