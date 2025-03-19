@@ -43,12 +43,13 @@ export interface CombinedCapability {
 export interface Milestone {
   milestone: string;
   phase?: string;
+  startDate: string;
   targetDate: string;
   description: string;
   requiredSkills: string[];
   technologies: string[];
   status: string;
-  completionPercentage: number;
+  completionPercentage?: number;
   foundationSkillsUtilized?: string[];
 }
 
