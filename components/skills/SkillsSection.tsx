@@ -9,7 +9,7 @@ interface SkillsSectionProps {
   data: Skill[];
 }
 
-const SkillsSection: React.FC<SkillsSectionProps> = ({ data }) => {
+export const SkillsSection: React.FC<SkillsSectionProps> = ({ data }) => {
   const [selectedSkill, setSelectedSkill] = useState<Skill | null>(data[0] || null);
 
   const handleSkillClick = (skill: Skill) => {
@@ -45,5 +45,3 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ data }) => {
     </section>
   );
 };
-
-export default SkillsSection;

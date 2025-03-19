@@ -1,4 +1,4 @@
-export { SkillsSection } from './SkillsSection';
+export { default as SkillsSection } from './SkillsSection';
 export { SkillDetails } from './SkillDetails';
 export { SkillCard } from './SkillCard';
 export { PhaseProgressBar } from './PhaseProgressBar';
