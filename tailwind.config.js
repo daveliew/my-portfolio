@@ -15,10 +15,28 @@ module.exports = {
         'primary-yellow': 'var(--primary-yellow)',
         'primary-yellow-dark': 'var(--primary-yellow-dark)',
         'primary-yellow-10': 'var(--primary-yellow-10)',
+        // New Tech-AI Fusion Color Palette
+        'deep-navy': 'var(--deep-navy)',
+        'twilight-purple': 'var(--twilight-purple)',
+        'tech-burgundy': 'var(--tech-burgundy)',
+        'warm-sand': 'var(--warm-sand)',
+        'cool-mint': 'var(--cool-mint)',
+        'vibrant-teal': 'var(--vibrant-teal)',
       },
       fontFamily: {
         sans: ['var(--font-raleway)', 'sans-serif'],
         merriweather: ['var(--font-merriweather)', 'serif'],
+      },
+      boxShadow: {
+        'ambient': 'var(--ambient-shadow)',
+        'hover-glow': 'var(--hover-glow)',
+        'active-pulse': 'var(--active-pulse)',
+      },
+      backgroundImage: {
+        'depth-gradient': 'var(--depth-gradient)',
+        'accent-gradient': 'var(--accent-gradient)',
+        'warm-gradient': 'var(--warm-gradient)',
+        'reflection': 'var(--reflection)',
       },
     },
   },
