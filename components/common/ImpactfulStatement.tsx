@@ -43,8 +43,7 @@ const ImpactfulStatement = () => {
         to create groundbreaking solutions for the challenges of today and tomorrow.
       </p>
       
-      {/* Decorative elements */}
-      <div className="absolute left-0 top-0 w-full h-1 bg-gradient-to-r from-burgundy via-primary-yellow to-light-burgundy opacity-20" />
+      <div className="mt-8 w-full h-1 bg-gradient-to-r from-burgundy via-primary-yellow to-light-burgundy opacity-20" />
     </div>
   );
 };
