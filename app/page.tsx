@@ -1,13 +1,13 @@
 'use client';
 
 import React, { useEffect } from 'react';
+import ImpactfulStatement from '@/components/common/ImpactfulStatement';
+import LifeSystem from '@/components/common/LifeSystem';
 import ExperienceSection from '@/components/experience/ExperienceSection';
 import experiencesData from '../data/experiences.json';
 import SkillsSection from '@/components/skills/SkillsSection';
 import skillsData from '@/data/skills.json';
 import { SkillsData } from '@/types/skills';
-import ImpactfulStatement from '@/components/common/ImpactfulStatement';
-import CoreImpactSystems from '@/components/common/LifeSystem';
 
 // Define types for the raw data structure
 interface RawSkill {
@@ -61,7 +61,7 @@ export default function HomeContent() {
 
       <main>
       <section id="systems" className="mt-8 scroll-mt-24 md:scroll-mt-32"> 
-          <CoreImpactSystems />        
+          <LifeSystem />        
       </section>
 
         <section id="skills" className="mt-8 scroll-mt-24 md:scroll-mt-32"> 

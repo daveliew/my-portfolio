@@ -3,7 +3,6 @@
 import React from 'react';
 import { usePathname } from 'next/navigation';
 import Head from 'next/head';
-import Footer from './Footer';
 import Navbar from './Navbar';
 
 interface PortfolioLayoutProps {
@@ -29,7 +28,6 @@ const PortfolioLayout: React.FC<PortfolioLayoutProps> = ({ children }) => {
         {children}
       </main>
 
-      <Footer />
     </div>
   );
 };

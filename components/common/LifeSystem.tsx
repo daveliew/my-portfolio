@@ -49,7 +49,7 @@ const LifeSystem = () => {
             <span className="block w-full text-center px-3 py-2 bg-gray-700 rounded text-off-white text-sm">AI Enhancement</span>
           </div>
           <div className="mt-auto pt-4 border-t border-gray-700/50 text-sm text-gray-300">
-            <p className="mb-2"><span className="font-semibold text-gray-200">Impact:</span> Your insights reach 1000x more people</p>
+            <p className="mb-2"><span className="font-semibold text-gray-200">Impact:</span> Insights reach 100x more people</p>
 
           </div>
         </div>
