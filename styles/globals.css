@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 :root {
-  /* Original colors (kept for backward compatibility) */
   --space-black: #1E1E22;
   --space-black-light: #242428;
   --burgundy: #8d263b;
@@ -14,37 +13,11 @@
   --primary-yellow-dark: #B8960C;
   --primary-yellow-10: rgba(212, 175, 55, 0.1);
   --gradient-dark: linear-gradient(to bottom, var(--space-black-light), var(--space-black));
-  
-  /* New Tech-AI Fusion Color Palette */
-  --deep-navy: #1a2b42;
-  --twilight-purple: #5d4a7c;
-  --tech-burgundy: #9a2d4f;
-  --warm-sand: #e9dfca;
-  --cool-mint: #a3d9c9;
-  --vibrant-teal: #20c4b3;
-  
-  /* Supporting Colors */
-  --dark-shadow: rgba(10, 15, 28, 0.85);
-  --light-glow: rgba(255, 255, 255, 0.12);
-  
-  /* Gradients */
-  --depth-gradient: linear-gradient(145deg, var(--deep-navy), #0d1726);
-  --accent-gradient: linear-gradient(to right, var(--vibrant-teal), #17a6e0);
-  --warm-gradient: linear-gradient(to bottom right, var(--tech-burgundy), #c75e69);
-  
-  /* Lighting Effects */
-  --directional-light: drop-shadow(0 0 8px var(--light-glow));
-  --ambient-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-  --reflection: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, transparent 50%);
-  
-  /* Interactive States */
-  --hover-glow: 0 0 15px rgba(32, 196, 179, 0.5);
-  --active-pulse: 0 0 0 2px rgba(32, 196, 179, 0.4);
 }
 
 @layer base {
   body {
-    @apply bg-[var(--deep-navy)] text-[var(--warm-sand)];
+    @apply bg-[var(--space-black)] text-[var(--off-white)];
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -58,28 +31,11 @@
   }
   
   .btn {
-    @apply px-4 py-2 rounded-md bg-[var(--vibrant-teal)] text-[var(--warm-sand)] hover:shadow-[var(--hover-glow)] transition-all duration-200 transform hover:-translate-y-0.5;
+    @apply px-4 py-2 rounded-md bg-[var(--burgundy)] text-[var(--off-white)] hover:bg-[var(--light-burgundy)] transition-colors duration-200;
   }
   
   .card {
-    @apply bg-[var(--deep-navy)] rounded-lg p-6 border border-[var(--light-glow)] shadow-[var(--ambient-shadow)] hover:shadow-xl transition-all duration-200 relative overflow-hidden;
-  }
-  
-  .card::before {
-    content: '';
-    @apply absolute top-0 left-0 right-0 h-2/5 pointer-events-none;
-    background: var(--reflection);
-    border-radius: inherit;
-  }
-  
-  .section-highlight {
-    @apply bg-[var(--twilight-purple)] relative overflow-hidden;
-  }
-  
-  .section-highlight::after {
-    content: '';
-    @apply absolute -top-1/2 -right-1/2 w-full h-full pointer-events-none;
-    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    @apply bg-[var(--dark-gray)] rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-200;
   }
 }
 
@@ -89,7 +45,7 @@
   }
   
   .accent-text {
-    @apply text-[var(--vibrant-teal)];
+    @apply text-[var(--burgundy)];
   }
   
   .logo-text {
@@ -110,20 +66,5 @@
 
   .scroll-margin {
     scroll-margin-top: 5rem;
-  }
-  
-  .reflective-surface {
-    @apply relative overflow-hidden;
-  }
-  
-  .reflective-surface::before {
-    content: '';
-    @apply absolute top-0 left-0 right-0 h-2/5 pointer-events-none;
-    background: var(--reflection);
-    border-radius: inherit;
-  }
-  
-  .directional-light {
-    filter: var(--directional-light);
   }
 }
