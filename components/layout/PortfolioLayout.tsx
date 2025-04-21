@@ -1,100 +1,35 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import Head from 'next/head';
+import Footer from './Footer';
+import Navbar from './Navbar';
 
-const PortfolioLayout = ({ children }: { children: React.ReactNode }) => {
+interface PortfolioLayoutProps {
+  children: React.ReactNode;
+}
+
+const PortfolioLayout: React.FC<PortfolioLayoutProps> = ({ children }) => {
   const pathname = usePathname();
   const isHomePage = pathname === '/';
 
   return (
-    <div className="flex flex-col min-h-screen bg-space-black text-off-white">
-      {/* Mobile-first Navigation */}
-      <nav className="
-        w-full
-        bg-dark-gray
-        border-b border-gray-800
-        sticky top-0 z-50
-        py-3 px-4 md:py-6 md:px-6
-      ">
-        <div className="max-w-6xl mx-auto flex justify-between items-center">
-          <Link 
-            href="/" 
-            className="flex items-center"
-            onClick={(e) => {
-              e.preventDefault();
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-              // Update URL without the hash
-              window.history.pushState({}, '', '/');
-            }}
-          >
-            <Image
-              src="/images/logo.png"
-              alt="David Liew Logo"
-              width={28}
-              height={28}
-              className="mr-2"
-            />
-            <h1 className="text-xl md:text-2xl font-bold text-burgundy">daveliew</h1>
-          </Link>
+    <div className="min-h-screen bg-dark-gray text-off-white font-sans">
+      <Head>
+        <title>David Liew</title>
+        <meta name="description" content="David Liew's portfolio, AI journey and life musings" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-          <div className="flex space-x-6 md:space-x-10">
-            <Link 
-              href="/#skills" 
-              className="text-off-white hover:text-burgundy transition-colors duration-300"
-              onClick={(e) => {
-                // Only use custom scroll behavior if already on the homepage
-                if (isHomePage) {
-                  e.preventDefault();
-                  const skillsSection = document.getElementById('skills');
-                  if (skillsSection) {
-                    skillsSection.scrollIntoView({ behavior: 'smooth' });
-                    window.history.pushState({}, '', '/#skills');
-                  }
-                }
-              }}
-            >
-              <span className="text-sm md:text-base">Skills</span>
-            </Link>
-            <Link 
-              href="/#experience" 
-              className="text-off-white hover:text-burgundy transition-colors duration-300"
-              onClick={(e) => {
-                // Only use custom scroll behavior if already on the homepage
-                if (isHomePage) {
-                  e.preventDefault();
-                  const experienceSection = document.getElementById('experience');
-                  if (experienceSection) {
-                    experienceSection.scrollIntoView({ behavior: 'smooth' });
-                    window.history.pushState({}, '', '/#experience');
-                  }
-                }
-                // If not on homepage, default behavior will navigate to /#experience
-              }}
-            >
-              <span className="text-sm md:text-base">Experience</span>
-            </Link>
-            <Link href="/ai-journey" className="text-off-white hover:text-burgundy transition-colors duration-300">
-              <span className="text-sm md:text-base">AI Journey</span>
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <Navbar isHomePage={isHomePage} />
 
-      {/* Main Content */}
-      <main className="
-        flex-1
-        w-full
-        px-4 py-6
-        md:px-8 md:py-8
-        lg:px-12 lg:py-10
-        bg-gradient-to-b from-[var(--space-black-light)] to-[var(--space-black)]
-      ">
-
+      <main className="max-w-6xl mx-auto px-4 md:px-6 py-8 md:py-12">
         {children}
       </main>
+
+      <Footer />
     </div>
   );
 };

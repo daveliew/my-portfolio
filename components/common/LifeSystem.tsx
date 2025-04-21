@@ -7,17 +7,16 @@ const borderColors = {
   wealth: 'border-blue-500'    
 };
 
-const CoreImpactSystems = () => {
+const LifeSystem = () => {
   return (
     <>
-      {/* The Virtuous Cycle Section - Moved to the top */}
       <div className="text-center mb-12">
         <h3 className="text-2xl font-semibold text-off-white mb-3">The Virtuous Cycle</h3>
         <p className="text-lg text-gray-300 mb-2">
           Build Time → Capture Knowledge → Create Wealth → Reinvest
         </p>
         <p className="text-gray-400 italic text-sm mb-4">
-          A virtuous cycle that compounds across life seasons
+          A virtuous cycle that compounds across seasons in life 
         </p>
         {/* Philosophical links kept here for context, could be moved if needed */}
         <p className="text-gray-300 max-w-2xl mx-auto text-sm">
@@ -37,7 +36,7 @@ const CoreImpactSystems = () => {
           </div>
           <div className="mt-auto pt-4 border-t border-gray-700/50 text-sm text-gray-300">
             <p className="mb-2"><span className="font-semibold text-gray-200">Impact:</span> Each hour invested = 10+ hours returned</p>
-            <p><span className="font-semibold text-gray-200">Season Focus:</span> Foundation (40-45)</p>
+            
           </div>
         </div>
 
@@ -51,7 +50,7 @@ const CoreImpactSystems = () => {
           </div>
           <div className="mt-auto pt-4 border-t border-gray-700/50 text-sm text-gray-300">
             <p className="mb-2"><span className="font-semibold text-gray-200">Impact:</span> Your insights reach 1000x more people</p>
-            <p><span className="font-semibold text-gray-200">Season Focus:</span> Skill Mastery (45-50)</p>
+
           </div>
         </div>
 
@@ -65,7 +64,7 @@ const CoreImpactSystems = () => {
           </div>
           <div className="mt-auto pt-4 border-t border-gray-700/50 text-sm text-gray-300">
             <p className="mb-2"><span className="font-semibold text-gray-200">Impact:</span> Financial freedom for meaning over obligation</p>
-            <p><span className="font-semibold text-gray-200">Season Focus:</span> Leverage & Transition (50-60)</p>
+
           </div>
         </div>
       </div>
@@ -85,9 +84,9 @@ const CoreImpactSystems = () => {
           <div>
             <h4 className="text-lg font-medium text-green-500 mb-2">2. Use reclaimed time to build your Knowledge Amplifier</h4>
             <ul className="list-disc list-inside ml-4 space-y-1 text-sm">
-              <li>Develop your personal knowledge management system (Obsidian/Notion)</li>
-              <li>Create content that packages your insights for others</li>
-              <li>Use AI to enhance and distribute your thinking</li>
+              <li>Develop personal knowledge management system (Obsidian/Notion)</li>
+              <li>Create content that packages insights for others</li>
+              <li>Use AI to enhance and distribute thinking</li>
             </ul>
           </div>
           <div>
@@ -109,4 +108,4 @@ const CoreImpactSystems = () => {
   );
 };
 
-export default CoreImpactSystems; 
+export default LifeSystem; 

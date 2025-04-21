@@ -7,7 +7,7 @@ import SkillsSection from '@/components/skills/SkillsSection';
 import skillsData from '@/data/skills.json';
 import { SkillsData } from '@/types/skills';
 import ImpactfulStatement from '@/components/common/ImpactfulStatement';
-import CoreImpactSystems from '@/components/common/CoreImpactSystems';
+import CoreImpactSystems from '@/components/common/LifeSystem';
 
 // Define types for the raw data structure
 interface RawSkill {
