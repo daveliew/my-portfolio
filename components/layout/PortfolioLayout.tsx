@@ -2,8 +2,6 @@
 
 import React from 'react';
 import Image from 'next/image';
-import PortfolioSummary from '../common/PortfolioSummary';
-import ImpactfulStatement from '../common/ImpactfulStatement';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -94,15 +92,8 @@ const PortfolioLayout = ({ children }: { children: React.ReactNode }) => {
         lg:px-12 lg:py-10
         bg-gradient-to-b from-[var(--space-black-light)] to-[var(--space-black)]
       ">
-        <div className="max-w-4xl mx-auto">
-          {isHomePage && (
-            <>
-              <ImpactfulStatement />
-              <PortfolioSummary className="mt-8 md:mt-12" />
-            </>
-          )}
-          {children}
-        </div>
+
+        {children}
       </main>
     </div>
   );

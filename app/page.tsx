@@ -6,6 +6,8 @@ import experiencesData from '../data/experiences.json';
 import SkillsSection from '@/components/skills/SkillsSection';
 import skillsData from '@/data/skills.json';
 import { SkillsData } from '@/types/skills';
+import ImpactfulStatement from '@/components/common/ImpactfulStatement';
+import PortfolioSummary from '@/components/common/PortfolioSummary';
 
 // Define types for the raw data structure
 interface RawSkill {
@@ -54,14 +56,19 @@ export default function HomeContent() {
   }, []);
 
   return (
-    <main>
-      <section id="skills" className="mt-8 scroll-mt-24 md:scroll-mt-32"> 
-        <SkillsSection data={typedSkillsData.skills} /> 
-      </section>
-      
-      <section id="experience" className="mt-8 scroll-mt-24 md:scroll-mt-32">
-        <ExperienceSection areas={experiencesData.professionalAreas} /> 
-      </section>
-    </main>
+    <div className="max-w-4xl mx-auto">
+      <ImpactfulStatement />
+      <PortfolioSummary className="mt-8 md:mt-12" />
+
+      <main>
+        <section id="skills" className="mt-8 scroll-mt-24 md:scroll-mt-32"> 
+          <SkillsSection data={typedSkillsData.skills} /> 
+        </section>
+        
+        <section id="experience" className="mt-8 scroll-mt-24 md:scroll-mt-32">
+          <ExperienceSection areas={experiencesData.professionalAreas} /> 
+        </section>
+      </main>
+    </div>
   );
 }
