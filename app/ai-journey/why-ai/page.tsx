@@ -55,7 +55,7 @@ export default function WhyAIPage() {
             <h3 className="text-xl font-medium text-burgundy-light mb-2">Phase 3: AI Applications</h3>
             <p className="text-off-white">
               The next evolution involves building software applications with AI at their core. These solutions are designed 
-              from the ground up with AI capabilities, rather than simply adding AI to existing systems. We're seeing the rise 
+              from the ground up with AI capabilities, rather than simply adding AI to existing systems. We&apos;re seeing the rise 
               of copilots, autonomous agents, and AI-native applications.
             </p>
           </div>
