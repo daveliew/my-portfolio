@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function HowToLearnOverviewPage() {
   return (
@@ -16,7 +15,7 @@ export default function HowToLearnOverviewPage() {
       <div className="mb-10">
         <h2 className="text-2xl font-semibold text-burgundy mb-4">Learning Pathways</h2>
         <p className="text-off-white mb-6">
-          I've developed these learning pathways based on my own journey and extensive research into effective approaches for 
+          I&apos;ve developed these learning pathways based on my own journey and extensive research into effective approaches for 
           developing AI expertise. The pathways are designed to provide both breadth and depth, depending on your goals.
         </p>
 
@@ -25,7 +24,7 @@ export default function HowToLearnOverviewPage() {
             <h3 className="text-xl font-medium text-burgundy-light mb-3">Broad LLM Handling</h3>
             <p className="text-off-white mb-4">
               This pathway focuses on developing general skills for working with large language models across a variety of applications. 
-              It's ideal for professionals who need to incorporate AI capabilities into existing workflows or products.
+              It&apos;s ideal for professionals who need to incorporate AI capabilities into existing workflows or products.
             </p>
             <ul className="list-disc list-inside text-off-white mb-6 space-y-1.5">
               <li>Prompt engineering fundamentals</li>
@@ -42,7 +41,7 @@ export default function HowToLearnOverviewPage() {
             <h3 className="text-xl font-medium text-burgundy-light mb-3">AI Agent & RAG Development</h3>
             <p className="text-off-white mb-4">
               This advanced pathway focuses on building autonomous agents and retrieval-augmented generation (RAG) systems. 
-              It's designed for developers who want to create more sophisticated AI applications.
+              It&apos;s designed for developers who want to create more sophisticated AI applications.
             </p>
             <ul className="list-disc list-inside text-off-white mb-6 space-y-1.5">
               <li>Agent architecture design</li>
@@ -70,7 +69,7 @@ export default function HowToLearnOverviewPage() {
           <div className="bg-dark-gray p-5 rounded-lg">
             <h3 className="text-lg font-medium text-burgundy-light mb-2">Understand the Fundamentals</h3>
             <p className="text-off-white">
-              While you don't need to know everything about how models work, having a solid conceptual understanding will make you more effective.
+              While you don&apos;t need to know everything about how models work, having a solid conceptual understanding will make you more effective.
             </p>
           </div>
           

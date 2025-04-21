@@ -7,7 +7,7 @@ import SkillsSection from '@/components/skills/SkillsSection';
 import skillsData from '@/data/skills.json';
 import { SkillsData } from '@/types/skills';
 import ImpactfulStatement from '@/components/common/ImpactfulStatement';
-import PortfolioSummary from '@/components/common/PortfolioSummary';
+import CoreImpactSystems from '@/components/common/CoreImpactSystems';
 
 // Define types for the raw data structure
 interface RawSkill {
@@ -58,9 +58,12 @@ export default function HomeContent() {
   return (
     <div className="max-w-4xl mx-auto">
       <ImpactfulStatement />
-      <PortfolioSummary className="mt-8 md:mt-12" />
 
       <main>
+      <section id="systems" className="mt-8 scroll-mt-24 md:scroll-mt-32"> 
+          <CoreImpactSystems />        
+      </section>
+
         <section id="skills" className="mt-8 scroll-mt-24 md:scroll-mt-32"> 
           <SkillsSection data={typedSkillsData.skills} /> 
         </section>
