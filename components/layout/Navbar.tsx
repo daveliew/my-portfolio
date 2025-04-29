@@ -40,13 +40,6 @@ const Navbar: React.FC<NavbarProps> = ({ isHomePage }) => {
           className="flex items-center"
           onClick={handleLogoClick}
         >
-          <Image
-            src="/images/logo.png"
-            alt="David Liew Logo"
-            width={28}
-            height={28}
-            className="mr-2"
-          />
           <h1 className="text-xl md:text-2xl font-bold text-burgundy">daveliew</h1>
         </Link>
         

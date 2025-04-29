@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/luna');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -37,19 +40,19 @@
 
   /* Simplified heading hierarchy */
   h1 {
-    @apply text-4xl leading-tight font-bold font-merriweather mb-6;
+    @apply text-4xl leading-tight font-bold font-heading mb-6;
   }
 
   h2 {
-    @apply text-3xl leading-tight font-bold font-merriweather mb-5;
+    @apply text-3xl leading-tight font-bold font-heading mb-5;
   }
 
   h3 {
-    @apply text-2xl leading-tight font-bold font-merriweather mb-4;
+    @apply text-2xl leading-tight font-bold font-heading mb-4;
   }
 
   h4 {
-    @apply text-xl leading-tight font-bold font-merriweather mb-3;
+    @apply text-xl leading-tight font-bold font-heading mb-3;
   }
 
   p {
@@ -111,8 +114,8 @@
     display: none;
   }
   
-  .font-merriweather {
-    font-family: var(--font-merriweather);
+  .font-heading {
+    font-family: 'Luna', sans-serif;
   }
 
   .scroll-margin {
