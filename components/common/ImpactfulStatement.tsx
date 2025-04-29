@@ -7,27 +7,27 @@ const ImpactfulStatement = () => {
       text-center 
       pb-8 md:pb-12  
       px-4 md:px-8
-      bg-[var(--space-black-light)]
-      border-b border-gray-800
+      bg-[var(--background-secondary)]
+      border-b border-[var(--dark-grey-secondary)]
       scroll-margin-top-[8rem]
     " id="top">
 
       
       <h1 className="
         text-2xl sm:text-3xl md:text-4xl lg:text-5xl  
-        font-merriweather font-bold 
+        font-heading font-bold 
         leading-tight
         mb-4
         pt-8 md:pt-12
       ">
         Co-creating{' '}
-        <span className="text-[var(--burgundy)]">Tomorrow</span>{' '}
+        <span className="text-[var(--accent-primary)]">Tomorrow</span>{' '}
         through{' '}
-        <span className="text-[var(--primary-yellow)]">
+        <span className="text-[var(--accent-secondary)]">
           Human Creativity
         </span>{' '}
         and{' '}
-        <span className="text-[var(--light-burgundy)]">
+        <span className="text-[var(--accent-primary)]">
           AI Precision
         </span>
       </h1>
@@ -36,14 +36,14 @@ const ImpactfulStatement = () => {
         text-base md:text-lg 
         max-w-2xl 
         mx-auto 
-        text-gray-300
+        text-[var(--text-secondary)]
         leading-relaxed
       ">
-        Leveraging the power of human innovation and artificial intelligence 
-        to create groundbreaking solutions for the challenges of today and tomorrow.
+        I leverage the power of human innovation and artificial intelligence 
+        to co-create groundbreaking solutions for the challenges of today and tomorrow.
       </p>
       
-      <div className="mt-8 w-full h-1 bg-gradient-to-r from-burgundy via-primary-yellow to-light-burgundy opacity-20" />
+      <div className="mt-8 w-full h-1 bg-gradient-to-r from-[var(--accent-primary)] via-[var(--accent-secondary)] to-[var(--accent-primary)] opacity-20" />
     </div>
   );
 };

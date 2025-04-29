@@ -6,16 +6,27 @@
 @tailwind utilities;
 
 :root {
-  --space-black: #1E1E22;
-  --space-black-light: #242428;
-  --burgundy: #8d263b;
-  --light-burgundy: #C8102E;
-  --off-white: #f0f0f0;
-  --dark-gray: #1D1D1F;
-  --primary-yellow: #D4AF37;
-  --primary-yellow-dark: #B8960C;
-  --primary-yellow-10: rgba(212, 175, 55, 0.1);
-  --gradient-dark: linear-gradient(to bottom, var(--space-black-light), var(--space-black));
+  /* Core colors */
+  --dark-grey: #1E293B;
+  --dark-grey-secondary: #111827;
+  --hot-pink: #FF0081;
+  --beer-gold: #F8B400;
+  --off-white: #F9FAFB;
+  
+  /* Semantic colors */
+  --text-primary: var(--off-white);
+  --text-secondary: #94A3B8;
+  --background-primary: var(--dark-grey);
+  --background-secondary: var(--dark-grey-secondary);
+  --accent-primary: var(--hot-pink);
+  --accent-secondary: var(--beer-gold);
+  
+  /* Opacity variants */
+  --hot-pink-10: rgba(255, 0, 129, 0.1);
+  --beer-gold-10: rgba(248, 180, 0, 0.1);
+  
+  /* Gradients */
+  --gradient-dark: linear-gradient(to bottom, var(--dark-grey), var(--dark-grey-secondary));
 
   /* Typography scale */
   --text-xs: 0.75rem;
@@ -35,7 +46,22 @@
 
 @layer base {
   body {
-    @apply bg-[var(--space-black)] text-[var(--off-white)] text-base leading-normal;
+    @apply bg-[var(--background-primary)] text-[var(--text-primary)] text-base leading-normal;
+  }
+
+  /* Links */
+  a {
+    @apply text-[var(--accent-primary)] hover:text-[var(--accent-secondary)] transition-colors duration-200;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4 {
+    @apply text-[var(--text-primary)];
+  }
+
+  /* Paragraphs */
+  p {
+    @apply text-[var(--text-primary)] mb-4 leading-relaxed;
   }
 
   /* Simplified heading hierarchy */
@@ -53,10 +79,6 @@
 
   h4 {
     @apply text-xl leading-tight font-bold font-heading mb-3;
-  }
-
-  p {
-    @apply mb-4 leading-relaxed;
   }
 
   /* Ensure proper text alignment */
@@ -80,11 +102,11 @@
   }
   
   .btn {
-    @apply px-4 py-2 rounded-md bg-[var(--burgundy)] text-[var(--off-white)] hover:bg-[var(--light-burgundy)] transition-colors duration-200;
+    @apply px-4 py-2 rounded-md bg-[var(--accent-primary)] text-[var(--off-white)] hover:bg-[var(--accent-secondary)] transition-colors duration-200;
   }
   
   .card {
-    @apply bg-[var(--dark-gray)] rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-200;
+    @apply bg-[var(--background-secondary)] rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-200;
   }
 
   .text-block {
@@ -98,7 +120,7 @@
   }
   
   .accent-text {
-    @apply text-[var(--burgundy)];
+    @apply text-[var(--hot-pink)];
   }
   
   .logo-text {
@@ -116,6 +138,11 @@
   
   .font-heading {
     font-family: 'Luna', sans-serif;
+  }
+
+  .font-navbar {
+    font-family: 'Luna', sans-serif;
+    letter-spacing: 0.01em;
   }
 
   .scroll-margin {
