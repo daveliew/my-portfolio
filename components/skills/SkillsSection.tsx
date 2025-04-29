@@ -17,9 +17,9 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ data }) => {
   };
 
   return (
-    <section className="w-full bg-[var(--space-black)] pt-12 md:pt-16 pb-4 md:pb-8">
+    <section className="w-full bg-[var(--background-secondary)] pt-12 md:pt-16 pb-4 md:pb-8">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12 text-off-white">
+        <h2 className="text-4xl font-bold text-center mb-12 text-[var(--text-primary)]">
           Skills Overview
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -32,7 +32,7 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ data }) => {
           </div>
           {selectedSkill && (
             <div>
-              <h3 className="text-2xl font-semibold mb-4 text-off-white md:hidden">
+              <h3 className="text-2xl font-semibold mb-4 text-[var(--text-primary)] md:hidden">
                 {selectedSkill.name}
               </h3>
               <div className="h-[300px] md:h-[400px]">

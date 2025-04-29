@@ -15,7 +15,7 @@ const SkillDetails: React.FC<SkillDetailsProps> = ({ skill }) => {
 
   return (
     <div className="mt-12">
-      <h3 className="text-2xl font-semibold mb-4 text-off-white hidden md:block">
+      <h3 className="text-2xl font-semibold mb-4 text-[var(--text-primary)] hidden md:block">
         {skill.name}
       </h3>
       <ResponsiveContainer width="100%" height={300}>
@@ -28,18 +28,18 @@ const SkillDetails: React.FC<SkillDetailsProps> = ({ skill }) => {
             type="number" 
             domain={[1, 5]} 
             ticks={[1, 2, 3, 4, 5]} 
-            stroke="var(--off-white)" 
+            stroke="var(--text-primary)" 
           />
-          <YAxis dataKey="name" type="category" width={150} stroke="var(--off-white)" />
+          <YAxis dataKey="name" type="category" width={150} stroke="var(--text-primary)" />
           <Tooltip 
             contentStyle={{ 
-              backgroundColor: 'var(--dark-gray)', 
-              border: '1px solid var(--burgundy)',
+              backgroundColor: 'var(--dark-grey-secondary)', 
+              border: '1px solid var(--accent-primary)',
               borderRadius: '4px',
-              color: 'var(--off-white)'
+              color: 'var(--text-primary)'
             }} 
           />
-          <Bar dataKey="score" fill="var(--primary-yellow)" /> {/* Changed from proficiency to score */}
+          <Bar dataKey="score" fill="var(--accent-secondary)" />
         </BarChart>
       </ResponsiveContainer>
     </div>

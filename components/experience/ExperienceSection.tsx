@@ -28,9 +28,9 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({ areas = [] }) => 
   }
 
   return (
-    <section className="w-full bg-[var(--space-black-light)] border-t border-gray-800/20">
+    <section className="w-full bg-[var(--background-secondary)] border-t border-[var(--dark-grey-secondary)]/20">
       <div className="max-w-7xl mx-auto px-4 py-12">
-        <h2 className="text-4xl font-bold text-center mb-8 text-off-white">
+        <h2 className="text-4xl font-bold text-center mb-8 text-[var(--text-primary)]">
           Professional Experience
         </h2>
         
@@ -40,8 +40,8 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({ areas = [] }) => 
               key={area.id}
               className={`flex-1 px-6 py-3 text-lg transition-colors duration-300 min-w-[250px] ${
                 selectedArea === area.id
-                  ? 'text-off-white border-b-2 border-burgundy font-medium'
-                  : 'text-gray-500 hover:text-gray-300'
+                  ? 'text-[var(--text-primary)] border-b-2 border-[var(--accent-primary)] font-medium'
+                  : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
               }`}
               onClick={() => handleAreaChange(area.id)}
             >

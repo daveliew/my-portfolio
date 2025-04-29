@@ -12,10 +12,10 @@ const LifeSystem = () => {
     <>
       <div className="text-center mb-12">
         <h3 className="text-2xl font-semibold text-[var(--text-primary)] mb-3">The Virtuous Cycle</h3>
-        <p className="text-lg text-[var(--text-secondary)] mb-2">
+        <p className="text-lg text-[var(--accent-primary)] mb-2">
           Build Time → Capture Knowledge → Create Wealth → Reinvest
         </p>
-        <p className="text-[var(--text-secondary)] italic text-sm mb-4">
+        <p className="text-[var(--accent-secondary)] italic text-sm mb-4">
           A virtuous cycle that compounds across seasons in life 
         </p>
         {/* Philosophical links kept here for context, could be moved if needed */}

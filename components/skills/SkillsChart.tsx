@@ -7,8 +7,8 @@ import { SkillsChartProps, CustomTooltipProps } from '@/types/skills';
 const CustomTooltip = ({ active, payload }: CustomTooltipProps) => {
   if (active && payload && payload.length) {
     return (
-      <div className="bg-dark-gray p-2 rounded border border-burgundy">
-        <p className="text-off-white">{`${payload[0].payload.name}: ${payload[0].value}`}</p>
+      <div className="bg-[var(--dark-grey-secondary)] p-2 rounded border border-[var(--accent-primary)]">
+        <p className="text-[var(--text-primary)]">{`${payload[0].payload.name}: ${payload[0].value}`}</p>
       </div>
     );
   }
@@ -48,7 +48,7 @@ const SkillsChart: React.FC<SkillsChartProps> = ({ skills, onSkillClick, selecte
     <div className="w-full h-[400px] relative">
       <ResponsiveContainer width="100%" height="100%">
         <RadarChart cx="50%" cy="50%" outerRadius="80%" data={chartData}>
-          <PolarGrid stroke="var(--primary-yellow-dark)" />
+          <PolarGrid stroke="var(--accent-secondary)" />
           <PolarAngleAxis 
             dataKey="name" 
             tick={false} // Hide default labels
@@ -63,8 +63,8 @@ const SkillsChart: React.FC<SkillsChartProps> = ({ skills, onSkillClick, selecte
           <Radar
             name="Skills"
             dataKey="value"
-            stroke="var(--burgundy)"
-            fill="var(--primary-yellow)"
+            stroke="var(--accent-primary)"
+            fill="var(--accent-secondary)"
             fillOpacity={0.6}
             onClick={handleClick}
           />
@@ -76,7 +76,7 @@ const SkillsChart: React.FC<SkillsChartProps> = ({ skills, onSkillClick, selecte
           <div
             key={data.name}
             className={`absolute cursor-pointer transition-colors duration-200 ${
-              selectedSkill?.name === data.name ? 'text-[var(--light-burgundy)] font-bold' : 'text-off-white hover:text-burgundy'
+              selectedSkill?.name === data.name ? 'text-[var(--accent-primary)] font-bold' : 'text-[var(--text-primary)] hover:text-[var(--accent-secondary)]'
             }`}
             style={{
               top: `${50 - 40 * Math.cos((index / chartData.length) * Math.PI * 2 - Math.PI / 2)}%`,
