@@ -2,23 +2,23 @@ import React, { useState } from 'react';
 
 // Define border colors based on new theme
 const borderColors = {
-  time: 'border-[var(--accent-tertiary)]', 
-  knowledge: 'border-[var(--accent-primary)]', 
-  wealth: 'border-[var(--accent-secondary)]'    
+  time: 'border-[var(--accent-primary)]', // Pink
+  knowledge: 'border-[var(--accent-secondary)]', // Teal
+  wealth: 'border-[var(--accent-tertiary)]' // Gold
 };
 
 // Define text colors based on new theme for consistency
 const textColors = {
-  time: 'text-[var(--accent-tertiary)]',
-  knowledge: 'text-[var(--accent-primary)]',
-  wealth: 'text-[var(--accent-secondary)]'
+  time: 'text-[var(--accent-primary)]', // Pink
+  knowledge: 'text-[var(--accent-secondary)]', // Teal
+  wealth: 'text-[var(--accent-tertiary)]' // Gold
 };
 
 // Define background colors for visual consistency
 const bgColors = {
-  time: 'bg-[var(--accent-tertiary)]/10',
-  knowledge: 'bg-[var(--accent-primary)]/10',
-  wealth: 'bg-[var(--accent-secondary)]/10',
+  time: 'bg-[var(--accent-primary)]/10', // Pink
+  knowledge: 'bg-[var(--accent-secondary)]/10', // Teal
+  wealth: 'bg-[var(--accent-tertiary)]/10', // Gold
 };
 
 const LifeSystem = () => {
@@ -32,7 +32,7 @@ const LifeSystem = () => {
         
         <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-4">My Life System OS</h2>
         <p className="text-lg text-[var(--text-primary)] mb-4 max-w-3xl mx-auto">
-          My operating system is designed to build compounding leverage across the key pillars of Time, Knowledge, and Wealth.
+          My operating system is designed to build compounding leverage across the key pillars of <span className="text-[var(--accent-primary)]">Time</span>, <span className="text-[var(--accent-secondary)]">Knowledge</span>, and <span className="text-[var(--accent-tertiary)]">Wealth</span>.
         </p>
         <p className="text-[var(--text-secondary)] italic text-sm mb-6 max-w-2xl mx-auto">
           Inspired by Jocko Willink&apos;s discipline, Naval Ravikant&apos;s leverage, and Charlie Munger&apos;s mental models.

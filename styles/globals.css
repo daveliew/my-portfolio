@@ -6,12 +6,12 @@
 @tailwind utilities;
 
 :root {
-  /* Core colors */
+  /* Core color palette */
   --dark-grey: #1E293B;
   --dark-grey-secondary: #111827;
   --hot-pink: #FF0081;
-  --beer-gold: #F8B400;
   --teal: #0CC0DF;
+  --beer-gold: #F8B400;
   --off-white: #F9FAFB;
   
   /* Semantic colors */
@@ -23,80 +23,36 @@
   --accent-secondary: var(--teal);
   --accent-tertiary: var(--beer-gold);
   
-  /* Opacity variants */
+  /* Color variants with opacity */
   --hot-pink-10: rgba(255, 0, 129, 0.1);
-  --beer-gold-10: rgba(248, 180, 0, 0.1);
   --teal-10: rgba(12, 192, 223, 0.1);
-  
-  /* Gradients */
-  --gradient-dark: linear-gradient(to bottom, var(--dark-grey), var(--dark-grey-secondary));
-
-  /* Typography scale */
-  --text-xs: 0.75rem;
-  --text-sm: 0.875rem;
-  --text-base: 1rem;
-  --text-lg: 1.125rem;
-  --text-xl: 1.25rem;
-  --text-2xl: 1.5rem;
-  --text-3xl: 1.875rem;
-  --text-4xl: 2.25rem;
-
-  /* Line heights */
-  --leading-tight: 1.25;
-  --leading-normal: 1.5;
-  --leading-relaxed: 1.625;
+  --beer-gold-10: rgba(248, 180, 0, 0.1);
 }
 
 @layer base {
   body {
-    @apply bg-[var(--background-primary)] text-[var(--text-primary)] text-base leading-normal;
+    @apply bg-[var(--background-primary)] text-[var(--text-primary)];
   }
 
-  /* Links */
+  /* Typography */
+  h1, h2, h3, h4 {
+    @apply text-[var(--text-primary)] font-bold font-heading;
+  }
+
+  h1 { @apply text-4xl leading-tight mb-6; }
+  h2 { @apply text-3xl leading-tight mb-5; }
+  h3 { @apply text-2xl leading-tight mb-4; }
+  h4 { @apply text-xl leading-tight mb-3; }
+
+  p { @apply text-[var(--text-primary)] mb-4 leading-relaxed; }
+
   a {
     @apply text-[var(--accent-primary)] hover:text-[var(--accent-secondary)] transition-colors duration-200;
   }
 
-  /* Headings */
-  h1, h2, h3, h4 {
-    @apply text-[var(--text-primary)];
-  }
-
-  /* Paragraphs */
-  p {
-    @apply text-[var(--text-primary)] mb-4 leading-relaxed;
-  }
-
-  /* Simplified heading hierarchy */
-  h1 {
-    @apply text-4xl leading-tight font-bold font-heading mb-6;
-  }
-
-  h2 {
-    @apply text-3xl leading-tight font-bold font-heading mb-5;
-  }
-
-  h3 {
-    @apply text-2xl leading-tight font-bold font-heading mb-4;
-  }
-
-  h4 {
-    @apply text-xl leading-tight font-bold font-heading mb-3;
-  }
-
-  /* Ensure proper text alignment */
-  .text-content {
-    @apply text-left;
-  }
-
-  /* Optimized list styles */
-  ul, ol {
-    @apply mb-4 pl-6;
-  }
-
-  li {
-    @apply mb-2 leading-relaxed;
-  }
+  /* Lists */
+  ul, ol { @apply mb-4 pl-6; }
+  li { @apply mb-2 leading-relaxed; }
 }
 
 @layer components {
@@ -105,11 +61,13 @@
   }
   
   .btn {
-    @apply px-4 py-2 rounded-md bg-[var(--accent-primary)] text-[var(--off-white)] hover:bg-[var(--accent-secondary)] transition-colors duration-200;
+    @apply px-4 py-2 rounded-md bg-[var(--accent-primary)] text-[var(--off-white)] 
+           hover:bg-[var(--accent-secondary)] transition-colors duration-200;
   }
   
   .card {
-    @apply bg-[var(--background-secondary)] rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-200;
+    @apply bg-[var(--background-secondary)] rounded-lg p-6 shadow-lg 
+           hover:shadow-xl transition-shadow duration-200;
   }
 
   .text-block {
@@ -123,20 +81,7 @@
   }
   
   .accent-text {
-    @apply text-[var(--hot-pink)];
-  }
-  
-  .logo-text {
-    @apply font-bold text-3xl;
-  }
-  
-  .scrollbar-hide {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-  
-  .scrollbar-hide::-webkit-scrollbar {
-    display: none;
+    @apply text-[var(--accent-primary)];
   }
   
   .font-heading {
@@ -148,16 +93,12 @@
     letter-spacing: 0.01em;
   }
 
-  .scroll-margin {
-    scroll-margin-top: 5rem;
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
-
-  /* Typography utilities */
-  .text-lead {
-    @apply text-lg leading-relaxed;
-  }
-
-  .text-small {
-    @apply text-sm leading-normal;
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
   }
 }
