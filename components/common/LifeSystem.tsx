@@ -1,32 +1,5 @@
 import React, { useState } from 'react';
-
-// Define border colors based on new theme
-const borderColors = {
-  time: 'border-[var(--accent-primary)]', // Pink
-  knowledge: 'border-[var(--accent-secondary)]', // Teal
-  wealth: 'border-[var(--accent-tertiary)]' // Gold
-};
-
-// Define text colors based on new theme for consistency
-const textColors = {
-  time: 'text-[var(--accent-primary)]', // Pink
-  knowledge: 'text-[var(--accent-secondary)]', // Teal
-  wealth: 'text-[var(--accent-tertiary)]' // Gold
-};
-
-// Define background colors for visual consistency
-const bgColors = {
-  time: 'bg-[var(--accent-primary)]/10', // Pink
-  knowledge: 'bg-[var(--accent-secondary)]/10', // Teal
-  wealth: 'bg-[var(--accent-tertiary)]/10', // Gold
-};
-
-// Define colors for bars
-const barColors = {
-  time: 'bg-[var(--accent-primary)]', // Pink
-  knowledge: 'bg-[var(--accent-secondary)]', // Teal
-  wealth: 'bg-[var(--accent-tertiary)]' // Gold
-};
+import { themeColors } from '@/styles/theme';
 
 const LifeSystem = () => {
   // State for active view/tab
@@ -39,7 +12,7 @@ const LifeSystem = () => {
         
         <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-4">My Life System OS</h2>
         <p className="text-lg text-[var(--text-primary)] mb-4 max-w-3xl mx-auto">
-          My operating system is designed to build compounding leverage across the key pillars of <span className="text-[var(--accent-primary)]">Time</span>, <span className="text-[var(--accent-secondary)]">Knowledge</span>, and <span className="text-[var(--accent-tertiary)]">Wealth</span>.
+          My operating system is designed to build compounding leverage across the key pillars of <span className={themeColors.text.time}>Time</span>, <span className={themeColors.text.knowledge}>Knowledge</span>, and <span className={themeColors.text.wealth}>Wealth</span>.
         </p>
         <p className="text-[var(--text-secondary)] italic text-sm mb-6 max-w-2xl mx-auto">
           Inspired by Jocko Willink&apos;s discipline, Naval Ravikant&apos;s leverage, and Charlie Munger&apos;s mental models.
@@ -103,11 +76,11 @@ const LifeSystem = () => {
               
               <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6 py-4">
                 {/* Step 1: Time */}
-                <div className={`w-full md:w-1/3 p-5 rounded-lg ${bgColors.time} border ${borderColors.time} flex flex-col items-center transform transition-all duration-300 hover:scale-105`}>
-                  <div className={`w-16 h-16 rounded-full flex items-center justify-center ${bgColors.time} border-2 ${borderColors.time} mb-3`}>
-                    <span className={`text-2xl font-bold ${textColors.time}`}>1</span>
+                <div className={`w-full md:w-1/3 p-5 rounded-lg ${themeColors.background.time} ${themeColors.border.time} flex flex-col items-center transform transition-all duration-300 hover:scale-105`}>
+                  <div className={`w-16 h-16 rounded-full flex items-center justify-center ${themeColors.background.time} ${themeColors.border.time} mb-3`}>
+                    <span className={`text-2xl font-bold ${themeColors.text.time}`}>1</span>
                   </div>
-                  <h4 className={`text-lg font-medium ${textColors.time} text-center`}>Build Time</h4>
+                  <h4 className={`text-lg font-medium text-center`}>Build <span className={themeColors.text.time}>Time</span></h4>
                   <p className="text-xs text-[var(--text-secondary)] text-center mt-2">Create systems that multiply your available time</p>
                 </div>
                 
@@ -115,11 +88,11 @@ const LifeSystem = () => {
                 <div className="text-3xl text-[var(--text-secondary)] transform md:rotate-0 rotate-90">→</div>
                 
                 {/* Step 2: Knowledge */}
-                <div className={`w-full md:w-1/3 p-5 rounded-lg ${bgColors.knowledge} border ${borderColors.knowledge} flex flex-col items-center transform transition-all duration-300 hover:scale-105`}>
-                  <div className={`w-16 h-16 rounded-full flex items-center justify-center ${bgColors.knowledge} border-2 ${borderColors.knowledge} mb-3`}>
-                    <span className={`text-2xl font-bold ${textColors.knowledge}`}>2</span>
+                <div className={`w-full md:w-1/3 p-5 rounded-lg ${themeColors.background.knowledge} ${themeColors.border.knowledge} flex flex-col items-center transform transition-all duration-300 hover:scale-105`}>
+                  <div className={`w-16 h-16 rounded-full flex items-center justify-center ${themeColors.background.knowledge} ${themeColors.border.knowledge} mb-3`}>
+                    <span className={`text-2xl font-bold ${themeColors.text.knowledge}`}>2</span>
                   </div>
-                  <h4 className={`text-lg font-medium ${textColors.knowledge} text-center`}>Capture Knowledge</h4>
+                  <h4 className={`text-lg font-medium text-center`}>Capture <span className={themeColors.text.knowledge}>Knowledge</span></h4>
                   <p className="text-xs text-[var(--text-secondary)] text-center mt-2">Convert time into valuable insights and skills</p>
                 </div>
                 
@@ -127,11 +100,11 @@ const LifeSystem = () => {
                 <div className="text-3xl text-[var(--text-secondary)] transform md:rotate-0 rotate-90">→</div>
                 
                 {/* Step 3: Wealth */}
-                <div className={`w-full md:w-1/3 p-5 rounded-lg ${bgColors.wealth} border ${borderColors.wealth} flex flex-col items-center transform transition-all duration-300 hover:scale-105`}>
-                  <div className={`w-16 h-16 rounded-full flex items-center justify-center ${bgColors.wealth} border-2 ${borderColors.wealth} mb-3`}>
-                    <span className={`text-2xl font-bold ${textColors.wealth}`}>3</span>
+                <div className={`w-full md:w-1/3 p-5 rounded-lg ${themeColors.background.wealth} ${themeColors.border.wealth} flex flex-col items-center transform transition-all duration-300 hover:scale-105`}>
+                  <div className={`w-16 h-16 rounded-full flex items-center justify-center ${themeColors.background.wealth} ${themeColors.border.wealth} mb-3`}>
+                    <span className={`text-2xl font-bold ${themeColors.text.wealth}`}>3</span>
                   </div>
-                  <h4 className={`text-lg font-medium ${textColors.wealth} text-center`}>Create Wealth</h4>
+                  <h4 className={`text-lg font-medium text-center`}>Create <span className={themeColors.text.wealth}>Wealth</span></h4>
                   <p className="text-xs text-[var(--text-secondary)] text-center mt-2">Transform knowledge into tangible assets and income</p>
                 </div>
               </div>
@@ -172,15 +145,15 @@ const LifeSystem = () => {
                   <h4 className="font-medium text-[var(--text-primary)] mb-4 border-b border-[var(--dark-grey-secondary)]/20 pb-2">Reinvestment Allocation</h4>
                   <div className="grid grid-cols-2 gap-2">
                     <div className={`p-3 rounded-md bg-[var(--background-secondary)] relative overflow-hidden col-span-2`}>
-                      <div className={`absolute left-0 top-0 h-full w-1 ${barColors.time}`}></div>
+                      <div className={`absolute left-0 top-0 h-full w-1 ${themeColors.bar.time}`}></div>
                       <h5 className="font-medium text-[var(--text-primary)] text-sm">Network & Opportunities (30%)</h5>
                     </div>
                     <div className={`p-3 rounded-md bg-[var(--background-secondary)] relative overflow-hidden col-span-2`}>
-                      <div className={`absolute left-0 top-0 h-full w-1 ${barColors.knowledge}`}></div>
+                      <div className={`absolute left-0 top-0 h-full w-1 ${themeColors.bar.knowledge}`}></div>
                       <h5 className="font-medium text-[var(--text-primary)] text-sm">Capabilities & Insights (50%)</h5>
                     </div>
                     <div className={`p-3 rounded-md bg-[var(--background-secondary)] col-span-2 relative overflow-hidden`}>
-                      <div className={`absolute left-0 top-0 h-full w-1 ${barColors.wealth}`}></div>
+                      <div className={`absolute left-0 top-0 h-full w-1 ${themeColors.bar.wealth}`}></div>
                       <h5 className="font-medium text-[var(--text-primary)] text-sm">Life Quality (20%)</h5>
                     </div>
                   </div>
@@ -203,22 +176,22 @@ const LifeSystem = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {/* Time Module Card - Enhanced with better hierarchy */}
-              <div className={`rounded-lg border ${borderColors.time} bg-[var(--background-secondary)] overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md`}>
-                <div className={`p-4 ${bgColors.time} border-b ${borderColors.time}`}>
-                  <h4 className={`text-xl font-medium ${textColors.time}`}>Module 1: Time Multiplier</h4>
+              <div className={`rounded-lg border ${themeColors.border.time} bg-[var(--background-secondary)] overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md`}>
+                <div className={`p-4 ${themeColors.background.time} border-b ${themeColors.border.time}`}>
+                  <h4 className={`text-xl font-medium ${themeColors.text.time}`}>Module 1: Time Multiplier</h4>
                 </div>
                 <div className="p-5">
                   <div className="space-y-2 mb-4">
                     <div className="flex items-center space-x-2">
-                      <div className={`w-2 h-2 rounded-full ${bgColors.time} border ${borderColors.time}`}></div>
+                      <div className={`w-2 h-2 rounded-full ${themeColors.background.time} border ${themeColors.border.time}`}></div>
                       <span className="text-[var(--text-primary)] text-sm">AI Agents</span>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <div className={`w-2 h-2 rounded-full ${bgColors.time} border ${borderColors.time}`}></div>
+                      <div className={`w-2 h-2 rounded-full ${themeColors.background.time} border ${themeColors.border.time}`}></div>
                       <span className="text-[var(--text-primary)] text-sm">Automation Flows</span>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <div className={`w-2 h-2 rounded-full ${bgColors.time} border ${borderColors.time}`}></div>
+                      <div className={`w-2 h-2 rounded-full ${themeColors.background.time} border ${themeColors.border.time}`}></div>
                       <span className="text-[var(--text-primary)] text-sm">Cloud Infrastructure</span>
                     </div>
                   </div>
@@ -242,22 +215,22 @@ const LifeSystem = () => {
               </div>
 
               {/* Knowledge Module Card - Enhanced with better hierarchy */}
-              <div className={`rounded-lg border ${borderColors.knowledge} bg-[var(--background-secondary)] overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md`}>
-                <div className={`p-4 ${bgColors.knowledge} border-b ${borderColors.knowledge}`}>
-                  <h4 className={`text-xl font-medium ${textColors.knowledge}`}>Module 2: Knowledge Amplifier</h4>
+              <div className={`rounded-lg border ${themeColors.border.knowledge} bg-[var(--background-secondary)] overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md`}>
+                <div className={`p-4 ${themeColors.background.knowledge} border-b ${themeColors.border.knowledge}`}>
+                  <h4 className={`text-xl font-medium ${themeColors.text.knowledge}`}>Module 2: Knowledge Amplifier</h4>
                 </div>
                 <div className="p-5">
                   <div className="space-y-2 mb-4">
                     <div className="flex items-center space-x-2">
-                      <div className={`w-2 h-2 rounded-full ${bgColors.knowledge} border ${borderColors.knowledge}`}></div>
+                      <div className={`w-2 h-2 rounded-full ${themeColors.background.knowledge} border ${themeColors.border.knowledge}`}></div>
                       <span className="text-[var(--text-primary)] text-sm">Knowledge Management</span>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <div className={`w-2 h-2 rounded-full ${bgColors.knowledge} border ${borderColors.knowledge}`}></div>
+                      <div className={`w-2 h-2 rounded-full ${themeColors.background.knowledge} border ${themeColors.border.knowledge}`}></div>
                       <span className="text-[var(--text-primary)] text-sm">Content Creation</span>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <div className={`w-2 h-2 rounded-full ${bgColors.knowledge} border ${borderColors.knowledge}`}></div>
+                      <div className={`w-2 h-2 rounded-full ${themeColors.background.knowledge} border ${themeColors.border.knowledge}`}></div>
                       <span className="text-[var(--text-primary)] text-sm">AI Enhancement</span>
                     </div>
                   </div>
@@ -281,22 +254,22 @@ const LifeSystem = () => {
               </div>
 
               {/* Wealth Module Card - Enhanced with better hierarchy */}
-              <div className={`rounded-lg border ${borderColors.wealth} bg-[var(--background-secondary)] overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md`}>
-                <div className={`p-4 ${bgColors.wealth} border-b ${borderColors.wealth}`}>
-                  <h4 className={`text-xl font-medium ${textColors.wealth}`}>Module 3: Wealth Multiplier</h4>
+              <div className={`rounded-lg border ${themeColors.border.wealth} bg-[var(--background-secondary)] overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md`}>
+                <div className={`p-4 ${themeColors.background.wealth} border-b ${themeColors.border.wealth}`}>
+                  <h4 className={`text-xl font-medium ${themeColors.text.wealth}`}>Module 3: Wealth Multiplier</h4>
                 </div>
                 <div className="p-5">
                   <div className="space-y-2 mb-4">
                     <div className="flex items-center space-x-2">
-                      <div className={`w-2 h-2 rounded-full ${bgColors.wealth} border ${borderColors.wealth}`}></div>
+                      <div className={`w-2 h-2 rounded-full ${themeColors.background.wealth} border ${themeColors.border.wealth}`}></div>
                       <span className="text-[var(--text-primary)] text-sm">Digital Products</span>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <div className={`w-2 h-2 rounded-full ${bgColors.wealth} border ${borderColors.wealth}`}></div>
+                      <div className={`w-2 h-2 rounded-full ${themeColors.background.wealth} border ${themeColors.border.wealth}`}></div>
                       <span className="text-[var(--text-primary)] text-sm">Automated Marketing</span>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <div className={`w-2 h-2 rounded-full ${bgColors.wealth} border ${borderColors.wealth}`}></div>
+                      <div className={`w-2 h-2 rounded-full ${themeColors.background.wealth} border ${themeColors.border.wealth}`}></div>
                       <span className="text-[var(--text-primary)] text-sm">Passive Distribution</span>
                     </div>
                   </div>
