@@ -97,10 +97,6 @@ const LifeSystem = () => {
         </div>
       </div>
 
-      {/* Concluding Paragraph */}
-      <p className="text-[var(--text-secondary)] text-center max-w-3xl mx-auto text-sm italic">
-        This focused approach provides a clear roadmap for the next 20 years while aligning with a 50-year vision. It&apos;s simple enough to remember and powerful enough to transform each phase of life.
-      </p>
     </>
   );
 };

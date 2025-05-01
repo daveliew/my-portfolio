@@ -40,7 +40,7 @@ const ImpactfulStatement = () => {
         leading-relaxed
       ">
         I leverage the power of human innovation and artificial intelligence 
-        to co-create groundbreaking solutions for the challenges of today and tomorrow.
+        to co-create solutions for the challenges of today and tomorrow.
       </p>
       
       <div className="mt-8 w-full h-1 bg-gradient-to-r from-[var(--accent-primary)] via-[var(--accent-secondary)] to-[var(--accent-primary)] opacity-20" />
