@@ -21,6 +21,13 @@ const bgColors = {
   wealth: 'bg-[var(--accent-tertiary)]/10', // Gold
 };
 
+// Define colors for bars
+const barColors = {
+  time: 'bg-[var(--accent-primary)]', // Pink
+  knowledge: 'bg-[var(--accent-secondary)]', // Teal
+  wealth: 'bg-[var(--accent-tertiary)]' // Gold
+};
+
 const LifeSystem = () => {
   // State for active view/tab
   const [activeView, setActiveView] = useState('overview');
@@ -164,16 +171,16 @@ const LifeSystem = () => {
                 <div className="bg-[var(--background-primary)]/30 p-5 rounded-lg">
                   <h4 className="font-medium text-[var(--text-primary)] mb-4 border-b border-[var(--dark-grey-secondary)]/20 pb-2">Reinvestment Allocation</h4>
                   <div className="grid grid-cols-2 gap-2">
-                    <div className="p-3 rounded-md bg-[var(--background-secondary)] relative overflow-hidden col-span-2">
-                      <div className="absolute left-0 top-0 h-full w-1 bg-[var(--accent-primary)]"></div>
-                      <h5 className="font-medium text-[var(--text-primary)] text-sm">Capability & Knowledge (40%)</h5>
+                    <div className={`p-3 rounded-md bg-[var(--background-secondary)] relative overflow-hidden col-span-2`}>
+                      <div className={`absolute left-0 top-0 h-full w-1 ${barColors.time}`}></div>
+                      <h5 className="font-medium text-[var(--text-primary)] text-sm">Network & Opportunities (30%)</h5>
                     </div>
-                    <div className="p-3 rounded-md bg-[var(--background-secondary)] relative overflow-hidden">
-                      <div className="absolute left-0 top-0 h-full w-1 bg-[var(--accent-tertiary)]"></div>
-                      <h5 className="font-medium text-[var(--text-primary)] text-sm">Network & Opportunities (40%)</h5>
+                    <div className={`p-3 rounded-md bg-[var(--background-secondary)] relative overflow-hidden col-span-2`}>
+                      <div className={`absolute left-0 top-0 h-full w-1 ${barColors.knowledge}`}></div>
+                      <h5 className="font-medium text-[var(--text-primary)] text-sm">Capabilities & Insights (50%)</h5>
                     </div>
-                    <div className="p-3 rounded-md bg-[var(--background-secondary)] col-span-2 relative overflow-hidden">
-                      <div className="absolute left-0 top-0 h-full w-1 bg-[var(--accent-secondary)]"></div>
+                    <div className={`p-3 rounded-md bg-[var(--background-secondary)] col-span-2 relative overflow-hidden`}>
+                      <div className={`absolute left-0 top-0 h-full w-1 ${barColors.wealth}`}></div>
                       <h5 className="font-medium text-[var(--text-primary)] text-sm">Life Quality (20%)</h5>
                     </div>
                   </div>
