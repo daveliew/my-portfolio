@@ -76,8 +76,8 @@ const LifeSystem = () => {
               
               <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6 py-4">
                 {/* Step 1: Time */}
-                <div className={`w-full md:w-1/3 p-5 rounded-lg ${themeColors.background.time} ${themeColors.border.time} flex flex-col items-center transform transition-all duration-300 hover:scale-105`}>
-                  <div className={`w-16 h-16 rounded-full flex items-center justify-center ${themeColors.background.time} ${themeColors.border.time} mb-3`}>
+                <div className={`w-full md:w-1/3 p-5 rounded-lg border-2 ${themeColors.border.time} ${themeColors.background.time} flex flex-col items-center transform transition-all duration-300 hover:scale-105`}>
+                  <div className={`w-16 h-16 rounded-full flex items-center justify-center border-2 ${themeColors.border.time} ${themeColors.background.time} mb-3`}>
                     <span className={`text-2xl font-bold ${themeColors.text.time}`}>1</span>
                   </div>
                   <h4 className={`text-lg font-medium text-center`}>Build <span className={themeColors.text.time}>Time</span></h4>
@@ -88,8 +88,8 @@ const LifeSystem = () => {
                 <div className="text-3xl text-[var(--text-secondary)] transform md:rotate-0 rotate-90">→</div>
                 
                 {/* Step 2: Knowledge */}
-                <div className={`w-full md:w-1/3 p-5 rounded-lg ${themeColors.background.knowledge} ${themeColors.border.knowledge} flex flex-col items-center transform transition-all duration-300 hover:scale-105`}>
-                  <div className={`w-16 h-16 rounded-full flex items-center justify-center ${themeColors.background.knowledge} ${themeColors.border.knowledge} mb-3`}>
+                <div className={`w-full md:w-1/3 p-5 rounded-lg border-2 ${themeColors.border.knowledge} ${themeColors.background.knowledge} flex flex-col items-center transform transition-all duration-300 hover:scale-105`}>
+                  <div className={`w-16 h-16 rounded-full flex items-center justify-center border-2 ${themeColors.border.knowledge} ${themeColors.background.knowledge} mb-3`}>
                     <span className={`text-2xl font-bold ${themeColors.text.knowledge}`}>2</span>
                   </div>
                   <h4 className={`text-lg font-medium text-center`}>Capture <span className={themeColors.text.knowledge}>Knowledge</span></h4>
@@ -100,8 +100,8 @@ const LifeSystem = () => {
                 <div className="text-3xl text-[var(--text-secondary)] transform md:rotate-0 rotate-90">→</div>
                 
                 {/* Step 3: Wealth */}
-                <div className={`w-full md:w-1/3 p-5 rounded-lg ${themeColors.background.wealth} ${themeColors.border.wealth} flex flex-col items-center transform transition-all duration-300 hover:scale-105`}>
-                  <div className={`w-16 h-16 rounded-full flex items-center justify-center ${themeColors.background.wealth} ${themeColors.border.wealth} mb-3`}>
+                <div className={`w-full md:w-1/3 p-5 rounded-lg border-2 ${themeColors.border.wealth} ${themeColors.background.wealth} flex flex-col items-center transform transition-all duration-300 hover:scale-105`}>
+                  <div className={`w-16 h-16 rounded-full flex items-center justify-center border-2 ${themeColors.border.wealth} ${themeColors.background.wealth} mb-3`}>
                     <span className={`text-2xl font-bold ${themeColors.text.wealth}`}>3</span>
                   </div>
                   <h4 className={`text-lg font-medium text-center`}>Create <span className={themeColors.text.wealth}>Wealth</span></h4>
@@ -123,7 +123,7 @@ const LifeSystem = () => {
                   <ul className="text-sm text-[var(--text-secondary)] space-y-3">
                     <li className="flex items-start">
                       <span className="mr-2 text-[var(--accent-primary)]">•</span>
-                      <span><span className="font-medium text-[var(--text-primary)]">Time:</span> Focused blocks for deep work</span>
+                      <span><span className="font-medium text-[var(--text-primary)]">Focus:</span> Time blocks for deep work</span>
                     </li>
                     <li className="flex items-start">
                       <span className="mr-2 text-[var(--accent-primary)]">•</span>
@@ -131,11 +131,15 @@ const LifeSystem = () => {
                     </li>
                     <li className="flex items-start">
                       <span className="mr-2 text-[var(--accent-primary)]">•</span>
-                      <span><span className="font-medium text-[var(--text-primary)]">Capital:</span> Initial funding (optional)</span>
+                      <span><span className="font-medium text-[var(--text-primary)]">Networking:</span> Building valuable connections</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-2 text-[var(--accent-secondary)]">•</span>
+                      <span><span className="font-medium text-[var(--text-primary)]">Skills & Expertise:</span> Technical & domain knowledge</span>
                     </li>
                     <li className="flex items-start">
                       <span className="mr-2 text-[var(--accent-tertiary)]">•</span>
-                      <span><span className="font-medium text-[var(--text-primary)]">Skills:</span> Technical & domain expertise</span>
+                      <span><span className="font-medium text-[var(--text-primary)]">Capital:</span> Reinvestment for system growth</span>
                     </li>
                   </ul>
                 </div>
@@ -146,15 +150,15 @@ const LifeSystem = () => {
                   <div className="grid grid-cols-2 gap-2">
                     <div className={`p-3 rounded-md bg-[var(--background-secondary)] relative overflow-hidden col-span-2`}>
                       <div className={`absolute left-0 top-0 h-full w-1 ${themeColors.bar.time}`}></div>
-                      <h5 className="font-medium text-[var(--text-primary)] text-sm">Network & Opportunities (30%)</h5>
+                      <h5 className="font-medium text-[var(--text-primary)] text-sm">Network & Opportunities (60%)</h5>
                     </div>
                     <div className={`p-3 rounded-md bg-[var(--background-secondary)] relative overflow-hidden col-span-2`}>
                       <div className={`absolute left-0 top-0 h-full w-1 ${themeColors.bar.knowledge}`}></div>
-                      <h5 className="font-medium text-[var(--text-primary)] text-sm">Capabilities & Insights (50%)</h5>
+                      <h5 className="font-medium text-[var(--text-primary)] text-sm">Capabilities & Insights (30%)</h5>
                     </div>
                     <div className={`p-3 rounded-md bg-[var(--background-secondary)] col-span-2 relative overflow-hidden`}>
                       <div className={`absolute left-0 top-0 h-full w-1 ${themeColors.bar.wealth}`}></div>
-                      <h5 className="font-medium text-[var(--text-primary)] text-sm">Life Quality (20%)</h5>
+                      <h5 className="font-medium text-[var(--text-primary)] text-sm">Life Quality (10%)</h5>
                     </div>
                   </div>
                 </div>
