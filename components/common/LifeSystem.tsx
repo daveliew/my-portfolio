@@ -64,13 +64,8 @@ const LifeSystem = () => {
           <div className="mb-12 max-w-4xl mx-auto p-6 bg-[var(--background-secondary)] rounded-lg border border-[var(--dark-grey-secondary)]/30 shadow-sm">
             {/* Core Engine Section - With visual improvements */}
             <div className="mb-8">
-              <div className="flex items-center mb-4">
-                <div className="h-1 flex-grow rounded-full"></div>
-                <h3 className="text-xl font-semibold text-[var(--text-primary)] px-4">The Virtuous Cycle</h3>
-                <div className="h-1 flex-grow rounded-full"></div>
-              </div>
-              
-              <p className="text-[var(--text-secondary)] italic text-sm mt-6 text-center">
+              <h3 className="text-xl font-semibold text-[var(--text-primary)] text-center mb-2">The Virtuous Cycle</h3>
+              <p className="text-[var(--text-secondary)] italic text-sm text-center">
                 The core engine: Generate resources through sequential leverage.
               </p>
               
