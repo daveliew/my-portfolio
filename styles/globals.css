@@ -11,6 +11,7 @@
   --dark-grey-secondary: #111827;
   --hot-pink: #FF0081;
   --beer-gold: #F8B400;
+  --teal: #0CC0DF;
   --off-white: #F9FAFB;
   
   /* Semantic colors */
@@ -19,11 +20,13 @@
   --background-primary: var(--dark-grey);
   --background-secondary: var(--dark-grey-secondary);
   --accent-primary: var(--hot-pink);
-  --accent-secondary: var(--beer-gold);
+  --accent-secondary: var(--teal);
+  --accent-tertiary: var(--beer-gold);
   
   /* Opacity variants */
   --hot-pink-10: rgba(255, 0, 129, 0.1);
   --beer-gold-10: rgba(248, 180, 0, 0.1);
+  --teal-10: rgba(12, 192, 223, 0.1);
   
   /* Gradients */
   --gradient-dark: linear-gradient(to bottom, var(--dark-grey), var(--dark-grey-secondary));

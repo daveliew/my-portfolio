@@ -2,21 +2,21 @@ import React, { useState } from 'react';
 
 // Define border colors based on new theme
 const borderColors = {
-  time: 'border-[var(--accent-secondary)]', 
+  time: 'border-[var(--accent-tertiary)]', 
   knowledge: 'border-[var(--accent-primary)]', 
   wealth: 'border-[var(--accent-secondary)]'    
 };
 
 // Define text colors based on new theme for consistency
 const textColors = {
-  time: 'text-[var(--accent-secondary)]',
+  time: 'text-[var(--accent-tertiary)]',
   knowledge: 'text-[var(--accent-primary)]',
   wealth: 'text-[var(--accent-secondary)]'
 };
 
 // Define background colors for visual consistency
 const bgColors = {
-  time: 'bg-[var(--accent-secondary)]/10',
+  time: 'bg-[var(--accent-tertiary)]/10',
   knowledge: 'bg-[var(--accent-primary)]/10',
   wealth: 'bg-[var(--accent-secondary)]/10',
 };
@@ -29,9 +29,10 @@ const LifeSystem = () => {
     <>
       {/* --- Introduction & Philosophy --- */}
       <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-4">The Life System OS</h2>
+        
+        <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-4">My Life System OS</h2>
         <p className="text-lg text-[var(--text-primary)] mb-4 max-w-3xl mx-auto">
-          An operating system designed to build compounding leverage across the key pillars of Time, Knowledge, and Wealth.
+          My operating system is designed to build compounding leverage across the key pillars of Time, Knowledge, and Wealth.
         </p>
         <p className="text-[var(--text-secondary)] italic text-sm mb-6 max-w-2xl mx-auto">
           Inspired by Jocko Willink&apos;s discipline, Naval Ravikant&apos;s leverage, and Charlie Munger&apos;s mental models.
@@ -84,10 +85,14 @@ const LifeSystem = () => {
             {/* Core Engine Section - With visual improvements */}
             <div className="mb-8">
               <div className="flex items-center mb-4">
-                <div className="h-1 flex-grow bg-[var(--accent-secondary)]/20 rounded-full"></div>
+                <div className="h-1 flex-grow rounded-full"></div>
                 <h3 className="text-xl font-semibold text-[var(--text-primary)] px-4">The Virtuous Cycle</h3>
-                <div className="h-1 flex-grow bg-[var(--accent-secondary)]/20 rounded-full"></div>
+                <div className="h-1 flex-grow rounded-full"></div>
               </div>
+              
+              <p className="text-[var(--text-secondary)] italic text-sm mt-6 text-center">
+                The core engine: Generate resources through sequential leverage.
+              </p>
               
               <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6 py-4">
                 {/* Step 1: Time */}
@@ -124,25 +129,12 @@ const LifeSystem = () => {
                 </div>
               </div>
               
-              <p className="text-[var(--text-secondary)] italic text-sm mt-6 text-center">
-                The core engine: Generate resources through sequential leverage.
-              </p>
 
-              {/* Circular Flow Indicator */}
-              <div className="flex justify-center mt-4">
-                <div className="w-8 h-8 border rounded-full border-[var(--accent-secondary)]/30 flex items-center justify-center">
-                  <div className="w-6 h-6 text-[var(--text-secondary)]">↻</div>
-                </div>
-              </div>
+
             </div>
 
             {/* Foundation Section (Inputs & Outputs) - With better visual hierarchy */}
             <div className="mt-8 pt-8 border-t border-[var(--dark-grey-secondary)]/30">
-              <div className="flex items-center mb-6">
-                <div className="h-1 flex-grow bg-[var(--accent-primary)]/20 rounded-full"></div>
-                <h3 className="text-xl font-semibold text-[var(--text-primary)] px-4">System Foundation</h3>
-                <div className="h-1 flex-grow bg-[var(--accent-primary)]/20 rounded-full"></div>
-              </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* System Inputs - Left Side */}
@@ -162,41 +154,27 @@ const LifeSystem = () => {
                       <span><span className="font-medium text-[var(--text-primary)]">Capital:</span> Initial funding (optional)</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="mr-2 text-[var(--accent-primary)]">•</span>
+                      <span className="mr-2 text-[var(--accent-tertiary)]">•</span>
                       <span><span className="font-medium text-[var(--text-primary)]">Skills:</span> Technical & domain expertise</span>
                     </li>
                   </ul>
-                  <p className="text-xs text-[var(--text-secondary)] italic mt-4 border-t border-[var(--dark-grey-secondary)]/20 pt-3">
-                    Required resources to start & sustain the system
-                  </p>
                 </div>
 
                 {/* Reinvestment - Right Side */}
                 <div className="bg-[var(--background-primary)]/30 p-5 rounded-lg">
                   <h4 className="font-medium text-[var(--text-primary)] mb-4 border-b border-[var(--dark-grey-secondary)]/20 pb-2">Reinvestment Allocation</h4>
-                  <p className="text-xs text-[var(--text-secondary)] mb-4">
-                    Output from the &apos;Create Wealth&apos; module is strategically allocated here to fuel the next cycle.
-                  </p>
                   <div className="grid grid-cols-2 gap-2">
-                    <div className="p-3 rounded-md bg-[var(--background-secondary)] relative overflow-hidden">
-                      <div className="absolute left-0 top-0 h-full w-1 bg-[var(--accent-secondary)]"></div>
-                      <h5 className="font-medium text-[var(--text-primary)] text-sm">Capability (10-20%)</h5>
-                    </div>
-                    <div className="p-3 rounded-md bg-[var(--background-secondary)] relative overflow-hidden">
+                    <div className="p-3 rounded-md bg-[var(--background-secondary)] relative overflow-hidden col-span-2">
                       <div className="absolute left-0 top-0 h-full w-1 bg-[var(--accent-primary)]"></div>
-                      <h5 className="font-medium text-[var(--text-primary)] text-sm">Knowledge (15-25%)</h5>
+                      <h5 className="font-medium text-[var(--text-primary)] text-sm">Capability & Knowledge (40%)</h5>
                     </div>
                     <div className="p-3 rounded-md bg-[var(--background-secondary)] relative overflow-hidden">
-                      <div className="absolute left-0 top-0 h-full w-1 bg-[var(--accent-secondary)]"></div>
-                      <h5 className="font-medium text-[var(--text-primary)] text-sm">Network (15-20%)</h5>
-                    </div>
-                    <div className="p-3 rounded-md bg-[var(--background-secondary)] relative overflow-hidden">
-                      <div className="absolute left-0 top-0 h-full w-1 bg-[var(--accent-primary)]"></div>
-                      <h5 className="font-medium text-[var(--text-primary)] text-sm">Opportunity (20-30%)</h5>
+                      <div className="absolute left-0 top-0 h-full w-1 bg-[var(--accent-tertiary)]"></div>
+                      <h5 className="font-medium text-[var(--text-primary)] text-sm">Network & Opportunities (40%)</h5>
                     </div>
                     <div className="p-3 rounded-md bg-[var(--background-secondary)] col-span-2 relative overflow-hidden">
                       <div className="absolute left-0 top-0 h-full w-1 bg-[var(--accent-secondary)]"></div>
-                      <h5 className="font-medium text-[var(--text-primary)] text-sm">Life Quality (15-25%)</h5>
+                      <h5 className="font-medium text-[var(--text-primary)] text-sm">Life Quality (20%)</h5>
                     </div>
                   </div>
                 </div>
@@ -211,9 +189,9 @@ const LifeSystem = () => {
           {/* --- Micro View: Core System Modules with enhanced visual presentation --- */}
           <div className="mb-10 max-w-4xl mx-auto">
             <div className="flex items-center mb-6">
-              <div className="h-1 flex-grow bg-[var(--accent-primary)]/20 rounded-full"></div>
+              <div className="h-1 flex-grow bg-gradient-to-r from-[var(--accent-tertiary)] via-[var(--accent-secondary)] to-[var(--accent-primary)]/50 rounded-full"></div>
               <h3 className="text-xl font-semibold text-[var(--text-primary)] px-4">Core Implementation Modules</h3>
-              <div className="h-1 flex-grow bg-[var(--accent-primary)]/20 rounded-full"></div>
+              <div className="h-1 flex-grow bg-gradient-to-r from-[var(--accent-primary)]/50 via-[var(--accent-secondary)] to-[var(--accent-tertiary)] rounded-full"></div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -348,9 +326,9 @@ const LifeSystem = () => {
       {activeView === 'resources' && (
         <div className="mb-10 max-w-4xl mx-auto">
           <div className="flex items-center mb-6">
-            <div className="h-1 flex-grow bg-[var(--accent-primary)]/20 rounded-full"></div>
+            <div className="h-1 flex-grow bg-gradient-to-r from-[var(--accent-primary)] via-[var(--accent-tertiary)] to-[var(--accent-secondary)]/50 rounded-full"></div>
             <h3 className="text-xl font-semibold text-[var(--text-primary)] px-4">Resources & References</h3>
-            <div className="h-1 flex-grow bg-[var(--accent-primary)]/20 rounded-full"></div>
+            <div className="h-1 flex-grow bg-gradient-to-r from-[var(--accent-secondary)]/50 via-[var(--accent-tertiary)] to-[var(--accent-primary)] rounded-full"></div>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -386,13 +364,13 @@ const LifeSystem = () => {
               </h4>
               <ul className="space-y-3">
                 <li className="flex items-start">
-                  <span className="mr-2 text-[var(--accent-secondary)]">•</span>
+                  <span className="mr-2 text-[var(--accent-tertiary)]">•</span>
                   <span className="text-[var(--text-secondary)] text-sm">
                     <span className="font-medium text-[var(--text-primary)]">AI Agents:</span> LangChain, CrewAI, AutoGen
                   </span>
                 </li>
                 <li className="flex items-start">
-                  <span className="mr-2 text-[var(--accent-secondary)]">•</span>
+                  <span className="mr-2 text-[var(--accent-primary)]">•</span>
                   <span className="text-[var(--text-secondary)] text-sm">
                     <span className="font-medium text-[var(--text-primary)]">Knowledge Management:</span> Obsidian, Notion
                   </span>
