@@ -28,30 +28,100 @@ const LifeSystem = () => {
         </p>
       </div>
 
-      {/* --- Macro View: The Virtuous Cycle --- */}
-      <div className="mb-16 text-center">
-        <h3 className="text-2xl font-semibold text-[var(--text-primary)] mb-6">The Virtuous Cycle (Macro View)</h3>
-        <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 text-lg">
-          <span className={`font-medium ${textColors.time}`}>Build Time</span>
-          <span className="text-[var(--text-secondary)]">→</span>
-          <span className={`font-medium ${textColors.knowledge}`}>Capture Knowledge</span>
-          <span className="text-[var(--text-secondary)]">→</span>
-          <span className={`font-medium ${textColors.wealth}`}>Create Wealth</span>
-          <span className="text-[var(--text-secondary)]">→</span>
-          <span className="font-medium text-[var(--accent-tertiary)]">Reinvest</span> 
+      {/* --- Integrated View: Core Cycle & Foundation --- */}
+      <div className="mb-16 max-w-4xl mx-auto p-6 bg-[var(--background-secondary)] rounded-lg border border-[var(--dark-grey-secondary)]/30">
+        {/* Core Engine Section */}
+        <div className="mb-6 pb-6 border-b border-[var(--dark-grey-secondary)]/50">
+          <h3 className="text-2xl font-semibold text-[var(--text-primary)] mb-6 text-center">The Virtuous Cycle (Macro View)</h3>
+          <p className="text-[var(--text-secondary)] italic text-sm mt-4 text-center">
+            The core engine: Generate resources through sequential leverage.
+          </p>
+          <div className="flex flex-col md:flex-row justify-center items-center md:space-x-2 text-center text-lg font-medium max-w-3xl mx-auto">
+            
+            {/* Step 1: Time */}
+            <div className={`flex-1 p-3 m-1 rounded ${textColors.time}`}>Build Time</div>
+            
+            {/* Arrow */}
+            <div className="text-2xl text-[var(--text-secondary)] transform md:rotate-0 rotate-90">→</div>
+            
+            {/* Step 2: Knowledge */}
+            <div className={`flex-1 p-3 m-1 rounded ${textColors.knowledge}`}>Capture Knowledge</div>
+            
+            {/* Arrow */}
+            <div className="text-2xl text-[var(--text-secondary)] transform md:rotate-0 rotate-90">→</div>
+            
+            {/* Step 3: Wealth */}
+            <div className={`flex-1 p-3 m-1 rounded ${textColors.wealth}`}>Create Wealth</div>
+            
+          </div>
+
         </div>
-         <p className="text-[var(--text-secondary)] italic text-sm mt-4">
-          A flywheel compounding across seasons in life.
-        </p>
+
+        {/* Foundation Section (Inputs & Outputs) */}
+        <div className="mt-6">
+          <h3 className="text-2xl font-semibold text-[var(--text-primary)] mb-4 text-center">System Foundation</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* System Inputs - Left Side */}
+            <div className="p-4 border-r-0 md:border-r border-[var(--dark-grey-secondary)]/30">
+              <h4 className="font-medium text-[var(--text-primary)] mb-3 text-center md:text-left">System Inputs</h4>
+              <ul className="text-sm text-[var(--text-secondary)] space-y-2 pl-2">
+                <li className="flex items-start">
+                  <span className="mr-2">•</span>
+                  <span><span className="font-medium">Time:</span> Focused blocks for deep work</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">•</span>
+                  <span><span className="font-medium">Energy:</span> Physical & mental capacity</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">•</span>
+                  <span><span className="font-medium">Capital:</span> Initial funding (optional)</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">•</span>
+                  <span><span className="font-medium">Skills:</span> Technical & domain expertise</span>
+                </li>
+              </ul>
+              <p className="text-xs text-[var(--text-secondary)] italic mt-3 text-center md:text-left">
+                Required resources to start & sustain the system
+              </p>
+            </div>
+
+            {/* Reinvestment - Right Side */}
+            <div className="p-4 border-l-0 md:border-l border-[var(--dark-grey-secondary)]/30">
+              <h4 className="font-medium text-[var(--text-primary)] mb-3 text-center md:text-left">Reinvestment Allocation</h4>
+              <p className="text-xs text-[var(--text-secondary)] mb-3">
+                Output from the &apos;Create Wealth&apos; module is strategically allocated here to fuel the next cycle, enhance capabilities, and improve life quality.
+              </p>
+              <div className="grid grid-cols-2 gap-2">
+                <div className="p-2 border border-[var(--dark-grey-secondary)]/30 rounded-md bg-[var(--background-primary)]/50">
+                  <h5 className="font-medium text-[var(--text-primary)] text-sm">Capability (10-20%)</h5>
+                </div>
+                <div className="p-2 border border-[var(--dark-grey-secondary)]/30 rounded-md bg-[var(--background-primary)]/50">
+                  <h5 className="font-medium text-[var(--text-primary)] text-sm">Knowledge (15-25%)</h5>
+                </div>
+                <div className="p-2 border border-[var(--dark-grey-secondary)]/30 rounded-md bg-[var(--background-primary)]/50">
+                  <h5 className="font-medium text-[var(--text-primary)] text-sm">Network (15-20%)</h5>
+                </div>
+                <div className="p-2 border border-[var(--dark-grey-secondary)]/30 rounded-md bg-[var(--background-primary)]/50">
+                  <h5 className="font-medium text-[var(--text-primary)] text-sm">Opportunity (20-30%)</h5>
+                </div>
+                <div className="p-2 border border-[var(--dark-grey-secondary)]/30 rounded-md bg-[var(--background-primary)]/50 col-span-2">
+                  <h5 className="font-medium text-[var(--text-primary)] text-sm">Life Quality (15-25%)</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      {/* --- Micro View: Core System Multipliers --- */}
+      {/* --- Micro View: Core System Modules --- */}
       <div className="mb-16">
-        <h3 className="text-2xl font-semibold text-[var(--text-primary)] mb-6 text-center">Core Multipliers & Implementation (Micro View)</h3>
+        <h3 className="text-2xl font-semibold text-[var(--text-primary)] mb-6 text-center">Core System Modules (Micro View)</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-          {/* Time Multiplier Column */}
+          {/* Time Module Card */}
           <div className={`p-6 bg-[var(--background-secondary)] rounded-lg border-l-4 ${borderColors.time} flex flex-col h-full`}>
-            <h4 className={`text-xl font-medium mb-4 ${textColors.time}`}>1. Time Multiplier</h4>
+            <h4 className={`text-xl font-medium mb-4 ${textColors.time}`}>Module 1: Time Multiplier</h4>
             <div className="space-y-3 mb-4 flex-grow">
               <span className="block w-full text-center px-3 py-2 bg-[var(--dark-grey-secondary)] rounded text-[var(--text-primary)] text-sm">AI Agents</span>
               <span className="block w-full text-center px-3 py-2 bg-[var(--dark-grey-secondary)] rounded text-[var(--text-primary)] text-sm">Automation Flows</span>
@@ -68,9 +138,9 @@ const LifeSystem = () => {
             </div>
           </div>
 
-          {/* Knowledge Amplifier Column */}
+          {/* Knowledge Module Card */}
           <div className={`p-6 bg-[var(--background-secondary)] rounded-lg border-l-4 ${borderColors.knowledge} flex flex-col h-full`}>
-            <h4 className={`text-xl font-medium mb-4 ${textColors.knowledge}`}>2. Knowledge Amplifier</h4>
+            <h4 className={`text-xl font-medium mb-4 ${textColors.knowledge}`}>Module 2: Knowledge Amplifier</h4>
             <div className="space-y-3 mb-4 flex-grow">
               <span className="block w-full text-center px-3 py-2 bg-[var(--dark-grey-secondary)] rounded text-[var(--text-primary)] text-sm">Knowledge Management</span>
               <span className="block w-full text-center px-3 py-2 bg-[var(--dark-grey-secondary)] rounded text-[var(--text-primary)] text-sm">Content Creation</span>
@@ -87,9 +157,9 @@ const LifeSystem = () => {
             </div>
           </div>
 
-          {/* Wealth Multiplier Column */}
+          {/* Wealth Module Card */}
           <div className={`p-6 bg-[var(--background-secondary)] rounded-lg border-l-4 ${borderColors.wealth} flex flex-col h-full`}>
-            <h4 className={`text-xl font-medium mb-4 ${textColors.wealth}`}>3. Wealth Multiplier</h4>
+            <h4 className={`text-xl font-medium mb-4 ${textColors.wealth}`}>Module 3: Wealth Multiplier</h4>
             <div className="space-y-3 mb-4 flex-grow">
               <span className="block w-full text-center px-3 py-2 bg-[var(--dark-grey-secondary)] rounded text-[var(--text-primary)] text-sm">Digital Products</span>
               <span className="block w-full text-center px-3 py-2 bg-[var(--dark-grey-secondary)] rounded text-[var(--text-primary)] text-sm">Automated Marketing</span>
@@ -109,41 +179,6 @@ const LifeSystem = () => {
          <p className="text-center text-[var(--text-secondary)] text-sm mt-6 italic">Build sequentially, reinvesting gains from one stage to accelerate the next.</p>
       </div>
 
-      {/* --- Reinvestment Channels (Closing the Loop) --- */}
-      <div className="max-w-4xl mx-auto mb-12 p-6 bg-[var(--background-secondary)] rounded-lg border border-[var(--dark-grey-secondary)]/50">
-        <h3 className="text-2xl font-semibold text-[var(--text-primary)] mb-6 text-center">Reinvestment Channels (Closing the Loop)</h3>
-        <p className="text-center text-[var(--text-secondary)] text-sm mb-8 max-w-2xl mx-auto">
-            Strategically allocate generated wealth to fuel the next iteration of the cycle and enhance overall life quality. Percentages are guidelines and adaptable.
-        </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-[var(--text-secondary)]">
-          
-          <div className="p-4 border border-[var(--dark-grey-secondary)]/30 rounded-md bg-[var(--background-primary)]">
-              <h4 className="font-medium text-[var(--text-primary)] mb-1">Capability (10-20%)</h4>
-              <p className="text-xs">Upgrade AI tools, automation platforms, infrastructure.</p>
-          </div>
-
-          <div className="p-4 border border-[var(--dark-grey-secondary)]/30 rounded-md bg-[var(--background-primary)]">
-              <h4 className="font-medium text-[var(--text-primary)] mb-1">Knowledge (15-25%)</h4>
-              <p className="text-xs">Advanced courses, mentors, research materials.</p>
-          </div>
-
-          <div className="p-4 border border-[var(--dark-grey-secondary)]/30 rounded-md bg-[var(--background-primary)]">
-              <h4 className="font-medium text-[var(--text-primary)] mb-1">Network (15-20%)</h4>
-              <p className="text-xs">Community building, strategic relationships.</p>
-          </div>
-
-          <div className="p-4 border border-[var(--dark-grey-secondary)]/30 rounded-md bg-[var(--background-primary)]">
-              <h4 className="font-medium text-[var(--text-primary)] mb-1">Opportunity (20-30%)</h4>
-              <p className="text-xs">Angel investments, new ventures, experiments.</p>
-          </div>
-
-          <div className="p-4 border border-[var(--dark-grey-secondary)]/30 rounded-md bg-[var(--background-primary)]">
-              <h4 className="font-medium text-[var(--text-primary)] mb-1">Life Quality (15-25%)</h4>
-              <p className="text-xs">Personal well-being, family experiences, buffer.</p>
-          </div>
-
-        </div>
-      </div>
 
     </>
   );
