@@ -1,18 +1,10 @@
-import { Raleway, Merriweather } from 'next/font/google'
 import type { Metadata } from "next";
 import '../styles/globals.css';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 
-const raleway = Raleway({ subsets: ['latin'] })
-const merriweather = Merriweather({ 
-  subsets: ['latin'], 
-  weight: ['400', '700'],
-  variable: '--font-merriweather'  // Add this line
-})
-
 export const metadata: Metadata = {
-  title: "daveliew.com",
+  title: "daveliew - Agentic AI Builder and Consultant",
   description: "Human Creativity fused with Tomorrow's Technology",
   icons: {
     icon: "/images/logo.png",
@@ -25,8 +17,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={merriweather.variable}>  
-      <body className={raleway.className}>
+    <html lang="en">  
+      <body>
         <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 flex flex-col">
           <Navbar />
           <main className="flex-grow">
