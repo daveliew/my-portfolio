@@ -1,8 +1,8 @@
 import { Raleway, Merriweather } from 'next/font/google'
 import type { Metadata } from "next";
 import '../styles/globals.css';
-import PortfolioLayout from "../components/layout/PortfolioLayout";
-import Footer from '@/components/layout/Footer';
+import Navbar from '../components/layout/Navbar';
+import Footer from '../components/layout/Footer';
 
 const raleway = Raleway({ subsets: ['latin'] })
 const merriweather = Merriweather({ 
@@ -27,12 +27,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={merriweather.variable}>  
       <body className={raleway.className}>
-        <PortfolioLayout>
-          <main>
+        <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 flex flex-col">
+          <Navbar />
+          <main className="flex-grow">
             {children}
           </main>
-        </PortfolioLayout>
-      <Footer />
+          <Footer />
+        </div>
       </body>
     </html>
   );
