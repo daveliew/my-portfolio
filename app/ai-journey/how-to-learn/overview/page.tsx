@@ -1,95 +1,120 @@
 'use client';
 
+import { motion } from 'framer-motion';
 import Link from 'next/link';
+import AIJourneySubpageLayout from '@/components/ai-journey/SubpageLayout';
 
-export default function HowToLearnOverviewPage() {
+export default function LearningOverviewPage() {
+  // Sample learning paths data - this would ideally come from a data file or CMS
+  const learningPaths = [
+    {
+      title: 'LLM Handling Path',
+      description: 'Learn how to effectively work with Large Language Models for content generation, summarization, and transformation.',
+      skills: ['Prompt Engineering', 'Context Management', 'Output Evaluation', 'Fine-tuning Basics'],
+      href: '/ai-journey/how-to-learn/llm-handling',
+      level: 'Beginner to Intermediate',
+      time: '4-6 weeks'
+    },
+    {
+      title: 'Agent & RAG Path',
+      description: 'Build intelligent agents and implement Retrieval Augmented Generation for more capable AI systems.',
+      skills: ['Agent Architecture', 'RAG Implementation', 'Tool & API Integration', 'Memory Systems'],
+      href: '/ai-journey/how-to-learn/agent-rag',
+      level: 'Intermediate to Advanced',
+      time: '6-8 weeks'
+    }
+  ];
+
   return (
-    <div className="min-h-screen">
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold text-burgundy mb-2">How to Learn AI</h1>
-        <p className="text-off-white text-lg mb-6">
-          A structured approach to developing AI expertise for different career paths
-        </p>
-      </div>
-
-      <div className="mb-10">
-        <h2 className="text-2xl font-semibold text-burgundy mb-4">Learning Pathways</h2>
-        <p className="text-off-white mb-6">
-          I&apos;ve developed these learning pathways based on my own journey and extensive research into effective approaches for 
-          developing AI expertise. The pathways are designed to provide both breadth and depth, depending on your goals.
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-          <div className="bg-dark-gray p-6 rounded-lg hover:shadow-md transition-all border border-gray-700 hover:border-burgundy">
-            <h3 className="text-xl font-medium text-burgundy-light mb-3">Broad LLM Handling</h3>
-            <p className="text-off-white mb-4">
-              This pathway focuses on developing general skills for working with large language models across a variety of applications. 
-              It&apos;s ideal for professionals who need to incorporate AI capabilities into existing workflows or products.
-            </p>
-            <ul className="list-disc list-inside text-off-white mb-6 space-y-1.5">
-              <li>Prompt engineering fundamentals</li>
-              <li>API integrations with popular models</li>
-              <li>Fine-tuning for specific use cases</li>
-              <li>Building augmented workflows</li>
-            </ul>
-            <Link href="/ai-journey/how-to-learn/llm-handling" className="inline-block px-4 py-2 bg-burgundy text-white rounded-md hover:bg-burgundy-light transition-colors">
-              Explore LLM Handling Path
-            </Link>
-          </div>
-
-          <div className="bg-dark-gray p-6 rounded-lg hover:shadow-md transition-all border border-gray-700 hover:border-burgundy">
-            <h3 className="text-xl font-medium text-burgundy-light mb-3">AI Agent & RAG Development</h3>
-            <p className="text-off-white mb-4">
-              This advanced pathway focuses on building autonomous agents and retrieval-augmented generation (RAG) systems. 
-              It&apos;s designed for developers who want to create more sophisticated AI applications.
-            </p>
-            <ul className="list-disc list-inside text-off-white mb-6 space-y-1.5">
-              <li>Agent architecture design</li>
-              <li>Vector database implementation</li>
-              <li>Knowledge retrieval systems</li>
-              <li>Multi-agent communication</li>
-            </ul>
-            <Link href="/ai-journey/how-to-learn/agent-rag" className="inline-block px-4 py-2 bg-burgundy text-white rounded-md hover:bg-burgundy-light transition-colors">
-              Explore Agent & RAG Path
-            </Link>
-          </div>
+    <AIJourneySubpageLayout
+      title="AI Learning Overview"
+      description="Structured paths to develop practical AI skills without getting lost in the hype"
+    >
+      {/* Introduction */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="mb-12"
+      >
+        <h2 className="text-2xl font-semibold mb-6 border-b border-gray-200 dark:border-gray-700 pb-2">Learning Philosophy</h2>
+        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+          <p className="text-gray-600 dark:text-gray-300 mb-4">
+            My approach to learning AI focuses on building practical capabilities that deliver immediate value while 
+            developing a foundation for long-term growth. Rather than trying to master everything at once, I&apos;ve created 
+            focused learning paths that build complementary skills.
+          </p>
+          <p className="text-gray-600 dark:text-gray-300">
+            Each path is designed to take you from theory to practical implementation, with an emphasis on building 
+            real-world projects that demonstrate your capabilities.
+          </p>
         </div>
-      </div>
+      </motion.section>
 
-      <div className="mb-12">
-        <h2 className="text-2xl font-semibold text-burgundy mb-4">Core Learning Principles</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-dark-gray p-5 rounded-lg">
-            <h3 className="text-lg font-medium text-burgundy-light mb-2">Learn by Building</h3>
-            <p className="text-off-white">
-              The most effective way to learn AI is through practical application. Focus on building real projects that solve actual problems.
-            </p>
-          </div>
-          
-          <div className="bg-dark-gray p-5 rounded-lg">
-            <h3 className="text-lg font-medium text-burgundy-light mb-2">Understand the Fundamentals</h3>
-            <p className="text-off-white">
-              While you don&apos;t need to know everything about how models work, having a solid conceptual understanding will make you more effective.
-            </p>
-          </div>
-          
-          <div className="bg-dark-gray p-5 rounded-lg">
-            <h3 className="text-lg font-medium text-burgundy-light mb-2">Iterative Improvement</h3>
-            <p className="text-off-white">
-              Start simple, then progressively enhance your projects as you learn more. This iterative approach builds confidence and skills.
-            </p>
-          </div>
+      {/* Learning Paths */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        className="mb-12"
+      >
+        <h2 className="text-2xl font-semibold mb-6 border-b border-gray-200 dark:border-gray-700 pb-2">Learning Paths</h2>
+        <div className="grid md:grid-cols-2 gap-6">
+          {learningPaths.map((path) => (
+            <div key={path.title} className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden border border-gray-200 dark:border-gray-700">
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-blue-600 dark:text-blue-400 mb-2">{path.title}</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">{path.description}</p>
+                
+                <div className="mb-4">
+                  <h4 className="font-medium text-gray-700 dark:text-gray-300 mb-2">Key Skills:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {path.skills.map(skill => (
+                      <span key={skill} className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-300 text-xs font-medium px-2.5 py-0.5 rounded">
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                
+                <div className="flex justify-between text-sm text-gray-500 dark:text-gray-400 mb-4">
+                  <span>Level: {path.level}</span>
+                  <span>Time: {path.time}</span>
+                </div>
+                
+                <Link 
+                  href={path.href} 
+                  className="inline-block w-full text-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded transition-colors"
+                >
+                  View Path
+                </Link>
+              </div>
+            </div>
+          ))}
         </div>
-      </div>
+      </motion.section>
 
-      <div className="flex justify-between mt-10">
-        <Link href="/ai-journey/why-ai" className="px-4 py-2 border border-burgundy text-burgundy rounded-md hover:bg-burgundy hover:text-white transition-colors">
-          ← Why AI Matters
-        </Link>
-        <Link href="/ai-journey/portfolio" className="px-4 py-2 border border-burgundy text-burgundy rounded-md hover:bg-burgundy hover:text-white transition-colors">
-          My AI Portfolio →
-        </Link>
-      </div>
-    </div>
+      {/* Learning Resources */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+        className="mb-12"
+      >
+        <h2 className="text-2xl font-semibold mb-6 border-b border-gray-200 dark:border-gray-700 pb-2">General Resources</h2>
+        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+          <p className="text-gray-600 dark:text-gray-300 mb-4">
+            Beyond the structured learning paths, these resources provide valuable context and deeper understanding of AI concepts:
+          </p>
+          <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-2">
+            <li>Stanford CS324: Large Language Models (freely available course materials)</li>
+            <li>Andrej Karpathy&apos;s Neural Networks and Transformers videos</li>
+            <li>Andrew Ng&apos;s Deep Learning Specialization</li>
+            <li>Hands-on experience building projects with Hugging Face, OpenAI, Anthropic and more</li>
+            <li>The &quot;Full Stack LLM Bootcamp&quot; series from a16z</li>
+          </ul>
+        </div>
+      </motion.section>
+    </AIJourneySubpageLayout>
   );
 } 

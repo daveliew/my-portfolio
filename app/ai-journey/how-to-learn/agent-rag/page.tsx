@@ -1,233 +1,163 @@
 'use client';
 
+import { motion } from 'framer-motion';
 import Link from 'next/link';
+import AIJourneySubpageLayout from '@/components/ai-journey/SubpageLayout';
+import learningPathsData from '@/data/ai-journey-learning-paths.json';
 
-export default function AgentRAGPage() {
+export default function AgentRagPage() {
+  // Find the Agent & RAG learning path from the data
+  const agentRagPath = learningPathsData.learningPaths.find(path => path.id === 'agent-rag');
+
+  if (!agentRagPath) {
+    return <div>Error loading learning path data</div>;
+  }
+
   return (
-    <div className="min-h-screen">
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold text-burgundy mb-2">AI Agent & RAG Development Path</h1>
-        <p className="text-off-white text-lg mb-6">
-          Advanced training for building autonomous agents and retrieval-augmented generation systems
-        </p>
-      </div>
+    <AIJourneySubpageLayout
+      title={agentRagPath.title}
+      description={agentRagPath.description}
+    >
+      {/* Learning Objectives */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="mb-12"
+      >
+        <h2 className="text-2xl font-semibold mb-6 border-b border-gray-200 dark:border-gray-700 pb-2">Learning Objectives</h2>
+        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+          <p className="text-gray-600 dark:text-gray-300 mb-4">
+            By the end of this advanced learning path, you will be able to:
+          </p>
+          <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300">
+            {agentRagPath.objectives.map((objective, index) => (
+              <li key={index} className="pl-2">
+                <span className="pl-2">{objective}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </motion.section>
 
-      <div className="mb-10">
-        <h2 className="text-2xl font-semibold text-burgundy mb-4">Learning Objectives</h2>
-        <p className="text-off-white mb-6">
-          Upon completing this specialized learning path, you will be able to:
-        </p>
-        <ul className="list-disc list-inside text-off-white space-y-2 mb-8">
-          <li>Design and implement autonomous AI agents with specific capabilities</li>
-          <li>Create effective retrieval systems that augment LLM knowledge</li>
-          <li>Build multi-agent systems that can collaborate on complex tasks</li>
-          <li>Implement effective memory and context management systems</li>
-          <li>Develop architectures that balance autonomy with appropriate safeguards</li>
-        </ul>
-      </div>
+      {/* Path Metadata */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        className="mb-12"
+      >
+        <h2 className="text-2xl font-semibold mb-6 border-b border-gray-200 dark:border-gray-700 pb-2">Path Information</h2>
+        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+          <div className="grid md:grid-cols-2 gap-6">
+            <div>
+              <h3 className="text-lg font-medium text-blue-600 dark:text-blue-400 mb-3">Details</h3>
+              <ul className="space-y-2 text-gray-600 dark:text-gray-300">
+                <li><span className="font-medium">Level:</span> {agentRagPath.metadata.level}</li>
+                <li><span className="font-medium">Duration:</span> {agentRagPath.metadata.duration}</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-medium text-blue-600 dark:text-blue-400 mb-3">Prerequisites</h3>
+              <ul className="list-disc list-inside space-y-1 text-gray-600 dark:text-gray-300">
+                {agentRagPath.metadata.prerequisites.map((prereq, index) => (
+                  <li key={index} className="pl-2">
+                    <span className="pl-2">{prereq}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          
+          <div className="mt-6">
+            <h3 className="text-lg font-medium text-blue-600 dark:text-blue-400 mb-3">Target Audience</h3>
+            <div className="flex flex-wrap gap-2">
+              {agentRagPath.metadata.targetAudience.map((audience, index) => (
+                <span key={index} className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-300 text-xs font-medium px-2.5 py-0.5 rounded">
+                  {audience}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </motion.section>
 
-      <div className="mb-12">
-        <h2 className="text-2xl font-semibold text-burgundy mb-4">Learning Path Structure</h2>
+      {/* Learning Path Structure */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+        className="mb-12"
+      >
+        <h2 className="text-2xl font-semibold mb-6 border-b border-gray-200 dark:border-gray-700 pb-2">Learning Path Structure</h2>
         
         <div className="space-y-8">
-          {/* Prerequisites */}
-          <div className="bg-dark-gray p-6 rounded-lg">
-            <h3 className="text-xl font-medium text-burgundy-light mb-3">Prerequisites</h3>
-            <p className="text-off-white mb-4">
-              Before starting this advanced path, ensure you have:
-            </p>
-            <ul className="list-disc list-inside text-off-white ml-4 space-y-1">
-              <li>Solid understanding of LLM fundamentals (see the LLM Handling path)</li>
-              <li>Basic programming skills (Python preferred)</li>
-              <li>Familiarity with API integrations</li>
-              <li>Understanding of vector embeddings concepts</li>
-            </ul>
-          </div>
-          
-          {/* Phase 1 */}
-          <div className="bg-dark-gray p-6 rounded-lg">
-            <h3 className="text-xl font-medium text-burgundy-light mb-3">Phase 1: Retrieval-Augmented Generation Fundamentals</h3>
-            <p className="text-off-white mb-4">
-              Master the core concepts and implementation of RAG systems.
-            </p>
-            <div className="space-y-4">
-              <div>
-                <h4 className="text-lg font-medium text-burgundy-light/90 mb-1">Vector Embeddings</h4>
-                <ul className="list-disc list-inside text-off-white ml-4 space-y-1">
-                  <li>Understanding embeddings and vector spaces</li>
-                  <li>Selecting and implementing embedding models</li>
-                  <li>Optimizing embeddings for specific domains</li>
-                </ul>
-              </div>
+          {agentRagPath.phases.map((phase, phaseIndex) => (
+            <div key={phaseIndex} className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-medium text-blue-600 dark:text-blue-400 mb-3">{phase.title}</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-4">{phase.description}</p>
               
-              <div>
-                <h4 className="text-lg font-medium text-burgundy-light/90 mb-1">Vector Databases</h4>
-                <ul className="list-disc list-inside text-off-white ml-4 space-y-1">
-                  <li>Setting up and configuring vector databases (Chroma, Pinecone, etc.)</li>
-                  <li>Indexing strategies for different content types</li>
-                  <li>Optimizing search performance and relevance</li>
-                </ul>
-              </div>
-              
-              <div>
-                <h4 className="text-lg font-medium text-burgundy-light/90 mb-1">Retrieval Mechanisms</h4>
-                <ul className="list-disc list-inside text-off-white ml-4 space-y-1">
-                  <li>Query formulation and processing</li>
-                  <li>Hybrid search techniques</li>
-                  <li>Reranking and relevance scoring</li>
-                </ul>
-              </div>
-              
-              <div>
-                <h4 className="text-lg font-medium text-burgundy-light/90 mb-1">Project: Simple RAG System</h4>
-                <p className="text-off-white ml-4">
-                  Build a basic RAG system that indexes a collection of documents and answers questions based on their content.
-                </p>
+              <div className="space-y-4">
+                {phase.modules.map((module, moduleIndex) => (
+                  <div key={moduleIndex}>
+                    <h4 className="text-lg font-medium text-gray-700 dark:text-gray-300 mb-2">{module.title}</h4>
+                    <ul className="list-disc list-inside ml-4 space-y-1 text-gray-600 dark:text-gray-300">
+                      {module.topics.map((topic, topicIndex) => (
+                        <li key={topicIndex} className="pl-2">
+                          <span className="pl-2">{topic}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
               </div>
             </div>
-          </div>
-          
-          {/* Phase 2 */}
-          <div className="bg-dark-gray p-6 rounded-lg">
-            <h3 className="text-xl font-medium text-burgundy-light mb-3">Phase 2: Agent Fundamentals</h3>
-            <p className="text-off-white mb-4">
-              Learn how to build autonomous agents with specific capabilities.
-            </p>
-            <div className="space-y-4">
-              <div>
-                <h4 className="text-lg font-medium text-burgundy-light/90 mb-1">Agent Architecture</h4>
-                <ul className="list-disc list-inside text-off-white ml-4 space-y-1">
-                  <li>Core components of an AI agent</li>
-                  <li>Planning and reasoning mechanisms</li>
-                  <li>Tool use and function calling</li>
-                </ul>
-              </div>
-              
-              <div>
-                <h4 className="text-lg font-medium text-burgundy-light/90 mb-1">Memory Systems</h4>
-                <ul className="list-disc list-inside text-off-white ml-4 space-y-1">
-                  <li>Short-term and conversational memory</li>
-                  <li>Long-term knowledge storage</li>
-                  <li>Memory retrieval and relevance</li>
-                </ul>
-              </div>
-              
-              <div>
-                <h4 className="text-lg font-medium text-burgundy-light/90 mb-1">Tool Integration</h4>
-                <ul className="list-disc list-inside text-off-white ml-4 space-y-1">
-                  <li>Designing and implementing agent tools</li>
-                  <li>API and external service connections</li>
-                  <li>Result processing and incorporation</li>
-                </ul>
-              </div>
-              
-              <div>
-                <h4 className="text-lg font-medium text-burgundy-light/90 mb-1">Project: Task-specific Agent</h4>
-                <p className="text-off-white ml-4">
-                  Build an agent that can perform a specific task autonomously, such as gathering information from the web or analyzing data.
-                </p>
-              </div>
-            </div>
-          </div>
-          
-          {/* Phase 3 */}
-          <div className="bg-dark-gray p-6 rounded-lg">
-            <h3 className="text-xl font-medium text-burgundy-light mb-3">Phase 3: Advanced Agent & RAG Integration</h3>
-            <p className="text-off-white mb-4">
-              Combine agents and RAG systems into powerful, knowledge-aware autonomous systems.
-            </p>
-            <div className="space-y-4">
-              <div>
-                <h4 className="text-lg font-medium text-burgundy-light/90 mb-1">RAG-Enhanced Agents</h4>
-                <ul className="list-disc list-inside text-off-white ml-4 space-y-1">
-                  <li>Integrating retrieval capabilities into agents</li>
-                  <li>Dynamic knowledge acquisition</li>
-                  <li>Self-updating knowledge bases</li>
-                </ul>
-              </div>
-              
-              <div>
-                <h4 className="text-lg font-medium text-burgundy-light/90 mb-1">Multi-Agent Systems</h4>
-                <ul className="list-disc list-inside text-off-white ml-4 space-y-1">
-                  <li>Agent communication protocols</li>
-                  <li>Role specialization and task delegation</li>
-                  <li>Orchestrating multiple agents with frameworks like CrewAI</li>
-                </ul>
-              </div>
-              
-              <div>
-                <h4 className="text-lg font-medium text-burgundy-light/90 mb-1">Reliability and Safety</h4>
-                <ul className="list-disc list-inside text-off-white ml-4 space-y-1">
-                  <li>Implementing guardrails and safety measures</li>
-                  <li>Error handling and recovery mechanisms</li>
-                  <li>Monitoring and logging agent activities</li>
-                </ul>
-              </div>
-              
-              <div>
-                <h4 className="text-lg font-medium text-burgundy-light/90 mb-1">Capstone Project</h4>
-                <p className="text-off-white ml-4">
-                  Build a multi-agent system with RAG capabilities that can solve complex, open-ended problems by combining information retrieval, reasoning, and specific domain tools.
-                </p>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
-      </div>
+      </motion.section>
       
-      <div className="mb-10">
-        <h2 className="text-2xl font-semibold text-burgundy mb-4">Recommended Technologies</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-dark-gray p-5 rounded-lg">
-            <h3 className="text-lg font-medium text-burgundy-light mb-2">Agent Frameworks</h3>
-            <ul className="list-disc list-inside text-off-white space-y-1">
-              <li>LangChain</li>
-              <li>CrewAI</li>
-              <li>AutoGPT</li>
-              <li>LlamaIndex</li>
-            </ul>
-          </div>
-          
-          <div className="bg-dark-gray p-5 rounded-lg">
-            <h3 className="text-lg font-medium text-burgundy-light mb-2">Vector Databases</h3>
-            <ul className="list-disc list-inside text-off-white space-y-1">
-              <li>Pinecone</li>
-              <li>Chroma</li>
-              <li>Weaviate</li>
-              <li>Qdrant</li>
-            </ul>
-          </div>
-          
-          <div className="bg-dark-gray p-5 rounded-lg">
-            <h3 className="text-lg font-medium text-burgundy-light mb-2">LLM Providers</h3>
-            <ul className="list-disc list-inside text-off-white space-y-1">
-              <li>OpenAI (GPT-4, GPT-3.5)</li>
-              <li>Anthropic (Claude)</li>
-              <li>Mistral AI</li>
-              <li>Google (Gemini)</li>
-            </ul>
-          </div>
-          
-          <div className="bg-dark-gray p-5 rounded-lg">
-            <h3 className="text-lg font-medium text-burgundy-light mb-2">Development Tools</h3>
-            <ul className="list-disc list-inside text-off-white space-y-1">
-              <li>Python</li>
-              <li>Jupyter Notebooks</li>
-              <li>FastAPI/Flask</li>
-              <li>Docker</li>
-            </ul>
-          </div>
+      {/* Learning Process */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+        className="mb-12"
+      >
+        <h2 className="text-2xl font-semibold mb-6 border-b border-gray-200 dark:border-gray-700 pb-2">Learning Process</h2>
+        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+          <p className="text-gray-600 dark:text-gray-300 mb-4">
+            For best results with this advanced learning path:
+          </p>
+          <ol className="list-decimal list-inside space-y-2 text-gray-600 dark:text-gray-300">
+            {agentRagPath.process.map((step, index) => (
+              <li key={index} className="pl-2">
+                <span className="pl-2">{step}</span>
+              </li>
+            ))}
+          </ol>
         </div>
-      </div>
+      </motion.section>
 
-      <div className="flex justify-between mt-10">
-        <Link href="/ai-journey/how-to-learn/llm-handling" className="px-4 py-2 border border-burgundy text-burgundy rounded-md hover:bg-burgundy hover:text-white transition-colors">
+      {/* Navigation */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.6 }}
+        className="flex justify-between mt-12"
+      >
+        <Link 
+          href={agentRagPath.links.previous} 
+          className="px-4 py-2 border border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 rounded-md hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500 transition-colors"
+        >
           ← LLM Handling Path
         </Link>
-        <Link href="/ai-journey/portfolio" className="px-4 py-2 border border-burgundy text-burgundy rounded-md hover:bg-burgundy hover:text-white transition-colors">
-          My AI Portfolio →
+        <Link 
+          href={agentRagPath.links.next} 
+          className="px-4 py-2 border border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 rounded-md hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500 transition-colors"
+        >
+          AI Portfolio →
         </Link>
-      </div>
-    </div>
+      </motion.div>
+    </AIJourneySubpageLayout>
   );
 } 

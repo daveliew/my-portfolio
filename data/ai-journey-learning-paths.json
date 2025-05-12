@@ -1,0 +1,251 @@
+{
+  "learningPaths": [
+    {
+      "id": "llm-handling",
+      "title": "LLM Handling Learning Path",
+      "description": "A comprehensive roadmap for mastering large language models in practical applications",
+      "overview": "This learning path focuses on developing the skills needed to effectively utilize large language models across various applications and workflows.",
+      "objectives": [
+        "Effectively communicate with AI models through well-crafted prompts",
+        "Integrate AI capabilities into existing applications and workflows",
+        "Understand LLM limitations and implement appropriate guardrails",
+        "Design hybrid human-AI workflows that maximize the strengths of both",
+        "Evaluate and select the right models for specific use cases"
+      ],
+      "metadata": {
+        "level": "Beginner to Intermediate",
+        "duration": "4-6 weeks",
+        "prerequisites": ["Basic programming knowledge", "Familiarity with API concepts"],
+        "targetAudience": ["Developers", "Content creators", "Business analysts", "Product managers"]
+      },
+      "phases": [
+        {
+          "title": "Phase 1: Fundamentals",
+          "description": "Build a solid foundation in understanding how LLMs work and how to interact with them effectively.",
+          "modules": [
+            {
+              "title": "Understanding LLMs",
+              "topics": [
+                "Basic concepts: tokens, parameters, temperature, context window",
+                "Model capabilities and limitations",
+                "Different model architectures and their strengths"
+              ]
+            },
+            {
+              "title": "Prompt Engineering Basics",
+              "topics": [
+                "Crafting clear instructions",
+                "Using examples (few-shot learning)",
+                "Basic prompt patterns and templates"
+              ]
+            },
+            {
+              "title": "Suggested Resources",
+              "topics": [
+                "OpenAI Documentation",
+                "Prompt Engineering Guide by Anthropic",
+                "Learn Prompting website"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Phase 2: Integration & Application",
+          "description": "Learn how to incorporate LLMs into applications and existing workflows.",
+          "modules": [
+            {
+              "title": "API Integration",
+              "topics": [
+                "Setting up API access to various models",
+                "Managing API costs and rate limits",
+                "Error handling and fallback strategies"
+              ]
+            },
+            {
+              "title": "Building Basic AI Features",
+              "topics": [
+                "Content generation capabilities",
+                "Data extraction and summarization",
+                "Conversation management"
+              ]
+            },
+            {
+              "title": "Suggested Projects",
+              "topics": [
+                "Build a simple chatbot",
+                "Create a content summarization tool",
+                "Implement a simple data extraction system"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Phase 3: Advanced Techniques",
+          "description": "Master advanced techniques for optimizing LLM performance in complex scenarios.",
+          "modules": [
+            {
+              "title": "Advanced Prompt Engineering",
+              "topics": [
+                "Chain-of-thought prompting",
+                "ReAct pattern implementation",
+                "System and user message design"
+              ]
+            },
+            {
+              "title": "Enhancing Reliability",
+              "topics": [
+                "Output validation and correction",
+                "Implementing guardrails",
+                "Handling hallucinations and misinformation"
+              ]
+            },
+            {
+              "title": "Model Fine-tuning",
+              "topics": [
+                "When and why to fine-tune models",
+                "Creating effective training datasets",
+                "Evaluating fine-tuned models"
+              ]
+            }
+          ]
+        }
+      ],
+      "process": [
+        "Spend 1-2 weeks on each phase",
+        "Complete at least one project in each phase before moving on",
+        "Document your learnings and challenges",
+        "Join communities like Hugging Face and AI Discord servers to share experiences"
+      ],
+      "links": {
+        "previous": "/ai-journey/how-to-learn/overview",
+        "next": "/ai-journey/how-to-learn/agent-rag"
+      }
+    },
+    {
+      "id": "agent-rag",
+      "title": "Agent & RAG Learning Path",
+      "description": "Build intelligent agents and implement Retrieval Augmented Generation for more capable AI systems",
+      "overview": "This advanced learning path focuses on building autonomous agents and retrieval-augmented generation (RAG) systems for sophisticated AI applications.",
+      "objectives": [
+        "Build AI agents that can perform complex, multi-step tasks",
+        "Implement effective RAG systems for knowledge-intensive applications",
+        "Design and deploy multi-agent systems for collaborative tasks",
+        "Integrate external tools and APIs with agents",
+        "Create memory and knowledge retrieval systems for AI applications"
+      ],
+      "metadata": {
+        "level": "Intermediate to Advanced",
+        "duration": "6-8 weeks",
+        "prerequisites": [
+          "Solid understanding of LLM capabilities and limitations",
+          "Experience with API integration",
+          "Basic knowledge of vector databases",
+          "Programming proficiency in Python or JavaScript"
+        ],
+        "targetAudience": ["AI developers", "Data engineers", "Solution architects", "ML engineers"]
+      },
+      "phases": [
+        {
+          "title": "Phase 1: Agent Fundamentals",
+          "description": "Understand the core concepts of AI agents and their implementation.",
+          "modules": [
+            {
+              "title": "Agent Architecture",
+              "topics": [
+                "Core components of an AI agent",
+                "Agent models (reactive, goal-based, utility-based)",
+                "Planning and execution frameworks"
+              ]
+            },
+            {
+              "title": "Frameworks & Tools",
+              "topics": [
+                "LangChain vs. CrewAI",
+                "AutoGPT and BabyAGI",
+                "Setting up development environments"
+              ]
+            },
+            {
+              "title": "Basic Agent Implementation",
+              "topics": [
+                "Creating a single-task agent",
+                "Tool and API integration",
+                "Testing and debugging agents"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Phase 2: Retrieval Augmented Generation",
+          "description": "Master the techniques for augmenting LLMs with external knowledge.",
+          "modules": [
+            {
+              "title": "Knowledge Representation",
+              "topics": [
+                "Vector embeddings and semantic search",
+                "Document chunking strategies",
+                "Metadata and filtering"
+              ]
+            },
+            {
+              "title": "Vector Databases",
+              "topics": [
+                "Setting up Pinecone, Weaviate, or Chroma",
+                "Indexing and querying vector databases",
+                "Hybrid search techniques"
+              ]
+            },
+            {
+              "title": "RAG Implementation",
+              "topics": [
+                "Building a basic RAG pipeline",
+                "Query reformulation techniques",
+                "Evaluating RAG quality"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Phase 3: Advanced Agent Systems",
+          "description": "Build sophisticated multi-agent systems with memory and advanced capabilities.",
+          "modules": [
+            {
+              "title": "Multi-Agent Systems",
+              "topics": [
+                "Agent roles and specialization",
+                "Inter-agent communication",
+                "Orchestration and coordination"
+              ]
+            },
+            {
+              "title": "Memory Systems",
+              "topics": [
+                "Short-term and long-term memory",
+                "Contextual recall mechanisms",
+                "Memory indexing and retrieval"
+              ]
+            },
+            {
+              "title": "Capstone Project",
+              "topics": [
+                "Design a complex agent system with RAG capabilities",
+                "Implement evaluation metrics",
+                "Deploy and monitor the system"
+              ]
+            }
+          ]
+        }
+      ],
+      "process": [
+        "Complete each phase sequentially",
+        "Build increasingly complex projects as you progress",
+        "Focus on a specific domain application (e.g., customer service, research assistant)",
+        "Continuously evaluate and refine your implementations"
+      ],
+      "links": {
+        "previous": "/ai-journey/how-to-learn/llm-handling",
+        "next": "/ai-journey/portfolio"
+      }
+    }
+  ]
+} 
