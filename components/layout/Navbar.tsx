@@ -2,91 +2,121 @@
 
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-
-interface NavbarProps {
-  isHomePage: boolean;
-}
+import { usePathname } from 'next/navigation';
 
 const navLinks = [
-  { href: '/#systems', label: 'Life System', id: 'systems' },
-  { href: '/#skills', label: 'Skills', id: 'skills' },
-  { href: '/#experience', label: 'Experience', id: 'experience' },
-  { href: '/ai-journey', label: 'AI Journey', id: 'ai-journey' },
+  { href: '/', label: 'Home', id: 'home' },
+  { href: '/now', label: 'Now', id: 'now' },
+  { href: '/skills-experience', label: 'Skills & Experience', id: 'skills-experience' },
+  { href: '/sustainability', label: 'Sustainability', id: 'sustainability' },
+  { href: '/business', label: 'Business', id: 'business' },
+  { href: '/tech-ed', label: 'Tech Ed', id: 'tech-ed' },
+  { href: '/contact', label: 'Contact', id: 'contact' },
 ];
 
-const Navbar: React.FC<NavbarProps> = ({ isHomePage }) => {
-  const [activeSection, setActiveSection] = useState<string>('');
+const Navbar: React.FC = () => {
+  const pathname = usePathname();
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const offsets = navLinks
-        .filter(link => link.href.startsWith('/#'))
-        .map(link => {
-          const el = document.getElementById(link.id);
-          return el ? { id: link.id, top: el.getBoundingClientRect().top } : null;
-        })
-        .filter(Boolean) as { id: string; top: number }[];
-      const threshold = 120;
-      const current = offsets.find(section => section.top > 0 && section.top < threshold);
-      setActiveSection(current ? current.id : '');
+      const scrollPosition = window.scrollY;
+      setIsScrolled(scrollPosition > 10);
     };
+    
     window.addEventListener('scroll', handleScroll);
-    handleScroll();
+    handleScroll(); // Check initial position
+    
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
-    if (isHomePage) {
-      e.preventDefault();
-      const section = document.getElementById(targetId);
-      if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
-        window.history.pushState({}, '', `/#${targetId}`);
-      }
-    }
-  };
-
-  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    window.history.pushState({}, '', '/');
-  };
-
   return (
-    <nav className="
+    <nav className={`
       w-full
       h-16
       flex items-center
-      bg-[var(--dark-grey)]
-      border-b border-[var(--dark-grey-secondary)]
+      ${isScrolled ? 'bg-white dark:bg-gray-900 shadow-md' : 'bg-transparent'}
+      transition-all duration-300
       sticky top-0 z-50
       px-4 md:px-6
-      shadow-lg
-    ">
+    `}>
       <div className="max-w-6xl mx-auto w-full flex justify-between items-center h-full">
         <Link 
           href="/" 
           className="flex items-center h-full"
-          onClick={handleLogoClick}
         >
-          <h1 className="mt-8 text-xl md:text-2xl font-bold font-navbar text-[var(--accent-primary)] leading-none">daveliew</h1>
+          <h1 className="text-xl md:text-2xl font-bold text-blue-600 dark:text-blue-400">daveliew</h1>
         </Link>
-        <div className="flex space-x-6 md:space-x-10 h-full items-center">
-          {navLinks.map(link => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`font-navbar text-[var(--text-primary)] relative transition-colors duration-200 px-1 py-2 flex items-center
-                hover:text-[var(--accent-primary)]
-                ${activeSection === link.id ? 'text-[var(--accent-primary)] after:absolute after:left-0 after:right-0 after:-bottom-1 after:h-0.5 after:bg-[var(--accent-primary)] after:rounded-full after:content-[""]' : ''}
-              `}
-              onClick={link.href.startsWith('/#') ? (e) => handleSmoothScroll(e, link.id) : undefined}
-            >
-              <span className="text-sm md:text-base">{link.label}</span>
-            </Link>
-          ))}
+
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex space-x-4 h-full items-center">
+          {navLinks.map(link => {
+            const isActive = 
+              link.href === '/' 
+                ? pathname === '/' 
+                : pathname.startsWith(link.href);
+            
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`relative transition-colors duration-200 px-1 py-2 flex items-center
+                  hover:text-blue-600 dark:hover:text-blue-400
+                  ${isActive 
+                    ? 'text-blue-600 dark:text-blue-400 font-medium after:absolute after:left-0 after:right-0 after:-bottom-1 after:h-0.5 after:bg-blue-600 dark:after:bg-blue-400 after:rounded-full after:content-[""]' 
+                    : 'text-gray-700 dark:text-gray-300'}
+                `}
+              >
+                <span className="text-sm md:text-base">{link.label}</span>
+              </Link>
+            );
+          })}
         </div>
+
+        {/* Mobile Navigation Toggle */}
+        <button 
+          className="md:hidden flex items-center"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Toggle mobile menu"
+        >
+          {isMobileMenuOpen ? (
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          ) : (
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          )}
+        </button>
       </div>
+
+      {/* Mobile Menu Dropdown */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden absolute top-16 left-0 right-0 bg-white dark:bg-gray-900 shadow-lg z-50 py-4 px-6 flex flex-col space-y-3">
+          {navLinks.map(link => {
+            const isActive = 
+              link.href === '/' 
+                ? pathname === '/' 
+                : pathname.startsWith(link.href);
+            
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`py-2 ${isActive 
+                  ? 'text-blue-600 dark:text-blue-400 font-medium'
+                  : 'text-gray-700 dark:text-gray-300'
+                }`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
+        </div>
+      )}
     </nav>
   );
 };

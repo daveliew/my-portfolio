@@ -1,33 +1,23 @@
 'use client';
 
 import React from 'react';
-import { usePathname } from 'next/navigation';
-import Head from 'next/head';
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 interface PortfolioLayoutProps {
   children: React.ReactNode;
 }
 
 const PortfolioLayout: React.FC<PortfolioLayoutProps> = ({ children }) => {
-  const pathname = usePathname();
-  const isHomePage = pathname === '/';
-
   return (
-    <div className="min-h-screen bg-dark-gray text-off-white font-sans">
-      <Head>
-        <title>David Liew</title>
-        <meta name="description" content="David Liew's portfolio, AI journey and life musings" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 flex flex-col">
+      <Navbar />
 
-      <Navbar isHomePage={isHomePage} />
-
-      <main className="max-w-6xl mx-auto px-4 md:px-6 py-8 md:py-12">
+      <main className="flex-grow">
         {children}
       </main>
 
+      <Footer />
     </div>
   );
 };
