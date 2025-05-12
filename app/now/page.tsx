@@ -52,17 +52,17 @@ export default function NowPage() {
   // Recent updates
   const recentUpdates = [
     {
-      date: 'June 15, 2023',
+      date: 'May 28, 2025',
       title: 'Portfolio Site Redesign',
-      description: 'Reorganized my portfolio to combine philosophy and current work for better clarity.',
+      description: 'Completed major portfolio refresh with three content pillars: Personal, Work, and AI Journey.',
     },
     {
-      date: 'June 10, 2023',
+      date: 'May 20, 2025',
       title: 'Sustainability Agent Research',
       description: 'Completed initial research on agentic AI for sustainability resource matching.',
     },
     {
-      date: 'June 5, 2023',
+      date: 'May 15, 2025',
       title: 'Business Process Analysis',
       description: 'Mapped business processes and identified AI integration opportunities in my speech therapy practice.',
     },
@@ -80,6 +80,9 @@ export default function NowPage() {
         <h1 className="text-3xl md:text-4xl font-bold mb-4">Now</h1>
         <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
           What I'm working on and learning right now. This page is a living record of my current focus, projects, and learning journey.
+        </p>
+        <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
+          Last updated: May 2025
         </p>
       </motion.div>
 
