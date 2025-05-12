@@ -6,11 +6,9 @@ import { usePathname } from 'next/navigation';
 
 const navLinks = [
   { href: '/', label: 'Home', id: 'home' },
-  { href: '/now', label: 'Now', id: 'now' },
-  { href: '/skills-experience', label: 'Skills & Experience', id: 'skills-experience' },
-  { href: '/sustainability', label: 'Sustainability', id: 'sustainability' },
-  { href: '/business', label: 'Business', id: 'business' },
-  { href: '/tech-ed', label: 'Tech Ed', id: 'tech-ed' },
+  { href: '/personal', label: 'Personal', id: 'personal' },
+  { href: '/work', label: 'Work', id: 'work' },
+  { href: '/ai-journey', label: 'AI Journey', id: 'ai-journey' },
   { href: '/contact', label: 'Contact', id: 'contact' },
 ];
 

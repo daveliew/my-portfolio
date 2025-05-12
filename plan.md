@@ -1,83 +1,70 @@
-# Portfolio Website Plan
+# Portfolio Website Plan (May 2025 Refresh)
 
-## Long-Term Vision (Stable)
+## Core Narrative & Philosophy
 
-- **Philosophy & Core Narrative:**
-  - The Virtuous Cycle / Life System is the foundation of the site and your work. This philosophy, leverage systems, and core narrative are stable and rarely change.
-  - The site should always clearly connect your "why" (philosophy) to your "what" (projects, learning, and impact).
+- **Three Content Pillars:**
+  1. **Personal** — Your “Why”: The meaning behind your work, your journey, and the philosophy that drives you.
+  2. **Work** — Your “How”: How you deliver value, your skills, experience, and the impact you create.
+  3. **AI Journey** — Your “What”: What you are learning, building, and exploring in AI and technology.
 
-- **Core Structure:**
-  - Home
-  - Now & Life System (philosophy + current focus)
-  - Skills & Experience
-  - AI Journey (with Roadmap, Skills Matrix, Case Studies)
-  - Sustainability
-  - Business
-  - Tech Ed
-  - Contact
-
-- **Tech Stack:**
-  - Next.js, React, Tailwind CSS, Framer Motion, TypeScript
-  - Modern, accessible, and mobile-friendly UI
-  - Consistent design system and navigation
-
-- **Content Principles:**
-  - Unique visuals and narrative are a signature feature
-  - All major sections are accessible from the navbar
-  - The site is a living record, but the core philosophy and structure are stable
+- **Guiding Principles:**
+  - The site should always connect your personal meaning (“why”) to your work (“how”) and your learning journey (“what”).
+  - Unique visuals and narrative remain a signature feature.
+  - Modern, accessible, and mobile-friendly UI with a consistent design system.
 
 ---
 
-## NOW: Current Focus for the Build (July 2024)
+## Core Structure (2025)
 
-- **Restore and Modernize Unique Content:**
-  - Virtuous Cycle/Life System diagram and leverage systems
-  - AI Journey/Learning Roadmap
-  - Skills Matrix, Combined Capabilities, and Case Studies
-  - Integrate these as dedicated pages or sections, linked from the main navigation
+- **Home:** Introduction and overview of the three pillars.
+- **Personal:** Your story, philosophy, and the meaning behind your work.
+- **Work:** Skills, experience, projects, and how you deliver value.
+- **AI Journey:** Learning roadmap, skills matrix, case studies, and ongoing explorations.
+- **Sustainability:** (If still relevant) Your approach to sustainable impact.
+- **Contact:** Ways to connect or collaborate.
 
-- **Refine the Now & Life System Page:**
-  - Polish the Virtuous Cycle visual and narrative
-  - Ensure each current focus/project is mapped to a leverage pillar
-  - Add/restore any missing context or visuals from previous work
+---
 
-- **Build Out the AI Journey Page:**
-  - Include roadmap, skills matrix, and case studies
-  - Use tabs or sections for Foundation Skills, Combined Capabilities, etc.
+## Current Focus (May 2025)
 
-- **Enhance Skills & Experience Page:**
-  - Keep philosophy summary, but link to full Life System for depth
-  - Refine skills display and experience timeline
-  - Add download link for resume/CV
+- **Clarify and Deepen the Three Pillars:**
+  - Refine content and visuals for each pillar.
+  - Ensure each section clearly communicates its purpose and connection to the others.
 
 - **Modernize Navigation and Layout:**
-  - Ensure all major sections are accessible from the navbar (including on mobile)
-  - Use clear, modern UI for all restored content
+  - All major sections accessible from the navbar (including mobile).
+  - Use clear, modern UI for all content.
+
+- **Restore and Enhance Unique Content:**
+  - Update the Virtuous Cycle/Life System visual and narrative within the Personal pillar.
+  - Polish the Skills Matrix and Experience Timeline in the Work pillar.
+  - Expand the AI Journey with new learnings, projects, and case studies.
 
 - **Content Migration & Visuals:**
-  - Migrate any diagrams, visuals, or UI elements you want to keep from previous versions
-  - Use consistent color, typography, and spacing for a unified look
+  - Migrate and update any diagrams, visuals, or UI elements from previous versions.
+  - Ensure consistent color, typography, and spacing.
 
 - **Iterate and Test:**
-  - Review each page for clarity, narrative, and visual appeal
-  - Test navigation and mobile responsiveness
-  - Gather feedback from trusted peers or collaborators
+  - Review each page for clarity, narrative, and visual appeal.
+  - Test navigation and mobile responsiveness.
+  - Gather feedback from trusted peers or collaborators.
 
 ---
 
 ## Success Metrics
 
-- Clear connection between philosophy, current work, and learning
-- Unique visuals and narrative restored and modernized
-- Easy navigation between all major sections
-- Positive feedback from collaborators and commercial partners
+- Clear articulation of your “why,” “how,” and “what.”
+- Unique visuals and narrative, modernized and aligned with the three pillars.
+- Easy navigation and a unified, professional look.
+- Positive feedback from collaborators, peers, and commercial partners.
 
 ---
 
 ## Immediate Next Steps
 
-1. Restore and polish the Virtuous Cycle/Life System visual and narrative
-2. Build out the AI Journey page with roadmap, skills matrix, and case studies
-3. Refine navigation and ensure all sections are accessible
-4. Migrate any additional visuals or content you want to keep
-5. Review, test, and iterate 
+1. Refine and update the Personal pillar (your story, philosophy, and meaning).
+2. Polish the Work pillar (skills, experience, and value delivery).
+3. Expand and update the AI Journey pillar (learning, projects, and case studies).
+4. Review and modernize navigation and layout.
+5. Migrate and update visuals and content as needed.
+6. Review, test, and iterate. 
