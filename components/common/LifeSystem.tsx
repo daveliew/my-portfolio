@@ -145,15 +145,15 @@ const LifeSystem = () => {
                   <div className="grid grid-cols-2 gap-2">
                     <div className={`p-3 rounded-md bg-[var(--background-secondary)] relative overflow-hidden col-span-2`}>
                       <div className={`absolute left-0 top-0 h-full w-1 ${themeColors.bar.time}`}></div>
-                      <h5 className="font-medium text-[var(--text-primary)] text-sm">Network & Opportunities (60%)</h5>
+                      <h5 className="font-medium text-[var(--text-primary)] text-sm">Network & Opportunities (30%)</h5>
                     </div>
                     <div className={`p-3 rounded-md bg-[var(--background-secondary)] relative overflow-hidden col-span-2`}>
                       <div className={`absolute left-0 top-0 h-full w-1 ${themeColors.bar.knowledge}`}></div>
-                      <h5 className="font-medium text-[var(--text-primary)] text-sm">Capabilities & Insights (30%)</h5>
+                      <h5 className="font-medium text-[var(--text-primary)] text-sm">Capabilities & Insights (50%)</h5>
                     </div>
                     <div className={`p-3 rounded-md bg-[var(--background-secondary)] col-span-2 relative overflow-hidden`}>
                       <div className={`absolute left-0 top-0 h-full w-1 ${themeColors.bar.wealth}`}></div>
-                      <h5 className="font-medium text-[var(--text-primary)] text-sm">Life Quality (10%)</h5>
+                      <h5 className="font-medium text-[var(--text-primary)] text-sm">Life Quality (20%)</h5>
                     </div>
                   </div>
                 </div>
