@@ -3,41 +3,6 @@
 import React, { useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import ImpactfulStatement from '@/components/common/ImpactfulStatement';
-import LifeSystem from '@/components/common/LifeSystem';
-import ExperienceSection from '@/components/experience/ExperienceSection';
-import experiencesData from '../data/experiences.json';
-import SkillsSection from '@/components/skills/SkillsSection';
-import skillsData from '@/data/skills.json';
-import { SkillsData } from '@/types/skills';
-
-// Define types for the raw data structure
-interface RawSkill {
-  name: string;
-  subskills: Record<string, number | undefined>;
-}
-
-interface RawSkillsData {
-  skills: RawSkill[];
-}
-
-// Helper function to clean and validate skills data
-function cleanSkillsData(rawData: RawSkillsData): SkillsData {
-  return {
-    skills: rawData.skills.map((skill) => ({
-      name: skill.name,
-      subskills: Object.fromEntries(
-        Object.entries(skill.subskills)
-          .filter((entry): entry is [string, number] => 
-            typeof entry[1] === 'number'
-          )
-      )
-    }))
-  };
-}
-
-// Use the cleaned data
-const typedSkillsData = cleanSkillsData(skillsData);
 
 export default function HomePage() {
   useEffect(() => {
@@ -69,11 +34,10 @@ export default function HomePage() {
         >
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Dave Liew</h1>
           <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-6">
-            AI Engineer & Builder
+            AI Strategist & Consultant
           </p>
           <p className="text-lg md:text-xl max-w-2xl mx-auto">
-            I build agentic AI solutions for sustainability, business transformation, and tech education,
-            fusing human creativity with tomorrow's technology.
+            Crafting agentic AI that transforms operations, empowers teams, and delights customers.
           </p>
         </motion.div>
       </section>
@@ -93,7 +57,7 @@ export default function HomePage() {
           </p>
           <div className="mt-4">
             <Link href="/now" className="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center">
-              See more about what I'm doing now
+              See more about what I&apos;m doing now
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
@@ -159,7 +123,7 @@ export default function HomePage() {
       >
         <h2 className="text-2xl font-semibold mb-4">Interested in Collaborating?</h2>
         <p className="text-lg mb-6 max-w-xl mx-auto">
-          I'm always open to discussing new projects, collaborative opportunities, 
+          I&apos;m always open to discussing new projects, collaborative opportunities, 
           or just exchanging ideas about AI and technology.
         </p>
         <Link 

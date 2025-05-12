@@ -61,7 +61,7 @@ export default function PersonalPage() {
         <p className="italic text-center text-gray-500 dark:text-gray-400 mb-4">{virtuousCycle.description}</p>
         <p className="text-center text-gray-500 dark:text-gray-400 mb-8 max-w-3xl mx-auto">{virtuousCycle.influences}</p>
         <div className="grid md:grid-cols-3 gap-8">
-          {virtuousCycle.systems.map((system, idx) => (
+          {virtuousCycle.systems.map((system) => (
             <div key={system.title} className={`rounded-lg border-t-4 ${system.border} bg-white dark:bg-gray-800 shadow-md p-6 flex flex-col items-center`}>
               <h3 className={`text-xl font-semibold mb-4 ${system.color}`}>{system.title}</h3>
               <div className="space-y-2 w-full">
