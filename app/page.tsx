@@ -127,10 +127,48 @@ export default function HomePage() {
           </div>
         </Card>
       </motion.section>
+
+      {/* Professional Experience - Quick Overview */}
+      <motion.section 
+        {...sectionAnimation(2)}
+        className="py-8 border-t border-gray-200 dark:border-gray-700"
+      >
+        <h2 className="text-2xl font-semibold mb-6 text-center">Professional Foundation</h2>
+        <Card className="p-8 bg-gradient-to-r from-gray-50 to-blue-50 dark:from-gray-900/20 dark:to-blue-900/20 border-gray-200 dark:border-gray-800">
+          <div className="grid md:grid-cols-3 gap-6 text-center">
+            <div>
+              <div className="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-2">10+ Years</div>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Building ventures from 0→1</p>
+            </div>
+            
+            <div>
+              <div className="text-2xl font-bold text-green-600 dark:text-green-400 mb-2">S$1M+</div>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Revenue growth delivered</p>
+            </div>
+            
+            <div>
+              <div className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-2">4 Ventures</div>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Co-founded & scaled</p>
+            </div>
+          </div>
+          
+          <div className="mt-6 text-center">
+            <p className="text-gray-600 dark:text-gray-400 mb-4">
+              <strong>Meta</strong> • <strong>Unity Technologies</strong> • <strong>Michelin-recognized restaurant</strong> • <strong>Education startups</strong>
+            </p>
+            <Link 
+              href="/laboratory#professional-background" 
+              className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:underline"
+            >
+              See full professional background →
+            </Link>
+          </div>
+        </Card>
+      </motion.section>
       
       {/* Simple, Powerful CTA */}
       <motion.section 
-        {...sectionAnimation(2)}
+        {...sectionAnimation(3)}
         className="py-12 border-t border-gray-200 dark:border-gray-700 text-center"
       >
         <h2 className="text-3xl font-bold mb-4">Ready to Pioneer?</h2>

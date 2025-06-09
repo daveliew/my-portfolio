@@ -464,9 +464,99 @@ export default function LaboratoryPage() {
         </motion.section>
       )}
 
-      {/* Call to Action */}
+      {/* Professional Background */}
       <motion.section
         {...sectionAnimation(4)}
+        id="professional-background"
+        className="py-8 border-t border-gray-200 dark:border-gray-700"
+      >
+        <h2 className="text-2xl font-semibold mb-6 text-center text-[var(--text-primary)]">Professional Background</h2>
+        <p className="text-center text-[var(--text-secondary)] mb-8 max-w-3xl mx-auto">
+          10+ years of hands-on experience building ventures from 0→1, implementing AI solutions, and scaling operations across diverse industries.
+        </p>
+        
+        <div className="grid md:grid-cols-2 gap-8 mb-8">
+          {/* Technology & AI Implementation */}
+          <Card className="p-6">
+            <h3 className="text-lg font-semibold mb-4 text-blue-600 dark:text-blue-400">Technology & AI Implementation</h3>
+            <div className="space-y-4">
+              <div>
+                <h4 className="font-medium">Technical Solutions Consultant, Meta</h4>
+                <p className="text-sm text-[var(--text-secondary)]">2022-2024</p>
+                <p className="text-sm mt-1">Implemented AdTech solutions for enterprise clients, developed technical solutions for business challenges</p>
+              </div>
+              <div>
+                <h4 className="font-medium">Full Stack Developer Bootcamp, General Assembly</h4>
+                <p className="text-sm text-[var(--text-secondary)]">2021</p>
+                <p className="text-sm mt-1">480-hour intensive program, mastered JavaScript, Python, and modern web technologies</p>
+              </div>
+            </div>
+          </Card>
+
+          {/* Venture Building & Operations */}
+          <Card className="p-6">
+            <h3 className="text-lg font-semibold mb-4 text-green-600 dark:text-green-400">Venture Building & Operations</h3>
+            <div className="space-y-4">
+              <div>
+                <h4 className="font-medium">Co-Founder, Labyrinth Restaurant</h4>
+                <p className="text-sm text-[var(--text-secondary)]">2013-present</p>
+                <p className="text-sm mt-1">Built from concept to Michelin recognition, led team through rapid growth and COVID pivot</p>
+              </div>
+              <div>
+                <h4 className="font-medium">Head of Business, SG Code Campus</h4>
+                <p className="text-sm text-[var(--text-secondary)]">2017-2020</p>
+                <p className="text-sm mt-1">Early team member, contributed to growth from S$100K to S$1M+ in three years</p>
+              </div>
+            </div>
+          </Card>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8">
+          {/* Strategic Growth & Analytics */}
+          <Card className="p-6">
+            <h3 className="text-lg font-semibold mb-4 text-purple-600 dark:text-purple-400">Strategic Growth & Analytics</h3>
+            <div className="space-y-4">
+              <div>
+                <h4 className="font-medium">Alpha Growth Ops Associate, Nansen</h4>
+                <p className="text-sm text-[var(--text-secondary)]">2021-2022</p>
+                <p className="text-sm mt-1">Early employee in web3 analytics platform, contributed to 35% revenue growth</p>
+              </div>
+              <div>
+                <h4 className="font-medium">Business Analyst, Unity Technologies</h4>
+                <p className="text-sm text-[var(--text-secondary)]">2013-2014</p>
+                <p className="text-sm mt-1">Developed strategic transition to SaaS revenue model, collaborated with global stakeholders</p>
+              </div>
+            </div>
+          </Card>
+
+          {/* Key Achievements */}
+          <Card className="p-6 bg-gradient-to-r from-amber-50 to-orange-50 dark:from-amber-900/20 dark:to-orange-900/20 border-amber-200 dark:border-amber-800">
+            <h3 className="text-lg font-semibold mb-4 text-amber-700 dark:text-amber-300">Key Achievements</h3>
+            <div className="space-y-3">
+              <div className="flex items-center">
+                <span className="w-3 h-3 bg-amber-500 rounded-full mr-3"></span>
+                <span className="text-sm">S$1M+ revenue growth across multiple ventures</span>
+              </div>
+              <div className="flex items-center">
+                <span className="w-3 h-3 bg-amber-500 rounded-full mr-3"></span>
+                <span className="text-sm">4 ventures co-founded and scaled</span>
+              </div>
+              <div className="flex items-center">
+                <span className="w-3 h-3 bg-amber-500 rounded-full mr-3"></span>
+                <span className="text-sm">Michelin restaurant recognition achieved</span>
+              </div>
+              <div className="flex items-center">
+                <span className="w-3 h-3 bg-amber-500 rounded-full mr-3"></span>
+                <span className="text-sm">35% revenue growth in web3 analytics platform</span>
+              </div>
+            </div>
+          </Card>
+        </div>
+      </motion.section>
+
+      {/* Call to Action */}
+      <motion.section
+        {...sectionAnimation(5)}
         className="bg-gradient-to-r from-[var(--accent-primary)]/10 to-[var(--accent-secondary)]/10 rounded-lg p-8 text-center"
       >
         <h2 className="text-2xl font-semibold mb-4 text-[var(--text-primary)]">Join the Laboratory</h2>
