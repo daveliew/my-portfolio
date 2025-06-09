@@ -19,7 +19,7 @@ export default function ToolUsePage() {
         <SectionHeader title="Understanding Tool Use" />
         <Card className="p-6">
           <p className="text-gray-600 dark:text-gray-300 mb-4">
-            Claude's tool use feature allows it to call external functions and APIs to extend its capabilities 
+            Claude&apos;s tool use feature allows it to call external functions and APIs to extend its capabilities 
             beyond text generation. This enables Claude to perform actions like calculations, data retrieval, 
             file operations, and integration with external services.
           </p>
@@ -60,7 +60,7 @@ export default function ToolUsePage() {
         <Card className="p-6">
           <p className="text-gray-600 dark:text-gray-300 mb-4">
             Tools are defined using JSON schemas that specify the function name, description, and parameters. 
-            Here's how to structure tool definitions:
+            Here&apos;s how to structure tool definitions:
           </p>
           
           <div className="space-y-6">
@@ -68,22 +68,22 @@ export default function ToolUsePage() {
               <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-3">Basic Tool Structure</h4>
               <pre className="text-sm text-gray-600 dark:text-gray-300 overflow-x-auto">
 {`{
-  "name": "get_weather",
-  "description": "Get weather information for a specific location",
-  "input_schema": {
-    "type": "object",
-    "properties": {
-      "location": {
-        "type": "string",
-        "description": "The city and state/country"
+  &quot;name&quot;: &quot;get_weather&quot;,
+  &quot;description&quot;: &quot;Get weather information for a specific location&quot;,
+  &quot;input_schema&quot;: {
+    &quot;type&quot;: &quot;object&quot;,
+    &quot;properties&quot;: {
+      &quot;location&quot;: {
+        &quot;type&quot;: &quot;string&quot;,
+        &quot;description&quot;: &quot;The city and state/country&quot;
       },
-      "units": {
-        "type": "string",
-        "enum": ["celsius", "fahrenheit"],
-        "description": "Temperature units"
+      &quot;units&quot;: {
+        &quot;type&quot;: &quot;string&quot;,
+        &quot;enum&quot;: [&quot;celsius&quot;, &quot;fahrenheit&quot;],
+        &quot;description&quot;: &quot;Temperature units&quot;
       }
     },
-    "required": ["location"]
+    &quot;required&quot;: [&quot;location&quot;]
   }
 }`}
               </pre>
@@ -93,17 +93,17 @@ export default function ToolUsePage() {
               <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-3">Calculator Tool Example</h4>
               <pre className="text-sm text-gray-600 dark:text-gray-300 overflow-x-auto">
 {`{
-  "name": "calculator",
-  "description": "Perform mathematical calculations",
-  "input_schema": {
-    "type": "object",
-    "properties": {
-      "expression": {
-        "type": "string",
-        "description": "Mathematical expression to evaluate"
+  &quot;name&quot;: &quot;calculator&quot;,
+  &quot;description&quot;: &quot;Perform mathematical calculations&quot;,
+  &quot;input_schema&quot;: {
+    &quot;type&quot;: &quot;object&quot;,
+    &quot;properties&quot;: {
+      &quot;expression&quot;: {
+        &quot;type&quot;: &quot;string&quot;,
+        &quot;description&quot;: &quot;Mathematical expression to evaluate&quot;
       }
     },
-    "required": ["expression"]
+    &quot;required&quot;: [&quot;expression&quot;]
   }
 }`}
               </pre>
@@ -127,45 +127,45 @@ export default function ToolUsePage() {
 import json
 
 def calculator(expression):
-    """Safely evaluate mathematical expressions"""
+    &quot;&quot;&quot;Safely evaluate mathematical expressions&quot;&quot;&quot;
     try:
         result = eval(expression)
-        return {"result": result}
+        return {&quot;result&quot;: result}
     except:
-        return {"error": "Invalid expression"}
+        return {&quot;error&quot;: &quot;Invalid expression&quot;}
 
-def get_weather(location, units="fahrenheit"):
-    """Mock weather function"""
+def get_weather(location, units=&quot;fahrenheit&quot;):
+    &quot;&quot;&quot;Mock weather function&quot;&quot;&quot;
     return {
-        "location": location,
-        "temperature": 72,
-        "units": units,
-        "condition": "sunny"
+        &quot;location&quot;: location,
+        &quot;temperature&quot;: 72,
+        &quot;units&quot;: units,
+        &quot;condition&quot;: &quot;sunny&quot;
     }
 
 # Tool definitions
 tools = [
     {
-        "name": "calculator",
-        "description": "Perform mathematical calculations",
-        "input_schema": {
-            "type": "object",
-            "properties": {
-                "expression": {"type": "string"}
+        &quot;name&quot;: &quot;calculator&quot;,
+        &quot;description&quot;: &quot;Perform mathematical calculations&quot;,
+        &quot;input_schema&quot;: {
+            &quot;type&quot;: &quot;object&quot;,
+            &quot;properties&quot;: {
+                &quot;expression&quot;: {&quot;type&quot;: &quot;string&quot;}
             },
-            "required": ["expression"]
+            &quot;required&quot;: [&quot;expression&quot;]
         }
     },
     {
-        "name": "get_weather",
-        "description": "Get weather information",
-        "input_schema": {
-            "type": "object",
-            "properties": {
-                "location": {"type": "string"},
-                "units": {"type": "string", "enum": ["celsius", "fahrenheit"]}
+        &quot;name&quot;: &quot;get_weather&quot;,
+        &quot;description&quot;: &quot;Get weather information&quot;,
+        &quot;input_schema&quot;: {
+            &quot;type&quot;: &quot;object&quot;,
+            &quot;properties&quot;: {
+                &quot;location&quot;: {&quot;type&quot;: &quot;string&quot;},
+                &quot;units&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;enum&quot;: [&quot;celsius&quot;, &quot;fahrenheit&quot;]}
             },
-            "required": ["location"]
+            &quot;required&quot;: [&quot;location&quot;]
         }
     }
 ]
@@ -173,12 +173,12 @@ tools = [
 # Claude API call with tools
 client = anthropic.Anthropic()
 message = client.messages.create(
-    model="claude-3-5-sonnet-20241022",
+    model=&quot;claude-3-5-sonnet-20241022&quot;,
     max_tokens=1024,
     tools=tools,
     messages=[{
-        "role": "user",
-        "content": "What's 25 * 47? Also, what's the weather like in Paris?"
+        &quot;role&quot;: &quot;user&quot;,
+        &quot;content&quot;: &quot;What&apos;s 25 * 47? Also, what&apos;s the weather like in Paris?&quot;
     }]
 )`}
               </pre>
@@ -189,7 +189,7 @@ message = client.messages.create(
             <h4 className="font-semibold text-blue-600 dark:text-blue-400 mb-4">JavaScript/Node.js Implementation</h4>
             <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
               <pre className="text-sm text-gray-600 dark:text-gray-300 overflow-x-auto">
-{`import Anthropic from '@anthropic-ai/sdk';
+{`import Anthropic from &apos;@anthropic-ai/sdk&apos;;
 
 const anthropic = new Anthropic();
 
@@ -197,10 +197,10 @@ const anthropic = new Anthropic();
 const tools = {
   calculator: (params) => {
     try {
-      const result = Function('"use strict"; return (' + params.expression + ')')();
+      const result = Function(&apos;&quot;use strict&quot;; return (&apos; + params.expression + &apos;)&apos;)();
       return { result };
     } catch (error) {
-      return { error: 'Invalid expression' };
+      return { error: &apos;Invalid expression&apos; };
     }
   },
   
@@ -209,32 +209,32 @@ const tools = {
     return {
       location: params.location,
       temperature: 22,
-      units: params.units || 'celsius',
-      condition: 'partly cloudy'
+      units: params.units || &apos;celsius&apos;,
+      condition: &apos;partly cloudy&apos;
     };
   }
 };
 
 async function handleToolUse() {
   const message = await anthropic.messages.create({
-    model: 'claude-3-5-sonnet-20241022',
+    model: &apos;claude-3-5-sonnet-20241022&apos;,
     max_tokens: 1024,
     tools: [
       {
-        name: 'calculator',
-        description: 'Perform mathematical calculations',
+        name: &apos;calculator&apos;,
+        description: &apos;Perform mathematical calculations&apos;,
         input_schema: {
-          type: 'object',
+          type: &apos;object&apos;,
           properties: {
-            expression: { type: 'string' }
+            expression: { type: &apos;string&apos; }
           },
-          required: ['expression']
+          required: [&apos;expression&apos;]
         }
       }
     ],
     messages: [{
-      role: 'user',
-      content: 'Calculate 15% tip on a $84.50 bill'
+      role: &apos;user&apos;,
+      content: &apos;Calculate 15% tip on a $84.50 bill&apos;
     }]
   });
   
@@ -334,16 +334,16 @@ async function handleToolUse() {
               </p>
               <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded text-xs">
                 <pre>{`{
-  "name": "query_database",
-  "description": "Execute SQL queries",
-  "input_schema": {
-    "type": "object",
-    "properties": {
-      "query": {"type": "string"},
-      "table": {"type": "string"},
-      "limit": {"type": "integer", "maximum": 100}
+  &quot;name&quot;: &quot;query_database&quot;,
+  &quot;description&quot;: &quot;Execute SQL queries&quot;,
+  &quot;input_schema&quot;: {
+    &quot;type&quot;: &quot;object&quot;,
+    &quot;properties&quot;: {
+      &quot;query&quot;: {&quot;type&quot;: &quot;string&quot;},
+      &quot;table&quot;: {&quot;type&quot;: &quot;string&quot;},
+      &quot;limit&quot;: {&quot;type&quot;: &quot;integer&quot;, &quot;maximum&quot;: 100}
     },
-    "required": ["query", "table"]
+    &quot;required&quot;: [&quot;query&quot;, &quot;table&quot;]
   }
 }`}</pre>
               </div>
@@ -356,16 +356,16 @@ async function handleToolUse() {
               </p>
               <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded text-xs">
                 <pre>{`{
-  "name": "file_operations",
-  "description": "File system operations",
-  "input_schema": {
-    "type": "object",
-    "properties": {
-      "operation": {"type": "string", "enum": ["read", "write", "list"]},
-      "path": {"type": "string"},
-      "content": {"type": "string"}
+  &quot;name&quot;: &quot;file_operations&quot;,
+  &quot;description&quot;: &quot;File system operations&quot;,
+  &quot;input_schema&quot;: {
+    &quot;type&quot;: &quot;object&quot;,
+    &quot;properties&quot;: {
+      &quot;operation&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;enum&quot;: [&quot;read&quot;, &quot;write&quot;, &quot;list&quot;]},
+      &quot;path&quot;: {&quot;type&quot;: &quot;string&quot;},
+      &quot;content&quot;: {&quot;type&quot;: &quot;string&quot;}
     },
-    "required": ["operation", "path"]
+    &quot;required&quot;: [&quot;operation&quot;, &quot;path&quot;]
   }
 }`}</pre>
               </div>
@@ -378,17 +378,17 @@ async function handleToolUse() {
               </p>
               <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded text-xs">
                 <pre>{`{
-  "name": "api_request",
-  "description": "Make HTTP API requests",
-  "input_schema": {
-    "type": "object",
-    "properties": {
-      "url": {"type": "string"},
-      "method": {"type": "string", "enum": ["GET", "POST"]},
-      "params": {"type": "object"},
-      "headers": {"type": "object"}
+  &quot;name&quot;: &quot;api_request&quot;,
+  &quot;description&quot;: &quot;Make HTTP API requests&quot;,
+  &quot;input_schema&quot;: {
+    &quot;type&quot;: &quot;object&quot;,
+    &quot;properties&quot;: {
+      &quot;url&quot;: {&quot;type&quot;: &quot;string&quot;},
+      &quot;method&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;enum&quot;: [&quot;GET&quot;, &quot;POST&quot;]},
+      &quot;params&quot;: {&quot;type&quot;: &quot;object&quot;},
+      &quot;headers&quot;: {&quot;type&quot;: &quot;object&quot;}
     },
-    "required": ["url", "method"]
+    &quot;required&quot;: [&quot;url&quot;, &quot;method&quot;]
   }
 }`}</pre>
               </div>

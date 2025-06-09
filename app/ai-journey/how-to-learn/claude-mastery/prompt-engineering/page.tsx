@@ -26,7 +26,7 @@ export default function PromptEngineeringPage() {
           
           <div className="grid md:grid-cols-2 gap-6 mt-6">
             <div className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-              <h4 className="font-semibold text-blue-800 dark:text-blue-300 mb-2">Claude's Strengths</h4>
+              <h4 className="font-semibold text-blue-800 dark:text-blue-300 mb-2">Claude&apos;s Strengths</h4>
               <ul className="space-y-1 text-sm text-gray-700 dark:text-gray-300">
                 <li>• Conversational reasoning</li>
                 <li>• Complex instruction following</li>
@@ -60,9 +60,9 @@ export default function PromptEngineeringPage() {
               <div className="space-y-4">
                 <div className="border-l-4 border-blue-500 pl-4">
                   <h5 className="font-medium text-blue-600 dark:text-blue-400">Role Definition</h5>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">Clearly define Claude's role and expertise level</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">Clearly define Claude&apos;s role and expertise level</p>
                   <code className="block mt-2 text-xs bg-gray-100 dark:bg-gray-800 p-2 rounded">
-                    "You are a senior software architect with expertise in distributed systems..."
+                    &quot;You are a senior software architect with expertise in distributed systems...&quot;
                   </code>
                 </div>
                 
@@ -70,7 +70,7 @@ export default function PromptEngineeringPage() {
                   <h5 className="font-medium text-green-600 dark:text-green-400">Task Description</h5>
                   <p className="text-sm text-gray-600 dark:text-gray-300">Specify the exact task with clear boundaries</p>
                   <code className="block mt-2 text-xs bg-gray-100 dark:bg-gray-800 p-2 rounded">
-                    "Analyze the following architecture and suggest improvements for scalability..."
+                    &quot;Analyze the following architecture and suggest improvements for scalability...&quot;
                   </code>
                 </div>
                 
@@ -78,7 +78,7 @@ export default function PromptEngineeringPage() {
                   <h5 className="font-medium text-purple-600 dark:text-purple-400">Context & Constraints</h5>
                   <p className="text-sm text-gray-600 dark:text-gray-300">Provide relevant background and limitations</p>
                   <code className="block mt-2 text-xs bg-gray-100 dark:bg-gray-800 p-2 rounded">
-                    "The system currently handles 10M daily users, budget constraints require cloud-native solutions..."
+                    &quot;The system currently handles 10M daily users, budget constraints require cloud-native solutions...&quot;
                   </code>
                 </div>
                 
@@ -86,7 +86,7 @@ export default function PromptEngineeringPage() {
                   <h5 className="font-medium text-orange-600 dark:text-orange-400">Output Format</h5>
                   <p className="text-sm text-gray-600 dark:text-gray-300">Define the expected response structure</p>
                   <code className="block mt-2 text-xs bg-gray-100 dark:bg-gray-800 p-2 rounded">
-                    "Provide your response in the following format: 1. Analysis 2. Recommendations 3. Implementation plan"
+                    &quot;Provide your response in the following format: 1. Analysis 2. Recommendations 3. Implementation plan&quot;
                   </code>
                 </div>
               </div>
@@ -110,10 +110,10 @@ export default function PromptEngineeringPage() {
             <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded text-sm">
               <div className="text-green-600 dark:text-green-400 mb-2">✓ Effective Example:</div>
               <code className="text-xs">
-                "Let's work through this step by step:<br/>
+                &quot;Let&apos;s work through this step by step:<br/>
                 1. First, analyze the problem<br/>
                 2. Then, consider possible solutions<br/>
-                3. Finally, evaluate trade-offs"
+                3. Finally, evaluate trade-offs&quot;
               </code>
             </div>
           </Card>
@@ -126,11 +126,11 @@ export default function PromptEngineeringPage() {
             <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded text-sm">
               <div className="text-green-600 dark:text-green-400 mb-2">✓ Example Pattern:</div>
               <code className="text-xs">
-                "Input: [example 1]<br/>
+                &quot;Input: [example 1]<br/>
                 Output: [desired format 1]<br/>
                 <br/>
                 Input: [example 2]<br/>
-                Output: [desired format 2]"
+                Output: [desired format 2]&quot;
               </code>
             </div>
           </Card>
@@ -143,9 +143,9 @@ export default function PromptEngineeringPage() {
             <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded text-sm">
               <div className="text-green-600 dark:text-green-400 mb-2">✓ Sequence Example:</div>
               <code className="text-xs">
-                "Prompt 1: Analyze requirements<br/>
+                &quot;Prompt 1: Analyze requirements<br/>
                 Prompt 2: Design architecture<br/>
-                Prompt 3: Plan implementation"
+                Prompt 3: Plan implementation&quot;
               </code>
             </div>
           </Card>
@@ -158,9 +158,9 @@ export default function PromptEngineeringPage() {
             <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded text-sm">
               <div className="text-green-600 dark:text-green-400 mb-2">✓ Persona Examples:</div>
               <code className="text-xs">
-                "Act as a security expert...<br/>
+                &quot;Act as a security expert...<br/>
                 Respond as a user experience designer...<br/>
-                Think like a startup founder..."
+                Think like a startup founder...&quot;
               </code>
             </div>
           </Card>
@@ -205,7 +205,7 @@ export default function PromptEngineeringPage() {
               <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">Problem-Solving Pattern</h4>
               <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded text-sm font-mono">
                 <div className="text-blue-600 dark:text-blue-400">Human:</div>
-                <div className="ml-4 mb-2">I'm facing this challenge: [PROBLEM DESCRIPTION]</div>
+                <div className="ml-4 mb-2">I&apos;m facing this challenge: [PROBLEM DESCRIPTION]</div>
                 <div className="ml-4 mb-2">Context: [RELEVANT BACKGROUND]</div>
                 <div className="ml-4 mb-2">Constraints: [LIMITATIONS]</div>
                 <div className="ml-4 mb-2">Please help me by:</div>
@@ -227,7 +227,7 @@ export default function PromptEngineeringPage() {
         <SectionHeader title="Optimization Tips" />
         <div className="grid md:grid-cols-2 gap-6">
           <Card className="p-6">
-            <h4 className="font-semibold text-green-600 dark:text-green-400 mb-4">Do's ✓</h4>
+            <h4 className="font-semibold text-green-600 dark:text-green-400 mb-4">Do&apos;s ✓</h4>
             <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
               <li className="flex items-start">
                 <span className="text-green-500 mr-2">•</span>
@@ -257,7 +257,7 @@ export default function PromptEngineeringPage() {
           </Card>
           
           <Card className="p-6">
-            <h4 className="font-semibold text-red-600 dark:text-red-400 mb-4">Don'ts ✗</h4>
+            <h4 className="font-semibold text-red-600 dark:text-red-400 mb-4">Don&apos;ts ✗</h4>
             <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
               <li className="flex items-start">
                 <span className="text-red-500 mr-2">•</span>

@@ -19,7 +19,7 @@ export default function RAGPage() {
         <SectionHeader title="What is RAG?" />
         <Card className="p-6">
           <p className="text-gray-600 dark:text-gray-300 mb-4">
-            Retrieval Augmented Generation (RAG) combines Claude's generative capabilities with external 
+            Retrieval Augmented Generation (RAG) combines Claude&apos;s generative capabilities with external 
             knowledge retrieval. Instead of relying solely on training data, RAG systems dynamically 
             fetch relevant information from external sources to provide more accurate, up-to-date, and 
             contextually relevant responses.
@@ -201,7 +201,7 @@ class DocumentIndexer:
         self.encoder = tiktoken.get_encoding("cl100k_base")
     
     def chunk_text(self, text, chunk_size=500, overlap=50):
-        """Split text into overlapping chunks"""
+        &quot;&quot;&quot;Split text into overlapping chunks&quot;&quot;&quot;
         tokens = self.encoder.encode(text)
         chunks = []
         
@@ -213,15 +213,15 @@ class DocumentIndexer:
         return chunks
     
     def get_embedding(self, text):
-        """Generate embedding for text"""
+        &quot;&quot;&quot;Generate embedding for text&quot;&quot;&quot;
         response = openai.Embedding.create(
             input=text,
-            model="text-embedding-ada-002"
+            model=&quot;text-embedding-ada-002&quot;
         )
-        return response['data'][0]['embedding']
+        return response[&apos;data&apos;][0][&apos;embedding&apos;]
     
     def index_document(self, content, metadata=None):
-        """Index a document into the vector database"""
+        &quot;&quot;&quot;Index a document into the vector database&quot;&quot;&quot;
         chunks = self.chunk_text(content)
         
         for i, chunk in enumerate(chunks):
@@ -229,14 +229,14 @@ class DocumentIndexer:
             
             doc_metadata = {
                 **(metadata or {}),
-                "chunk_index": i,
-                "total_chunks": len(chunks)
+                &quot;chunk_index&quot;: i,
+                &quot;total_chunks&quot;: len(chunks)
             }
             
-            self.supabase.table('documents').insert({
-                'content': chunk,
-                'metadata': doc_metadata,
-                'embedding': embedding
+            self.supabase.table(&apos;documents&apos;).insert({
+                &apos;content&apos;: chunk,
+                &apos;metadata&apos;: doc_metadata,
+                &apos;embedding&apos;: embedding
             }).execute()`}
               </pre>
             </div>
@@ -263,32 +263,32 @@ class RAGSystem:
         self.claude = anthropic.Anthropic(api_key=anthropic_key)
     
     def retrieve_documents(self, query, limit=5):
-        """Retrieve relevant documents for a query"""
+        &quot;&quot;&quot;Retrieve relevant documents for a query&quot;&quot;&quot;
         # Generate embedding for query
         query_embedding = self.get_embedding(query)
         
         # Perform similarity search
         result = self.supabase.rpc(
-            'match_documents',
+            &apos;match_documents&apos;,
             {
-                'query_embedding': query_embedding,
-                'match_threshold': 0.7,
-                'match_count': limit
+                &apos;query_embedding&apos;: query_embedding,
+                &apos;match_threshold&apos;: 0.7,
+                &apos;match_count&apos;: limit
             }
         ).execute()
         
         return result.data
     
     def generate_response(self, query, retrieved_docs):
-        """Generate response using Claude with retrieved context"""
+        &quot;&quot;&quot;Generate response using Claude with retrieved context&quot;&quot;&quot;
         # Construct context from retrieved documents
         context = "\n\n".join([
-            f"Source: {doc['metadata'].get('title', 'Unknown')}\n{doc['content']}"
+            f&quot;Source: {doc[&apos;metadata&apos;].get(&apos;title&apos;, &apos;Unknown&apos;)}\n{doc[&apos;content&apos;]}&quot;
             for doc in retrieved_docs
         ])
         
-        prompt = f"""Based on the following context, please answer the user's question. 
-If the context doesn't contain enough information to answer the question, 
+        prompt = f&quot;&quot;&quot;Based on the following context, please answer the user&apos;s question. 
+If the context doesn&apos;t contain enough information to answer the question, 
 please say so and explain what information would be needed.
 
 Context:
@@ -296,21 +296,21 @@ Context:
 
 Question: {query}
 
-Please provide a helpful and accurate response based on the context provided."""
+Please provide a helpful and accurate response based on the context provided.&quot;&quot;&quot;
 
         message = self.claude.messages.create(
-            model="claude-3-5-sonnet-20241022",
+            model=&quot;claude-3-5-sonnet-20241022&quot;,
             max_tokens=1000,
             messages=[{
-                "role": "user",
-                "content": prompt
+                &quot;role&quot;: &quot;user&quot;,
+                &quot;content&quot;: prompt
             }]
         )
         
         return message.content[0].text
     
     def query(self, question):
-        """Complete RAG workflow"""
+        &quot;&quot;&quot;Complete RAG workflow&quot;&quot;&quot;
         # Step 1: Retrieve relevant documents
         retrieved_docs = self.retrieve_documents(question)
         
@@ -318,9 +318,9 @@ Please provide a helpful and accurate response based on the context provided."""
         response = self.generate_response(question, retrieved_docs)
         
         return {
-            "answer": response,
-            "sources": [doc['metadata'] for doc in retrieved_docs],
-            "context_used": len(retrieved_docs)
+            &quot;answer&quot;: response,
+            &quot;sources&quot;: [doc[&apos;metadata&apos;] for doc in retrieved_docs],
+            &quot;context_used&quot;: len(retrieved_docs)
         }`}
               </pre>
             </div>
@@ -409,7 +409,7 @@ Please provide a helpful and accurate response based on the context provided."""
         <SectionHeader title="Best Practices" />
         <div className="grid md:grid-cols-2 gap-6">
           <Card className="p-6">
-            <h4 className="font-semibold text-green-600 dark:text-green-400 mb-4">Do's ✓</h4>
+            <h4 className="font-semibold text-green-600 dark:text-green-400 mb-4">Do&apos;s ✓</h4>
             <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
               <li className="flex items-start">
                 <span className="text-green-500 mr-2">•</span>
@@ -439,7 +439,7 @@ Please provide a helpful and accurate response based on the context provided."""
           </Card>
           
           <Card className="p-6">
-            <h4 className="font-semibold text-red-600 dark:text-red-400 mb-4">Don'ts ✗</h4>
+            <h4 className="font-semibold text-red-600 dark:text-red-400 mb-4">Don&apos;ts ✗</h4>
             <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
               <li className="flex items-start">
                 <span className="text-red-500 mr-2">•</span>

@@ -18,7 +18,7 @@ export default function ComputerUsePage() {
         <SectionHeader title="Revolutionary Computer Control" />
         <Card className="p-6">
           <p className="text-gray-600 dark:text-gray-300 mb-4">
-            Claude's computer use feature represents a breakthrough in AI capabilities, allowing Claude to 
+            Claude&apos;s computer use feature represents a breakthrough in AI capabilities, allowing Claude to 
             interact directly with computer interfaces, navigate applications, and perform complex desktop automation tasks.
           </p>
           

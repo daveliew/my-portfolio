@@ -8,9 +8,24 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `npm run build` - Build production version (runs type-check and lint first)
 - `npm run type-check` - TypeScript type checking with `tsc --noEmit`
 - `npm run lint` - ESLint with Next.js configuration
-- `npm start` - Start production server
+- `npm run start` - Start production server
 
-The prebuild script automatically runs type checking and linting before building.
+### Pre-Deployment Validation (ALWAYS RUN FIRST!)
+
+**CRITICAL: Always check for build errors before making changes or committing code.**
+
+- `npm run pre-deploy` - Full validation (TypeScript + ESLint + Philosophy + Build)
+- `npm run quick-check` - Fast validation (TypeScript + ESLint + Philosophy)
+- `npm run deploy-check` - Alias for pre-deploy
+
+**Deployment Workflow:**
+1. **FIRST** - Run `npm run pre-deploy` to identify any existing errors
+2. Make your changes
+3. **ALWAYS** - Run `npm run pre-deploy` again before committing
+4. Fix any errors found (typically ESLint quote escaping: `'` → `&apos;`, `"` → `&quot;`)
+5. Deploy only when validation passes
+
+The prebuild script automatically runs type checking and linting before building, so ESLint errors will block Netlify deployments.
 
 ## Architecture Overview
 

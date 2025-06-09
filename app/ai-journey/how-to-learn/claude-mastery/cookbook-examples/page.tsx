@@ -48,7 +48,7 @@ export default function CookbookExamplesPage() {
         <SectionHeader title="Curated Examples (Coming Soon)" />
         <Card className="p-6">
           <p className="text-gray-600 dark:text-gray-300 mb-4">
-            We're currently curating and organizing the best examples from the Anthropic Cookbook, 
+            We&apos;re currently curating and organizing the best examples from the Anthropic Cookbook, 
             with detailed explanations and learning objectives for each implementation.
           </p>
           

@@ -25,7 +25,7 @@ export default function VisionMultimodalPage() {
           <div className="mt-6 p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg border border-purple-200 dark:border-purple-800">
             <h4 className="font-semibold text-purple-800 dark:text-purple-300 mb-2">🖼️ Vision Capabilities</h4>
             <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">
-              Learn about Claude's vision features and implementation:
+              Learn about Claude&apos;s vision features and implementation:
             </p>
             <a 
               href="https://docs.anthropic.com/claude/docs/vision" 
