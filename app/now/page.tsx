@@ -2,118 +2,47 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
+import { PageLayout, Card, SectionHeader } from '@/components/common';
+import { sectionAnimation } from '@/utils/animations';
+import { NowData } from '@/types/now';
+import nowData from '@/data/now.json';
 
 export default function NowPage() {
-  // Current focus areas
-  const focusAreas = [
-    {
-      title: 'Sustainability Non-Profit',
-      description: 'Developing an agentic AI system to match resources and needs for sustainability initiatives.',
-      system: 'Time Multiplier',
-      progress: 'Research phase, building proof-of-concept.',
-    },
-    {
-      title: 'Business Innovation',
-      description: 'Implementing AI in speech therapy and corporate gifting businesses for automation and growth.',
-      system: 'Wealth Multiplier',
-      progress: 'Automating customer communication and operations.',
-    },
-    {
-      title: 'Tech Education',
-      description: 'Documenting my AI journey and building resources for the next generation of builders.',
-      system: 'Knowledge Amplifier',
-      progress: 'Building portfolio site and planning tutorials.',
-    },
-  ];
-
-  // Learning roadmap (example)
-  const roadmap = [
-    {
-      quarter: 'Q2 2025',
-      title: 'Build Agent-based Research Assistant',
-      description: 'Implement a system of autonomous agents for market research and compiling findings.',
-      requiredSkills: ['Autonomous Agents', 'AI Workflow Integration', 'Data Management'],
-      foundationSkills: ['Pattern Recognition', 'Strategic Thinking', 'Technical Skills'],
-      progress: 20,
-      status: 'In Progress',
-    },
-    {
-      quarter: 'Q3 2025',
-      title: 'Develop AI Strategy Workshop',
-      description: 'Create a workshop framework to help businesses identify and implement AI opportunities.',
-      requiredSkills: ['AI Workflow Integration', 'Business Process Analysis', 'Strategic Planning'],
-      foundationSkills: ['Stakeholder Engagement', 'System Design', 'Team Collaboration'],
-      progress: 0,
-      status: 'Planning',
-    },
-  ];
-
-  // Recent updates
-  const recentUpdates = [
-    {
-      date: 'May 28, 2025',
-      title: 'Portfolio Site Redesign',
-      description: 'Completed major portfolio refresh with three content pillars: Personal, Work, and AI Journey.',
-    },
-    {
-      date: 'May 20, 2025',
-      title: 'Sustainability Agent Research',
-      description: 'Completed initial research on agentic AI for sustainability resource matching.',
-    },
-    {
-      date: 'May 15, 2025',
-      title: 'Business Process Analysis',
-      description: 'Mapped business processes and identified AI integration opportunities in my speech therapy practice.',
-    },
-  ];
+  const data = nowData as NowData;
+  const { focusAreas, roadmap, recentUpdates, lastUpdated } = data;
 
   return (
-    <div className="max-w-5xl mx-auto px-4 py-12">
-      {/* Hero/Intro */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="mb-12 text-center"
-      >
-        <h1 className="text-3xl md:text-4xl font-bold mb-4">Now</h1>
-        <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-          What I&apos;m working on and learning right now. This page is a living record of my current focus, projects, and learning journey.
-        </p>
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
-          Last updated: May 2025
-        </p>
-      </motion.div>
+    <PageLayout
+      title="Now"
+      description="What I'm working on and learning right now. This page is a living record of my current focus, projects, and learning journey."
+      maxWidth="5xl"
+      lastUpdated={lastUpdated}
+    >
 
       {/* Current Focus Areas */}
       <motion.section
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
+        {...sectionAnimation(0)}
         className="mb-16"
       >
-        <h2 className="text-2xl font-semibold mb-6 border-b border-gray-200 dark:border-gray-700 pb-2">Current Focus</h2>
+        <SectionHeader title="Current Focus" />
         <div className="grid md:grid-cols-3 gap-8">
           {focusAreas.map((area) => (
-            <div key={area.title} className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 flex flex-col">
+            <Card key={area.title} className="p-6 flex flex-col">
               <h3 className="text-lg font-semibold mb-2">{area.title}</h3>
               <p className="mb-2 text-gray-600 dark:text-gray-300">{area.description}</p>
               <span className="text-xs font-medium mb-1 text-gray-500">System: <span className="font-semibold">{area.system}</span></span>
               <span className="text-xs font-medium mb-1 text-gray-500">Progress: <span className="font-semibold">{area.progress}</span></span>
-            </div>
+            </Card>
           ))}
         </div>
       </motion.section>
 
       {/* Learning Roadmap */}
       <motion.section
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.3 }}
+        {...sectionAnimation(1)}
         className="mb-16"
       >
-        <h2 className="text-2xl font-semibold mb-6 border-b border-gray-200 dark:border-gray-700 pb-2">Learning Roadmap</h2>
+        <SectionHeader title="Learning Roadmap" />
         <div className="space-y-8">
           {roadmap.map((item) => (
             <div key={item.title} className="bg-gray-900/80 dark:bg-gray-800 rounded-lg shadow-md p-6">
@@ -146,11 +75,9 @@ export default function NowPage() {
 
       {/* Recent Updates */}
       <motion.section
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.4 }}
+        {...sectionAnimation(2)}
       >
-        <h2 className="text-2xl font-semibold mb-6 border-b border-gray-200 dark:border-gray-700 pb-2">Recent Updates</h2>
+        <SectionHeader title="Recent Updates" />
         <div className="space-y-4">
           {recentUpdates.map((update) => (
             <div key={update.title} className="border-l-4 border-blue-500 pl-4 py-2">
@@ -162,23 +89,6 @@ export default function NowPage() {
         </div>
       </motion.section>
 
-      {/* Return Home */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.5 }}
-        className="mt-12 text-center"
-      >
-        <Link 
-          href="/" 
-          className="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-          </svg>
-          Back to home
-        </Link>
-      </motion.div>
-    </div>
+    </PageLayout>
   );
 } 
