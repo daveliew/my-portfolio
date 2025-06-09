@@ -3,9 +3,10 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import AIJourneySubpageLayout from '@/components/ai-journey/SubpageLayout';
+import { Card, SectionHeader } from '@/components/common';
+import { sectionAnimation } from '@/utils/animations';
 
 export default function LearningOverviewPage() {
-  // Sample learning paths data - this would ideally come from a data file or CMS
   const learningPaths = [
     {
       title: 'LLM Handling Path',
@@ -32,13 +33,11 @@ export default function LearningOverviewPage() {
     >
       {/* Introduction */}
       <motion.section
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
+        {...sectionAnimation(0)}
         className="mb-12"
       >
-        <h2 className="text-2xl font-semibold mb-6 border-b border-gray-200 dark:border-gray-700 pb-2">Learning Philosophy</h2>
-        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+        <SectionHeader title="Learning Philosophy" />
+        <Card className="p-6">
           <p className="text-gray-600 dark:text-gray-300 mb-4">
             My approach to learning AI focuses on building practical capabilities that deliver immediate value while 
             developing a foundation for long-term growth. Rather than trying to master everything at once, I&apos;ve created 
@@ -48,20 +47,18 @@ export default function LearningOverviewPage() {
             Each path is designed to take you from theory to practical implementation, with an emphasis on building 
             real-world projects that demonstrate your capabilities.
           </p>
-        </div>
+        </Card>
       </motion.section>
 
       {/* Learning Paths */}
       <motion.section
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.3 }}
+        {...sectionAnimation(1)}
         className="mb-12"
       >
-        <h2 className="text-2xl font-semibold mb-6 border-b border-gray-200 dark:border-gray-700 pb-2">Learning Paths</h2>
+        <SectionHeader title="Learning Paths" />
         <div className="grid md:grid-cols-2 gap-6">
           {learningPaths.map((path) => (
-            <div key={path.title} className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden border border-gray-200 dark:border-gray-700">
+            <Card key={path.title} className="overflow-hidden border border-gray-200 dark:border-gray-700">
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-blue-600 dark:text-blue-400 mb-2">{path.title}</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">{path.description}</p>
@@ -89,20 +86,18 @@ export default function LearningOverviewPage() {
                   View Path
                 </Link>
               </div>
-            </div>
+            </Card>
           ))}
         </div>
       </motion.section>
 
       {/* Learning Resources */}
       <motion.section
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.4 }}
+        {...sectionAnimation(2)}
         className="mb-12"
       >
-        <h2 className="text-2xl font-semibold mb-6 border-b border-gray-200 dark:border-gray-700 pb-2">General Resources</h2>
-        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+        <SectionHeader title="General Resources" />
+        <Card className="p-6">
           <p className="text-gray-600 dark:text-gray-300 mb-4">
             Beyond the structured learning paths, these resources provide valuable context and deeper understanding of AI concepts:
           </p>
@@ -113,7 +108,7 @@ export default function LearningOverviewPage() {
             <li>Hands-on experience building projects with Hugging Face, OpenAI, Anthropic and more</li>
             <li>The &quot;Full Stack LLM Bootcamp&quot; series from a16z</li>
           </ul>
-        </div>
+        </Card>
       </motion.section>
     </AIJourneySubpageLayout>
   );

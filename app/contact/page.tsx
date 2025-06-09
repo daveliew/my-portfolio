@@ -2,33 +2,24 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { PageLayout, Card, SectionHeader } from '@/components/common';
+import { sectionAnimation } from '@/utils/animations';
 
 export default function ContactPage() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        <h1 className="text-3xl md:text-4xl font-bold mb-6">Start Building Your AI Future</h1>
-        <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl">
-          Ready to transform your organization with intelligent systems? Whether you&apos;re launching 
-          sustainability initiatives, scaling purpose-driven businesses, or navigating AI transformation, 
-          let&apos;s explore how agentic AI can amplify your impact.
-        </p>
-      </motion.div>
+    <PageLayout
+      title="Start Building Your AI Future"
+      description="Ready to transform your organization with intelligent systems? Whether you're launching sustainability initiatives, scaling purpose-driven businesses, or navigating AI transformation, let's explore how agentic AI can amplify your impact."
+    >
 
       {/* Project Types */}
       <motion.section
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.1 }}
+        {...sectionAnimation(0)}
         className="mb-12"
       >
-        <h2 className="text-2xl font-semibold mb-6">How I Can Help</h2>
+        <SectionHeader title="How I Can Help" />
         <div className="grid md:grid-cols-2 gap-6">
-          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+          <Card className="p-6">
             <h3 className="text-xl font-semibold mb-3 text-blue-600 dark:text-blue-400">AI Strategy & Architecture</h3>
             <ul className="space-y-2 text-gray-600 dark:text-gray-300">
               <li>• Agentic AI system design & implementation</li>
@@ -36,9 +27,9 @@ export default function ContactPage() {
               <li>• AI transformation roadmaps</li>
               <li>• Technology stack recommendations</li>
             </ul>
-          </div>
+          </Card>
           
-          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+          <Card className="p-6">
             <h3 className="text-xl font-semibold mb-3 text-blue-600 dark:text-blue-400">Purpose-Driven Solutions</h3>
             <ul className="space-y-2 text-gray-600 dark:text-gray-300">
               <li>• Sustainability-focused AI applications</li>
@@ -46,7 +37,7 @@ export default function ContactPage() {
               <li>• Educational technology platforms</li>
               <li>• Community-driven initiatives</li>
             </ul>
-          </div>
+          </Card>
           
           <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold mb-3 text-blue-600 dark:text-blue-400">Business Transformation</h3>
@@ -70,7 +61,10 @@ export default function ContactPage() {
         </div>
       </motion.section>
 
-      <div className="grid md:grid-cols-2 gap-12">
+      <motion.section
+        {...sectionAnimation(1)}
+        className="grid md:grid-cols-2 gap-12"
+      >
         {/* Contact Information */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -184,7 +178,7 @@ export default function ContactPage() {
             </p>
           </div>
         </motion.div>
-      </div>
-    </div>
+      </motion.section>
+    </PageLayout>
   );
 } 
