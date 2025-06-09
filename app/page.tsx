@@ -127,8 +127,8 @@ export default function HomePage() {
       >
         <h2 className="text-2xl font-semibold mb-4">Ready to Transform with Agentic AI?</h2>
         <p className="text-lg mb-6 max-w-xl mx-auto">
-          Whether you're leading sustainability initiatives, scaling purpose-driven businesses, 
-          or navigating your AI transformation journey — let's build something meaningful together.
+          Whether you&apos;re leading sustainability initiatives, scaling purpose-driven businesses, 
+          or navigating your AI transformation journey — let&apos;s build something meaningful together.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link 

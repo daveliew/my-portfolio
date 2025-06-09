@@ -3,7 +3,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function SustainabilityPage() {
   // This would ideally come from a CMS or data file in the future
@@ -155,7 +154,7 @@ export default function SustainabilityPage() {
         className="bg-green-50 dark:bg-green-900/20 rounded-lg p-6 text-center"
       >
         <h2 className="text-xl font-semibold mb-4">Interested in Sustainability & AI?</h2>
-        <p className="mb-6">I'm always looking for collaborators, advisors, or just fellow enthusiasts to discuss ideas and potential projects.</p>
+        <p className="mb-6">I&apos;m always looking for collaborators, advisors, or just fellow enthusiasts to discuss ideas and potential projects.</p>
         <Link 
           href="/contact" 
           className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 shadow-sm transition duration-300"

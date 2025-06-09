@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Dave Liew</h3>
             <p className="text-gray-600 dark:text-gray-300">
-              AI Engineer & Builder fusing human creativity with tomorrow's technology.
+              AI Engineer & Builder fusing human creativity with tomorrow&apos;s technology.
             </p>
           </div>
           

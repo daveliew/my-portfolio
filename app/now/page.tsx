@@ -79,7 +79,7 @@ export default function NowPage() {
       >
         <h1 className="text-3xl md:text-4xl font-bold mb-4">Now</h1>
         <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-          What I'm working on and learning right now. This page is a living record of my current focus, projects, and learning journey.
+          What I&apos;m working on and learning right now. This page is a living record of my current focus, projects, and learning journey.
         </p>
         <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
           Last updated: May 2025
@@ -95,7 +95,7 @@ export default function NowPage() {
       >
         <h2 className="text-2xl font-semibold mb-6 border-b border-gray-200 dark:border-gray-700 pb-2">Current Focus</h2>
         <div className="grid md:grid-cols-3 gap-8">
-          {focusAreas.map((area, idx) => (
+          {focusAreas.map((area) => (
             <div key={area.title} className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 flex flex-col">
               <h3 className="text-lg font-semibold mb-2">{area.title}</h3>
               <p className="mb-2 text-gray-600 dark:text-gray-300">{area.description}</p>
@@ -115,7 +115,7 @@ export default function NowPage() {
       >
         <h2 className="text-2xl font-semibold mb-6 border-b border-gray-200 dark:border-gray-700 pb-2">Learning Roadmap</h2>
         <div className="space-y-8">
-          {roadmap.map((item, idx) => (
+          {roadmap.map((item) => (
             <div key={item.title} className="bg-gray-900/80 dark:bg-gray-800 rounded-lg shadow-md p-6">
               <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
                 <span className="text-sm text-gray-400 font-medium mb-2 md:mb-0">{item.quarter}</span>
@@ -152,7 +152,7 @@ export default function NowPage() {
       >
         <h2 className="text-2xl font-semibold mb-6 border-b border-gray-200 dark:border-gray-700 pb-2">Recent Updates</h2>
         <div className="space-y-4">
-          {recentUpdates.map((update, idx) => (
+          {recentUpdates.map((update) => (
             <div key={update.title} className="border-l-4 border-blue-500 pl-4 py-2">
               <p className="text-sm text-gray-500 dark:text-gray-400">{update.date}</p>
               <h3 className="font-medium mb-1">{update.title}</h3>
