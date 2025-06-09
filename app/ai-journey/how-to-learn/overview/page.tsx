@@ -7,32 +7,6 @@ import { Card, SectionHeader } from '@/components/common';
 import { sectionAnimation } from '@/utils/animations';
 
 export default function LearningOverviewPage() {
-  const learningPaths = [
-    {
-      title: 'LLM Handling Path',
-      description: 'Learn how to effectively work with Large Language Models for content generation, summarization, and transformation.',
-      skills: ['Prompt Engineering', 'Context Management', 'Output Evaluation', 'Fine-tuning Basics'],
-      href: '/ai-journey/how-to-learn/llm-handling',
-      level: 'Beginner to Intermediate',
-      time: '4-6 weeks'
-    },
-    {
-      title: 'Agent & RAG Path',
-      description: 'Build intelligent agents and implement Retrieval Augmented Generation for more capable AI systems.',
-      skills: ['Agent Architecture', 'RAG Implementation', 'Tool & API Integration', 'Memory Systems'],
-      href: '/ai-journey/how-to-learn/agent-rag',
-      level: 'Intermediate to Advanced',
-      time: '6-8 weeks'
-    },
-    {
-      title: 'Three-Hat Technical Leadership',
-      description: 'Master the integration of systems architecture, product management, and hands-on implementation for comprehensive AI solutions.',
-      skills: ['Systems Architecture', 'Product Strategy', 'Quality Engineering', 'Technical Leadership'],
-      href: '/ai-journey/how-to-learn/technical-leadership',
-      level: 'Intermediate to Advanced',
-      time: '8-10 weeks'
-    }
-  ];
 
   return (
     <AIJourneySubpageLayout
@@ -85,37 +59,61 @@ export default function LearningOverviewPage() {
       >
         <SectionHeader title="Learning Paths" />
         <div className="grid md:grid-cols-2 gap-6">
-          {learningPaths.map((path) => (
-            <Card key={path.title} className="overflow-hidden border border-gray-200 dark:border-gray-700">
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-blue-600 dark:text-blue-400 mb-2">{path.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">{path.description}</p>
-                
-                <div className="mb-4">
-                  <h4 className="font-medium text-gray-700 dark:text-gray-300 mb-2">Key Skills:</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {path.skills.map(skill => (
-                      <span key={skill} className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-300 text-xs font-medium px-2.5 py-0.5 rounded">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                
-                <div className="flex justify-between text-sm text-gray-500 dark:text-gray-400 mb-4">
-                  <span>Level: {path.level}</span>
-                  <span>Time: {path.time}</span>
-                </div>
-                
-                <Link 
-                  href={path.href} 
-                  className="inline-block w-full text-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded transition-colors"
-                >
-                  View Path
-                </Link>
-              </div>
-            </Card>
-          ))}
+          <Card className="p-6">
+            <h3 className="text-xl font-semibold text-blue-600 dark:text-blue-400 mb-3">Technical Deep Dive</h3>
+            <p className="text-gray-600 dark:text-gray-300 mb-4">
+              For those who want to understand the technical foundations of how LLMs work, 
+              from the mathematical foundations to implementation details.
+            </p>
+            <Link 
+              href="/ai-journey/how-to-learn/technical-leadership" 
+              className="inline-block px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded transition-colors"
+            >
+              Start Technical Path
+            </Link>
+          </Card>
+          
+          <Card className="p-6">
+            <h3 className="text-xl font-semibold text-green-600 dark:text-green-400 mb-3">Practical Implementation</h3>
+            <p className="text-gray-600 dark:text-gray-300 mb-4">
+              Learn how to handle, deploy, and scale language models in production environments 
+              with real-world constraints and considerations.
+            </p>
+            <Link 
+              href="/ai-journey/how-to-learn/llm-handling" 
+              className="inline-block px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded transition-colors"
+            >
+              Start Implementation Path
+            </Link>
+          </Card>
+          
+          <Card className="p-6">
+            <h3 className="text-xl font-semibold text-purple-600 dark:text-purple-400 mb-3">Claude Mastery</h3>
+            <p className="text-gray-600 dark:text-gray-300 mb-4">
+              Master Claude&apos;s advanced capabilities including prompt engineering, tool use, 
+              computer use, vision, and RAG implementations.
+            </p>
+            <Link 
+              href="/ai-journey/how-to-learn/claude-mastery" 
+              className="inline-block px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded transition-colors"
+            >
+              Start Claude Path
+            </Link>
+          </Card>
+          
+          <Card className="p-6">
+            <h3 className="text-xl font-semibold text-orange-600 dark:text-orange-400 mb-3">Agent & RAG Systems</h3>
+            <p className="text-gray-600 dark:text-gray-300 mb-4">
+              Build sophisticated AI agents and RAG systems that can interact with external 
+              tools, databases, and APIs to solve complex real-world problems.
+            </p>
+            <Link 
+              href="/ai-journey/how-to-learn/agent-rag" 
+              className="inline-block px-4 py-2 bg-orange-600 hover:bg-orange-700 text-white rounded transition-colors"
+            >
+              Start Agent Path
+            </Link>
+          </Card>
         </div>
       </motion.section>
 
