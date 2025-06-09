@@ -81,7 +81,7 @@ export default function HomePage() {
             <h3 className="text-xl font-semibold mb-3">Self-Discovery</h3>
             <p className="text-sm text-gray-500 dark:text-gray-400 mb-2 font-medium">Understanding My Nature</p>
             <p className="mb-4">Working with ADHD patterns, embodied wisdom, and moral agency. The foundation for authentic human-AI collaboration starts with knowing yourself.</p>
-            <Link href="/personal" className="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center">
+            <Link href="/philosophy" className="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center">
               Explore my philosophy
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -107,8 +107,8 @@ export default function HomePage() {
             <h3 className="text-xl font-semibold mb-3">Wealth Generation</h3>
             <p className="text-sm text-gray-500 dark:text-gray-400 mb-2 font-medium">Funding the Exploration</p>
             <p className="mb-4">Creating multiple resilient revenue streams to fund the exploration into human-AI collaboration models and civilizational wisdom.</p>
-            <Link href="/work" className="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center">
-              See my work
+            <Link href="/laboratory" className="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center">
+              See my experiments
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
@@ -116,10 +116,55 @@ export default function HomePage() {
           </Card>
         </div>
       </motion.section>
+
+      {/* Current Experiments */}
+      <motion.section 
+        {...sectionAnimation(2)}
+        className="py-8 border-t border-gray-200 dark:border-gray-700"
+      >
+        <h2 className="text-2xl font-semibold mb-6">Current Experiments</h2>
+        <div className="grid md:grid-cols-2 gap-6 mb-6">
+          <Card className="p-6">
+            <h3 className="text-lg font-semibold text-blue-600 dark:text-blue-400 mb-3">
+              Three-Hat Framework Testing
+            </h3>
+            <p className="text-gray-600 dark:text-gray-400 mb-4">
+              Rapid context switching between Systems Architect, Product Manager, and Implementation roles. 
+              Currently testing on 3 live client projects.
+            </p>
+            <div className="flex justify-between text-sm">
+              <span>Status:</span>
+              <span className="font-medium text-green-600">Active</span>
+            </div>
+          </Card>
+          
+          <Card className="p-6">
+            <h3 className="text-lg font-semibold text-blue-600 dark:text-blue-400 mb-3">
+              ADHD-Optimized AI Workflows
+            </h3>
+            <p className="text-gray-600 dark:text-gray-400 mb-4">
+              Building AI systems that work WITH neurodivergent patterns. Testing hypothesis: 
+              ADHD cognitive speed matches AI processing capabilities.
+            </p>
+            <div className="flex justify-between text-sm">
+              <span>Status:</span>
+              <span className="font-medium text-orange-600">Development</span>
+            </div>
+          </Card>
+        </div>
+        <div className="text-center">
+          <Link href="/laboratory" className="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center">
+            See all lab experiments
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </Link>
+        </div>
+      </motion.section>
       
       {/* Enhanced Call to Action */}
       <motion.section 
-        {...sectionAnimation(2)}
+        {...sectionAnimation(3)}
         className="py-12 border-t border-gray-200 dark:border-gray-700 text-center"
       >
         <h2 className="text-2xl font-semibold mb-4">Join the Human-AI Collaboration Experiment</h2>

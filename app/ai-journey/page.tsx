@@ -11,14 +11,14 @@ import { AIJourneyData, CaseStudy } from '@/types/ai-journey';
 import { SkillsMatrix, RoadmapTimeline, CaseStudyCard, FoundationSkills, CombinedCapabilities } from '../../components/skills';
 
 export default function AIJourneyPage() {
-  const [activeTab, setActiveTab] = useState<string>('roadmap');
+  const [activeTab, setActiveTab] = useState<string>('combined');
   const typedJourneyData = journeyData as AIJourneyData;
   const { journey } = typedJourneyData;
 
   return (
     <PageLayout
-      title={journey.title}
-      description={journey.description}
+      title="Human-AI Collaboration Journey"
+      description="Pioneering complementary intelligence systems through real-world experimentation and framework development"
       maxWidth="5xl"
     >
 
@@ -27,34 +27,37 @@ export default function AIJourneyPage() {
         {...sectionAnimation(0)}
         className="mb-12"
       >
-        <SectionHeader title="AI Journey Navigation" />
+        <SectionHeader title="Human-AI Collaboration Framework" />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <Link href="/ai-journey/why-ai">
             <Card hover className="p-4 h-full">
-              <h3 className="text-lg font-medium text-blue-600 dark:text-blue-400 mb-2">Why AI</h3>
-              <p className="text-gray-600 dark:text-gray-300 text-sm">Understanding the AI S-curve and why AI matters</p>
+              <h3 className="text-lg font-medium text-blue-600 dark:text-blue-400 mb-2">Why Collaboration</h3>
+              <p className="text-gray-600 dark:text-gray-300 text-sm">The case for complementarity over replacement in AI implementation</p>
             </Card>
           </Link>
           
           <Card className="p-4">
-            <h3 className="text-lg font-medium text-blue-600 dark:text-blue-400 mb-2">How to Learn AI</h3>
+            <h3 className="text-lg font-medium text-blue-600 dark:text-blue-400 mb-2">Learning Frameworks</h3>
             <div className="space-y-2 mt-2">
               <Link href="/ai-journey/how-to-learn/overview" className="block text-gray-600 dark:text-gray-300 text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                • Learning Overview
+                • Framework Overview
               </Link>
               <Link href="/ai-journey/how-to-learn/llm-handling" className="block text-gray-600 dark:text-gray-300 text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                • LLM Handling Path
+                • Human-AI Communication
               </Link>
               <Link href="/ai-journey/how-to-learn/agent-rag" className="block text-gray-600 dark:text-gray-300 text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                • Agent & RAG Path
+                • Complementary Intelligence
+              </Link>
+              <Link href="/ai-journey/how-to-learn/technical-leadership" className="block text-gray-600 dark:text-gray-300 text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                • Three-Hat Leadership
               </Link>
             </div>
           </Card>
           
           <Link href="/ai-journey/portfolio">
             <Card hover className="p-4 h-full">
-              <h3 className="text-lg font-medium text-blue-600 dark:text-blue-400 mb-2">My AI Portfolio</h3>
-              <p className="text-gray-600 dark:text-gray-300 text-sm">Showcase of my AI projects and implementations</p>
+              <h3 className="text-lg font-medium text-blue-600 dark:text-blue-400 mb-2">Living Lab Results</h3>
+              <p className="text-gray-600 dark:text-gray-300 text-sm">Real implementations demonstrating human-AI collaboration models</p>
             </Card>
           </Link>
         </div>
@@ -79,9 +82,9 @@ export default function AIJourneyPage() {
           Source: Coatue opinion and analysis as of June 2024. For illustrative purposes only.
         </p>
         <p className="text-gray-600 dark:text-gray-300 mt-4">
-          My journey is currently at the intersection of <span className="text-blue-600 dark:text-blue-400 font-medium">Phase 2 (Edge AI)</span> and 
-          <span className="text-blue-600 dark:text-blue-400 font-medium"> Phase 3 (AI Applications)</span>, focusing on building practical AI solutions 
-          that deliver immediate business value while understanding the technology deeply enough to adapt as it evolves.
+          My collaboration experiments span <span className="text-blue-600 dark:text-blue-400 font-medium">Phase 2 (Edge AI)</span> and 
+          <span className="text-blue-600 dark:text-blue-400 font-medium"> Phase 3 (AI Applications)</span>, pioneering complementary intelligence systems 
+          where human wisdom and AI capabilities create value greater than the sum of their parts.
         </p>
         </Card>
       </motion.section>
@@ -91,39 +94,9 @@ export default function AIJourneyPage() {
         {...sectionAnimation(2)}
         className="mb-8"
       >
-        <SectionHeader title="Journey Details" />
+        <SectionHeader title="Collaboration Framework Details" />
         <div className="mb-6 border-b border-gray-200 dark:border-gray-700">
           <nav className="flex flex-wrap space-x-4 md:space-x-6">
-            <button
-              onClick={() => setActiveTab('roadmap')}
-              className={`py-2 px-1 -mb-px font-medium text-sm ${
-                activeTab === 'roadmap'
-                  ? 'border-b-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400'
-                  : 'text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
-              }`}
-            >
-              Roadmap
-            </button>
-            <button
-              onClick={() => setActiveTab('foundation')}
-              className={`py-2 px-1 -mb-px font-medium text-sm ${
-                activeTab === 'foundation'
-                  ? 'border-b-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400'
-                  : 'text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
-              }`}
-            >
-              Foundation Skills
-            </button>
-            <button
-              onClick={() => setActiveTab('skills')}
-              className={`py-2 px-1 -mb-px font-medium text-sm ${
-                activeTab === 'skills'
-                  ? 'border-b-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400'
-                  : 'text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
-              }`}
-            >
-              AI Skills Matrix
-            </button>
             <button
               onClick={() => setActiveTab('combined')}
               className={`py-2 px-1 -mb-px font-medium text-sm ${
@@ -132,7 +105,7 @@ export default function AIJourneyPage() {
                   : 'text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
               }`}
             >
-              Combined Capabilities
+              Collaboration Models
             </button>
             <button
               onClick={() => setActiveTab('casestudies')}
@@ -142,47 +115,49 @@ export default function AIJourneyPage() {
                   : 'text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
               }`}
             >
-              Case Studies
+              Living Lab Results
+            </button>
+            <button
+              onClick={() => setActiveTab('roadmap')}
+              className={`py-2 px-1 -mb-px font-medium text-sm ${
+                activeTab === 'roadmap'
+                  ? 'border-b-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400'
+                  : 'text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
+              }`}
+            >
+              Experiment Pipeline
+            </button>
+            <button
+              onClick={() => setActiveTab('foundation')}
+              className={`py-2 px-1 -mb-px font-medium text-sm ${
+                activeTab === 'foundation'
+                  ? 'border-b-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400'
+                  : 'text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
+              }`}
+            >
+              Human Foundation
+            </button>
+            <button
+              onClick={() => setActiveTab('skills')}
+              className={`py-2 px-1 -mb-px font-medium text-sm ${
+                activeTab === 'skills'
+                  ? 'border-b-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400'
+                  : 'text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
+              }`}
+            >
+              Technical Capabilities
             </button>
           </nav>
         </div>
 
         {/* Tab Content */}
         <div className="mt-6">
-          {activeTab === 'roadmap' && (
-            <Card className="p-6">
-              <h3 className="text-xl font-semibold mb-4 text-blue-600 dark:text-blue-400">Learning Roadmap</h3>
-              <RoadmapTimeline milestones={journey.roadmap} />
-            </Card>
-          )}
-
-          {activeTab === 'foundation' && (
-            <Card className="p-6">
-              <h3 className="text-xl font-semibold mb-4 text-blue-600 dark:text-blue-400">Foundation Skills</h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-6">
-                My journey in AI builds upon a foundation of business and technical skills developed over years of experience.
-                These core competencies provide the platform from which I&apos;m developing specialized AI capabilities.
-              </p>
-              <FoundationSkills foundationSkills={journey.foundationSkills} />
-            </Card>
-          )}
-
-          {activeTab === 'skills' && (
-            <Card className="p-6">
-              <h3 className="text-xl font-semibold mb-4 text-blue-600 dark:text-blue-400">AI Skills Matrix</h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-6">
-                Core skills needed across Cloud Infrastructure, Data Management, Workflow Implementation, and AI Applications.
-              </p>
-              <SkillsMatrix skillsMap={journey.skillsMap} />
-            </Card>
-          )}
-
           {activeTab === 'combined' && (
             <Card className="p-6">
-              <h3 className="text-xl font-semibold mb-4 text-blue-600 dark:text-blue-400">Combined Capabilities</h3>
+              <h3 className="text-xl font-semibold mb-4 text-blue-600 dark:text-blue-400">Human-AI Collaboration Models</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
-                By combining my foundation skills with AI-specific expertise, I&apos;ve developed these unique capabilities
-                that position me to deliver value across multiple phases of the AI S-curve.
+                Developed frameworks that demonstrate how human wisdom and AI capabilities can create complementary 
+                intelligence systems, including the breakthrough Three-Hat Framework for technical leadership.
               </p>
               <CombinedCapabilities combinedCapabilities={journey.combinedCapabilities} />
             </Card>
@@ -190,12 +165,49 @@ export default function AIJourneyPage() {
 
           {activeTab === 'casestudies' && (
             <Card className="p-6">
-              <h3 className="text-xl font-semibold mb-4 text-blue-600 dark:text-blue-400">Case Studies</h3>
+              <h3 className="text-xl font-semibold mb-4 text-blue-600 dark:text-blue-400">Living Lab Results</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-6">
+                Real-world implementations that prove complementary intelligence models work. Each case study shows 
+                how the Three-Hat Framework prevents technical debt while optimizing for human-AI collaboration.
+              </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {journey.casestudies.map((study: CaseStudy, index: number) => (
                   <CaseStudyCard key={index} casestudy={study} />
                 ))}
               </div>
+            </Card>
+          )}
+
+          {activeTab === 'roadmap' && (
+            <Card className="p-6">
+              <h3 className="text-xl font-semibold mb-4 text-blue-600 dark:text-blue-400">Experiment Pipeline</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-6">
+                Planned experiments to further develop human-AI collaboration models. Each milestone tests new 
+                hypotheses about complementary intelligence and builds toward frameworks our children will need.
+              </p>
+              <RoadmapTimeline milestones={journey.roadmap} />
+            </Card>
+          )}
+
+          {activeTab === 'foundation' && (
+            <Card className="p-6">
+              <h3 className="text-xl font-semibold mb-4 text-blue-600 dark:text-blue-400">Human Foundation Skills</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-6">
+                The distinctly human capabilities that form the foundation for effective AI collaboration—pattern recognition, 
+                strategic thinking, moral agency, and embodied wisdom that AI cannot replicate.
+              </p>
+              <FoundationSkills foundationSkills={journey.foundationSkills} />
+            </Card>
+          )}
+
+          {activeTab === 'skills' && (
+            <Card className="p-6">
+              <h3 className="text-xl font-semibold mb-4 text-blue-600 dark:text-blue-400">Technical Implementation Capabilities</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-6">
+                Technical skills that enable rapid prototyping and testing of human-AI collaboration models across 
+                infrastructure, applications, and edge deployment scenarios.
+              </p>
+              <SkillsMatrix skillsMap={journey.skillsMap} />
             </Card>
           )}
         </div>
