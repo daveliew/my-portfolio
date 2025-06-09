@@ -36,6 +36,20 @@ export default function HomePage() {
           <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-6">
             Systems Implementation Pioneer
           </p>
+          
+          {/* Fitzgerald Quote - Intellectual Signature */}
+          <div className="max-w-3xl mx-auto mb-8 p-6 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
+            <blockquote className="text-lg md:text-xl italic text-gray-700 dark:text-gray-300 mb-3 text-center">
+              &ldquo;The test of a first-rate intelligence is the ability to hold two opposed ideas in mind at the same time and still retain the ability to function.&rdquo;
+            </blockquote>
+            <footer className="text-center text-gray-500 dark:text-gray-400 text-sm mb-3">
+              — F. Scott Fitzgerald
+            </footer>
+            <p className="text-center text-blue-700 dark:text-blue-300 font-medium">
+              This is my operating system for pioneering human-AI collaboration.
+            </p>
+          </div>
+          
           <p className="text-lg md:text-xl max-w-2xl mx-auto mb-4">
             Architecting the bridge between human wisdom and artificial intelligence for the next generation.
           </p>
@@ -45,141 +59,87 @@ export default function HomePage() {
         </motion.div>
       </section>
 
-      {/* Now/Current Focus Section */}
+
+      {/* What I'm Building - Simple & Powerful */}
       <motion.section 
         {...sectionAnimation(0)}
         className="py-8 border-t border-gray-200 dark:border-gray-700"
       >
-        <div className="mb-6">
-          <h2 className="text-2xl font-semibold mb-4">Pioneering in Progress</h2>
-          <p className="text-lg">
-            Creating living laboratories for human-AI collaboration through real-world implementations. 
-            Testing complementarity models, documenting wisdom frameworks, and building the playbooks 
-            my children will need to thrive in an AI-inhabited world.
-          </p>
-          <div className="mt-4">
-            <Link href="/now" className="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center">
-              See my complete current focus
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
+        <h2 className="text-2xl font-semibold mb-8 text-center">What I&apos;m Building</h2>
+        
+        <div className="grid md:grid-cols-3 gap-6">
+          <Card hover className="p-6 text-center">
+            <div className="text-3xl mb-4">🧠</div>
+            <h3 className="text-xl font-semibold mb-3">Philosophy</h3>
+            <p className="mb-4 text-gray-600 dark:text-gray-400">The intellectual framework for human-AI collaboration</p>
+            <Link href="/philosophy" className="text-blue-600 dark:text-blue-400 hover:underline">
+              See the framework →
             </Link>
-          </div>
+          </Card>
+          
+          <Card hover className="p-6 text-center">
+            <div className="text-3xl mb-4">🧪</div>
+            <h3 className="text-xl font-semibold mb-3">Laboratory</h3>
+            <p className="mb-4 text-gray-600 dark:text-gray-400">Live experiments in complementary intelligence systems</p>
+            <Link href="/laboratory" className="text-blue-600 dark:text-blue-400 hover:underline">
+              See the experiments →
+            </Link>
+          </Card>
+          
+          <Card hover className="p-6 text-center">
+            <div className="text-3xl mb-4">🚀</div>
+            <h3 className="text-xl font-semibold mb-3">AI Journey</h3>
+            <p className="mb-4 text-gray-600 dark:text-gray-400">Learning frameworks for the next generation</p>
+            <Link href="/ai-journey" className="text-blue-600 dark:text-blue-400 hover:underline">
+              See the journey →
+            </Link>
+          </Card>
         </div>
       </motion.section>
 
-      {/* Three Pillars Preview - Aligned with PLAN.md */}
+      {/* Live Proof - Simplified */}
       <motion.section 
         {...sectionAnimation(1)}
         className="py-8 border-t border-gray-200 dark:border-gray-700"
       >
-        <h2 className="text-2xl font-semibold mb-6">The Triangle Foundation</h2>
-        
-        <div className="grid md:grid-cols-3 gap-6">
-          {/* Foundation 1: Self-Discovery */}
-          <Card hover className="p-6">
-            <h3 className="text-xl font-semibold mb-3">Self-Discovery</h3>
-            <p className="text-sm text-gray-500 dark:text-gray-400 mb-2 font-medium">Understanding My Nature</p>
-            <p className="mb-4">Working with ADHD patterns, embodied wisdom, and moral agency. The foundation for authentic human-AI collaboration starts with knowing yourself.</p>
-            <Link href="/philosophy" className="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center">
-              Explore my philosophy
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
-          </Card>
-          
-          {/* Foundation 2: Family/Legacy */}
-          <Card hover className="p-6">
-            <h3 className="text-xl font-semibold mb-3">Family Generation</h3>
-            <p className="text-sm text-gray-500 dark:text-gray-400 mb-2 font-medium">Building for Tomorrow</p>
-            <p className="mb-4">Modeling adaptive strategies for an AI-inhabited world. Every system I build is a lesson for the next generation.</p>
-            <Link href="/ai-journey" className="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center">
-              See the journey
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
-          </Card>
-          
-          {/* Foundation 3: Wealth Generation */}
-          <Card hover className="p-6">
-            <h3 className="text-xl font-semibold mb-3">Wealth Generation</h3>
-            <p className="text-sm text-gray-500 dark:text-gray-400 mb-2 font-medium">Funding the Exploration</p>
-            <p className="mb-4">Creating multiple resilient revenue streams to fund the exploration into human-AI collaboration models and civilizational wisdom.</p>
-            <Link href="/laboratory" className="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center">
-              See my experiments
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
-          </Card>
-        </div>
-      </motion.section>
-
-      {/* Current Experiments */}
-      <motion.section 
-        {...sectionAnimation(2)}
-        className="py-8 border-t border-gray-200 dark:border-gray-700"
-      >
-        <h2 className="text-2xl font-semibold mb-6">Current Experiments</h2>
-        <div className="grid md:grid-cols-2 gap-6 mb-6">
-          <Card className="p-6">
-            <h3 className="text-lg font-semibold text-blue-600 dark:text-blue-400 mb-3">
-              Three-Hat Framework Testing
-            </h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-4">
-              Rapid context switching between Systems Architect, Product Manager, and Implementation roles. 
-              Currently testing on 3 live client projects.
-            </p>
-            <div className="flex justify-between text-sm">
-              <span>Status:</span>
-              <span className="font-medium text-green-600">Active</span>
+        <h2 className="text-2xl font-semibold mb-6 text-center">Live Proof</h2>
+        <Card className="p-8 bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 border-green-200 dark:border-green-800">
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-lg font-semibold mb-3">⚡ Three-Hat Framework</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-2">
+                Testing rapid context switching: Systems Architect → Product Manager → Implementation
+              </p>
+              <p className="text-sm text-green-600 dark:text-green-400 font-medium">
+                Active on 3 client projects
+              </p>
             </div>
-          </Card>
-          
-          <Card className="p-6">
-            <h3 className="text-lg font-semibold text-blue-600 dark:text-blue-400 mb-3">
-              ADHD-Optimized AI Workflows
-            </h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-4">
-              Building AI systems that work WITH neurodivergent patterns. Testing hypothesis: 
-              ADHD cognitive speed matches AI processing capabilities.
-            </p>
-            <div className="flex justify-between text-sm">
-              <span>Status:</span>
-              <span className="font-medium text-orange-600">Development</span>
+            
+            <div>
+              <h3 className="text-lg font-semibold mb-3">🧠 ADHD-AI Optimization</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-2">
+                Hypothesis: ADHD cognitive patterns match AI processing speed
+              </p>
+              <p className="text-sm text-orange-600 dark:text-orange-400 font-medium">
+                In development
+              </p>
             </div>
-          </Card>
-        </div>
-        <div className="text-center">
-          <Link href="/laboratory" className="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center">
-            See all lab experiments
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </Link>
-        </div>
+          </div>
+        </Card>
       </motion.section>
       
-      {/* Enhanced Call to Action */}
+      {/* Simple, Powerful CTA */}
       <motion.section 
-        {...sectionAnimation(3)}
+        {...sectionAnimation(2)}
         className="py-12 border-t border-gray-200 dark:border-gray-700 text-center"
       >
-        <h2 className="text-2xl font-semibold mb-4">Join the Human-AI Collaboration Experiment</h2>
-        <p className="text-lg mb-6 max-w-xl mx-auto">
-          Ready to pioneer complementary intelligence systems? Let&apos;s build the frameworks 
-          our children will need to thrive in an AI-inhabited world.
+        <h2 className="text-3xl font-bold mb-4">Ready to Pioneer?</h2>
+        <p className="text-lg mb-8 max-w-xl mx-auto text-gray-600 dark:text-gray-400">
+          Let&apos;s build the frameworks our children will need to thrive with AI.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <CTAButton href="/contact">
-            Join the Lab
-          </CTAButton>
-          <CTAButton href="/ai-journey" variant="secondary">
-            See the Experiments
-          </CTAButton>
-        </div>
+        <CTAButton href="/contact">
+          Join the Experiment
+        </CTAButton>
       </motion.section>
     </div>
   );

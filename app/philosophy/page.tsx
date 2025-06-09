@@ -7,34 +7,67 @@ import { sectionAnimation } from '@/utils/animations';
 export default function PhilosophyPage() {
   return (
     <PageLayout
-      title="The Collaborator Model"
-      description="Pioneering Human-AI Collaboration for the Next Generation"
+      title="The Fitzgerald Principle"
+      description="First-rate intelligence through productive tensions: My operating system for pioneering human-AI collaboration"
     >
-      {/* Core Manifesto */}
+      {/* The Fitzgerald Principle - Core Operating System */}
       <motion.section
         {...sectionAnimation(0)}
         className="mb-12"
       >
-        <SectionHeader title="The Meta-Mission" />
+        <SectionHeader title="My Intellectual Operating System" />
         <Card className="p-8 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 border-blue-200 dark:border-blue-800">
+          <blockquote className="text-xl md:text-2xl italic text-gray-700 dark:text-gray-300 mb-6 text-center">
+            &ldquo;The test of a first-rate intelligence is the ability to hold two opposed ideas in mind at the same time and still retain the ability to function.&rdquo;
+          </blockquote>
+          <footer className="text-center text-gray-500 dark:text-gray-400 mb-6">— F. Scott Fitzgerald</footer>
+          
+          <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-blue-300 dark:border-blue-700">
+            <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
+              <strong>This is my operating system for everything:</strong>
+            </p>
+            <p className="text-gray-600 dark:text-gray-400 mb-4">
+              <strong>Immediate practical value AND long-term civilizational contribution</strong><br/>
+              <strong>Personal family focus AND public knowledge building</strong><br/>
+              <strong>Business success AND philosophical advancement</strong>
+            </p>
+            <p className="text-gray-600 dark:text-gray-400 italic">
+              These aren&apos;t contradictions to resolve—they&apos;re the productive tensions that create value in the AI era.
+            </p>
+          </div>
+        </Card>
+      </motion.section>
+
+      {/* Meta-Mission Flows From Fitzgerald */}
+      <motion.section
+        {...sectionAnimation(1)}
+        className="mb-12"
+      >
+        <SectionHeader title="The Meta-Mission" />
+        <Card className="p-6">
           <blockquote className="text-lg md:text-xl italic text-gray-700 dark:text-gray-300 mb-6">
             &ldquo;My children will inherit a world co-inhabited by a new form of intelligence. My mission is to pioneer 
             and model the wisdom needed to thrive in this collaboration.&rdquo;
           </blockquote>
           <p className="text-gray-600 dark:text-gray-400">
-            This involves demonstrating how uniquely human qualities—like purpose-driven creativity, moral agency, 
-            and even the profound understanding of our own mortality—remain our greatest assets.
+            This mission embodies the Fitzgerald Principle perfectly: demonstrating how uniquely human qualities—like 
+            purpose-driven creativity, moral agency, and even the profound understanding of our own mortality—remain 
+            our greatest assets while building practical AI systems today.
           </p>
         </Card>
       </motion.section>
 
-      {/* The Triangle Foundation */}
+      {/* The Triangle Foundation - A Fitzgerald Application */}
       <motion.section
-        {...sectionAnimation(1)}
+        {...sectionAnimation(2)}
         className="mb-12"
       >
         <SectionHeader title="The Triangle Foundation" />
         <Card className="p-6 mb-6">
+          <p className="text-gray-600 dark:text-gray-400 mb-6 text-center">
+            The Triangle Foundation is the Fitzgerald Principle applied to life design: three opposing forces that strengthen each other.
+          </p>
+          
           <div className="text-center mb-8">
             <div className="inline-block">
               <div className="text-lg font-mono mb-4">
@@ -71,59 +104,9 @@ export default function PhilosophyPage() {
           
           <div className="mt-6 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
             <p className="text-sm text-gray-600 dark:text-gray-400 text-center">
-              Each point strengthens the others. No single point can stand alone.
+              <strong>Fitzgerald Principle Applied:</strong> Each point creates productive tension with the others. No single point can stand alone.
             </p>
           </div>
-        </Card>
-      </motion.section>
-
-      {/* The Fitzgerald Principle */}
-      <motion.section
-        {...sectionAnimation(2)}
-        className="mb-12"
-      >
-        <SectionHeader title="The Fitzgerald Principle" />
-        <Card className="p-6">
-          <blockquote className="text-lg italic text-gray-700 dark:text-gray-300 mb-6 text-center border-l-4 border-blue-400 pl-4">
-            &ldquo;The test of a first-rate intelligence is the ability to hold two opposed ideas in mind 
-            at the same time and still retain the ability to function.&rdquo;
-            <footer className="text-sm text-gray-500 dark:text-gray-400 mt-2">— F. Scott Fitzgerald</footer>
-          </blockquote>
-          
-          <h4 className="font-semibold mb-4">The Paradoxes I Navigate:</h4>
-          <div className="grid md:grid-cols-2 gap-4">
-            <div className="space-y-3">
-              <div className="flex items-center">
-                <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                <span className="text-sm">Technically rigorous <strong>AND</strong> Business pragmatic</span>
-              </div>
-              <div className="flex items-center">
-                <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
-                <span className="text-sm">ADHD-driven <strong>AND</strong> Systematically productive</span>
-              </div>
-              <div className="flex items-center">
-                <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                <span className="text-sm">Multi-venture <strong>AND</strong> Deeply committed</span>
-              </div>
-            </div>
-            <div className="space-y-3">
-              <div className="flex items-center">
-                <span className="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
-                <span className="text-sm">Future-focused <strong>AND</strong> Present-profitable</span>
-              </div>
-              <div className="flex items-center">
-                <span className="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
-                <span className="text-sm">Family-first <strong>AND</strong> Prolific builder</span>
-              </div>
-              <div className="flex items-center">
-                <span className="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
-                <span className="text-sm">Accumulated wisdom <strong>AND</strong> Beginner&apos;s humility</span>
-              </div>
-            </div>
-          </div>
-          <p className="text-sm text-gray-600 dark:text-gray-400 mt-4 italic">
-            These aren&apos;t contradictions to resolve—they&apos;re the productive tensions that create value in this new era.
-          </p>
         </Card>
       </motion.section>
 

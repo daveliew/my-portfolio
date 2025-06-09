@@ -13,7 +13,7 @@ export default function LaboratoryPage() {
   return (
     <PageLayout
       title="The Laboratory"
-      description="Current experiments in human-AI collaboration, proof points from real implementations, and insights from the frontier of complementary intelligence systems."
+      description="Where productive tensions create value: Current experiments in human-AI collaboration, proof points from real implementations, and insights from the frontier of complementary intelligence systems."
     >
       {/* Current Experiments */}
       <motion.section

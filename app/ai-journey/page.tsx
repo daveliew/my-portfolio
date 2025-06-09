@@ -18,7 +18,7 @@ export default function AIJourneyPage() {
   return (
     <PageLayout
       title="Human-AI Collaboration Journey"
-      description="Pioneering complementary intelligence systems through real-world experimentation and framework development"
+      description="First-rate intelligence through productive tensions: Pioneering complementary intelligence systems through real-world experimentation and framework development"
       maxWidth="5xl"
     >
 
