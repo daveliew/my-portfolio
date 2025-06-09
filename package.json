@@ -10,7 +10,10 @@
     "lint": "next lint",
     "type-check": "tsc --noEmit",
     "validate-philosophy": "node scripts/validate-philosophy.js",
-    "philosophy-check": "npm run validate-philosophy"
+    "philosophy-check": "npm run validate-philosophy",
+    "pre-deploy": "node scripts/pre-deploy.js",
+    "deploy-check": "npm run pre-deploy",
+    "quick-check": "node scripts/quick-check.js"
   },
   "dependencies": {
     "framer-motion": "^11.11.8",
