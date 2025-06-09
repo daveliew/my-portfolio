@@ -34,10 +34,13 @@ export default function HomePage() {
         >
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Dave Liew</h1>
           <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-6">
-            Agentic AI Architect for Purpose-Driven Leaders
+            Systems Implementation Pioneer
           </p>
-          <p className="text-lg md:text-xl max-w-2xl mx-auto">
-            Building intelligent systems that amplify human potential while creating sustainable impact through purposeful technology.
+          <p className="text-lg md:text-xl max-w-2xl mx-auto mb-4">
+            Architecting the bridge between human wisdom and artificial intelligence for the next generation.
+          </p>
+          <p className="text-base md:text-lg max-w-2xl mx-auto text-gray-600 dark:text-gray-400">
+            Building complementary human-AI systems where moral agency, creativity, and embodied wisdom remain our greatest assets.
           </p>
         </motion.div>
       </section>
@@ -48,11 +51,11 @@ export default function HomePage() {
         className="py-8 border-t border-gray-200 dark:border-gray-700"
       >
         <div className="mb-6">
-          <h2 className="text-2xl font-semibold mb-4">Currently Working On</h2>
+          <h2 className="text-2xl font-semibold mb-4">Pioneering in Progress</h2>
           <p className="text-lg">
-            Architecting agentic AI systems for sustainability initiatives, implementing intelligent automation 
-            in purpose-driven businesses, and documenting proven methodologies to help other leaders navigate 
-            the AI transformation journey.
+            Creating living laboratories for human-AI collaboration through real-world implementations. 
+            Testing complementarity models, documenting wisdom frameworks, and building the playbooks 
+            my children will need to thrive in an AI-inhabited world.
           </p>
           <div className="mt-4">
             <Link href="/now" className="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center">
@@ -70,14 +73,14 @@ export default function HomePage() {
         {...sectionAnimation(1)}
         className="py-8 border-t border-gray-200 dark:border-gray-700"
       >
-        <h2 className="text-2xl font-semibold mb-6">My Approach</h2>
+        <h2 className="text-2xl font-semibold mb-6">The Triangle Foundation</h2>
         
         <div className="grid md:grid-cols-3 gap-6">
-          {/* Pillar 1: Personal - Your Why */}
+          {/* Foundation 1: Self-Discovery */}
           <Card hover className="p-6">
-            <h3 className="text-xl font-semibold mb-3">Personal</h3>
-            <p className="text-sm text-gray-500 dark:text-gray-400 mb-2 font-medium">Your &ldquo;Why&rdquo;</p>
-            <p className="mb-4">The philosophy and life system that drives purposeful technology. Understanding the meaning behind the work creates sustainable impact.</p>
+            <h3 className="text-xl font-semibold mb-3">Self-Discovery</h3>
+            <p className="text-sm text-gray-500 dark:text-gray-400 mb-2 font-medium">Understanding My Nature</p>
+            <p className="mb-4">Working with ADHD patterns, embodied wisdom, and moral agency. The foundation for authentic human-AI collaboration starts with knowing yourself.</p>
             <Link href="/personal" className="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center">
               Explore my philosophy
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -86,26 +89,26 @@ export default function HomePage() {
             </Link>
           </Card>
           
-          {/* Pillar 2: Work - Your How */}
+          {/* Foundation 2: Family/Legacy */}
           <Card hover className="p-6">
-            <h3 className="text-xl font-semibold mb-3">Work</h3>
-            <p className="text-sm text-gray-500 dark:text-gray-400 mb-2 font-medium">Your &ldquo;How&rdquo;</p>
-            <p className="mb-4">Skills, experience, and proven methodologies for delivering value through agentic AI systems that solve real business challenges.</p>
-            <Link href="/work" className="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center">
-              See my capabilities
+            <h3 className="text-xl font-semibold mb-3">Family Generation</h3>
+            <p className="text-sm text-gray-500 dark:text-gray-400 mb-2 font-medium">Building for Tomorrow</p>
+            <p className="mb-4">Modeling adaptive strategies for an AI-inhabited world. Every system I build is a lesson for the next generation.</p>
+            <Link href="/ai-journey" className="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center">
+              See the journey
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </Link>
           </Card>
           
-          {/* Pillar 3: AI Journey - Your What */}
+          {/* Foundation 3: Wealth Generation */}
           <Card hover className="p-6">
-            <h3 className="text-xl font-semibold mb-3">AI Journey</h3>
-            <p className="text-sm text-gray-500 dark:text-gray-400 mb-2 font-medium">Your &ldquo;What&rdquo;</p>
-            <p className="mb-4">Continuous learning, building, and exploration in AI. Documenting the path from foundation to advanced agentic systems.</p>
-            <Link href="/ai-journey" className="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center">
-              Follow my journey
+            <h3 className="text-xl font-semibold mb-3">Wealth Generation</h3>
+            <p className="text-sm text-gray-500 dark:text-gray-400 mb-2 font-medium">Funding the Exploration</p>
+            <p className="mb-4">Creating multiple resilient revenue streams to fund the exploration into human-AI collaboration models and civilizational wisdom.</p>
+            <Link href="/work" className="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center">
+              See my work
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
@@ -119,17 +122,17 @@ export default function HomePage() {
         {...sectionAnimation(2)}
         className="py-12 border-t border-gray-200 dark:border-gray-700 text-center"
       >
-        <h2 className="text-2xl font-semibold mb-4">Ready to Transform with Agentic AI?</h2>
+        <h2 className="text-2xl font-semibold mb-4">Join the Human-AI Collaboration Experiment</h2>
         <p className="text-lg mb-6 max-w-xl mx-auto">
-          Whether you&apos;re leading sustainability initiatives, scaling purpose-driven businesses, 
-          or navigating your AI transformation journey — let&apos;s build something meaningful together.
+          Ready to pioneer complementary intelligence systems? Let&apos;s build the frameworks 
+          our children will need to thrive in an AI-inhabited world.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <CTAButton href="/contact">
-            Start a Conversation
+            Join the Lab
           </CTAButton>
           <CTAButton href="/ai-journey" variant="secondary">
-            Explore My Methodology
+            See the Experiments
           </CTAButton>
         </div>
       </motion.section>

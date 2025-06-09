@@ -23,6 +23,14 @@ export default function LearningOverviewPage() {
       href: '/ai-journey/how-to-learn/agent-rag',
       level: 'Intermediate to Advanced',
       time: '6-8 weeks'
+    },
+    {
+      title: 'Three-Hat Technical Leadership',
+      description: 'Master the integration of systems architecture, product management, and hands-on implementation for comprehensive AI solutions.',
+      skills: ['Systems Architecture', 'Product Strategy', 'Quality Engineering', 'Technical Leadership'],
+      href: '/ai-journey/how-to-learn/technical-leadership',
+      level: 'Intermediate to Advanced',
+      time: '8-10 weeks'
     }
   ];
 
@@ -43,10 +51,30 @@ export default function LearningOverviewPage() {
             developing a foundation for long-term growth. Rather than trying to master everything at once, I&apos;ve created 
             focused learning paths that build complementary skills.
           </p>
-          <p className="text-gray-600 dark:text-gray-300">
+          <p className="text-gray-600 dark:text-gray-300 mb-4">
             Each path is designed to take you from theory to practical implementation, with an emphasis on building 
             real-world projects that demonstrate your capabilities.
           </p>
+          <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
+            <h4 className="font-semibold text-blue-800 dark:text-blue-300 mb-2">The Three-Hat Framework</h4>
+            <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">
+              A key insight from my journey: successful AI implementation requires wearing three distinct hats:
+            </p>
+            <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+              <li className="flex items-start">
+                <span className="font-medium text-blue-700 dark:text-blue-400 mr-2">🏗️ Systems Architect:</span>
+                <span>Think big picture, prevent technical debt, design for 10x scale</span>
+              </li>
+              <li className="flex items-start">
+                <span className="font-medium text-green-700 dark:text-green-400 mr-2">📊 Product Manager:</span>
+                <span>Optimize for user value, data-driven decisions, business impact</span>
+              </li>
+              <li className="flex items-start">
+                <span className="font-medium text-purple-700 dark:text-purple-400 mr-2">💻 Implementation:</span>
+                <span>Quality gates, developer experience, continuous improvement</span>
+              </li>
+            </ul>
+          </div>
         </Card>
       </motion.section>
 

@@ -246,6 +246,164 @@
         "previous": "/ai-journey/how-to-learn/llm-handling",
         "next": "/ai-journey/portfolio"
       }
+    },
+    {
+      "id": "technical-leadership",
+      "title": "Three-Hat Technical Leadership Framework",
+      "description": "Master the integration of systems architecture, product management, and hands-on implementation for comprehensive AI solutions",
+      "overview": "This advanced learning path teaches you to seamlessly switch between three critical perspectives: Systems Architect (big picture), Product Manager (value optimization), and Implementation (delivery excellence). Based on hard-won insights from real-world AI projects.",
+      "objectives": [
+        "Develop systems thinking to prevent technical debt and complexity explosion",
+        "Master data-driven product management for AI features",
+        "Build robust implementation practices with quality gates and monitoring",
+        "Learn to context-switch effectively between the three hats",
+        "Apply the framework to deliver fractional CTO-level value"
+      ],
+      "metadata": {
+        "level": "Intermediate to Advanced",
+        "duration": "8-10 weeks",
+        "prerequisites": [
+          "Experience building and deploying AI applications",
+          "Basic understanding of software architecture",
+          "Some exposure to product management concepts",
+          "Willingness to learn from failures and iterate"
+        ],
+        "targetAudience": ["Technical leaders", "Senior developers", "AI consultants", "Aspiring fractional CTOs"]
+      },
+      "phases": [
+        {
+          "title": "Phase 1: The Systems Architect Hat",
+          "description": "Learn to think in systems, architectures, and scalable designs that prevent future problems.",
+          "modules": [
+            {
+              "title": "Foundation First Thinking",
+              "topics": [
+                "The Pareto principle in architecture (80/20 rule)",
+                "Identifying the core 20% that delivers 80% value",
+                "Building modular, extensible systems from the start"
+              ]
+            },
+            {
+              "title": "Scalability & Complexity Management",
+              "topics": [
+                "The 10x scalability question framework",
+                "Monitoring complexity before it explodes (69→10 tools lesson)",
+                "Chaos engineering principles for AI systems"
+              ]
+            },
+            {
+              "title": "Technical Debt Prevention",
+              "topics": [
+                "Early warning signs of architectural problems",
+                "Protocol compliance as business risk (the $50K stdout lesson)",
+                "Building in flexibility without over-engineering"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Phase 2: The Product Manager Hat",
+          "description": "Optimize for user value, business impact, and data-driven decision making.",
+          "modules": [
+            {
+              "title": "User Journey Optimization",
+              "topics": [
+                "Time-to-first-success metrics (<2 min onboarding)",
+                "Identifying and removing friction points",
+                "Building user feedback loops into AI systems"
+              ]
+            },
+            {
+              "title": "Data-Driven AI Features",
+              "topics": [
+                "Usage analytics that drive architecture decisions",
+                "Feature lifecycle: Discovery → Experimentation → Optimization",
+                "Measuring actual vs perceived value"
+              ]
+            },
+            {
+              "title": "Business Impact Alignment",
+              "topics": [
+                "Translating technical capabilities to business outcomes",
+                "ROI measurement for AI implementations",
+                "Prioritization frameworks for AI features"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Phase 3: The Implementation Hat",
+          "description": "Excellence in delivery through quality gates, automation, and continuous improvement.",
+          "modules": [
+            {
+              "title": "Quality Gates & Testing",
+              "topics": [
+                "CI/CD pipelines for AI applications",
+                "Testing strategies for non-deterministic systems",
+                "Monitoring beyond uptime - the metrics that matter"
+              ]
+            },
+            {
+              "title": "Developer Experience",
+              "topics": [
+                "One-command setup philosophy",
+                "Hot reload and rapid iteration for AI development",
+                "Documentation that developers actually use"
+              ]
+            },
+            {
+              "title": "Continuous Improvement",
+              "topics": [
+                "Weekly metrics → monthly architecture reviews",
+                "Learning from production incidents",
+                "Building improvement culture in AI teams"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Phase 4: Framework Integration",
+          "description": "Apply all three hats together for comprehensive technical leadership.",
+          "modules": [
+            {
+              "title": "Context Switching Mastery",
+              "topics": [
+                "When to wear which hat",
+                "Rapid perspective switching in meetings",
+                "Balancing competing priorities across hats"
+              ]
+            },
+            {
+              "title": "Technical Leadership Audits",
+              "topics": [
+                "The comprehensive health check framework",
+                "Architecture assessment in Week 1-2",
+                "Operational excellence design in Week 3-4",
+                "Growth preparation in Week 5-6"
+              ]
+            },
+            {
+              "title": "Client Delivery Excellence",
+              "topics": [
+                "Positioning as a fractional CTO",
+                "Demonstrating value through the framework",
+                "Building long-term client relationships"
+              ]
+            }
+          ]
+        }
+      ],
+      "process": [
+        "Start with self-assessment: Which hat do you naturally wear most?",
+        "Focus on strengthening your weakest hat first",
+        "Apply the framework to a real project throughout the learning process",
+        "Document your 'hard lessons learned' as you go",
+        "Share insights with the community to reinforce learning"
+      ],
+      "links": {
+        "previous": "/ai-journey/how-to-learn/agent-rag",
+        "next": "/ai-journey/portfolio"
+      }
     }
   ]
 } 

@@ -236,6 +236,20 @@
           "Aligning business and technical stakeholders",
           "Driving AI adoption across organizations"
         ]
+      },
+      {
+        "name": "Three-Hat Technical Leadership Framework",
+        "description": "Integrating systems architecture, product management, and hands-on implementation for comprehensive AI solutions",
+        "level": 4,
+        "foundation": ["Technical Skills", "Strategic Thinking", "AI Implementation", "Pattern Recognition"],
+        "applications": [
+          "Systems Architect Hat: Designing scalable AI infrastructure with 80/20 optimization",
+          "Product Manager Hat: Data-driven feature prioritization and user journey optimization",
+          "Implementation Hat: Quality gates, CI/CD pipelines, and developer experience optimization",
+          "Preventing technical debt through architectural foresight (69→10 tools optimization)",
+          "Chaos engineering readiness for 10x growth scenarios",
+          "Technical health audits and operational excellence design"
+        ]
       }
     ],
     "roadmap": [
@@ -284,7 +298,12 @@
                 "Reduced costs of market intelligence gathering"
             ],
             "technologies": ["CrewAI", "LangChain", "OpenAI API", "Vector Databases"],
-            "foundationSkillsApplied": ["Pattern Recognition", "Strategic Thinking", "Technical Skills", "AI Implementation"]
+            "foundationSkillsApplied": ["Pattern Recognition", "Strategic Thinking", "Technical Skills", "AI Implementation"],
+            "threeHatFramework": {
+                "systemsArchitect": "Designed modular agent architecture that scaled from 3 to 12 agents without complexity explosion",
+                "productManager": "Optimized user journey from 30min to 2min for first insights",
+                "implementation": "Built comprehensive testing suite and monitoring dashboard for agent performance"
+            }
         },
         {
           "title": "Marketing & Operations Automation - Ray of Joy Therapy",
@@ -296,7 +315,12 @@
             "Enhanced operational efficiency through integrated systems"
           ],
           "technologies": ["n8n", "OpenAI API", "Airtable", "Website Integration"],
-          "foundationSkillsApplied": ["Technical Skills", "AI Implementation", "Business Development"]
+          "foundationSkillsApplied": ["Technical Skills", "AI Implementation", "Business Development"],
+          "threeHatFramework": {
+            "systemsArchitect": "Designed integrated automation architecture preventing tool sprawl (learned from 69→10 tools experience)",
+            "productManager": "Prioritized therapist time-saving features based on usage data and feedback loops",
+            "implementation": "Established monitoring and quality gates for all automated client communications"
+          }
         },
         {
             "title": "B2B Corporate Gift Platform Transformation",

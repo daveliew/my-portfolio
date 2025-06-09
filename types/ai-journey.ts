@@ -53,14 +53,22 @@ export interface Milestone {
   foundationSkillsUtilized?: string[];
 }
 
+export interface ThreeHatFramework {
+  systemsArchitect: string;
+  productManager: string;
+  implementation: string;
+}
+
 export interface CaseStudy {
   title: string;
   date: string;
-  phase: string;
+  phase?: string;
+  status?: string;
   description: string;
   outcomes: string[];
   technologies: string[];
   foundationSkillsApplied?: string[];
+  threeHatFramework?: ThreeHatFramework;
 }
 
 export interface AIJourney {
