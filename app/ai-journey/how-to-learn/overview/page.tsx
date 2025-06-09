@@ -130,11 +130,70 @@ export default function LearningOverviewPage() {
             Beyond the structured learning paths, these resources provide valuable context and deeper understanding of AI concepts:
           </p>
           <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-2">
-            <li>Stanford CS324: Large Language Models (freely available course materials)</li>
-            <li>Andrej Karpathy&apos;s Neural Networks and Transformers videos</li>
-            <li>Andrew Ng&apos;s Deep Learning Specialization</li>
-            <li>Hands-on experience building projects with Hugging Face, OpenAI, Anthropic and more</li>
-            <li>The &quot;Full Stack LLM Bootcamp&quot; series from a16z</li>
+            <li>
+              <a 
+                href="https://stanford-cs324.github.io/winter2022/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-blue-600 dark:text-blue-400 hover:underline"
+              >
+                Stanford CS324: Large Language Models
+              </a>
+              {" "}(freely available course materials)
+            </li>
+            <li>
+              <a 
+                href="https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-blue-600 dark:text-blue-400 hover:underline"
+              >
+                Andrej Karpathy&apos;s Neural Networks: Zero to Hero
+              </a>
+              {" "}video series
+            </li>
+            <li>
+              <a 
+                href="https://www.coursera.org/specializations/deep-learning" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-blue-600 dark:text-blue-400 hover:underline"
+              >
+                Andrew Ng&apos;s Deep Learning Specialization
+              </a>
+              {" "}on Coursera
+            </li>
+            <li>
+              <a 
+                href="https://huggingface.co/learn" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-blue-600 dark:text-blue-400 hover:underline"
+              >
+                Hugging Face Course
+              </a>
+              {" "}and{" "}
+              <a 
+                href="https://www.anthropic.com/learn" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-blue-600 dark:text-blue-400 hover:underline"
+              >
+                Anthropic Academy
+              </a>
+              {" "}for hands-on experience
+            </li>
+            <li>
+              <a 
+                href="https://fullstackdeeplearning.com/llm-bootcamp/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-blue-600 dark:text-blue-400 hover:underline"
+              >
+                Full Stack LLM Bootcamp
+              </a>
+              {" "}series from a16z
+            </li>
           </ul>
         </Card>
       </motion.section>

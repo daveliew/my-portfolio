@@ -8,7 +8,6 @@ import { sectionAnimation } from '@/utils/animations';
 import { themeColors, themeUtilities } from '@/styles/theme';
 
 // Import data
-import aiJourneyData from '@/data/ai-journey.json';
 import sustainabilityData from '@/data/sustainability.json';
 
 export default function LaboratoryPage() {
@@ -237,7 +236,7 @@ export default function LaboratoryPage() {
                 </div>
                 <div className="flex justify-between text-sm">
                   <span>Key Insight:</span>
-                  <span className="font-medium">Gesture > Voice > Touch</span>
+                  <span className="font-medium">Gesture &gt; Voice &gt; Touch</span>
                 </div>
               </div>
             </Card>
@@ -428,7 +427,7 @@ export default function LaboratoryPage() {
                 ⚡ The 2-Minute Rule Discovery
               </h3>
               <p className="text-[var(--text-secondary)] mb-3">
-                If users can't achieve first success within 2 minutes, the architecture has failed. 
+                If users can&apos;t achieve first success within 2 minutes, the architecture has failed. 
                 This became the north star metric for all human-AI interface design, and now extends to human-robot collaboration.
               </p>
               <div className="text-sm text-[var(--text-secondary)]">
@@ -442,7 +441,7 @@ export default function LaboratoryPage() {
               </h3>
               <p className="text-[var(--text-secondary)] mb-3">
                 Human mortality creates urgency and meaning that immortal AI systems cannot replicate. 
-                This "bug" in human design is actually our greatest feature for creative decision-making and long-term sustainability thinking.
+                This &ldquo;bug&rdquo; in human design is actually our greatest feature for creative decision-making and long-term sustainability thinking.
               </p>
               <div className="text-sm text-[var(--text-secondary)]">
                 <strong>Insight:</strong> Our finite nature is a competitive advantage, not a limitation to overcome.
