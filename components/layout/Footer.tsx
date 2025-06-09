@@ -16,31 +16,26 @@ const Footer: React.FC = () => {
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-4">Explore</h3>
+            <h3 className="text-lg font-semibold mb-4">Explore AI Journey</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
-                  Home
+                <Link href="/ai-journey/overview" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
+                  Learning Overview
                 </Link>
               </li>
               <li>
-                <Link href="/now" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
-                  Now
+                <Link href="/ai-journey/portfolio" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
+                  AI Portfolio
                 </Link>
               </li>
               <li>
-                <Link href="/sustainability" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
-                  Sustainability
+                <Link href="/ai-journey/how-to-learn/overview" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
+                  How to Learn AI
                 </Link>
               </li>
               <li>
-                <Link href="/business" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
-                  Business
-                </Link>
-              </li>
-              <li>
-                <Link href="/tech-ed" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
-                  Tech Ed
+                <Link href="/ai-journey/why-ai" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
+                  Why AI Matters
                 </Link>
               </li>
             </ul>
@@ -50,11 +45,6 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">Connect</h3>
             <ul className="space-y-2">
               <li>
-                <a href="https://twitter.com/daveliew" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
-                  Twitter
-                </a>
-              </li>
-              <li>
                 <a href="https://linkedin.com/in/daveliew" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
                   LinkedIn
                 </a>
@@ -62,6 +52,11 @@ const Footer: React.FC = () => {
               <li>
                 <a href="https://github.com/daveliew" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
                   GitHub
+                </a>
+              </li>
+              <li>
+                <a href="https://agenticbrewery.ai" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
+                  Agentic Brewery
                 </a>
               </li>
             </ul>

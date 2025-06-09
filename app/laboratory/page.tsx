@@ -1,254 +1,494 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { Card, SectionHeader, PageLayout } from '@/components/common';
 import { sectionAnimation } from '@/utils/animations';
+import { themeColors, themeUtilities } from '@/styles/theme';
 
 // Import data
 import aiJourneyData from '@/data/ai-journey.json';
+import sustainabilityData from '@/data/sustainability.json';
 
 export default function LaboratoryPage() {
+  const [activeSection, setActiveSection] = useState('overview');
+
   return (
     <PageLayout
-      title="The Laboratory"
-      description="Where productive tensions create value: Current experiments in human-AI collaboration, proof points from real implementations, and insights from the frontier of complementary intelligence systems."
+      title="Innovation Laboratory"
+      description="Where the unstoppable forces of AI, sustainability, and robotics converge: Experiments in technology that creates value while preserving our future."
     >
-      {/* Current Experiments */}
+      {/* Hero Section - The Three Unstoppable Trends */}
       <motion.section
         {...sectionAnimation(0)}
         className="mb-12"
       >
-        <SectionHeader title="Current Experiments" />
-        <div className="grid md:grid-cols-2 gap-6">
-          <Card className="p-6">
-            <h3 className="text-xl font-semibold text-blue-600 dark:text-blue-400 mb-3">
-              Three-Hat Framework Implementation
-            </h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-4">
-              Testing rapid context switching between Systems Architect, Product Manager, and Implementation roles 
-              in real client projects. Measuring decision quality and delivery speed.
-            </p>
-            <div className="space-y-2">
-              <div className="flex justify-between text-sm">
-                <span>Current Status:</span>
-                <span className="font-medium text-green-600">Active</span>
-              </div>
-              <div className="flex justify-between text-sm">
-                <span>Projects Testing:</span>
-                <span className="font-medium">3</span>
-              </div>
-              <div className="flex justify-between text-sm">
-                <span>Key Metric:</span>
-                <span className="font-medium">Context switch time &lt;15min</span>
-              </div>
-            </div>
-          </Card>
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold mb-4">The Convergence</h2>
+          <p className="text-lg text-[var(--text-secondary)] mb-6 max-w-3xl mx-auto">
+            Three unstoppable trends are reshaping everything: AI automation, sustainability imperatives, and robotic systems. 
+            The laboratory explores where these forces intersect to create exponential value.
+          </p>
+        </div>
 
-          <Card className="p-6">
-            <h3 className="text-xl font-semibold text-blue-600 dark:text-blue-400 mb-3">
-              ADHD-Optimized AI Workflows
-            </h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-4">
-              Designing AI agent systems that work WITH neurodivergent cognitive patterns rather than against them. 
-              Building productivity systems that leverage hyperfocus cycles.
+        <div className="grid md:grid-cols-3 gap-6 mb-8">
+          <div className={`${themeUtilities.cards.knowledge} p-6 text-center`}>
+            <div className="text-4xl mb-4">🤖</div>
+            <h3 className={`text-xl font-semibold ${themeColors.text.knowledge} mb-3`}>AI Revolution</h3>
+            <p className="text-[var(--text-secondary)] text-sm">
+              Exponential capabilities in reasoning, automation, and human-AI collaboration systems
             </p>
-            <div className="space-y-2">
-              <div className="flex justify-between text-sm">
-                <span>Current Status:</span>
-                <span className="font-medium text-orange-600">In Development</span>
-              </div>
-              <div className="flex justify-between text-sm">
-                <span>Focus Areas:</span>
-                <span className="font-medium">Energy peaks, Task switching</span>
-              </div>
-              <div className="flex justify-between text-sm">
-                <span>Hypothesis:</span>
-                <span className="font-medium">ADHD = AI-speed advantage</span>
-              </div>
-            </div>
-          </Card>
+          </div>
+          
+          <div className={`${themeUtilities.cards.time} p-6 text-center`}>
+            <div className="text-4xl mb-4">🌱</div>
+            <h3 className={`text-xl font-semibold ${themeColors.text.time} mb-3`}>Sustainability</h3>
+            <p className="text-[var(--text-secondary)] text-sm">
+              Climate urgency driving massive capital allocation toward green technology and circular systems
+            </p>
+          </div>
+          
+          <div className={`${themeUtilities.cards.wealth} p-6 text-center`}>
+            <div className="text-4xl mb-4">🦾</div>
+            <h3 className={`text-xl font-semibold ${themeColors.text.wealth} mb-3`}>Robotics</h3>
+            <p className="text-[var(--text-secondary)] text-sm">
+              Physical automation reaching cost parity with human labor across manufacturing and services
+            </p>
+          </div>
+        </div>
+
+        {/* Navigation for different views */}
+        <div className="flex justify-center mb-8">
+          <div className="bg-[var(--background-secondary)] rounded-lg p-2 flex space-x-2">
+            {[
+              { id: 'overview', label: 'Overview' },
+              { id: 'experiments', label: 'Active Experiments' },
+              { id: 'sustainability', label: 'Sustainability Lab' },
+              { id: 'investments', label: 'Investment Thesis' },
+              { id: 'insights', label: 'Insights' }
+            ].map((section) => (
+              <button
+                key={section.id}
+                onClick={() => setActiveSection(section.id)}
+                className={`px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
+                  activeSection === section.id
+                    ? 'bg-[var(--accent-primary)] text-[var(--off-white)]'
+                    : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
+                }`}
+              >
+                {section.label}
+              </button>
+            ))}
+          </div>
         </div>
       </motion.section>
 
-      {/* Case Studies - Proof Points */}
-      <motion.section
-        {...sectionAnimation(1)}
-        className="mb-12"
-      >
-        <SectionHeader title="Case Studies - Collaboration Models in Action" />
-        <div className="space-y-8">
-          {aiJourneyData.journey.casestudies.map((study, index) => (
-            <Card key={index} className="p-6">
-              <div className="flex justify-between items-start mb-4">
-                <h3 className="text-xl font-semibold text-green-600 dark:text-green-400">
-                  {study.title}
-                </h3>
-                <span className="text-sm text-gray-500 dark:text-gray-400">
-                  {study.date}
-                </span>
-              </div>
-              
-              <p className="text-gray-600 dark:text-gray-400 mb-4">
-                {study.description}
+      {/* Overview Section */}
+      {activeSection === 'overview' && (
+        <motion.section
+          {...sectionAnimation(1)}
+          className="mb-12"
+        >
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="p-6">
+              <h3 className="text-xl font-semibold mb-4">The Thesis</h3>
+              <p className="text-[var(--text-secondary)] mb-4">
+                The intersection of AI, sustainability, and robotics creates the largest investment and innovation 
+                opportunity in human history. Each trend amplifies the others:
               </p>
+              <ul className="space-y-2 text-sm">
+                <li className="flex items-start">
+                  <span className={`mr-2 ${themeColors.text.knowledge}`}>•</span>
+                  <span>AI optimizes robotic systems for sustainable manufacturing</span>
+                </li>
+                <li className="flex items-start">
+                  <span className={`mr-2 ${themeColors.text.time}`}>•</span>
+                  <span>Sustainability constraints drive AI efficiency innovation</span>
+                </li>
+                <li className="flex items-start">
+                  <span className={`mr-2 ${themeColors.text.wealth}`}>•</span>
+                  <span>Robotics enables circular economy at unprecedented scale</span>
+                </li>
+              </ul>
+            </Card>
 
-              {/* Three-Hat Framework Application */}
-              {study.threeHatFramework && (
-                <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4 mb-4">
-                  <h4 className="font-semibold text-blue-800 dark:text-blue-300 mb-3">
-                    Three-Hat Framework Applied:
-                  </h4>
-                  <div className="space-y-2 text-sm">
+            <Card className="p-6">
+              <h3 className="text-xl font-semibold mb-4">Laboratory Focus</h3>
+              <p className="text-[var(--text-secondary)] mb-4">
+                We experiment with human-AI-robot collaboration systems that create value while 
+                preserving resources and expanding human potential.
+              </p>
+              <div className="space-y-3">
+                <div className="flex items-center">
+                  <div className={`w-3 h-3 rounded-full ${themeColors.background.knowledge} mr-3`}></div>
+                  <span className="text-sm">Complementary intelligence systems</span>
+                </div>
+                <div className="flex items-center">
+                  <div className={`w-3 h-3 rounded-full ${themeColors.background.time} mr-3`}></div>
+                  <span className="text-sm">Resource optimization algorithms</span>
+                </div>
+                <div className="flex items-center">
+                  <div className={`w-3 h-3 rounded-full ${themeColors.background.wealth} mr-3`}></div>
+                  <span className="text-sm">Scalable automation frameworks</span>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </motion.section>
+      )}
+
+      {/* Active Experiments Section */}
+      {activeSection === 'experiments' && (
+        <motion.section
+          {...sectionAnimation(1)}
+          className="mb-12"
+        >
+          <SectionHeader title="Active Experiments" />
+          <div className="grid md:grid-cols-2 gap-6">
+            <Card className="p-6">
+              <h3 className={`text-xl font-semibold ${themeColors.text.knowledge} mb-3`}>
+                Three-Hat Framework Implementation
+              </h3>
+              <p className="text-[var(--text-secondary)] mb-4">
+                Testing rapid context switching between Systems Architect, Product Manager, and Implementation roles 
+                in real client projects. Measuring decision quality and delivery speed.
+              </p>
+              <div className="space-y-2">
+                <div className="flex justify-between text-sm">
+                  <span>Current Status:</span>
+                  <span className={`font-medium ${themeColors.text.time}`}>Active</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span>Projects Testing:</span>
+                  <span className="font-medium">3</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span>Key Metric:</span>
+                  <span className="font-medium">Context switch time &lt;15min</span>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="p-6">
+              <h3 className={`text-xl font-semibold ${themeColors.text.knowledge} mb-3`}>
+                ADHD-Optimized AI Workflows
+              </h3>
+              <p className="text-[var(--text-secondary)] mb-4">
+                Designing AI agent systems that work WITH neurodivergent cognitive patterns rather than against them. 
+                Building productivity systems that leverage hyperfocus cycles.
+              </p>
+              <div className="space-y-2">
+                <div className="flex justify-between text-sm">
+                  <span>Current Status:</span>
+                  <span className={`font-medium ${themeColors.text.wealth}`}>In Development</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span>Focus Areas:</span>
+                  <span className="font-medium">Energy peaks, Task switching</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span>Hypothesis:</span>
+                  <span className="font-medium">ADHD = AI-speed advantage</span>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="p-6">
+              <h3 className={`text-xl font-semibold ${themeColors.text.time} mb-3`}>
+                Sustainable AI Model Training
+              </h3>
+              <p className="text-[var(--text-secondary)] mb-4">
+                Exploring energy-efficient training methods for domain-specific models. Testing whether smaller, 
+                specialized models can outperform general-purpose LLMs while using 90% less energy.
+              </p>
+              <div className="space-y-2">
+                <div className="flex justify-between text-sm">
+                  <span>Energy Reduction:</span>
+                  <span className={`font-medium ${themeColors.text.time}`}>87% vs GPT-4</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span>Performance:</span>
+                  <span className="font-medium">Domain tasks: +15%</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span>Current Focus:</span>
+                  <span className="font-medium">Sustainability assessment</span>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="p-6">
+              <h3 className={`text-xl font-semibold ${themeColors.text.wealth} mb-3`}>
+                Human-Robot Collaboration UX
+              </h3>
+              <p className="text-[var(--text-secondary)] mb-4">
+                Designing interfaces for seamless human-robot collaboration in manufacturing and service contexts. 
+                Focus on intuitive control systems and safety protocols.
+              </p>
+              <div className="space-y-2">
+                <div className="flex justify-between text-sm">
+                  <span>Current Status:</span>
+                  <span className={`font-medium ${themeColors.text.knowledge}`}>Prototype Phase</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span>Test Scenarios:</span>
+                  <span className="font-medium">Assembly, Quality Control</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span>Key Insight:</span>
+                  <span className="font-medium">Gesture > Voice > Touch</span>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </motion.section>
+      )}
+
+      {/* Sustainability Lab Section */}
+      {activeSection === 'sustainability' && (
+        <motion.section
+          {...sectionAnimation(1)}
+          className="mb-12"
+        >
+          <SectionHeader title="Sustainability Laboratory" />
+          
+          <div className="mb-8">
+            <Card className="p-6 bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20">
+              <h3 className="text-xl font-semibold mb-4">Mission</h3>
+              <p className="text-lg">{sustainabilityData.mission}</p>
+            </Card>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+            {sustainabilityData.currentProjects.map((project, index) => (
+              <Card key={index} className="p-6">
+                <div className="flex justify-between items-start mb-3">
+                  <h3 className={`text-lg font-semibold ${themeColors.text.time}`}>{project.title}</h3>
+                  <span className={`text-xs px-2 py-1 rounded ${
+                    project.status === 'Research Phase' 
+                      ? 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300'
+                      : 'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300'
+                  }`}>
+                    {project.status}
+                  </span>
+                </div>
+                <p className="text-[var(--text-secondary)] mb-4">{project.description}</p>
+                
+                {/* Add convergence indicators */}
+                <div className="border-t border-[var(--dark-grey-secondary)]/20 pt-3">
+                  <p className="text-xs text-[var(--text-secondary)] mb-2">Convergence Opportunities:</p>
+                  <div className="flex flex-wrap gap-1">
+                    <span className="text-xs bg-[var(--accent-secondary)]/20 text-[var(--accent-secondary)] px-2 py-1 rounded">AI</span>
+                    <span className="text-xs bg-[var(--accent-primary)]/20 text-[var(--accent-primary)] px-2 py-1 rounded">Sustainability</span>
+                    {project.title.includes('Resource') && (
+                      <span className="text-xs bg-[var(--accent-tertiary)]/20 text-[var(--accent-tertiary)] px-2 py-1 rounded">Robotics</span>
+                    )}
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-4">
+            {sustainabilityData.keyLearnings.map((learning, index) => (
+              <Card key={index} className="p-4">
+                <h4 className="font-semibold mb-2">{learning.title}</h4>
+                <p className="text-sm text-[var(--text-secondary)]">{learning.description}</p>
+              </Card>
+            ))}
+          </div>
+        </motion.section>
+      )}
+
+      {/* Investment Thesis Section */}
+      {activeSection === 'investments' && (
+        <motion.section
+          {...sectionAnimation(1)}
+          className="mb-12"
+        >
+          <SectionHeader title="Investment Thesis" />
+          
+          <div className="space-y-8">
+            <Card className="p-6">
+              <h3 className="text-xl font-semibold mb-4">The Opportunity Matrix</h3>
+              <p className="text-[var(--text-secondary)] mb-6">
+                $50+ trillion in capital will be deployed over the next decade across these three unstoppable trends. 
+                The highest returns come from their intersection points.
+              </p>
+              
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className={`p-4 rounded-lg border-2 ${themeColors.border.knowledge} ${themeColors.background.knowledge}`}>
+                  <h4 className={`font-semibold ${themeColors.text.knowledge} mb-2`}>AI Infrastructure</h4>
+                  <ul className="text-sm space-y-1">
+                    <li>• Edge computing for robotics</li>
+                    <li>• Efficient model architectures</li>
+                    <li>• Human-AI interface design</li>
+                  </ul>
+                </div>
+                
+                <div className={`p-4 rounded-lg border-2 ${themeColors.border.time} ${themeColors.background.time}`}>
+                  <h4 className={`font-semibold ${themeColors.text.time} mb-2`}>Green Technology</h4>
+                  <ul className="text-sm space-y-1">
+                    <li>• Circular economy platforms</li>
+                    <li>• Carbon capture automation</li>
+                    <li>• Renewable energy optimization</li>
+                  </ul>
+                </div>
+                
+                <div className={`p-4 rounded-lg border-2 ${themeColors.border.wealth} ${themeColors.background.wealth}`}>
+                  <h4 className={`font-semibold ${themeColors.text.wealth} mb-2`}>Robotic Systems</h4>
+                  <ul className="text-sm space-y-1">
+                    <li>• Manufacturing automation</li>
+                    <li>• Service robotics</li>
+                    <li>• Agricultural technology</li>
+                  </ul>
+                </div>
+              </div>
+            </Card>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              <Card className="p-6">
+                <h3 className="text-lg font-semibold mb-4">Current Portfolio Focus</h3>
+                <div className="space-y-4">
+                  <div>
+                    <h4 className="font-medium mb-2">Active Investments</h4>
+                    <ul className="text-sm text-[var(--text-secondary)] space-y-1">
+                      <li>• Energy-efficient AI hardware startups</li>
+                      <li>• Human-robot collaboration software</li>
+                      <li>• Circular economy marketplaces</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-medium mb-2">Research & Development</h4>
+                    <ul className="text-sm text-[var(--text-secondary)] space-y-1">
+                      <li>• Sustainable AI training methods</li>
+                      <li>• Neurodivergent-optimized interfaces</li>
+                      <li>• Resource optimization algorithms</li>
+                    </ul>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="p-6">
+                <h3 className="text-lg font-semibold mb-4">Investment Criteria</h3>
+                <div className="space-y-3">
+                  <div className="flex items-start">
+                    <span className={`mr-2 ${themeColors.text.knowledge}`}>🎯</span>
                     <div>
-                      <span className="font-medium text-blue-700 dark:text-blue-400">🏗️ Systems Architect:</span>
-                      <span className="ml-2 text-gray-700 dark:text-gray-300">{study.threeHatFramework.systemsArchitect}</span>
+                      <p className="font-medium text-sm">Convergence Play</p>
+                      <p className="text-xs text-[var(--text-secondary)]">Sits at intersection of 2+ trends</p>
                     </div>
+                  </div>
+                  <div className="flex items-start">
+                    <span className={`mr-2 ${themeColors.text.time}`}>⚡</span>
                     <div>
-                      <span className="font-medium text-green-700 dark:text-green-400">📊 Product Manager:</span>
-                      <span className="ml-2 text-gray-700 dark:text-gray-300">{study.threeHatFramework.productManager}</span>
+                      <p className="font-medium text-sm">Exponential Scalability</p>
+                      <p className="text-xs text-[var(--text-secondary)]">Software-like scaling with hardware impact</p>
                     </div>
+                  </div>
+                  <div className="flex items-start">
+                    <span className={`mr-2 ${themeColors.text.wealth}`}>🤝</span>
                     <div>
-                      <span className="font-medium text-purple-700 dark:text-purple-400">💻 Implementation:</span>
-                      <span className="ml-2 text-gray-700 dark:text-gray-300">{study.threeHatFramework.implementation}</span>
+                      <p className="font-medium text-sm">Human-Centric Design</p>
+                      <p className="text-xs text-[var(--text-secondary)]">Enhances rather than replaces human capabilities</p>
                     </div>
                   </div>
                 </div>
-              )}
+              </Card>
+            </div>
+          </div>
+        </motion.section>
+      )}
 
-              {/* Outcomes */}
-              <div className="mb-4">
-                <h4 className="font-semibold mb-2">Outcomes:</h4>
-                <ul className="space-y-1">
-                  {study.outcomes.map((outcome, outcomeIndex) => (
-                    <li key={outcomeIndex} className="flex items-start text-sm">
-                      <span className="text-green-500 mr-2 mt-1">✓</span>
-                      <span className="text-gray-600 dark:text-gray-400">{outcome}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Technologies */}
-              <div className="flex flex-wrap gap-2">
-                {study.technologies.map((tech, techIndex) => (
-                  <span key={techIndex} className="px-2 py-1 text-xs bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-md">
-                    {tech}
-                  </span>
-                ))}
+      {/* Insights Section */}
+      {activeSection === 'insights' && (
+        <motion.section
+          {...sectionAnimation(1)}
+          className="mb-12"
+        >
+          <SectionHeader title="Laboratory Insights" />
+          <div className="space-y-6">
+            <Card className="p-6">
+              <h3 className={`text-lg font-semibold ${themeColors.text.time} mb-3`}>
+                💡 The Convergence Multiplier Effect
+              </h3>
+              <p className="text-[var(--text-secondary)] mb-3">
+                Projects that integrate all three trends (AI + sustainability + robotics) show 10x higher success rates 
+                than single-trend initiatives. The constraint of sustainability forces innovation in AI efficiency, 
+                which unlocks new robotic applications.
+              </p>
+              <div className="text-sm text-[var(--text-secondary)]">
+                <strong>Insight:</strong> Constraints drive exponential innovation when systems are properly architected.
               </div>
             </Card>
-          ))}
-        </div>
-      </motion.section>
 
-      {/* Learning Insights */}
-      <motion.section
-        {...sectionAnimation(2)}
-        className="mb-12"
-      >
-        <SectionHeader title="Learning Insights" />
-        <div className="space-y-6">
-          <Card className="p-6">
-            <h3 className="text-lg font-semibold text-red-600 dark:text-red-400 mb-3">
-              💡 The 69→10 Tools Lesson
-            </h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-3">
-              Discovered that without architectural oversight, AI tool complexity explodes exponentially. 
-              What started as 3 core tools became 69 disconnected scripts before implementing the 
-              Pareto principle for tool consolidation.
-            </p>
-            <div className="text-sm text-gray-500 dark:text-gray-400">
-              <strong>Insight:</strong> The Systems Architect hat must be worn FIRST, not last.
-            </div>
-          </Card>
+            <Card className="p-6">
+              <h3 className={`text-lg font-semibold ${themeColors.text.knowledge} mb-3`}>
+                ⚡ The 2-Minute Rule Discovery
+              </h3>
+              <p className="text-[var(--text-secondary)] mb-3">
+                If users can't achieve first success within 2 minutes, the architecture has failed. 
+                This became the north star metric for all human-AI interface design, and now extends to human-robot collaboration.
+              </p>
+              <div className="text-sm text-[var(--text-secondary)]">
+                <strong>Insight:</strong> Time-to-first-success trumps feature completeness across all automation domains.
+              </div>
+            </Card>
 
-          <Card className="p-6">
-            <h3 className="text-lg font-semibold text-amber-600 dark:text-amber-400 mb-3">
-              ⚡ The 2-Minute Rule Discovery
-            </h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-3">
-              If users can&apos;t achieve first success within 2 minutes, the architecture has failed. 
-              This became the north star metric for all human-AI interface design.
-            </p>
-            <div className="text-sm text-gray-500 dark:text-gray-400">
-              <strong>Insight:</strong> Time-to-first-success trumps feature completeness.
-            </div>
-          </Card>
+            <Card className="p-6">
+              <h3 className={`text-lg font-semibold ${themeColors.text.wealth} mb-3`}>
+                🎯 The Mortality Advantage
+              </h3>
+              <p className="text-[var(--text-secondary)] mb-3">
+                Human mortality creates urgency and meaning that immortal AI systems cannot replicate. 
+                This "bug" in human design is actually our greatest feature for creative decision-making and long-term sustainability thinking.
+              </p>
+              <div className="text-sm text-[var(--text-secondary)]">
+                <strong>Insight:</strong> Our finite nature is a competitive advantage, not a limitation to overcome.
+              </div>
+            </Card>
 
-          <Card className="p-6">
-            <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-3">
-              🎯 The Mortality Advantage
-            </h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-3">
-              Human mortality creates urgency and meaning that immortal AI systems cannot replicate. 
-              This &ldquo;bug&rdquo; in human design is actually our greatest feature for creative decision-making.
-            </p>
-            <div className="text-sm text-gray-500 dark:text-gray-400">
-              <strong>Insight:</strong> Our finite nature is a competitive advantage, not a limitation.
-            </div>
-          </Card>
-        </div>
-      </motion.section>
+            <Card className="p-6">
+              <h3 className={`text-lg font-semibold ${themeColors.text.time} mb-3`}>
+                🌱 The Efficiency Paradox
+              </h3>
+              <p className="text-[var(--text-secondary)] mb-3">
+                Sustainability constraints initially seem to limit AI capabilities, but actually drive breakthrough 
+                innovations in model efficiency. Our energy-constrained models now outperform larger models on specific tasks.
+              </p>
+              <div className="text-sm text-[var(--text-secondary)]">
+                <strong>Insight:</strong> Environmental limits accelerate rather than hinder technological progress.
+              </div>
+            </Card>
+          </div>
+        </motion.section>
+      )}
 
-      {/* Methodologies Developed */}
-      <motion.section
-        {...sectionAnimation(3)}
-        className="mb-12"
-      >
-        <SectionHeader title="Methodologies Developed" />
-        <div className="grid md:grid-cols-2 gap-6">
-          <Card className="p-6">
-            <h3 className="text-lg font-semibold mb-3">Triangle Foundation</h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-4">
-              Personal stability framework balancing Self-Discovery, Family Generation, and Wealth Generation. 
-              Each point strengthens the others.
-            </p>
-            <Link href="/philosophy" className="text-blue-600 dark:text-blue-400 hover:underline text-sm">
-              View full framework →
-            </Link>
-          </Card>
-
-          <Card className="p-6">
-            <h3 className="text-lg font-semibold mb-3">Three-Hat Framework</h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-4">
-              Professional implementation framework for seamless context switching between Systems Architect, 
-              Product Manager, and Implementation roles.
-            </p>
-            <Link href="/ai-journey/how-to-learn/technical-leadership" className="text-blue-600 dark:text-blue-400 hover:underline text-sm">
-              Learn the framework →
-            </Link>
-          </Card>
-        </div>
-      </motion.section>
-
-      {/* Join the Experiment */}
+      {/* Call to Action */}
       <motion.section
         {...sectionAnimation(4)}
-        className="mb-12"
+        className="bg-gradient-to-r from-[var(--accent-primary)]/10 to-[var(--accent-secondary)]/10 rounded-lg p-6 text-center"
       >
-        <Card className="p-8 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 border-blue-200 dark:border-blue-800 text-center">
-          <h2 className="text-2xl font-semibold mb-4">Ready to Join the Experiment?</h2>
-          <p className="text-lg mb-6 max-w-2xl mx-auto">
-            These aren&apos;t just case studies—they&apos;re active experiments in building the future of human-AI collaboration. 
-            Every project teaches us something new about complementary intelligence.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
-              className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 shadow-sm transition duration-300"
-            >
-              Join the Lab
-            </Link>
-            <Link 
-              href="/philosophy" 
-              className="inline-flex items-center justify-center px-6 py-3 border border-blue-600 text-base font-medium rounded-md text-blue-600 dark:text-blue-400 bg-white dark:bg-gray-800 hover:bg-blue-50 dark:hover:bg-gray-700 shadow-sm transition duration-300"
-            >
-              See the Philosophy
-            </Link>
-          </div>
-        </Card>
+        <h2 className="text-xl font-semibold mb-4">Join the Laboratory</h2>
+        <p className="mb-6 max-w-2xl mx-auto">
+          Interested in collaborating on experiments at the intersection of AI, sustainability, and robotics? 
+          Looking for investment opportunities in the convergence space?
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Link 
+            href="/contact" 
+            className={`${themeUtilities.buttons.primary} px-6 py-3 rounded-md text-center`}
+          >
+            Collaborate
+          </Link>
+          <Link 
+            href="/ai-journey" 
+            className={`${themeUtilities.buttons.secondary} px-6 py-3 rounded-md text-center`}
+          >
+            Explore AI Journey
+          </Link>
+        </div>
       </motion.section>
     </PageLayout>
   );

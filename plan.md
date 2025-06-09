@@ -20,7 +20,7 @@
 - **Personal:** Your story, philosophy, and the meaning behind your work.
 - **Work:** Skills, experience, projects, and how you deliver value.
 - **AI Journey:** Learning roadmap, skills matrix, case studies, and ongoing explorations.
-- **Sustainability:** (If still relevant) Your approach to sustainable impact.
+- **Innovation Laboratory:** The convergence of AI, sustainability, and robotics as unstoppable trends. Includes experiments, investment thesis, and sustainability initiatives.
 - **Contact:** Ways to connect or collaborate.
 
 ---

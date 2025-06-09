@@ -14,55 +14,56 @@ The prebuild script automatically runs type checking and linting before building
 
 ## Architecture Overview
 
-This is a Next.js 14 portfolio website using the App Router architecture with TypeScript, Tailwind CSS, and Framer Motion for animations. The site embodies the **Fitzgerald Principle** throughout its design and implementation.
+This is a Next.js 14 portfolio website using the App Router architecture with TypeScript, Tailwind CSS, and Framer Motion for animations.
 
-### Philosophy-Driven Design System
+### Core Philosophy Integration
 
-**The Fitzgerald Principle**: "The test of a first-rate intelligence is the ability to hold two opposed ideas in mind at the same time and still retain the ability to function." This principle guides every design decision.
+The site embodies the philosophy of **blending human wisdom with AI automation**, structured around three unstoppable trends:
 
-**Productive Tensions in Architecture**:
-- **Immediate practical value AND long-term civilizational contribution**
-- **Technical rigor AND business pragmatism** 
-- **Simple user experience AND complex underlying systems**
-- **Consistent patterns AND flexible customization**
+1. **AI Revolution** - Exponential capabilities in reasoning and automation
+2. **Sustainability Imperatives** - Climate urgency driving green technology
+3. **Robotic Systems** - Physical automation reaching cost parity
 
 ### Key Architectural Patterns
 
 **Data-Driven Content**: The site content is driven by JSON files in `/data/` that define skills, experiences, and AI journey information. These files follow strict TypeScript interfaces defined in `/types/`.
 
-**Philosophy-First Component Design**: Every component balances opposing forces - simplicity with power, consistency with flexibility, aesthetics with functionality.
+**Theme System**: Uses CSS custom properties for theming with a utility system in `styles/theme.ts` that provides type-safe color mappings for three main categories: time, knowledge, and wealth. See `styles/design-system.md` for comprehensive guidelines.
 
 **Component Structure**:
 - `/components/layout/` - Site-wide layout components (Navbar, Footer)
-- `/components/common/` - Reusable UI components following Fitzgerald Principle
+- `/components/common/` - Reusable UI components
 - `/components/skills/` - Skills visualization components (charts, matrices, cards)
 - `/components/ai-journey/` - AI journey specific layouts
 - `/components/experience/` - Experience section components
 
-**Streamlined Navigation**: Home | Philosophy | Laboratory | AI Journey | Contact
-- **Philosophy**: The intellectual framework (Fitzgerald Principle, Triangle Foundation)
-- **Laboratory**: Live experiments in human-AI collaboration  
-- **AI Journey**: Learning frameworks for the next generation
+**Routing Structure**: Uses Next.js App Router with nested routes for the AI journey section (`/ai-journey/overview`, `/ai-journey/portfolio`, etc.).
 
-**Theme System**: Uses CSS custom properties for theming with a utility system in `styles/theme.ts` that provides type-safe color mappings.
+### Innovation Laboratory Structure
 
-**Routing Structure**: Uses Next.js App Router with laser-focused structure eliminating distraction pages (removed /now, /personal, /work).
+The `/laboratory` section represents the convergence of the three unstoppable trends with five main views:
+- **Overview** - The thesis and laboratory focus
+- **Active Experiments** - Current human-AI-robot collaboration projects
+- **Sustainability Lab** - Projects at the intersection of AI and environmental impact
+- **Investment Thesis** - Business and investment opportunities in the convergence space
+- **Insights** - Key learnings from laboratory experiments
 
-### Data Flow & Design Philosophy
+### Data Flow
 
-1. **Philosophy defines structure** - Fitzgerald Principle organizing principle
-2. **JSON data files** define content structure with TypeScript interfaces
-3. **Components embody tensions** - each component balances opposing forces
-4. **Animations create flow** - Framer Motion for meaningful transitions
-5. **Content shows proof** - every page demonstrates the philosophy in action
+1. JSON data files define content structure
+2. TypeScript interfaces ensure type safety across components
+3. Components consume data through props and render using Tailwind classes
+4. Theme utilities provide consistent styling across skill visualizations
+5. Color meanings are semantically tied to the three-pillar philosophy
 
-### Design System Principles
+### Design System
 
-**Simplicity with Impact**: Every element serves the core mission of demonstrating first-rate intelligence through productive tensions.
+**Color Philosophy:**
+- **Hot Pink** (#FF0081) - Time/Energy/Human Agency
+- **Teal** (#0CC0DF) - Knowledge/Growth/AI Capabilities  
+- **Beer Gold** (#F8B400) - Wealth/Impact/Tangible Outcomes
 
-**Consistency with Flexibility**: Reusable patterns that can adapt while maintaining philosophical coherence.
-
-**Proof over Claims**: Show don't tell - the site structure itself demonstrates human-AI collaboration principles.
+See `styles/design-system.md` for complete usage guidelines and best practices for human-AI collaboration.
 
 ### Path Aliases
 
@@ -75,22 +76,17 @@ Uses `@/*` alias pointing to the root directory, configured in `tsconfig.json`.
 - **next** - React framework with App Router
 - **tailwindcss** - Utility-first CSS framework
 
-## Design System & Philosophy
-
-This codebase follows a philosophy-driven design system based on the **Fitzgerald Principle**: "The test of a first-rate intelligence is the ability to hold two opposed ideas in mind at the same time and still retain the ability to function."
-
-**Key Documentation:**
-- `/docs/DESIGN_SYSTEM.md` - Complete component patterns and philosophy guidelines
-- `/DESIGN_SYSTEM_VERSION.md` - Version history and evolution tracking
-- `npm run philosophy-check` - Automated validation of philosophy adherence
-
-**Current Philosophy Score:** 7% (v1.0.0 baseline)
-**Goal:** Increase philosophy integration while maintaining functional excellence.
-
-Every component should balance productive tensions: simplicity AND depth, consistency AND flexibility, immediate value AND long-term vision.
-
 # important-instruction-reminders
 Do what has been asked; nothing more, nothing less.
 NEVER create files unless they're absolutely necessary for achieving your goal.
 ALWAYS prefer editing an existing file to creating a new one.
 NEVER proactively create documentation files (*.md) or README files. Only create documentation files if explicitly requested by the User.
+
+## Working with the Innovation Laboratory
+
+When making changes to the laboratory section:
+1. **Follow the convergence philosophy** - Every feature should relate to AI, sustainability, or robotics
+2. **Use semantic theming** - Colors should align with their meaning (time/knowledge/wealth)
+3. **Maintain experiment focus** - Content should feel like active research, not static documentation
+4. **Consider investment implications** - Features should connect to business value and scalability
+5. **Preserve human-centric design** - Technology should enhance rather than replace human capabilities
