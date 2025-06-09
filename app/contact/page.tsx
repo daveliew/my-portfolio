@@ -6,23 +6,7 @@ import { PageLayout, Card } from '@/components/common';
 import { sectionAnimation } from '@/utils/animations';
 
 export default function ContactPage() {
-  useEffect(() => {
-    // Redirect to agenticbrewery.ai after 3 seconds unless user interacts
-    const timer = setTimeout(() => {
-      window.location.href = 'https://agenticbrewery.ai';
-    }, 3000);
-
-    // Clear timeout if user scrolls or clicks
-    const clearTimer = () => clearTimeout(timer);
-    window.addEventListener('scroll', clearTimer);
-    window.addEventListener('click', clearTimer);
-
-    return () => {
-      clearTimeout(timer);
-      window.removeEventListener('scroll', clearTimer);
-      window.removeEventListener('click', clearTimer);
-    };
-  }, []);
+  // Auto-redirect removed per user request
 
   return (
     <PageLayout
@@ -95,7 +79,7 @@ export default function ContactPage() {
               Visit Agentic Brewery →
             </a>
             <p className="text-sm text-gray-500 dark:text-gray-400">
-              Auto-redirecting in 3 seconds...
+              For AI implementation projects and business collaborations
             </p>
           </div>
         </Card>

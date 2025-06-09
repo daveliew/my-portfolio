@@ -470,8 +470,8 @@ export default function LaboratoryPage() {
         id="professional-background"
         className="py-8 border-t border-gray-200 dark:border-gray-700"
       >
-        <h2 className="text-2xl font-semibold mb-6 text-center text-[var(--text-primary)]">Professional Background</h2>
-        <p className="text-center text-[var(--text-secondary)] mb-8 max-w-3xl mx-auto">
+        <h2 className="text-2xl font-semibold mb-6 text-center text-gray-900 dark:text-gray-100">Professional Background</h2>
+        <p className="text-center text-gray-600 dark:text-gray-400 mb-8 max-w-3xl mx-auto">
           10+ years of hands-on experience building ventures from 0→1, implementing AI solutions, and scaling operations across diverse industries.
         </p>
         
@@ -481,14 +481,14 @@ export default function LaboratoryPage() {
             <h3 className="text-lg font-semibold mb-4 text-blue-600 dark:text-blue-400">Technology & AI Implementation</h3>
             <div className="space-y-4">
               <div>
-                <h4 className="font-medium">Technical Solutions Consultant, Meta</h4>
-                <p className="text-sm text-[var(--text-secondary)]">2022-2024</p>
-                <p className="text-sm mt-1">Implemented AdTech solutions for enterprise clients, developed technical solutions for business challenges</p>
+                <h4 className="font-medium text-gray-900 dark:text-gray-100">Technical Solutions Consultant, Meta</h4>
+                <p className="text-sm text-gray-500 dark:text-gray-400">2022-2024</p>
+                <p className="text-sm mt-1 text-gray-600 dark:text-gray-300">Implemented AdTech solutions for enterprise clients, developed technical solutions for business challenges</p>
               </div>
               <div>
-                <h4 className="font-medium">Full Stack Developer Bootcamp, General Assembly</h4>
-                <p className="text-sm text-[var(--text-secondary)]">2021</p>
-                <p className="text-sm mt-1">480-hour intensive program, mastered JavaScript, Python, and modern web technologies</p>
+                <h4 className="font-medium text-gray-900 dark:text-gray-100">Full Stack Developer Bootcamp, General Assembly</h4>
+                <p className="text-sm text-gray-500 dark:text-gray-400">2021</p>
+                <p className="text-sm mt-1 text-gray-600 dark:text-gray-300">480-hour intensive program, mastered JavaScript, Python, and modern web technologies</p>
               </div>
             </div>
           </Card>
@@ -498,14 +498,14 @@ export default function LaboratoryPage() {
             <h3 className="text-lg font-semibold mb-4 text-green-600 dark:text-green-400">Venture Building & Operations</h3>
             <div className="space-y-4">
               <div>
-                <h4 className="font-medium">Co-Founder, Labyrinth Restaurant</h4>
-                <p className="text-sm text-[var(--text-secondary)]">2013-present</p>
-                <p className="text-sm mt-1">Built from concept to Michelin recognition, led team through rapid growth and COVID pivot</p>
+                <h4 className="font-medium text-gray-900 dark:text-gray-100">Co-Founder, Labyrinth Restaurant</h4>
+                <p className="text-sm text-gray-500 dark:text-gray-400">2013-present</p>
+                <p className="text-sm mt-1 text-gray-600 dark:text-gray-300">Built from concept to Michelin recognition, led team through rapid growth and COVID pivot</p>
               </div>
               <div>
-                <h4 className="font-medium">Head of Business, SG Code Campus</h4>
-                <p className="text-sm text-[var(--text-secondary)]">2017-2020</p>
-                <p className="text-sm mt-1">Early team member, contributed to growth from S$100K to S$1M+ in three years</p>
+                <h4 className="font-medium text-gray-900 dark:text-gray-100">Head of Business, SG Code Campus</h4>
+                <p className="text-sm text-gray-500 dark:text-gray-400">2017-2020</p>
+                <p className="text-sm mt-1 text-gray-600 dark:text-gray-300">Early team member, contributed to growth from S$100K to S$1M+ in three years</p>
               </div>
             </div>
           </Card>
@@ -517,14 +517,14 @@ export default function LaboratoryPage() {
             <h3 className="text-lg font-semibold mb-4 text-purple-600 dark:text-purple-400">Strategic Growth & Analytics</h3>
             <div className="space-y-4">
               <div>
-                <h4 className="font-medium">Alpha Growth Ops Associate, Nansen</h4>
-                <p className="text-sm text-[var(--text-secondary)]">2021-2022</p>
-                <p className="text-sm mt-1">Early employee in web3 analytics platform, contributed to 35% revenue growth</p>
+                <h4 className="font-medium text-gray-900 dark:text-gray-100">Alpha Growth Ops Associate, Nansen</h4>
+                <p className="text-sm text-gray-500 dark:text-gray-400">2021-2022</p>
+                <p className="text-sm mt-1 text-gray-600 dark:text-gray-300">Early employee in web3 analytics platform, contributed to 35% revenue growth</p>
               </div>
               <div>
-                <h4 className="font-medium">Business Analyst, Unity Technologies</h4>
-                <p className="text-sm text-[var(--text-secondary)]">2013-2014</p>
-                <p className="text-sm mt-1">Developed strategic transition to SaaS revenue model, collaborated with global stakeholders</p>
+                <h4 className="font-medium text-gray-900 dark:text-gray-100">Business Analyst, Unity Technologies</h4>
+                <p className="text-sm text-gray-500 dark:text-gray-400">2013-2014</p>
+                <p className="text-sm mt-1 text-gray-600 dark:text-gray-300">Developed strategic transition to SaaS revenue model, collaborated with global stakeholders</p>
               </div>
             </div>
           </Card>
@@ -535,19 +535,19 @@ export default function LaboratoryPage() {
             <div className="space-y-3">
               <div className="flex items-center">
                 <span className="w-3 h-3 bg-amber-500 rounded-full mr-3"></span>
-                <span className="text-sm">S$1M+ revenue growth across multiple ventures</span>
+                <span className="text-sm text-gray-700 dark:text-gray-300">S$1M+ revenue growth across multiple ventures</span>
               </div>
               <div className="flex items-center">
                 <span className="w-3 h-3 bg-amber-500 rounded-full mr-3"></span>
-                <span className="text-sm">4 ventures co-founded and scaled</span>
+                <span className="text-sm text-gray-700 dark:text-gray-300">4 ventures co-founded and scaled</span>
               </div>
               <div className="flex items-center">
                 <span className="w-3 h-3 bg-amber-500 rounded-full mr-3"></span>
-                <span className="text-sm">Michelin restaurant recognition achieved</span>
+                <span className="text-sm text-gray-700 dark:text-gray-300">Michelin restaurant recognition achieved</span>
               </div>
               <div className="flex items-center">
                 <span className="w-3 h-3 bg-amber-500 rounded-full mr-3"></span>
-                <span className="text-sm">35% revenue growth in web3 analytics platform</span>
+                <span className="text-sm text-gray-700 dark:text-gray-300">35% revenue growth in web3 analytics platform</span>
               </div>
             </div>
           </Card>
@@ -557,23 +557,23 @@ export default function LaboratoryPage() {
       {/* Call to Action */}
       <motion.section
         {...sectionAnimation(5)}
-        className="bg-gradient-to-r from-[var(--accent-primary)]/10 to-[var(--accent-secondary)]/10 rounded-lg p-8 text-center"
+        className="bg-gradient-to-r from-pink-50 to-blue-50 dark:from-pink-900/20 dark:to-blue-900/20 rounded-lg p-8 text-center"
       >
-        <h2 className="text-2xl font-semibold mb-4 text-[var(--text-primary)]">Join the Laboratory</h2>
-        <p className="mb-6 max-w-2xl mx-auto text-base leading-relaxed text-[var(--text-secondary)]">
+        <h2 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-gray-100">Join the Laboratory</h2>
+        <p className="mb-6 max-w-2xl mx-auto text-base leading-relaxed text-gray-600 dark:text-gray-400">
           Interested in collaborating on experiments at the intersection of AI, sustainability, and robotics? 
           Looking for investment opportunities in the convergence space?
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link 
             href="/contact" 
-            className="inline-flex items-center justify-center px-6 py-3 text-base font-medium rounded-md bg-[var(--accent-primary)] text-[var(--off-white)] hover:bg-[var(--accent-secondary)] transition-colors duration-200 shadow-sm"
+            className="inline-flex items-center justify-center px-6 py-3 text-base font-medium rounded-md bg-pink-600 text-white hover:bg-blue-600 transition-colors duration-200 shadow-sm"
           >
             Collaborate
           </Link>
           <Link 
             href="/ai-journey" 
-            className="inline-flex items-center justify-center px-6 py-3 text-base font-medium rounded-md border-2 border-[var(--accent-primary)] text-[var(--accent-primary)] bg-transparent hover:bg-[var(--accent-primary)]/10 transition-colors duration-200"
+            className="inline-flex items-center justify-center px-6 py-3 text-base font-medium rounded-md border-2 border-pink-600 text-pink-600 bg-transparent hover:bg-pink-50 dark:hover:bg-pink-900/20 transition-colors duration-200"
           >
             Explore AI Journey
           </Link>
