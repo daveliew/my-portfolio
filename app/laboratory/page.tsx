@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { Card, SectionHeader, PageLayout } from '@/components/common';
+import { Card, SectionHeader, PageLayout, CrossPollinationStudio } from '@/components/common';
 import { sectionAnimation } from '@/utils/animations';
 import { themeColors, themeUtilities } from '@/styles/theme';
 
@@ -59,9 +59,10 @@ export default function LaboratoryPage() {
 
         {/* Navigation for different views */}
         <div className="flex justify-center mb-8">
-          <div className="bg-[var(--background-secondary)] rounded-lg p-2 flex space-x-2">
+          <div className="bg-gray-800 rounded-lg p-2 flex space-x-2">
             {[
               { id: 'overview', label: 'Overview' },
+              { id: 'crosspollination', label: 'Cross-Pollination Studio' },
               { id: 'experiments', label: 'Active Experiments' },
               { id: 'sustainability', label: 'Sustainability Lab' },
               { id: 'investments', label: 'Investment Thesis' },
@@ -72,8 +73,8 @@ export default function LaboratoryPage() {
                 onClick={() => setActiveSection(section.id)}
                 className={`px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
                   activeSection === section.id
-                    ? 'bg-[var(--accent-primary)] text-[var(--off-white)]'
-                    : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
+                    ? 'bg-green-400 text-gray-900'
+                    : 'text-gray-300 hover:text-white hover:bg-gray-700'
                 }`}
               >
                 {section.label}
@@ -134,6 +135,16 @@ export default function LaboratoryPage() {
               </div>
             </Card>
           </div>
+        </motion.section>
+      )}
+
+      {/* Cross-Pollination Studio Section */}
+      {activeSection === 'crosspollination' && (
+        <motion.section
+          {...sectionAnimation(1)}
+          className="mb-12"
+        >
+          <CrossPollinationStudio />
         </motion.section>
       )}
 
