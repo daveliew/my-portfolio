@@ -7,18 +7,33 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'space-black': 'var(--space-black)',
-        'burgundy': 'var(--burgundy)',
-        'light-burgundy': 'var(--light-burgundy)',
-        'off-white': 'var(--off-white)',
-        'dark-gray': 'var(--dark-gray)',
-        'primary-yellow': 'var(--primary-yellow)',
-        'primary-yellow-dark': 'var(--primary-yellow-dark)',
-        'primary-yellow-10': 'var(--primary-yellow-10)',
+        // Studio theme colors
+        'studio-black': 'var(--studio-black)',
+        'studio-black-light': 'var(--studio-black-light)',
+        'studio-lime': 'var(--studio-lime)',
+        'studio-lime-muted': 'var(--studio-lime-muted)',
+        'studio-white': 'var(--studio-white)',
+        'studio-gray': 'var(--studio-gray)',
+        'studio-gray-dark': 'var(--studio-gray-dark)',
+        
+        // Semantic colors
+        'text-primary': 'var(--text-primary)',
+        'text-secondary': 'var(--text-secondary)',
+        'text-muted': 'var(--text-muted)',
+        'bg-primary': 'var(--background-primary)',
+        'bg-secondary': 'var(--background-secondary)',
+        'accent-primary': 'var(--accent-primary)',
+        'accent-secondary': 'var(--accent-secondary)',
+        
+        // Opacity variants
+        'studio-lime-10': 'var(--studio-lime-10)',
+        'studio-lime-20': 'var(--studio-lime-20)',
+        'studio-lime-30': 'var(--studio-lime-30)',
       },
       fontFamily: {
-        sans: ['var(--font-raleway)', 'sans-serif'],
-        merriweather: ['var(--font-merriweather)', 'serif'],
+        sans: ['Work Sans', 'sans-serif'],
+        heading: ['Jura', 'sans-serif'],
+        navbar: ['Jura', 'sans-serif'],
       },
     },
   },

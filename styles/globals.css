@@ -1,38 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.cdnfonts.com/css/luna');
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  /* Core color palette */
-  --dark-grey: #1E293B;
-  --dark-grey-secondary: #111827;
-  --hot-pink: #FF0081;
-  --teal: #0CC0DF;
-  --beer-gold: #F8B400;
-  --off-white: #F9FAFB;
+  /* Core color palette - Architectural Studio Theme */
+  --studio-black: #0E0E14;
+  --studio-black-light: #1A1A24;
+  --studio-lime: #C6FF33;
+  --studio-lime-muted: #A8D929;
+  --studio-white: #FAFAFA;
+  --studio-gray: #8B9DC3;
+  --studio-gray-dark: #6B7A99;
   
   /* Semantic colors */
-  --text-primary: var(--off-white);
-  --text-secondary: #94A3B8;
-  --background-primary: var(--dark-grey);
-  --background-secondary: var(--dark-grey-secondary);
-  --accent-primary: var(--hot-pink);
-  --accent-secondary: var(--teal);
-  --accent-tertiary: var(--beer-gold);
+  --text-primary: var(--studio-white);
+  --text-secondary: var(--studio-gray);
+  --text-muted: var(--studio-gray-dark);
+  --background-primary: var(--studio-black);
+  --background-secondary: var(--studio-black-light);
+  --accent-primary: var(--studio-lime);
+  --accent-secondary: var(--studio-lime-muted);
   
   /* Color variants with opacity */
-  --hot-pink-10: rgba(255, 0, 129, 0.1);
-  --teal-10: rgba(12, 192, 223, 0.1);
-  --beer-gold-10: rgba(248, 180, 0, 0.1);
+  --studio-lime-10: rgba(198, 255, 51, 0.1);
+  --studio-lime-20: rgba(198, 255, 51, 0.2);
+  --studio-lime-30: rgba(198, 255, 51, 0.3);
 }
 
 @layer base {
   body {
     @apply bg-[var(--background-primary)] text-[var(--text-primary)];
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Work Sans', sans-serif;
   }
 
   /* Typography */
@@ -62,8 +63,8 @@
   }
   
   .btn {
-    @apply px-4 py-2 rounded-md bg-[var(--accent-primary)] text-[var(--off-white)] 
-           hover:bg-[var(--accent-secondary)] transition-colors duration-200;
+    @apply px-4 py-2 rounded-md bg-[var(--accent-primary)] text-[var(--background-primary)] 
+           hover:bg-[var(--accent-secondary)] transition-colors duration-200 font-medium;
   }
   
   .card {
@@ -86,12 +87,14 @@
   }
   
   .font-heading {
-    font-family: 'Luna', sans-serif;
+    font-family: 'Jura', sans-serif;
+    letter-spacing: 0.02em;
   }
 
   .font-navbar {
-    font-family: 'Luna', sans-serif;
-    letter-spacing: 0.01em;
+    font-family: 'Jura', sans-serif;
+    letter-spacing: 0.03em;
+    font-weight: 500;
   }
 
   .scrollbar-hide {
