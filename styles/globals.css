@@ -15,6 +15,13 @@
   --studio-gray: #8B9DC3;
   --studio-gray-dark: #6B7A99;
   
+  /* Dave's Vibrant Palette - Left+Right Brain */
+  --hot-pink: #FF0081;
+  --teal: #0CC0DF;
+  --gold: #F8B400;
+  --deep-purple: #6B46C1;
+  --emerald: #10B981;
+  
   /* Semantic colors */
   --text-primary: var(--studio-white);
   --text-secondary: var(--studio-gray);
@@ -23,6 +30,13 @@
   --background-secondary: var(--studio-black-light);
   --accent-primary: var(--studio-lime);
   --accent-secondary: var(--studio-lime-muted);
+  
+  /* Three Pillar System Colors */
+  --time-color: var(--hot-pink);
+  --knowledge-color: var(--teal);
+  --wealth-color: var(--gold);
+  --strategy-color: var(--deep-purple);
+  --growth-color: var(--emerald);
   
   /* Color variants with opacity */
   --studio-lime-10: rgba(198, 255, 51, 0.1);
