@@ -8,43 +8,138 @@ import { fadeInUp, sectionAnimation } from '@/utils/animations';
 
 export default function HomePage() {
   return (
-    <div className="max-w-4xl mx-auto px-4">
-      {/* Hero Section - Authentic Voice */}
-      <section className="py-12 md:py-20">
-        <motion.div 
-          {...fadeInUp()}
-          className="text-center"
-        >
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Dave Liew</h1>
-          <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-8 font-medium">
-            Most people use AI to do more. I use it to do less.
-          </p>
-          
-          <div className="max-w-3xl mx-auto space-y-6 text-lg text-gray-600 dark:text-gray-400">
-            <p>
-              After working at Meta, Unity, and co-founding a few ventures,<br/>
-              I learned something: <span className="text-[var(--deep-purple)] font-semibold">Time compounds faster than money.</span>
+    <div>
+      {/* Hero Section - Visual Impact */}
+      <section className="py-16 md:py-24 relative overflow-hidden">
+        {/* Subtle gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[var(--deep-purple)]/5 via-transparent to-[var(--teal)]/5 pointer-events-none" />
+        
+        <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+          {/* Left side - Text content */}
+          <motion.div 
+            {...fadeInUp()}
+            className="space-y-6"
+          >
+            <h1 className="text-4xl md:text-5xl font-bold">Dave Liew</h1>
+            
+            <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 font-medium">
+              Most people use AI to do more.<br className="hidden md:block" />
+              I use it to do less.
             </p>
             
-            <p>
-              So I build tools that delete tasks instead of adding them.<br/>
-              WhatsApp insights. Self-thinking dashboards. Emails that sort themselves.
+            {/* Key insight as visual callout */}
+            <div className="relative py-6">
+              <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[var(--deep-purple)] to-[var(--teal)]" />
+              <blockquote className="pl-6">
+                <p className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-[var(--deep-purple)] to-[var(--teal)] bg-clip-text text-transparent">
+                  Time compounds faster than money.
+                </p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
+                  — learned after Meta, Unity, and a few ventures
+                </p>
+              </blockquote>
+            </div>
+            
+            <p className="text-lg text-gray-600 dark:text-gray-400">
+              So I build tools that delete tasks from your day.
             </p>
             
-            <div className="py-4">
-              <p className="text-base mb-2">The pattern I&apos;m exploring:</p>
-              <p className="text-[var(--hot-pink)]">
-                Build time → <span className="text-[var(--teal)]">Capture knowledge</span> → <span className="text-[var(--gold)]">Create value</span> → <span className="text-[var(--deep-purple)]">Share freely</span>
-              </p>
+            <div className="flex flex-wrap gap-3 text-sm">
+              <span className="px-3 py-1 bg-[var(--hot-pink)]/10 text-[var(--hot-pink)] rounded-full">WhatsApp insights</span>
+              <span className="px-3 py-1 bg-[var(--teal)]/10 text-[var(--teal)] rounded-full">Self-thinking dashboards</span>
+              <span className="px-3 py-1 bg-[var(--gold)]/10 text-[var(--gold)] rounded-full">Smart email systems</span>
             </div>
             
             <p className="text-gray-700 dark:text-gray-300">
-              Currently helping 3 businesses reclaim their time. Happy to chat about yours.
+              Currently helping 3 businesses reclaim their time.<br/>
+              Happy to chat about yours.
             </p>
-          </div>
-        </motion.div>
+          </motion.div>
+          
+          {/* Right side - Visual element */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="relative hidden md:block"
+          >
+            {/* Virtuous Cycle Visual - Properly Aligned */}
+            <div className="relative w-full h-full flex items-center justify-center">
+              <div className="relative w-80 h-80">
+                {/* Center glow */}
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-gradient-to-br from-[var(--deep-purple)]/10 to-[var(--teal)]/10 rounded-full blur-xl animate-pulse" />
+                
+                {/* Build Time - Top */}
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <div className="bg-white dark:bg-gray-800 p-4 rounded-2xl shadow-lg border border-[var(--hot-pink)]/20 hover:border-[var(--hot-pink)]/40 transition-colors">
+                    <p className="text-[var(--hot-pink)] font-semibold text-sm whitespace-nowrap">Build time</p>
+                    <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">Delete tasks</p>
+                  </div>
+                </div>
+                
+                {/* Capture Knowledge - Right */}
+                <div className="absolute top-1/2 -right-4 transform -translate-y-1/2">
+                  <div className="bg-white dark:bg-gray-800 p-4 rounded-2xl shadow-lg border border-[var(--teal)]/20 hover:border-[var(--teal)]/40 transition-colors">
+                    <p className="text-[var(--teal)] font-semibold text-sm whitespace-nowrap">Capture knowledge</p>
+                    <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">Learn patterns</p>
+                  </div>
+                </div>
+                
+                {/* Create Value - Bottom */}
+                <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2">
+                  <div className="bg-white dark:bg-gray-800 p-4 rounded-2xl shadow-lg border border-[var(--gold)]/20 hover:border-[var(--gold)]/40 transition-colors">
+                    <p className="text-[var(--gold)] font-semibold text-sm whitespace-nowrap">Create value</p>
+                    <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">Build tools</p>
+                  </div>
+                </div>
+                
+                {/* Share Freely - Left */}
+                <div className="absolute top-1/2 -left-4 transform -translate-y-1/2">
+                  <div className="bg-white dark:bg-gray-800 p-4 rounded-2xl shadow-lg border border-[var(--deep-purple)]/20 hover:border-[var(--deep-purple)]/40 transition-colors">
+                    <p className="text-[var(--deep-purple)] font-semibold text-sm whitespace-nowrap">Share freely</p>
+                    <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">Help others</p>
+                  </div>
+                </div>
+                
+                {/* Circular flow indicators */}
+                <svg className="absolute inset-0 w-full h-full" viewBox="0 0 320 320">
+                  <defs>
+                    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="var(--hot-pink)" stopOpacity="0.3" />
+                      <stop offset="100%" stopColor="var(--teal)" stopOpacity="0.3" />
+                    </linearGradient>
+                    <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="var(--gold)" stopOpacity="0.3" />
+                      <stop offset="100%" stopColor="var(--deep-purple)" stopOpacity="0.3" />
+                    </linearGradient>
+                  </defs>
+                  
+                  {/* Animated circle path */}
+                  <circle 
+                    cx="160" 
+                    cy="160" 
+                    r="120" 
+                    fill="none" 
+                    stroke="url(#gradient1)" 
+                    strokeWidth="2" 
+                    strokeDasharray="4 4" 
+                    className="animate-spin-slow"
+                    style={{ transformOrigin: 'center', animationDuration: '20s' }}
+                  />
+                  
+                  {/* Arrow indicators */}
+                  <path d="M 160 40 L 170 50 M 160 40 L 150 50" stroke="var(--hot-pink)" strokeWidth="2" strokeLinecap="round" opacity="0.5" />
+                  <path d="M 280 160 L 270 170 M 280 160 L 270 150" stroke="var(--teal)" strokeWidth="2" strokeLinecap="round" opacity="0.5" />
+                  <path d="M 160 280 L 150 270 M 160 280 L 170 270" stroke="var(--gold)" strokeWidth="2" strokeLinecap="round" opacity="0.5" />
+                  <path d="M 40 160 L 50 150 M 40 160 L 50 170" stroke="var(--deep-purple)" strokeWidth="2" strokeLinecap="round" opacity="0.5" />
+                </svg>
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </section>
 
+      <div className="max-w-4xl mx-auto px-4">
       {/* Combined 3-Hat Method & Framework */}
       <motion.section 
         {...sectionAnimation(0)}
@@ -284,6 +379,7 @@ export default function HomePage() {
           </Link>
         </div>
       </motion.section>
+      </div>
     </div>
   );
 }
