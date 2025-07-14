@@ -76,12 +76,8 @@ const Navbar: React.FC = () => {
       px-4 md:px-6
     `}>
       <div className="max-w-6xl mx-auto w-full flex justify-between items-center h-full">
-        <Link 
-          href="/" 
-          className="flex items-center h-full"
-        >
-          <h1 className="text-xl md:text-2xl font-bold text-blue-600 dark:text-blue-400">daveliew</h1>
-        </Link>
+        {/* Logo/Brand removed to avoid double naming */}
+        <div className="h-full" />
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-6 h-full items-center">

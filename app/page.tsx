@@ -40,10 +40,6 @@ export default function HomePage() {
               </blockquote>
             </div>
             
-            <p className="text-lg text-gray-600 dark:text-gray-400">
-              So I build tools that delete tasks from your day.
-            </p>
-            
             <div className="flex flex-wrap gap-3 text-sm">
               <span className="px-3 py-1 bg-[var(--hot-pink)]/10 text-[var(--hot-pink)] rounded-full">WhatsApp insights</span>
               <span className="px-3 py-1 bg-[var(--teal)]/10 text-[var(--teal)] rounded-full">Self-thinking dashboards</span>
@@ -71,32 +67,32 @@ export default function HomePage() {
                 
                 {/* Build Time - Top */}
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-white dark:bg-gray-800 p-4 rounded-2xl shadow-lg border border-[var(--hot-pink)]/20 hover:border-[var(--hot-pink)]/40 transition-colors">
-                    <p className="text-[var(--hot-pink)] font-semibold text-sm whitespace-nowrap">Build time</p>
+                  <div className="bg-white dark:bg-gray-800 p-4 rounded-2xl shadow-lg border border-[var(--hot-pink)]/20 hover:border-[var(--hot-pink)]/40 transition-colors min-w-[140px] text-center">
+                    <p className="text-[var(--hot-pink)] font-semibold text-sm">Build time</p>
                     <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">Delete tasks</p>
                   </div>
                 </div>
                 
                 {/* Capture Knowledge - Right */}
                 <div className="absolute top-1/2 -right-4 transform -translate-y-1/2">
-                  <div className="bg-white dark:bg-gray-800 p-4 rounded-2xl shadow-lg border border-[var(--teal)]/20 hover:border-[var(--teal)]/40 transition-colors">
-                    <p className="text-[var(--teal)] font-semibold text-sm whitespace-nowrap">Capture knowledge</p>
+                  <div className="bg-white dark:bg-gray-800 p-4 rounded-2xl shadow-lg border border-[var(--teal)]/20 hover:border-[var(--teal)]/40 transition-colors min-w-[140px] text-center">
+                    <p className="text-[var(--teal)] font-semibold text-sm">Capture knowledge</p>
                     <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">Learn patterns</p>
                   </div>
                 </div>
                 
                 {/* Create Value - Bottom */}
                 <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-white dark:bg-gray-800 p-4 rounded-2xl shadow-lg border border-[var(--gold)]/20 hover:border-[var(--gold)]/40 transition-colors">
-                    <p className="text-[var(--gold)] font-semibold text-sm whitespace-nowrap">Create value</p>
+                  <div className="bg-white dark:bg-gray-800 p-4 rounded-2xl shadow-lg border border-[var(--gold)]/20 hover:border-[var(--gold)]/40 transition-colors min-w-[140px] text-center">
+                    <p className="text-[var(--gold)] font-semibold text-sm">Create value</p>
                     <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">Build tools</p>
                   </div>
                 </div>
                 
                 {/* Share Freely - Left */}
                 <div className="absolute top-1/2 -left-4 transform -translate-y-1/2">
-                  <div className="bg-white dark:bg-gray-800 p-4 rounded-2xl shadow-lg border border-[var(--deep-purple)]/20 hover:border-[var(--deep-purple)]/40 transition-colors">
-                    <p className="text-[var(--deep-purple)] font-semibold text-sm whitespace-nowrap">Share freely</p>
+                  <div className="bg-white dark:bg-gray-800 p-4 rounded-2xl shadow-lg border border-[var(--deep-purple)]/20 hover:border-[var(--deep-purple)]/40 transition-colors min-w-[140px] text-center">
+                    <p className="text-[var(--deep-purple)] font-semibold text-sm">Share freely</p>
                     <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">Help others</p>
                   </div>
                 </div>
@@ -127,11 +123,7 @@ export default function HomePage() {
                     style={{ transformOrigin: 'center', animationDuration: '20s' }}
                   />
                   
-                  {/* Arrow indicators */}
-                  <path d="M 160 40 L 170 50 M 160 40 L 150 50" stroke="var(--hot-pink)" strokeWidth="2" strokeLinecap="round" opacity="0.5" />
-                  <path d="M 280 160 L 270 170 M 280 160 L 270 150" stroke="var(--teal)" strokeWidth="2" strokeLinecap="round" opacity="0.5" />
-                  <path d="M 160 280 L 150 270 M 160 280 L 170 270" stroke="var(--gold)" strokeWidth="2" strokeLinecap="round" opacity="0.5" />
-                  <path d="M 40 160 L 50 150 M 40 160 L 50 170" stroke="var(--deep-purple)" strokeWidth="2" strokeLinecap="round" opacity="0.5" />
+                  {/* Arrows removed for cleaner look */}
                 </svg>
               </div>
             </div>
