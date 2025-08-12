@@ -24,7 +24,7 @@ export default function HomePage() {
             
             <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 font-medium">
               Most people use AI to do more.<br className="hidden md:block" />
-              I use it to do less.
+              I&apos;m exploring how to do less—systematically.
             </p>
             
             {/* Key insight as visual callout */}
@@ -47,8 +47,8 @@ export default function HomePage() {
             </div>
             
             <p className="text-gray-700 dark:text-gray-300">
-              Currently helping 3 businesses reclaim their time.<br/>
-              Happy to chat about yours.
+              Currently testing these approaches with 3 businesses.<br/>
+              Here&apos;s what I&apos;m discovering.
             </p>
           </motion.div>
           
@@ -216,7 +216,7 @@ export default function HomePage() {
           {/* Core Principle Card */}
           <Card className="p-5 bg-gradient-to-r from-[var(--deep-purple)]/5 to-transparent">
             <p className="text-sm text-gray-600 dark:text-gray-400 text-center mb-3">
-              I&apos;m learning how to create spaces where human intuition and AI capabilities work together naturally.
+              I&apos;m systematically exploring how to create spaces where human intuition and AI capabilities work together naturally.
             </p>
             
             <p className="text-xs text-center text-gray-500 dark:text-gray-400 italic">
@@ -226,7 +226,7 @@ export default function HomePage() {
           
           {/* Active Projects Note */}
           <p className="text-center mt-6 text-gray-600 dark:text-gray-400">
-            Currently using this approach on <span className="font-semibold text-[#F8B400]">3 active projects</span>
+            Currently testing this approach on <span className="font-semibold text-[#F8B400]">3 live projects</span>
           </p>
         </div>
       </motion.section>
@@ -236,7 +236,7 @@ export default function HomePage() {
         {...sectionAnimation(1)}
         className="py-12 border-t border-gray-200 dark:border-gray-700"
       >
-        <h2 className="text-2xl font-semibold mb-8 text-center">Recent Builds</h2>
+        <h2 className="text-2xl font-semibold mb-8 text-center">Current Experiments</h2>
         <div className="grid md:grid-cols-2 gap-6">
           <Card className="p-6 hover:shadow-lg transition-shadow group">
             <div className="flex items-start justify-between">
@@ -297,7 +297,7 @@ export default function HomePage() {
         </div>
         
         <p className="text-center mt-8 text-sm text-gray-500 dark:text-gray-400">
-          Patterns and approaches available for discussion
+          Discoveries and patterns emerging from active research
         </p>
       </motion.section>
 
@@ -306,7 +306,7 @@ export default function HomePage() {
         {...sectionAnimation(2)}
         className="py-8 border-t border-gray-200 dark:border-gray-700"
       >
-        <h2 className="text-2xl font-semibold mb-8 text-center">What I&apos;ve Learned</h2>
+        <h2 className="text-2xl font-semibold mb-8 text-center">What I&apos;ve Discovered</h2>
         <Card className="p-6">
           <div className="space-y-6">
             <p className="text-gray-600 dark:text-gray-400">
@@ -337,7 +337,7 @@ export default function HomePage() {
             </div>
             
             <p className="text-sm text-center text-gray-500 dark:text-gray-400 italic">
-              The best part? Every business I help teaches me something new to share with the next one.
+              The best part? Every business I work with teaches me something new to explore with the next one.
             </p>
           </div>
         </Card>
@@ -353,13 +353,13 @@ export default function HomePage() {
         </h2>
         <p className="text-lg mb-8 text-gray-600 dark:text-gray-400">
           I&apos;m exploring how AI can help delete it from your day.<br/>
-          If something I&apos;ve built might help, let&apos;s chat.
+          If something I&apos;m discovering might help, let&apos;s compare notes.
         </p>
         <Link 
           href="/contact"
           className="inline-flex items-center justify-center px-6 py-2.5 text-base font-medium rounded-md text-gray-700 bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700 transition-colors"
         >
-          Get in Touch
+          Compare Notes
         </Link>
         
         <div className="mt-8">
@@ -367,7 +367,7 @@ export default function HomePage() {
             href="/philosophy" 
             className="text-sm text-gray-500 dark:text-gray-400 hover:text-[#0CC0DF] transition-colors"
           >
-            Or just explore what I&apos;m learning →
+            Or explore what I&apos;m discovering →
           </Link>
         </div>
       </motion.section>

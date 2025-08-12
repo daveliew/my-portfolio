@@ -9,7 +9,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `npm run type-check` - TypeScript type checking with `tsc --noEmit`
 - `npm run lint` - ESLint with Next.js configuration
 - `npm run start` - Start production server
-- `npm run philosophy-check` - Validate adherence to Fitzgerald Principle (currently 7% score)
+- `npm run philosophy-check` - Validate adherence to Fitzgerald Principle (automated scoring system)
+- `npm run validate-philosophy` - Alias for philosophy-check
 
 ### Pre-Deployment Validation (ALWAYS RUN FIRST!)
 
@@ -55,18 +56,23 @@ The site blends **human wisdom with AI automation**, structured around three uns
 
 ### Key Architectural Patterns
 
-**Data-Driven Content**: The site content is driven by JSON files in `/data/` that define skills, experiences, and AI journey information. These files follow strict TypeScript interfaces defined in `/types/`.
+**Data-Driven Content**: The site content is driven by JSON files in `/data/` that define skills, experiences, and AI journey information. These files follow strict TypeScript interfaces defined in `/types/`. Never hardcode content directly in components.
 
 **Theme System**: Uses CSS custom properties for theming with a utility system in `styles/theme.ts` that provides type-safe color mappings for three main categories: time, knowledge, and wealth. See `ai_docs/developer_guide/design-system-reference.md` for comprehensive guidelines.
 
 **Component Structure**:
 - `/components/layout/` - Site-wide layout components (Navbar, Footer)
-- `/components/common/` - Reusable UI components
+- `/components/common/` - Reusable UI components with barrel exports via index.ts
 - `/components/skills/` - Skills visualization components (charts, matrices, cards)
 - `/components/ai-journey/` - AI journey specific layouts
 - `/components/experience/` - Experience section components
 
 **Routing Structure**: Uses Next.js App Router with nested routes for the AI journey section (`/ai-journey/overview`, `/ai-journey/portfolio`, etc.).
+
+**Validation Pipeline**: Automated scripts in `/scripts/` ensure code quality:
+- `pre-deploy.js` - Comprehensive validation runner
+- `validate-philosophy.js` - Fitzgerald Principle adherence scoring
+- `quick-check.js` - Fast validation for development
 
 ### Innovation Laboratory Structure
 
@@ -115,11 +121,17 @@ The codebase includes automated scoring (currently 7%) for adherence to the Fitz
 
 ## Key Dependencies
 
-- **next** (14.2.0) - React framework with App Router
-- **typescript** (^5) - Type safety with strict mode
-- **tailwindcss** (^3.4.7) - Utility-first CSS framework  
-- **framer-motion** (^10.16.5) - Meaningful animations
-- **recharts** (^2.10.4) - Data visualizations in skills sections
+- **next** (^14.2.30) - React framework with App Router
+- **typescript** (^5) - Type safety with strict mode enabled
+- **tailwindcss** (^3.4.13) - Utility-first CSS framework  
+- **framer-motion** (^11.11.8) - Meaningful animations and transitions
+- **recharts** (^2.13.0) - Data visualizations in skills sections
+
+### Build Configuration
+- **Path aliases**: `@/*` maps to root directory via tsconfig.json
+- **Strict TypeScript**: Full type checking with `noEmit` flag
+- **ESLint**: Next.js configuration with custom philosophy validation
+- **Build process**: Automated prebuild script runs type-check and lint before building
 
 ## Comprehensive Documentation
 
@@ -176,6 +188,25 @@ Currently helping 3 businesses reclaim their time. Happy to chat about yours.
 - "Happy to share what I've learned"
 - "If something helps you, that's enough for me"
 - "Time compounds faster than money"
+
+## Critical Development Patterns
+
+### Data Management
+- **Content updates**: Edit JSON files in `/data/`, never hardcode in components
+- **Type safety**: All data structures have corresponding TypeScript interfaces in `/types/`
+- **Validation**: Always run `npm run pre-deploy` before committing changes
+
+### Component Development
+- **Philosophy integration**: Components should embody the Fitzgerald Principle (opposing forces in harmony)
+- **Barrel exports**: Use index.ts files for clean imports from component directories
+- **Theme consistency**: Use colors semantically (hot pink=time, teal=knowledge, gold=wealth)
+
+### Deployment Workflow
+1. Run `npm run pre-deploy` to identify existing issues
+2. Make changes following architectural patterns
+3. Run `npm run pre-deploy` again before committing
+4. Fix any ESLint errors (typically quote escaping: `'` → `&apos;`, `"` → `&quot;`)
+5. Deploy only when all validations pass
 
 # important-instruction-reminders
 Do what has been asked; nothing more, nothing less.
