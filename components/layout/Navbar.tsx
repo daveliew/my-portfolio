@@ -26,6 +26,8 @@ const aiJourneyMenu = {
     { href: '/ai-journey/how-to-learn/claude-mastery/tool-use', label: 'Tool Use & Function Calling', description: 'Integrate Claude with external systems' },
     { href: '/ai-journey/how-to-learn/claude-mastery/computer-use', label: 'Computer Use Capabilities', description: 'Claude\'s computer interaction features' },
     { href: '/ai-journey/how-to-learn/claude-mastery/vision-multimodal', label: 'Vision & Multimodal', description: 'Working with images and mixed content' },
+    { href: '/ai-journey/how-to-learn/claude-mastery/claude-code', label: 'Claude Code', description: 'Agentic coding from terminal & IDE' },
+    { href: '/ai-journey/how-to-learn/claude-mastery/model-context-protocol', label: 'Model Context Protocol', description: 'Enhanced AI workflows with MCP' },
   ],
   livingLab: [
     { href: '/ai-journey/portfolio', label: 'Portfolio Results', description: 'Living lab implementations and case studies' },
@@ -75,11 +77,8 @@ const Navbar: React.FC = () => {
       sticky top-0 z-50
       px-4 md:px-6
     `}>
-      <div className="max-w-6xl mx-auto w-full flex justify-between items-center h-full">
-        {/* Logo/Brand removed to avoid double naming */}
-        <div className="h-full" />
-
-        {/* Desktop Navigation */}
+      <div className="max-w-6xl mx-auto w-full flex justify-center items-center h-full">
+        {/* Desktop Navigation - Centralized */}
         <div className="hidden md:flex space-x-6 h-full items-center">
           {/* Left side navigation */}
           {navLinks.map(link => {
@@ -338,7 +337,7 @@ const Navbar: React.FC = () => {
               ))}
               
               <div className="text-sm font-medium text-gray-500 dark:text-gray-400 mt-4">Claude Deep Dive</div>
-              {aiJourneyMenu.claudeDeepDive.slice(0, 3).map(item => (
+              {aiJourneyMenu.claudeDeepDive.map(item => (
                 <Link
                   key={item.href}
                   href={item.href}

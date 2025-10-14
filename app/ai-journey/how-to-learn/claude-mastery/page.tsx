@@ -222,6 +222,26 @@ export default function ClaudeMasteryPage() {
             <li><strong>Memory + Multi-turn</strong> = Persistent intelligent agents that remember context</li>
           </ul>
         </div>
+
+        <div className="mt-6 p-6 bg-gradient-to-r from-green-50 via-teal-50 to-blue-50 dark:from-green-900/20 dark:via-teal-900/20 dark:to-blue-900/20 rounded-lg border-2 border-teal-300 dark:border-teal-700">
+          <div className="flex items-start">
+            <span className="text-4xl mr-4">🔮</span>
+            <div className="flex-1">
+              <h4 className="font-semibold text-teal-800 dark:text-teal-300 mb-2">What&apos;s Coming in 2026?</h4>
+              <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">
+                Based on Anthropic&apos;s research trajectory and the Early Experience learning paradigm, we can make
+                informed predictions about Claude&apos;s capabilities next year. From 90%+ SWE-bench performance to
+                multi-agent coordination, see what the data suggests.
+              </p>
+              <Link
+                href="/ai-journey/how-to-learn/claude-mastery/2026-predictions"
+                className="inline-block px-4 py-2 bg-teal-600 hover:bg-teal-700 text-white rounded transition-colors text-sm font-medium"
+              >
+                Read 2026 Predictions →
+              </Link>
+            </div>
+          </div>
+        </div>
       </motion.section>
 
       {/* Hands-on Resources */}

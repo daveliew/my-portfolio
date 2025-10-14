@@ -106,6 +106,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     },
     {
+      url: `${baseUrl}/ai-journey/how-to-learn/claude-mastery/2026-predictions`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
       url: `${baseUrl}/ai-journey/how-to-learn/claude-mastery/tool-use`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
