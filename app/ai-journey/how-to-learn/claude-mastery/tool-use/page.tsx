@@ -217,7 +217,7 @@ const tools = {
 
 async function handleToolUse() {
   const message = await anthropic.messages.create({
-    model: &apos;claude-3-5-sonnet-20241022&apos;,
+    model: &apos;claude-sonnet-4-5-20250929&apos;,
     max_tokens: 1024,
     tools: [
       {
@@ -319,9 +319,173 @@ async function handleToolUse() {
         </div>
       </motion.section>
 
-      {/* Common Tool Examples */}
+      {/* Parallel Tool Calling - NEW in Sonnet 4.5 */}
       <motion.section
         {...sectionAnimation(4)}
+        className="mb-12"
+      >
+        <SectionHeader title="Parallel Tool Calling" />
+        <Card className="p-6">
+          <div className="p-4 bg-gradient-to-r from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20 rounded-lg border border-purple-200 dark:border-purple-800 mb-6">
+            <h4 className="font-semibold text-purple-800 dark:text-purple-300 mb-2">🚀 New in Claude Sonnet 4.5</h4>
+            <p className="text-sm text-gray-700 dark:text-gray-300">
+              Sonnet 4.5 introduces enhanced parallel tool calling, allowing Claude to invoke multiple tools
+              simultaneously for dramatically faster execution and more efficient workflows. This is particularly
+              powerful when tasks are independent and don&apos;t rely on each other&apos;s results.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 mb-6">
+            <div className="p-4 bg-green-50 dark:bg-green-900/20 rounded-lg border border-green-200 dark:border-green-800">
+              <h4 className="font-semibold text-green-800 dark:text-green-300 mb-2">✅ When to Use Parallel</h4>
+              <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+                <li>• <strong>Independent queries</strong>: Fetching weather for multiple cities</li>
+                <li>• <strong>Batch operations</strong>: Processing multiple files simultaneously</li>
+                <li>• <strong>Data aggregation</strong>: Querying different databases at once</li>
+                <li>• <strong>Multi-source research</strong>: Searching multiple APIs in parallel</li>
+              </ul>
+            </div>
+
+            <div className="p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg border border-yellow-200 dark:border-yellow-800">
+              <h4 className="font-semibold text-yellow-800 dark:text-yellow-300 mb-2">⚠️ When to Use Sequential</h4>
+              <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+                <li>• <strong>Dependent operations</strong>: Each step needs previous results</li>
+                <li>• <strong>Rate-limited APIs</strong>: Services with strict concurrency limits</li>
+                <li>• <strong>Transactional workflows</strong>: Database operations requiring order</li>
+                <li>• <strong>State management</strong>: Operations that modify shared state</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="space-y-6">
+            <div>
+              <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-3">Parallel Execution Example</h4>
+              <p className="text-sm text-gray-600 dark:text-gray-300 mb-3">
+                When Claude receives a request requiring multiple independent tool calls, it can execute them
+                all in parallel. Here&apos;s what happens behind the scenes:
+              </p>
+
+              <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                <pre className="text-sm text-gray-600 dark:text-gray-300 overflow-x-auto">
+{`// User request:
+&quot;What&apos;s the weather in New York, London, and Tokyo?
+Also calculate 25 * 47 and what&apos;s 15% of 200?&quot;
+
+// Claude makes PARALLEL tool calls:
+[
+  { name: &apos;get_weather&apos;, input: { location: &apos;New York&apos; } },
+  { name: &apos;get_weather&apos;, input: { location: &apos;London&apos; } },
+  { name: &apos;get_weather&apos;, input: { location: &apos;Tokyo&apos; } },
+  { name: &apos;calculator&apos;, input: { expression: &apos;25 * 47&apos; } },
+  { name: &apos;calculator&apos;, input: { expression: &apos;200 * 0.15&apos; } }
+]
+
+// Result: All 5 operations complete in the time of 1!`}
+                </pre>
+              </div>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-3">Performance Comparison</h4>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="p-4 border border-gray-300 dark:border-gray-600 rounded-lg">
+                  <div className="text-red-600 dark:text-red-400 font-semibold mb-2">Sequential (Old Way)</div>
+                  <div className="space-y-1 text-xs text-gray-600 dark:text-gray-400">
+                    <div>Tool 1: 2s</div>
+                    <div>Tool 2: 2s</div>
+                    <div>Tool 3: 2s</div>
+                    <div>Tool 4: 2s</div>
+                    <div>Tool 5: 2s</div>
+                    <div className="pt-2 border-t border-gray-300 dark:border-gray-600 font-semibold text-gray-800 dark:text-gray-200">
+                      Total: 10 seconds
+                    </div>
+                  </div>
+                </div>
+
+                <div className="p-4 border border-green-300 dark:border-green-600 rounded-lg bg-green-50 dark:bg-green-900/20">
+                  <div className="text-green-600 dark:text-green-400 font-semibold mb-2">Parallel (Sonnet 4.5)</div>
+                  <div className="space-y-1 text-xs text-gray-600 dark:text-gray-400">
+                    <div>All 5 tools: 2s</div>
+                    <div className="opacity-50">(executed simultaneously)</div>
+                    <div className="pt-8 border-t border-green-300 dark:border-green-600 font-semibold text-gray-800 dark:text-gray-200">
+                      Total: 2 seconds
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded text-center">
+                <p className="text-sm font-semibold text-blue-700 dark:text-blue-300">
+                  🚀 80% faster execution with parallel tool calling!
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-3">Implementation Tips</h4>
+              <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+                  <li>
+                    <strong>• Automatic behavior</strong>: Claude decides when to use parallel execution -
+                    no special configuration needed
+                  </li>
+                  <li>
+                    <strong>• Design for parallelism</strong>: Make tools stateless and independent when possible
+                  </li>
+                  <li>
+                    <strong>• Handle all responses</strong>: Your code must process multiple tool_use blocks
+                    in a single API response
+                  </li>
+                  <li>
+                    <strong>• Test edge cases</strong>: Ensure your tools can handle concurrent execution safely
+                  </li>
+                  <li>
+                    <strong>• Monitor performance</strong>: Track actual speedups in your specific use cases
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-3">Real-World Use Cases</h4>
+              <div className="space-y-3">
+                <div className="border-l-4 border-blue-500 pl-4 py-2">
+                  <h5 className="font-semibold text-blue-600 dark:text-blue-400 mb-1">
+                    E-commerce Price Comparison
+                  </h5>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">
+                    Query 5 different retailer APIs simultaneously for product prices instead of waiting
+                    for each sequentially. 5x faster price updates.
+                  </p>
+                </div>
+
+                <div className="border-l-4 border-teal-500 pl-4 py-2">
+                  <h5 className="font-semibold text-teal-600 dark:text-teal-400 mb-1">
+                    Content Localization
+                  </h5>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">
+                    Translate content into 10 languages in parallel using translation APIs. From 30 seconds
+                    to 3 seconds for complete localization.
+                  </p>
+                </div>
+
+                <div className="border-l-4 border-purple-500 pl-4 py-2">
+                  <h5 className="font-semibold text-purple-600 dark:text-purple-400 mb-1">
+                    Multi-Database Analytics
+                  </h5>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">
+                    Query PostgreSQL, MongoDB, and Redis simultaneously for different metrics.
+                    Aggregate dashboard data 3x faster.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Card>
+      </motion.section>
+
+      {/* Common Tool Examples */}
+      <motion.section
+        {...sectionAnimation(5)}
         className="mb-12"
       >
         <SectionHeader title="Common Tool Examples" />

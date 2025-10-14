@@ -31,6 +31,14 @@ export default function ClaudeMasteryPage() {
       href: '/ai-journey/how-to-learn/claude-mastery/developer-console',
       level: 'Beginner',
       time: '1-2 hours'
+    },
+    {
+      title: 'Claude Code',
+      description: 'Agentic coding with Claude from your terminal and IDE - build features autonomously with 30+ hour operation.',
+      skills: ['Autonomous Coding', 'IDE Integration', 'Multi-file Editing', 'Checkpoints & Rollback'],
+      href: '/ai-journey/how-to-learn/claude-mastery/claude-code',
+      level: 'Intermediate to Advanced',
+      time: '3-4 hours'
     }
   ];
 
@@ -111,11 +119,109 @@ export default function ClaudeMasteryPage() {
               </li>
               <li className="flex items-start">
                 <span className="font-medium text-green-700 dark:text-green-400 mr-2">📊</span>
-                <span>200K+ token context window for complex applications</span>
+                <span>Up to 200K token context with intelligent caching</span>
+              </li>
+              <li className="flex items-start">
+                <span className="font-medium text-green-700 dark:text-green-400 mr-2">⚡</span>
+                <span>Extended thinking for deep reasoning on complex problems</span>
+              </li>
+              <li className="flex items-start">
+                <span className="font-medium text-green-700 dark:text-green-400 mr-2">💻</span>
+                <span>Claude Code for autonomous multi-hour coding tasks</span>
               </li>
             </ul>
           </div>
         </Card>
+      </motion.section>
+
+      {/* 2025 Breakthroughs */}
+      <motion.section
+        {...sectionAnimation(0.5)}
+        className="mb-12"
+      >
+        <SectionHeader title="Latest Breakthroughs (2025)" />
+        <div className="grid md:grid-cols-2 gap-6">
+          <Card className="p-6 border-2 border-purple-200 dark:border-purple-800">
+            <div className="flex items-center mb-4">
+              <span className="text-3xl mr-3">🚀</span>
+              <div>
+                <h3 className="text-xl font-semibold text-purple-600 dark:text-purple-400">Claude Sonnet 4.5</h3>
+                <p className="text-sm text-gray-500 dark:text-gray-400">September 2025</p>
+              </div>
+            </div>
+            <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+              <li>• Best coding model: 77.2% SWE-bench (82% with parallel compute)</li>
+              <li>• 30+ hour autonomous operation (vs 7 hours previously)</li>
+              <li>• 61.4% OSWorld computer use accuracy</li>
+              <li>• Enhanced parallel tool calling</li>
+              <li>• Memory across conversations</li>
+            </ul>
+          </Card>
+
+          <Card className="p-6 border-2 border-blue-200 dark:border-blue-800">
+            <div className="flex items-center mb-4">
+              <span className="text-3xl mr-3">💻</span>
+              <div>
+                <h3 className="text-xl font-semibold text-blue-600 dark:text-blue-400">Claude Code</h3>
+                <p className="text-sm text-gray-500 dark:text-gray-400">2025 - Now GA</p>
+              </div>
+            </div>
+            <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+              <li>• Agentic coding from terminal & IDE</li>
+              <li>• VS Code, JetBrains, Xcode integration</li>
+              <li>• Checkpoints & instant rollback</li>
+              <li>• Multi-file autonomous editing</li>
+              <li>• Extended thinking integration</li>
+            </ul>
+          </Card>
+
+          <Card className="p-6 border-2 border-teal-200 dark:border-teal-800">
+            <div className="flex items-center mb-4">
+              <span className="text-3xl mr-3">💭</span>
+              <div>
+                <h3 className="text-xl font-semibold text-teal-600 dark:text-teal-400">Extended Thinking</h3>
+                <p className="text-sm text-gray-500 dark:text-gray-400">Claude 3.7+</p>
+              </div>
+            </div>
+            <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+              <li>• Toggle-able deep reasoning mode</li>
+              <li>• Visible thinking process</li>
+              <li>• Thinking budget control</li>
+              <li>• Tool use during reasoning</li>
+              <li>• Hybrid instant + deep modes</li>
+            </ul>
+          </Card>
+
+          <Card className="p-6 border-2 border-green-200 dark:border-green-800">
+            <div className="flex items-center mb-4">
+              <span className="text-3xl mr-3">⚡</span>
+              <div>
+                <h3 className="text-xl font-semibold text-green-600 dark:text-green-400">Prompt Caching</h3>
+                <p className="text-sm text-gray-500 dark:text-gray-400">GA December 2024</p>
+              </div>
+            </div>
+            <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+              <li>• Up to 90% cost reduction</li>
+              <li>• Up to 85% latency reduction</li>
+              <li>• Automatic longest prefix reuse</li>
+              <li>• Perfect for RAG & large contexts</li>
+              <li>• Cache reads don&apos;t count toward ITPM</li>
+            </ul>
+          </Card>
+        </div>
+
+        <div className="mt-6 p-6 bg-gradient-to-r from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20 rounded-lg border border-purple-200 dark:border-purple-800">
+          <h4 className="font-semibold text-purple-800 dark:text-purple-300 mb-3">🎯 Composition is Key</h4>
+          <p className="text-gray-700 dark:text-gray-300 mb-3">
+            The real power emerges when combining Claude&apos;s capabilities together:
+          </p>
+          <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+            <li><strong>Claude Code + MCP servers</strong> = Autonomous full-stack development with real data access</li>
+            <li><strong>Extended Thinking + Tool Use</strong> = Deep research with verified factual grounding</li>
+            <li><strong>Prompt Caching + RAG</strong> = Cost-effective knowledge systems with instant retrieval</li>
+            <li><strong>Memory + Multi-turn</strong> = Persistent intelligent agents that remember context</li>
+          </ul>
+        </div>
       </motion.section>
 
       {/* Hands-on Resources */}
