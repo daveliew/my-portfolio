@@ -10,11 +10,59 @@ export default function Claude2026PredictionsPage() {
     <AIJourneySubpageLayout
       title="Claude 2026: What to Expect"
       description="Research-backed predictions for Claude's capabilities and the future of agentic AI"
+      breadcrumbs={[
+        { href: '/', label: 'Home' },
+        { href: '/ai-journey', label: 'AI Journey' },
+        { href: '/ai-journey/how-to-learn', label: 'How to Learn' },
+        { href: '/ai-journey/how-to-learn/claude-mastery', label: 'Claude Mastery' },
+      ]}
     >
-      {/* Introduction */}
+      {/* TL;DR Quick Summary */}
       <motion.section
         {...sectionAnimation(0)}
         className="mb-12"
+      >
+        <div className="p-6 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-lg border-2 border-blue-300 dark:border-blue-700">
+          <div className="flex items-start mb-3">
+            <span className="text-3xl mr-3">⚡</span>
+            <h3 className="text-xl font-bold text-blue-800 dark:text-blue-300">TL;DR: The 30-Second Forecast</h3>
+          </div>
+          <p className="text-gray-700 dark:text-gray-300 mb-3">
+            By late 2026, Claude will likely reach <strong>90%+ SWE-bench performance</strong> (human-level coding),
+            handle <strong>50-100+ hour autonomous operations</strong> (multi-day development sprints), and power an
+            ecosystem of <strong>200+ MCP servers</strong> enabling agentic workflows far beyond coding.
+          </p>
+          <p className="text-sm text-gray-600 dark:text-gray-400 italic">
+            This isn&apos;t speculation — it&apos;s extrapolation from 18 months of documented improvements and
+            Anthropic&apos;s Early Experience learning paradigm.
+          </p>
+        </div>
+      </motion.section>
+
+      {/* Table of Contents */}
+      <motion.section
+        {...sectionAnimation(0.1)}
+        className="mb-16"
+      >
+        <Card className="p-6">
+          <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-4">📑 Jump to Section</h3>
+          <div className="grid md:grid-cols-2 gap-3 text-sm">
+            <a href="#trajectory" className="text-blue-600 dark:text-blue-400 hover:underline">📊 Performance Trajectory</a>
+            <a href="#high-confidence" className="text-blue-600 dark:text-blue-400 hover:underline">🎯 High Confidence Predictions</a>
+            <a href="#medium-confidence" className="text-blue-600 dark:text-blue-400 hover:underline">💡 Medium Confidence Predictions</a>
+            <a href="#paradigm-shift" className="text-blue-600 dark:text-blue-400 hover:underline">🚀 The Paradigm Shift</a>
+            <a href="#wild-cards" className="text-blue-600 dark:text-blue-400 hover:underline">⚡ Wild Cards & Uncertainties</a>
+            <a href="#career" className="text-blue-600 dark:text-blue-400 hover:underline">💼 Career Implications</a>
+            <a href="#methodology" className="text-blue-600 dark:text-blue-400 hover:underline">📚 Methodology</a>
+          </div>
+        </Card>
+      </motion.section>
+
+      {/* Introduction */}
+      <motion.section
+        id="trajectory"
+        {...sectionAnimation(0.2)}
+        className="mb-16"
       >
         <SectionHeader title="The Trajectory Pattern" />
         <Card className="p-6">
@@ -75,8 +123,9 @@ export default function Claude2026PredictionsPage() {
 
       {/* High Confidence Predictions */}
       <motion.section
+        id="high-confidence"
         {...sectionAnimation(1)}
-        className="mb-12"
+        className="mb-16"
       >
         <SectionHeader title="High Confidence Predictions (80%+)" />
         <div className="space-y-6">
@@ -189,8 +238,9 @@ export default function Claude2026PredictionsPage() {
 
       {/* Medium Confidence Predictions */}
       <motion.section
+        id="medium-confidence"
         {...sectionAnimation(2)}
-        className="mb-12"
+        className="mb-16"
       >
         <SectionHeader title="Medium Confidence Predictions (50-70%)" />
         <div className="space-y-6">
@@ -304,8 +354,9 @@ export default function Claude2026PredictionsPage() {
 
       {/* The Paradigm Shift */}
       <motion.section
+        id="paradigm-shift"
         {...sectionAnimation(3)}
-        className="mb-12"
+        className="mb-16"
       >
         <SectionHeader title="The Big Picture: 2026 as an Inflection Point" />
         <Card className="p-6">
@@ -384,11 +435,24 @@ export default function Claude2026PredictionsPage() {
 
       {/* Wild Cards */}
       <motion.section
+        id="wild-cards"
         {...sectionAnimation(4)}
-        className="mb-12"
+        className="mb-16"
       >
-        <SectionHeader title="Wild Cards & Uncertainties" />
-        <div className="grid md:grid-cols-2 gap-6">
+        <details className="group">
+          <summary className="cursor-pointer list-none">
+            <div className="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+              <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200">
+                ⚡ Wild Cards & Uncertainties
+              </h3>
+              <span className="text-gray-500 group-open:rotate-180 transition-transform">▼</span>
+            </div>
+          </summary>
+          <div className="mt-4 space-y-4">
+            <p className="text-sm text-gray-600 dark:text-gray-400 italic mb-4">
+              Factors that could significantly accelerate or slow the predicted timeline:
+            </p>
+            <div className="grid md:grid-cols-2 gap-6">
           <Card className="p-6">
             <h4 className="font-semibold text-green-600 dark:text-green-400 mb-4">⚡ Could Accelerate Timeline</h4>
             <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-300">
@@ -442,13 +506,16 @@ export default function Claude2026PredictionsPage() {
               </li>
             </ul>
           </Card>
-        </div>
+            </div>
+          </div>
+        </details>
       </motion.section>
 
       {/* Career Implications */}
       <motion.section
+        id="career"
         {...sectionAnimation(5)}
-        className="mb-12"
+        className="mb-16"
       >
         <SectionHeader title="Career Implications: What This Means for You" />
         <Card className="p-6">
@@ -531,10 +598,20 @@ export default function Claude2026PredictionsPage() {
 
       {/* Methodology Note */}
       <motion.section
+        id="methodology"
         {...sectionAnimation(6)}
         className="mb-12"
       >
-        <SectionHeader title="Methodology & Confidence Levels" />
+        <details className="group">
+          <summary className="cursor-pointer list-none">
+            <div className="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+              <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200">
+                📚 Methodology & Confidence Levels
+              </h3>
+              <span className="text-gray-500 group-open:rotate-180 transition-transform">▼</span>
+            </div>
+          </summary>
+          <div className="mt-4">
         <Card className="p-6">
           <p className="text-gray-600 dark:text-gray-300 mb-4">
             These predictions are based on:
@@ -583,6 +660,8 @@ export default function Claude2026PredictionsPage() {
             </p>
           </div>
         </Card>
+          </div>
+        </details>
       </motion.section>
     </AIJourneySubpageLayout>
   );
