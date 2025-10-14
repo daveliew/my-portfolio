@@ -4,6 +4,7 @@ import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://daveliew.dev'),
   title: "Dave Liew - Agentic AI Architect for Purpose-Driven Leaders",
   description: "Building intelligent systems that amplify human potential. Expert in agentic AI, automation, and sustainable technology solutions for purpose-driven businesses.",
   keywords: "agentic AI architect, AI automation, intelligent systems, purpose-driven technology, sustainable AI, AI consultant Singapore",
