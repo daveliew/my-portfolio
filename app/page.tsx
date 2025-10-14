@@ -150,70 +150,31 @@ export default function HomePage() {
             <h3 className="text-lg font-semibold mb-3 text-[#0CC0DF]">Systems Architect Hat</h3>
             <p className="text-gray-600 dark:text-gray-400 text-sm">
               Step back to see patterns<br/>
-              Find what&apos;s really broken<br/>
               Build something simple
             </p>
           </Card>
-          
+
           <Card className="p-6 border-2 border-[#FF0081]/30 bg-gradient-to-br from-[#FF0081]/5 to-transparent hover:border-[#FF0081]/60 transition-all">
             <div className="text-2xl mb-3">📊</div>
             <h3 className="text-lg font-semibold mb-3 text-[#FF0081]">Product Manager Hat</h3>
             <p className="text-gray-600 dark:text-gray-400 text-sm">
               Figure out what matters<br/>
-              Say no to everything else<br/>
               Ship something useful
             </p>
           </Card>
-          
+
           <Card className="p-6 border-2 border-[#F8B400]/30 bg-gradient-to-br from-[#F8B400]/5 to-transparent hover:border-[#F8B400]/60 transition-all">
             <div className="text-2xl mb-3">💻</div>
             <h3 className="text-lg font-semibold mb-3 text-[#F8B400]">Implementation Hat</h3>
             <p className="text-gray-600 dark:text-gray-400 text-sm">
               Code it myself<br/>
-              See if it actually helps<br/>
-              Keep improving it
+              See if it actually helps
             </p>
           </Card>
         </div>
-        
-        
-        {/* Framework Integration */}
+
+        {/* Core Principle Card */}
         <div className="max-w-3xl mx-auto mt-8">
-          {/* Visual Flow - 3 Phases */}
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-6">
-            {/* Phase 1: Foundation */}
-            <div className="text-center flex-1">
-              <div className="w-12 h-12 mx-auto bg-gradient-to-br from-[var(--deep-purple)]/20 to-[var(--hot-pink)]/10 rounded-full flex items-center justify-center mb-2 ring-2 ring-[var(--deep-purple)]/30">
-                <span className="text-lg">👁️</span>
-              </div>
-              <h3 className="font-semibold text-sm text-[var(--deep-purple)]">Foundation</h3>
-              <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">Human intuition guides</p>
-            </div>
-            
-            <div className="hidden md:block text-gray-400 text-xl">→</div>
-            
-            {/* Phase 2: Collaboration */}
-            <div className="text-center flex-1">
-              <div className="w-12 h-12 mx-auto bg-gradient-to-br from-[var(--teal)]/20 to-[var(--emerald)]/10 rounded-full flex items-center justify-center mb-2 ring-2 ring-[var(--teal)]/30">
-                <span className="text-lg">🤖</span>
-              </div>
-              <h3 className="font-semibold text-sm text-[var(--teal)]">Collaboration</h3>
-              <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">AI amplifies capabilities</p>
-            </div>
-            
-            <div className="hidden md:block text-gray-400 text-xl">→</div>
-            
-            {/* Phase 3: Evolution */}
-            <div className="text-center flex-1">
-              <div className="w-12 h-12 mx-auto bg-gradient-to-br from-[var(--gold)]/20 to-[var(--emerald)]/10 rounded-full flex items-center justify-center mb-2 ring-2 ring-[var(--gold)]/30">
-                <span className="text-lg">🌟</span>
-              </div>
-              <h3 className="font-semibold text-sm text-[var(--gold)]">Evolution</h3>
-              <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">New insights emerge</p>
-            </div>
-          </div>
-          
-          {/* Core Principle Card */}
           <Card className="p-5 bg-gradient-to-r from-[var(--deep-purple)]/5 to-transparent">
             <p className="text-sm text-gray-600 dark:text-gray-400 text-center mb-3">
               I&apos;m systematically exploring how to create spaces where human intuition and AI capabilities work together naturally.
@@ -223,11 +184,6 @@ export default function HomePage() {
               Context Engineering is the art of designing the informational environment where human intuition and AI capabilities converge.
             </p>
           </Card>
-          
-          {/* Active Projects Note */}
-          <p className="text-center mt-6 text-gray-600 dark:text-gray-400">
-            Currently testing this approach on <span className="font-semibold text-[#F8B400]">3 live projects</span>
-          </p>
         </div>
       </motion.section>
 
@@ -343,48 +299,6 @@ export default function HomePage() {
         </p>
       </motion.section>
 
-      {/* Why I Can Help - Authentic Version */}
-      <motion.section 
-        {...sectionAnimation(2)}
-        className="py-8 border-t border-gray-200 dark:border-gray-700"
-      >
-        <h2 className="text-2xl font-semibold mb-8 text-center">What I&apos;ve Discovered</h2>
-        <Card className="p-6">
-          <div className="space-y-6">
-            <p className="text-gray-600 dark:text-gray-400">
-              After years at different scales - from startups to Meta - I&apos;ve seen the same patterns everywhere.
-              Smart people drowning in tasks that should be automated.
-            </p>
-            
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="font-semibold mb-3 text-[var(--deep-purple)]">Where I&apos;ve explored</h3>
-                <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
-                  <li>• Meta - learned how things scale</li>
-                  <li>• Unity - saw how systems connect</li>
-                  <li>• Restaurant tech - discovered simplicity under pressure</li>
-                  <li>• Various ventures - found what actually matters</li>
-                </ul>
-              </div>
-              
-              <div>
-                <h3 className="font-semibold mb-3 text-[var(--teal)]">What I&apos;m building now</h3>
-                <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
-                  <li>• Tools that understand WhatsApp conversations</li>
-                  <li>• Dashboards that think before you ask</li>
-                  <li>• Email systems that sort themselves</li>
-                  <li>• Still learning something new daily</li>
-                </ul>
-              </div>
-            </div>
-            
-            <p className="text-sm text-center text-gray-500 dark:text-gray-400 italic">
-              The best part? Every business I work with teaches me something new to explore with the next one.
-            </p>
-          </div>
-        </Card>
-      </motion.section>
-      
       {/* Gentle CTA */}
       <motion.section 
         {...sectionAnimation(3)}
