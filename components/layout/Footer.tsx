@@ -19,23 +19,23 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">Explore AI Journey</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/ai-journey/overview" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
-                  Learning Overview
-                </Link>
-              </li>
-              <li>
-                <Link href="/ai-journey/portfolio" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
-                  AI Portfolio
-                </Link>
-              </li>
-              <li>
-                <Link href="/ai-journey/how-to-learn/overview" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
-                  How to Learn AI
+                <Link href="/ai-journey" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
+                  AI Journey Home
                 </Link>
               </li>
               <li>
                 <Link href="/ai-journey/why-ai" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
                   Why AI Matters
+                </Link>
+              </li>
+              <li>
+                <Link href="/ai-journey/how-to-learn/overview" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
+                  Learning Framework
+                </Link>
+              </li>
+              <li>
+                <Link href="/ai-journey/portfolio" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
+                  Portfolio & Projects
                 </Link>
               </li>
             </ul>
