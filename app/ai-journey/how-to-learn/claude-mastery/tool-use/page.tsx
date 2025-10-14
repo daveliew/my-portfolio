@@ -51,6 +51,111 @@ export default function ToolUsePage() {
         </Card>
       </motion.section>
 
+      {/* The Complete Tool Use Loop */}
+      <motion.section
+        {...sectionAnimation(0.5)}
+        className="mb-12"
+      >
+        <SectionHeader title="The Complete Tool Use Loop" />
+        <Card className="p-6">
+          <p className="text-gray-600 dark:text-gray-300 mb-6">
+            Tool use follows a request-response cycle where Claude decides when tools are needed, your application
+            executes them, and Claude synthesizes the results into a final response.
+          </p>
+
+          <div className="space-y-6">
+            {/* Visual Flow */}
+            <div className="p-4 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
+              <h4 className="font-semibold text-blue-800 dark:text-blue-300 mb-3">The 5-Step Cycle</h4>
+              <div className="space-y-3 text-sm text-gray-700 dark:text-gray-300">
+                <div className="flex items-start">
+                  <span className="font-bold text-blue-600 dark:text-blue-400 mr-3 mt-0.5">1.</span>
+                  <div>
+                    <strong>User Request:</strong> Your application sends a message to Claude with available tools defined
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <span className="font-bold text-blue-600 dark:text-blue-400 mr-3 mt-0.5">2.</span>
+                  <div>
+                    <strong>Claude Responds:</strong> Claude analyzes the request and decides which tools (if any) to use,
+                    returning <code className="text-xs px-1 py-0.5 bg-blue-100 dark:bg-blue-900 rounded">tool_use</code> blocks
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <span className="font-bold text-blue-600 dark:text-blue-400 mr-3 mt-0.5">3.</span>
+                  <div>
+                    <strong>Your Code Executes:</strong> You extract tool names and parameters, execute the tools in your environment
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <span className="font-bold text-blue-600 dark:text-blue-400 mr-3 mt-0.5">4.</span>
+                  <div>
+                    <strong>Return Results:</strong> You send tool results back to Claude in a{' '}
+                    <code className="text-xs px-1 py-0.5 bg-blue-100 dark:bg-blue-900 rounded">tool_result</code> message
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <span className="font-bold text-blue-600 dark:text-blue-400 mr-3 mt-0.5">5.</span>
+                  <div>
+                    <strong>Final Response:</strong> Claude synthesizes tool results with its knowledge to provide a complete answer
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Pseudo-code Example */}
+            <div>
+              <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-3">Conceptual Flow (Pseudo-code)</h4>
+              <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                <pre className="text-sm text-gray-600 dark:text-gray-300 overflow-x-auto">
+{`// Step 1: Define your tools
+tools = [
+  { name: "calculator", description: "...", input_schema: {...} },
+  { name: "get_weather", description: "...", input_schema: {...} }
+]
+
+// Step 2: Send initial request to Claude
+response = claude.messages.create({
+  model: "claude-sonnet-4-5-20250929",
+  messages: [{ role: "user", content: "What's 25 * 47?" }],
+  tools: tools
+})
+
+// Step 3: Check if Claude wants to use tools
+if response.stop_reason === "tool_use":
+  // Extract tool use information
+  for tool_use in response.content:
+    if tool_use.type === "tool_use":
+      tool_name = tool_use.name
+      tool_input = tool_use.input
+
+      // Step 4: Execute the tool
+      result = execute_tool(tool_name, tool_input)
+
+      // Step 5: Send results back to Claude
+      final_response = claude.messages.create({
+        model: "claude-sonnet-4-5-20250929",
+        messages: [
+          ...previous_messages,
+          response,  // Claude's tool request
+          { role: "user", content: [
+            { type: "tool_result", tool_use_id: tool_use.id, content: result }
+          ]}
+        ],
+        tools: tools
+      })
+
+// Now final_response contains Claude's answer using the tool results`}
+                </pre>
+              </div>
+              <p className="text-xs text-gray-500 dark:text-gray-400 mt-2 italic">
+                See official Anthropic documentation for language-specific implementation details.
+              </p>
+            </div>
+          </div>
+        </Card>
+      </motion.section>
+
       {/* Tool Definition */}
       <motion.section
         {...sectionAnimation(1)}
@@ -121,6 +226,20 @@ export default function ToolUsePage() {
         <div className="space-y-6">
           <Card className="p-6">
             <h4 className="font-semibold text-purple-600 dark:text-purple-400 mb-4">Python Implementation</h4>
+
+            <div className="mb-4 p-4 bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 rounded">
+              <h5 className="font-semibold text-red-800 dark:text-red-300 mb-2">⚠️ SECURITY WARNING</h5>
+              <p className="text-sm text-red-700 dark:text-red-400 mb-2">
+                This calculator example uses <code className="px-1 py-0.5 bg-red-100 dark:bg-red-900 rounded">eval()</code> for
+                demonstration purposes only. <strong>NEVER use eval() with user input in production</strong> - it allows
+                arbitrary code execution and complete system compromise.
+              </p>
+              <p className="text-xs text-red-600 dark:text-red-400">
+                <strong>Production alternative:</strong> Use <code>ast.literal_eval()</code> or safe expression
+                evaluation libraries like <code>numexpr</code> or <code>simpleeval</code>.
+              </p>
+            </div>
+
             <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
               <pre className="text-sm text-gray-600 dark:text-gray-300 overflow-x-auto">
 {`import anthropic
@@ -173,7 +292,7 @@ tools = [
 # Claude API call with tools
 client = anthropic.Anthropic()
 message = client.messages.create(
-    model=&quot;claude-3-5-sonnet-20241022&quot;,
+    model=&quot;claude-sonnet-4-5-20250929&quot;,  # Latest Sonnet 4.5
     max_tokens=1024,
     tools=tools,
     messages=[{
@@ -187,6 +306,19 @@ message = client.messages.create(
           
           <Card className="p-6">
             <h4 className="font-semibold text-blue-600 dark:text-blue-400 mb-4">JavaScript/Node.js Implementation</h4>
+
+            <div className="mb-4 p-4 bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 rounded">
+              <h5 className="font-semibold text-red-800 dark:text-red-300 mb-2">⚠️ SECURITY WARNING</h5>
+              <p className="text-sm text-red-700 dark:text-red-400 mb-2">
+                The calculator example uses the <code className="px-1 py-0.5 bg-red-100 dark:bg-red-900 rounded">Function()</code> constructor,
+                which is similar to <code>eval()</code> and poses serious security risks with untrusted input.
+              </p>
+              <p className="text-xs text-red-600 dark:text-red-400">
+                <strong>Production alternative:</strong> Use safe expression evaluation libraries like{' '}
+                <code>mathjs</code>, <code>expr-eval</code>, or <code>jexl</code>.
+              </p>
+            </div>
+
             <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
               <pre className="text-sm text-gray-600 dark:text-gray-300 overflow-x-auto">
 {`import Anthropic from &apos;@anthropic-ai/sdk&apos;;
@@ -319,6 +451,101 @@ async function handleToolUse() {
         </div>
       </motion.section>
 
+      {/* tool_choice Parameter */}
+      <motion.section
+        {...sectionAnimation(3.5)}
+        className="mb-12"
+      >
+        <SectionHeader title="Controlling Tool Selection with tool_choice" />
+        <Card className="p-6">
+          <p className="text-gray-600 dark:text-gray-300 mb-6">
+            The <code className="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded">tool_choice</code> parameter gives you
+            precise control over when and which tools Claude uses.
+          </p>
+
+          <div className="space-y-6">
+            <div className="grid md:grid-cols-3 gap-4">
+              <div className="p-4 border border-blue-200 dark:border-blue-800 rounded-lg bg-blue-50/50 dark:bg-blue-900/10">
+                <h4 className="font-semibold text-blue-700 dark:text-blue-400 mb-2">
+                  <code className="text-sm">&quot;auto&quot;</code> (Default)
+                </h4>
+                <p className="text-sm text-gray-600 dark:text-gray-300 mb-3">
+                  Claude decides whether to use tools based on the request. May use tools, may not.
+                </p>
+                <div className="text-xs text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 p-2 rounded">
+                  <strong>When to use:</strong> General conversations where tools are optional
+                </div>
+              </div>
+
+              <div className="p-4 border border-green-200 dark:border-green-800 rounded-lg bg-green-50/50 dark:bg-green-900/10">
+                <h4 className="font-semibold text-green-700 dark:text-green-400 mb-2">
+                  <code className="text-sm">&quot;any&quot;</code>
+                </h4>
+                <p className="text-sm text-gray-600 dark:text-gray-300 mb-3">
+                  Claude MUST use at least one tool. Guarantees tool execution.
+                </p>
+                <div className="text-xs text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 p-2 rounded">
+                  <strong>When to use:</strong> Workflows requiring guaranteed data fetching or actions
+                </div>
+              </div>
+
+              <div className="p-4 border border-purple-200 dark:border-purple-800 rounded-lg bg-purple-50/50 dark:bg-purple-900/10">
+                <h4 className="font-semibold text-purple-700 dark:text-purple-400 mb-2">
+                  <code className="text-sm">&#123;type: &quot;tool&quot;, name: &quot;...&quot;&#125;</code>
+                </h4>
+                <p className="text-sm text-gray-600 dark:text-gray-300 mb-3">
+                  Force Claude to use a specific tool by name.
+                </p>
+                <div className="text-xs text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 p-2 rounded">
+                  <strong>When to use:</strong> Deterministic workflows requiring specific tool execution
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-3">Usage Examples</h4>
+              <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                <pre className="text-sm text-gray-600 dark:text-gray-300 overflow-x-auto">
+{`// Auto (default) - Claude decides
+claude.messages.create({
+  model: "claude-sonnet-4-5-20250929",
+  messages: [...],
+  tools: tools,
+  tool_choice: {"type": "auto"}  // Optional, this is default
+})
+
+// Any - Force at least one tool use
+claude.messages.create({
+  model: "claude-sonnet-4-5-20250929",
+  messages: [...],
+  tools: tools,
+  tool_choice: {"type": "any"}  // Guarantees tool execution
+})
+
+// Specific tool - Force exact tool
+claude.messages.create({
+  model: "claude-sonnet-4-5-20250929",
+  messages: [...],
+  tools: tools,
+  tool_choice: {"type": "tool", "name": "get_weather"}  // Must use get_weather
+})`}
+                </pre>
+              </div>
+            </div>
+
+            <div className="p-4 bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500 rounded">
+              <h5 className="font-semibold text-yellow-800 dark:text-yellow-300 mb-2">⚡ Best Practices</h5>
+              <ul className="space-y-1 text-sm text-yellow-700 dark:text-yellow-400">
+                <li>• Use <code>"auto"</code> for conversational interfaces where flexibility is desired</li>
+                <li>• Use <code>"any"</code> for workflows that require tool execution (e.g., data pipelines)</li>
+                <li>• Use specific tool forcing sparingly - reduces Claude&apos;s flexibility and reasoning</li>
+                <li>• If forcing specific tools, ensure the request actually needs that tool</li>
+              </ul>
+            </div>
+          </div>
+        </Card>
+      </motion.section>
+
       {/* Parallel Tool Calling - NEW in Sonnet 4.5 */}
       <motion.section
         {...sectionAnimation(4)}
@@ -445,6 +672,81 @@ Also calculate 25 * 47 and what&apos;s 15% of 200?&quot;
               </div>
             </div>
 
+            <div className="p-4 bg-orange-50 dark:bg-orange-900/20 border-l-4 border-orange-500 rounded">
+              <h5 className="font-semibold text-orange-800 dark:text-orange-300 mb-3">🔧 Critical Implementation Details</h5>
+              <div className="space-y-3 text-sm text-orange-700 dark:text-orange-400">
+                <div>
+                  <strong className="block mb-1">Response contains ARRAY of tool_use blocks:</strong>
+                  <p className="text-xs">
+                    When Claude uses parallel tools, <code>response.content</code> will contain multiple{' '}
+                    <code>tool_use</code> blocks in a single response. Your code must loop through and execute all of them.
+                  </p>
+                </div>
+                <div>
+                  <strong className="block mb-1">Execution order not guaranteed:</strong>
+                  <p className="text-xs">
+                    Tools may complete in any order. Don&apos;t assume sequential execution - design tools to be
+                    order-independent.
+                  </p>
+                </div>
+                <div>
+                  <strong className="block mb-1">Tools must be thread-safe:</strong>
+                  <p className="text-xs">
+                    If tools modify shared state, ensure proper locking/synchronization. Prefer stateless tools
+                    for parallel execution.
+                  </p>
+                </div>
+                <div>
+                  <strong className="block mb-1">Return ALL tool results together:</strong>
+                  <p className="text-xs">
+                    Execute all tools, collect results, then send all <code>tool_result</code> messages back
+                    to Claude in a single follow-up request.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-3">Handling Multiple tool_use Blocks (Example)</h4>
+              <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                <pre className="text-sm text-gray-600 dark:text-gray-300 overflow-x-auto">
+{`// Claude's response with multiple tool_use blocks
+response = {
+  "content": [
+    { "type": "tool_use", "id": "toolu_1", "name": "get_weather", "input": {"location": "NYC"} },
+    { "type": "tool_use", "id": "toolu_2", "name": "get_weather", "input": {"location": "London"} },
+    { "type": "tool_use", "id": "toolu_3", "name": "calculator", "input": {"expression": "25*47"} }
+  ],
+  "stop_reason": "tool_use"
+}
+
+// Your code must handle ALL tool_use blocks
+tool_results = []
+for content_block in response.content:
+  if content_block.type === "tool_use":
+    // Execute the tool
+    result = execute_tool(content_block.name, content_block.input)
+
+    // Collect result with original ID
+    tool_results.append({
+      "type": "tool_result",
+      "tool_use_id": content_block.id,  // Must match original ID!
+      "content": result
+    })
+
+// Send ALL results back together
+final_response = claude.messages.create({
+  model: "claude-sonnet-4-5-20250929",
+  messages: [
+    ...previous_messages,
+    response,  // Claude's tool request
+    { "role": "user", "content": tool_results }  // All results
+  ]
+})`}
+                </pre>
+              </div>
+            </div>
+
             <div>
               <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-3">Real-World Use Cases</h4>
               <div className="space-y-3">
@@ -476,6 +778,148 @@ Also calculate 25 * 47 and what&apos;s 15% of 200?&quot;
                     Query PostgreSQL, MongoDB, and Redis simultaneously for different metrics.
                     Aggregate dashboard data 3x faster.
                   </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Card>
+      </motion.section>
+
+      {/* Token & Cost Considerations */}
+      <motion.section
+        {...sectionAnimation(4.5)}
+        className="mb-12"
+      >
+        <SectionHeader title="Token & Cost Considerations" />
+        <Card className="p-6">
+          <p className="text-gray-600 dark:text-gray-300 mb-6">
+            Understanding how tool use affects token consumption and costs is crucial for building efficient applications.
+          </p>
+
+          <div className="space-y-6">
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
+                <h4 className="font-semibold text-blue-700 dark:text-blue-400 mb-3">📥 Input Token Costs</h4>
+                <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+                  <li>
+                    <strong>Tool definitions</strong> consume input tokens on every request
+                  </li>
+                  <li>
+                    Large tool schemas (complex parameters) = more tokens
+                  </li>
+                  <li>
+                    Multiple tools = linear token growth
+                  </li>
+                  <li>
+                    <span className="text-blue-600 dark:text-blue-400">
+                      Optimization: Keep descriptions concise but clear
+                    </span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="p-4 bg-green-50 dark:bg-green-900/20 rounded-lg border border-green-200 dark:border-green-800">
+                <h4 className="font-semibold text-green-700 dark:text-green-400 mb-3">📤 Output Token Costs</h4>
+                <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+                  <li>
+                    <strong>tool_use blocks</strong> in Claude&apos;s response count as output tokens
+                  </li>
+                  <li>
+                    Tool parameters passed back count toward output
+                  </li>
+                  <li>
+                    Final synthesized response = additional output tokens
+                  </li>
+                  <li>
+                    <span className="text-green-600 dark:text-green-400">
+                      Parallel calls don&apos;t reduce tokens, just time
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="p-4 bg-gradient-to-r from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20 rounded-lg border border-purple-200 dark:border-purple-800">
+              <h4 className="font-semibold text-purple-800 dark:text-purple-300 mb-3">
+                💰 Cost Optimization with Prompt Caching
+              </h4>
+              <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">
+                <strong>Prompt Caching</strong> allows you to cache tool definitions across requests, dramatically reducing costs
+                for applications with stable tool sets.
+              </p>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="bg-white dark:bg-gray-800 p-3 rounded">
+                  <div className="text-xs font-semibold text-gray-600 dark:text-gray-400 mb-2">Without Caching</div>
+                  <div className="space-y-1 text-xs">
+                    <div>10 tools × 200 tokens each = <strong>2,000 tokens/request</strong></div>
+                    <div>1,000 requests = <strong>2,000,000 input tokens</strong></div>
+                    <div className="text-red-600 dark:text-red-400 font-semibold">Cost: ~$6.00</div>
+                  </div>
+                </div>
+                <div className="bg-white dark:bg-gray-800 p-3 rounded border-2 border-green-500">
+                  <div className="text-xs font-semibold text-green-600 dark:text-green-400 mb-2">With Caching ✓</div>
+                  <div className="space-y-1 text-xs">
+                    <div>First request: 2,000 tokens (cached)</div>
+                    <div>Next 999 requests: <strong>~200 cached tokens</strong></div>
+                    <div className="text-green-600 dark:text-green-400 font-semibold">Cost: ~$0.62 (90% savings!)</div>
+                  </div>
+                </div>
+              </div>
+              <p className="text-xs text-gray-600 dark:text-gray-400 mt-3 italic">
+                See Prompt Caching documentation for implementation details. Cache TTL is 5 minutes.
+              </p>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-3">💡 Best Practices for Cost Efficiency</h4>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="space-y-2 text-sm">
+                  <div className="flex items-start">
+                    <span className="text-green-500 mr-2 mt-0.5">✓</span>
+                    <span>Use Prompt Caching for stable tool sets</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-green-500 mr-2 mt-0.5">✓</span>
+                    <span>Keep tool descriptions concise but informative</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-green-500 mr-2 mt-0.5">✓</span>
+                    <span>Only include tools relevant to the conversation</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-green-500 mr-2 mt-0.5">✓</span>
+                    <span>Use tool_choice: "any" only when necessary</span>
+                  </div>
+                </div>
+                <div className="space-y-2 text-sm">
+                  <div className="flex items-start">
+                    <span className="text-red-500 mr-2 mt-0.5">✗</span>
+                    <span>Don&apos;t send 50+ tools "just in case"</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-red-500 mr-2 mt-0.5">✗</span>
+                    <span>Don&apos;t use verbose parameter descriptions</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-red-500 mr-2 mt-0.5">✗</span>
+                    <span>Don&apos;t duplicate similar tools</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-red-500 mr-2 mt-0.5">✗</span>
+                    <span>Don&apos;t ignore caching opportunities</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
+              <h5 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">📊 Token Estimation Example</h5>
+              <div className="text-xs space-y-1 text-gray-600 dark:text-gray-400">
+                <div><strong>Typical tool definition:</strong> ~150-300 tokens per tool</div>
+                <div><strong>tool_use response:</strong> ~50-150 tokens (name + parameters)</div>
+                <div><strong>Final synthesis:</strong> Varies by complexity (100-500+ tokens)</div>
+                <div className="pt-2 border-t border-gray-300 dark:border-gray-600 mt-2">
+                  <strong>Example single tool request:</strong> ~500-800 total tokens (input + output)
                 </div>
               </div>
             </div>
