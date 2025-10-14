@@ -2,12 +2,13 @@
 
 ## Overview
 
-This is a modern Next.js 14 portfolio website that embodies the **Fitzgerald Principle** - the ability to hold two opposed ideas in mind simultaneously while still functioning. The site demonstrates human-AI collaboration through a philosophy-driven design system.
+This is a modern Next.js 15 portfolio website that embodies the **Fitzgerald Principle** - the ability to hold two opposed ideas in mind simultaneously while still functioning. The site demonstrates human-AI collaboration through a philosophy-driven design system.
 
 ## Tech Stack & Architecture
 
 ### Core Technologies
-- **Framework**: Next.js 14 with App Router
+- **Framework**: Next.js 15.5 with App Router & Turbopack
+- **React**: React 19 with improved hydration
 - **Language**: TypeScript (strict mode)
 - **Styling**: Tailwind CSS with custom design system
 - **Animation**: Framer Motion
@@ -105,18 +106,40 @@ npm run philosophy-check  # Philosophy adherence check
 
 ## Navigation Structure
 
-### Streamlined 5-Page Architecture
-1. **Home**: Philosophy introduction & overview
-2. **Philosophy**: The Fitzgerald framework
-3. **Laboratory**: Live experiments & professional background
-4. **AI Journey**: Comprehensive learning paths with mega-menu
-5. **Contact**: Connection point
+### Complete Site Map (19 Routes)
 
-### AI Journey Mega-Menu Structure
-- **Getting Started**: Why AI, Three-Hat Framework, Learning Path Selector
-- **Learning Paths**: Technical Leadership, LLM Implementation, Agent & RAG, Claude Mastery
-- **Claude Deep Dive**: Prompt Engineering, Tool Use, Computer Use, Vision & Multimodal
-- **Living Lab**: Portfolio Results, Professional Background, Current Experiments
+**Main Pages (5):**
+- `/` - Homepage: Philosophy introduction & 3-Hat Framework
+- `/philosophy` - Fitzgerald Principle framework deep dive
+- `/laboratory` - Live experiments & professional background
+- `/contact` - Connection point & collaboration
+- `/ai-journey` - AI learning hub with comprehensive paths
+
+**AI Journey Routes (14):**
+
+*Core Sections:*
+- `/ai-journey/why-ai` - Why human-AI collaboration matters
+- `/ai-journey/portfolio` - Portfolio & active projects
+- `/ai-journey/how-to-learn/overview` - Three-Hat Framework overview
+
+*Learning Paths:*
+- `/ai-journey/how-to-learn/llm-handling` - LLM communication fundamentals
+- `/ai-journey/how-to-learn/agent-rag` - Agent & RAG systems
+- `/ai-journey/how-to-learn/technical-leadership` - 3-Hat technical leadership
+
+*Claude Mastery (8 modules):*
+- `/ai-journey/how-to-learn/claude-mastery` - Claude Mastery hub
+- `/ai-journey/how-to-learn/claude-mastery/prompt-engineering` - Prompting techniques
+- `/ai-journey/how-to-learn/claude-mastery/tool-use` - Tool use implementation
+- `/ai-journey/how-to-learn/claude-mastery/computer-use` - Computer use capabilities
+- `/ai-journey/how-to-learn/claude-mastery/vision-multimodal` - Vision & multimodal
+- `/ai-journey/how-to-learn/claude-mastery/retrieval-augmented-generation` - RAG systems
+- `/ai-journey/how-to-learn/claude-mastery/model-context-protocol` - MCP integration
+- `/ai-journey/how-to-learn/claude-mastery/developer-console` - Developer tools
+- `/ai-journey/how-to-learn/claude-mastery/cookbook-examples` - Practical examples
+
+**SEO:**
+- Sitemap available at `/sitemap.xml` (auto-generated via `app/sitemap.ts`)
 
 ## Content Management
 
