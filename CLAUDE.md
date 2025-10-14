@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Quick Reference
 
-**Stack**: Next.js 14 + React 18 + TypeScript + Tailwind + Framer Motion
+**Stack**: Next.js 15.5 + React 19 + TypeScript + Tailwind + Framer Motion
 **Philosophy**: Fitzgerald Principle (opposing forces in productive tension)
 **Path Alias**: `@/*` → root directory
 **Critical**: Always run `npm run pre-deploy` before committing
@@ -66,6 +66,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 2. **Sustainability Imperatives** - Climate urgency driving green tech
 3. **Robotic Systems** - Physical automation reaching cost parity
 
+**Tech Stack**: Next.js 15.5 with React 19, leveraging App Router, Turbopack dev builds, and React 19's improved hydration.
+
 **Data-Driven Content Pattern** (CRITICAL):
 - Content lives in `/data/*.json` files, NOT hardcoded in components
 - TypeScript interfaces in `/types/*.ts` enforce structure
@@ -117,11 +119,12 @@ import { fadeInUp, containerVariants, itemVariants } from '@/utils/animations';
 
 ## Key Dependencies
 
-- **next** (^14.2.30) - React framework with App Router
+- **next** (^15.5.5) - React framework with App Router and Turbopack
+- **react** (^19.2.0) - React 19 with improved hydration and Actions
 - **typescript** (^5) - Strict type checking
-- **tailwindcss** (^3.4.13) - Utility-first CSS
-- **framer-motion** (^11.11.8) - Animations
-- **recharts** (^2.13.0) - Data visualizations
+- **tailwindcss** (^3.4.18) - Utility-first CSS
+- **framer-motion** (^11.18.2) - Animations
+- **recharts** (^2.15.4) - Data visualizations
 
 **Build Config:**
 - Path alias `@/*` maps to root (tsconfig.json)
