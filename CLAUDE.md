@@ -2,223 +2,157 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Quick Reference
+
+**Stack**: Next.js 14 + React 18 + TypeScript + Tailwind + Framer Motion
+**Philosophy**: Fitzgerald Principle (opposing forces in productive tension)
+**Path Alias**: `@/*` → root directory
+**Critical**: Always run `npm run pre-deploy` before committing
+
 ## Development Commands
 
-- `npm run dev` - Start development server on http://localhost:3000
-- `npm run build` - Build production version (runs type-check and lint first)
-- `npm run type-check` - TypeScript type checking with `tsc --noEmit`
-- `npm run lint` - ESLint with Next.js configuration
-- `npm run start` - Start production server
-- `npm run philosophy-check` - Validate adherence to Fitzgerald Principle (automated scoring system)
-- `npm run validate-philosophy` - Alias for philosophy-check
+- `npm run dev` - Start development server (http://localhost:3000)
+- `npm run build` - Build production (runs type-check + lint first)
+- `npm run type-check` - TypeScript validation only
+- `npm run lint` - ESLint validation only
+- `npm run philosophy-check` - Fitzgerald Principle adherence scoring
+- `npm run pre-deploy` - Full validation (TypeScript + ESLint + Philosophy + Build)
+- `npm run quick-check` - Fast validation (TypeScript + ESLint + Philosophy, no build)
 
-### Pre-Deployment Validation (ALWAYS RUN FIRST!)
+## Pre-Deployment Validation
 
 **CRITICAL: Always check for build errors before making changes or committing code.**
 
-- `npm run pre-deploy` - Full validation (TypeScript + ESLint + Philosophy + Build)
-- `npm run quick-check` - Fast validation (TypeScript + ESLint + Philosophy)
-- `npm run deploy-check` - Alias for pre-deploy
-
-**Deployment Workflow:**
-1. **FIRST** - Run `npm run pre-deploy` to identify any existing errors
+**Workflow:**
+1. Run `npm run pre-deploy` FIRST to identify existing errors
 2. Make your changes
-3. **ALWAYS** - Run `npm run pre-deploy` again before committing
-4. Fix any errors found (typically ESLint quote escaping: `'` → `&apos;`, `"` → `&quot;`)
+3. Run `npm run pre-deploy` again before committing
+4. Fix any errors (typically ESLint quote escaping: `'` → `&apos;`, `"` → `&quot;`)
 5. Deploy only when validation passes
 
-The prebuild script automatically runs type checking and linting before building, so ESLint errors will block Netlify deployments.
+**Validation Scripts:**
+- `scripts/pre-deploy.js` - Runs all checks sequentially, stops on critical failures
+- `scripts/validate-philosophy.js` - Scans components for Fitzgerald Principle patterns
+- `scripts/quick-check.js` - Fast validation without build step
 
-## Testing Individual Components
+**Note**: The prebuild script runs type-check + lint automatically before build. ESLint errors WILL block Netlify deployments.
 
-For development efficiency:
-- `npm run type-check` - Faster than full build for TypeScript validation
-- `npm run lint` - Quick ESLint check (5-7 lines output when clean)
-- `npm run philosophy-check` - Check design philosophy adherence
+## Project Structure
 
-## Architecture Overview
+**No `/src` directory** - All files at root level:
 
-This is a Next.js 14 portfolio website embodying the **Fitzgerald Principle**: holding two opposed ideas simultaneously while retaining the ability to function. The codebase demonstrates productive tensions throughout: simple surfaces with rich depth, technical rigor with human warmth, and AI augmentation preserving human agency.
+```
+/app              - Next.js App Router pages & layouts
+/components       - React components (layout, common, skills, ai-journey, experience)
+/data             - JSON content files (never hardcode content in components)
+/types            - TypeScript interfaces for data structures
+/styles           - Global CSS and theme utilities
+/utils            - Helper functions (animations.ts for framer-motion)
+/scripts          - Validation and build scripts
+/public           - Static assets
+/ai_docs          - Comprehensive documentation
+```
 
-### Core Philosophy Integration
+**App Router Structure:**
+- Main pages at `/app/page.tsx`, `/app/philosophy/page.tsx`, `/app/contact/page.tsx`
+- AI Journey nested routes: `/app/ai-journey/[section]/page.tsx`
+  - Examples: `/ai-journey/portfolio`, `/ai-journey/how-to-learn/claude-mastery/tool-use`
+- Laboratory at `/app/laboratory/page.tsx`
 
-The site blends **human wisdom with AI automation**, structured around three unstoppable trends:
+## Architecture Essentials
 
-1. **AI Revolution** - Exponential capabilities in reasoning and automation
-2. **Sustainability Imperatives** - Climate urgency driving green technology
+**Core Philosophy**: Portfolio embodying the Fitzgerald Principle - holding two opposed ideas simultaneously while retaining ability to function. Built around three trends:
+1. **AI Revolution** - Exponential reasoning/automation capabilities
+2. **Sustainability Imperatives** - Climate urgency driving green tech
 3. **Robotic Systems** - Physical automation reaching cost parity
 
-### Quick Architecture Reference
+**Data-Driven Content Pattern** (CRITICAL):
+- Content lives in `/data/*.json` files, NOT hardcoded in components
+- TypeScript interfaces in `/types/*.ts` enforce structure
+- Components consume data via props only
+- Never hardcode content directly in components
 
-**Navigation Structure**: 5 main pages with AI Journey mega-menu (9 sub-pages) and Laboratory section (5 views)
-
-**Build Pipeline**: `prebuild → type-check → lint → philosophy-check → build` (all must pass for deployment)
-
-### Key Architectural Patterns
-
-**Data-Driven Content**: The site content is driven by JSON files in `/data/` that define skills, experiences, and AI journey information. These files follow strict TypeScript interfaces defined in `/types/`. Never hardcode content directly in components.
-
-**Theme System**: Uses CSS custom properties for theming with a utility system in `styles/theme.ts` that provides type-safe color mappings for three main categories: time, knowledge, and wealth. See `ai_docs/developer_guide/design-system-reference.md` for comprehensive guidelines.
-
-**Component Structure**:
-- `/components/layout/` - Site-wide layout components (Navbar, Footer)
-- `/components/common/` - Reusable UI components with barrel exports via index.ts
-- `/components/skills/` - Skills visualization components (charts, matrices, cards)
-- `/components/ai-journey/` - AI journey specific layouts
+**Component Organization**:
+- `/components/layout/` - Navbar, Footer (site-wide)
+- `/components/common/` - Reusable UI (Card, CTAButton, PageLayout, etc.) with barrel exports
+- `/components/skills/` - Skills visualizations (charts, matrices, cards)
+- `/components/ai-journey/` - AI journey layouts (SubpageLayout)
 - `/components/experience/` - Experience section components
 
-**Routing Structure**: Uses Next.js App Router with nested routes for the AI journey section (`/ai-journey/overview`, `/ai-journey/portfolio`, etc.).
+## Theme System
 
-**Validation Pipeline**: Automated scripts in `/scripts/` ensure code quality:
-- `pre-deploy.js` - Comprehensive validation runner
-- `validate-philosophy.js` - Fitzgerald Principle adherence scoring
-- `quick-check.js` - Fast validation for development
+**Color Philosophy** (semantic meaning):
+- **Hot Pink (#FF0081)** - `time` - Human agency, energy, urgency
+- **Teal (#0CC0DF)** - `knowledge` - AI capabilities, growth, learning
+- **Beer Gold (#F8B400)** - `wealth` - Tangible outcomes, achievement, legacy
 
-### Innovation Laboratory Structure
+**Usage**: Theme utilities in `styles/theme.ts` provide type-safe color mappings:
+```typescript
+import { themeColors, getThemeColor } from '@/styles/theme';
+// Use: themeColors.border.time, themeColors.text.knowledge, etc.
+```
 
-The `/laboratory` section represents the convergence of the three unstoppable trends with five main views:
-- **Overview** - The thesis and laboratory focus
-- **Active Experiments** - Current human-AI-robot collaboration projects
-- **Sustainability Lab** - Projects at the intersection of AI and environmental impact
-- **Investment Thesis** - Business and investment opportunities in the convergence space
-- **Insights** - Key learnings from laboratory experiments
-
-### Data Flow
-
-1. JSON data files define content structure
-2. TypeScript interfaces ensure type safety across components
-3. Components consume data through props and render using Tailwind classes
-4. Theme utilities provide consistent styling across skill visualizations
-5. Color meanings are semantically tied to the three-pillar philosophy
-
-### Design System
-
-**Color Philosophy:**
-- **Hot Pink** (#FF0081) - Time/Energy/Human Agency
-- **Teal** (#0CC0DF) - Knowledge/Growth/AI Capabilities  
-- **Beer Gold** (#F8B400) - Wealth/Impact/Tangible Outcomes
-
-See `ai_docs/developer_guide/design-system-reference.md` for complete usage guidelines and best practices for human-AI collaboration.
-
-### Path Aliases
-
-Uses `@/*` alias pointing to the root directory, configured in `tsconfig.json`.
+**Animation Utilities**: `utils/animations.ts` provides framer-motion helpers:
+```typescript
+import { fadeInUp, containerVariants, itemVariants } from '@/utils/animations';
+```
 
 ## Common Development Patterns
 
-### Adding/Modifying Content
-1. Edit JSON files in `/data/` (never hardcode content in components)
-2. TypeScript interfaces in `/types/` will enforce correct structure
+### Content Updates
+1. Edit JSON files in `/data/` (e.g., `skills.json`, `experiences.json`)
+2. TypeScript interfaces in `/types/` enforce correct structure
 3. Components automatically reflect changes
 
 ### ESLint Quote Escaping (Common Deployment Blocker)
+**These errors WILL block Netlify deployments:**
 - Replace `'` with `&apos;`
 - Replace `"` with `&quot;`
-- These errors WILL block Netlify deployments
+- Always run `npm run lint` before committing
 
-### Philosophy Validation
-The codebase includes automated scoring (currently 7%) for adherence to the Fitzgerald Principle. Every component should demonstrate productive tensions.
+### Adding New Pages
+1. Create page in `/app/[route]/page.tsx`
+2. Add data to appropriate JSON file in `/data/`
+3. Update Navbar links if needed in `/components/layout/Navbar.tsx`
 
 ## Key Dependencies
 
 - **next** (^14.2.30) - React framework with App Router
-- **typescript** (^5) - Type safety with strict mode enabled
-- **tailwindcss** (^3.4.13) - Utility-first CSS framework  
-- **framer-motion** (^11.11.8) - Meaningful animations and transitions
-- **recharts** (^2.13.0) - Data visualizations in skills sections
+- **typescript** (^5) - Strict type checking
+- **tailwindcss** (^3.4.13) - Utility-first CSS
+- **framer-motion** (^11.11.8) - Animations
+- **recharts** (^2.13.0) - Data visualizations
 
-### Build Configuration
-- **Path aliases**: `@/*` maps to root directory via tsconfig.json
-- **Strict TypeScript**: Full type checking with `noEmit` flag
-- **ESLint**: Next.js configuration with custom philosophy validation
-- **Build process**: Automated prebuild script runs type-check and lint before building
+**Build Config:**
+- Path alias `@/*` maps to root (tsconfig.json)
+- Strict TypeScript with `noEmit` flag
+- Standalone output mode (next.config.mjs)
+
+## Dave's Voice Guidelines
+
+When writing content for this site:
+- **Humble explorer**: "Still figuring it out", "happy to share what I've learned"
+- **Direct but warm**: Clear insights without aggressive claims or sales language
+- **Lead with contrarian insights**: "Most people use AI to do more. I use it to do less."
+- **Gentle invitations**: "Happy to chat" not "Book a call now!"
+- **Proper sentence case**: Web content, not WhatsApp casual
+- **Virtuous cycle**: Build time → Capture knowledge → Create value → Share freely
+
+**Avoid**: Corporate speak, aggressive claims ("10x your productivity!"), achievement focus, overly casual tone
 
 ## Comprehensive Documentation
 
-Detailed documentation is available in `/ai_docs/`:
-- **Developer Guide**: Architecture overview, getting started, component patterns
-- **User Guide**: Installation, features, troubleshooting (when created)
-- **API Reference**: Component APIs, data models (when created)
-- **Architecture**: System design, data flows, ADRs (when created)
+Detailed documentation available in `/ai_docs/`:
+- `developer_guide/` - Architecture, getting started, design system reference
+- `quick_start/` - 15-minute setup procedures
+- `technical/` - Complete references
 
-## Dave's Communication Style & Tone
+---
 
-When writing content for this site, follow these principles learned from Dave's authentic voice:
-
-### Core Voice Attributes
-- **Humble explorer**: "Still figuring it out", "happy to share what I've learned"
-- **Direct but warm**: Clear insights without aggressive claims
-- **Helper not seller**: Focus on sharing value, not pushing services
-- **Philosophical yet practical**: Deep insights delivered conversationally
-
-### Writing Guidelines
-1. **Lead with contrarian insights**: "Most people use AI to do more. I use it to do less."
-2. **Share journey without bragging**: Mention Meta/Unity/ventures as context, not credentials
-3. **Use proper sentence case**: This is web content, not WhatsApp
-4. **End with gentle invitations**: "Happy to chat about yours" not "Book a call now!"
-5. **Embrace the virtuous cycle**: Build time → Capture knowledge → Create value → Share freely
-
-### Hero Section Example (What Works)
-```
-Dave Liew
-Most people use AI to do more. I use it to do less.
-
-After working at Meta, Unity, and co-founding a few ventures,
-I learned something: Time compounds faster than money.
-
-So I build tools that delete tasks instead of adding them.
-WhatsApp insights. Self-thinking dashboards. Emails that sort themselves.
-
-The pattern I'm exploring:
-Build time → Capture knowledge → Create value → Share freely
-
-Currently helping 3 businesses reclaim their time. Happy to chat about yours.
-```
-
-### What to Avoid
-- ❌ Corporate speak: "I build tools that solve real problems"
-- ❌ Aggressive claims: "10x your productivity!"
-- ❌ Sales language: "Book your consultation today"
-- ❌ Overly casual: "yeah so basically..." (save for actual chats)
-- ❌ Achievement focus: "Scaled ventures from $0→$1M+"
-
-### Key Phrases That Work
-- "I'm exploring..."
-- "Still figuring it out, but..."
-- "Happy to share what I've learned"
-- "If something helps you, that's enough for me"
-- "Time compounds faster than money"
-
-## Critical Development Patterns
-
-### Data Management
-- **Content updates**: Edit JSON files in `/data/`, never hardcode in components
-- **Type safety**: All data structures have corresponding TypeScript interfaces in `/types/`
-- **Validation**: Always run `npm run pre-deploy` before committing changes
-
-### Component Development
-- **Philosophy integration**: Components should embody the Fitzgerald Principle (opposing forces in harmony)
-- **Barrel exports**: Use index.ts files for clean imports from component directories
-- **Theme consistency**: Use colors semantically (hot pink=time, teal=knowledge, gold=wealth)
-
-### Deployment Workflow
-1. Run `npm run pre-deploy` to identify existing issues
-2. Make changes following architectural patterns
-3. Run `npm run pre-deploy` again before committing
-4. Fix any ESLint errors (typically quote escaping: `'` → `&apos;`, `"` → `&quot;`)
-5. Deploy only when all validations pass
+**Philosophy Integration Note**: The codebase includes automated scoring for Fitzgerald Principle adherence. Components should demonstrate productive tensions (simple surfaces with rich depth, technical rigor with human warmth, AI augmentation preserving human agency).
 
 # important-instruction-reminders
 Do what has been asked; nothing more, nothing less.
 NEVER create files unless they're absolutely necessary for achieving your goal.
 ALWAYS prefer editing an existing file to creating a new one.
 NEVER proactively create documentation files (*.md) or README files. Only create documentation files if explicitly requested by the User.
-
-## Working with the Innovation Laboratory
-
-When making changes to the laboratory section:
-1. **Follow the convergence philosophy** - Every feature should relate to AI, sustainability, or robotics
-2. **Use semantic theming** - Colors should align with their meaning (time/knowledge/wealth)
-3. **Maintain experiment focus** - Content should feel like active research, not static documentation
-4. **Consider investment implications** - Features should connect to business value and scalability
-5. **Preserve human-centric design** - Technology should enhance rather than replace human capabilities
