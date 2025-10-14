@@ -231,73 +231,115 @@ export default function HomePage() {
         </div>
       </motion.section>
 
-      {/* Live Proof - Real but Protected with Visual Interest */}
-      <motion.section 
+      {/* What I'm Building - Living Proof */}
+      <motion.section
         {...sectionAnimation(1)}
         className="py-12 border-t border-gray-200 dark:border-gray-700"
       >
-        <h2 className="text-2xl font-semibold mb-8 text-center">Current Experiments</h2>
+        <h2 className="text-2xl font-semibold mb-3 text-center">See How I Work</h2>
+        <p className="text-center text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
+          Rather than tell you what I can do, here&apos;s what I&apos;m actually building.
+          You&apos;re looking at one of them right now.
+        </p>
+
         <div className="grid md:grid-cols-2 gap-6">
-          <Card className="p-6 hover:shadow-lg transition-shadow group">
-            <div className="flex items-start justify-between">
+          {/* This Website - The Meta Example */}
+          <Card className="p-6 hover:shadow-lg transition-shadow group md:col-span-2 border-2 border-[#0CC0DF]/30">
+            <div className="flex items-start justify-between mb-3">
+              <h3 className="text-lg font-semibold group-hover:text-[#0CC0DF] transition-colors">
+                This Portfolio Site (Meta Example)
+              </h3>
+              <span className="text-xs text-[#0CC0DF] px-2 py-1 bg-[#0CC0DF]/10 rounded font-medium">Live Now</span>
+            </div>
+
+            <p className="text-gray-600 dark:text-gray-400 mb-4">
+              You&apos;re looking at it. Built to embody the Fitzgerald Principle - holding opposing ideas
+              (simple surface + rich depth) in productive tension.
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-4 mb-4">
               <div>
-                <h3 className="font-semibold mb-2 group-hover:text-[#0CC0DF] transition-colors">
-                  WhatsApp Analytics Tool
-                </h3>
-                <p className="text-gray-600 dark:text-gray-400 text-sm mb-2">
-                  Industry: E-commerce<br/>
-                  Result: <span className="text-[#F8B400] font-semibold">10x faster</span> customer insights<br/>
-                  Stack: Python, MCP, Claude API
-                </p>
-                <p className="text-xs text-[var(--deep-purple)] mt-2">
-                  <span className="font-semibold">Pattern discovered:</span> 80% of customer insights hide in unstructured WhatsApp data
-                </p>
+                <p className="text-sm font-medium mb-2 text-[var(--deep-purple)]">What&apos;s Interesting:</p>
+                <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-1">
+                  <li>• Next.js 15 + React 19 (upgraded today!)</li>
+                  <li>• Philosophy validation scripts that score design decisions</li>
+                  <li>• Zero hardcoded content (all JSON-driven)</li>
+                  <li>• Automated quality gates before deploy</li>
+                </ul>
               </div>
-              <span className="text-xs text-gray-500 dark:text-gray-400 px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded">Under NDA</span>
+              <div>
+                <p className="text-sm font-medium mb-2 text-[var(--teal)]">Still Figuring Out:</p>
+                <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-1">
+                  <li>• How to improve philosophy score (currently 7%)</li>
+                  <li>• Better ways to showcase technical depth</li>
+                  <li>• Balance between showing code and keeping it clean</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap gap-2 text-xs">
+              <span className="px-2 py-1 bg-[#0CC0DF]/10 text-[#0CC0DF] rounded">Next.js 15</span>
+              <span className="px-2 py-1 bg-[#0CC0DF]/10 text-[#0CC0DF] rounded">React 19</span>
+              <span className="px-2 py-1 bg-[#0CC0DF]/10 text-[#0CC0DF] rounded">TypeScript</span>
+              <span className="px-2 py-1 bg-[#0CC0DF]/10 text-[#0CC0DF] rounded">Framer Motion</span>
+              <span className="px-2 py-1 bg-[#0CC0DF]/10 text-[#0CC0DF] rounded">Philosophy Automation</span>
             </div>
           </Card>
-          
+
+          {/* WhatsApp MCP Server */}
           <Card className="p-6 hover:shadow-lg transition-shadow group">
-            <div className="flex items-start justify-between">
-              <div>
-                <h3 className="font-semibold mb-2 group-hover:text-[#FF0081] transition-colors">
-                  Business Intelligence Dashboard
-                </h3>
-                <p className="text-gray-600 dark:text-gray-400 text-sm mb-2">
-                  Industry: Professional Services<br/>
-                  Result: <span className="text-[#F8B400] font-semibold">15 hours/week</span> saved<br/>
-                  Stack: React, SQL, Custom APIs
-                </p>
-                <p className="text-xs text-[var(--deep-purple)] mt-2">
-                  <span className="font-semibold">Pattern discovered:</span> Manual data reconciliation wastes 3+ hours daily
-                </p>
-              </div>
-              <span className="text-xs text-gray-500 dark:text-gray-400 px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded">Under NDA</span>
+            <div className="flex items-start justify-between mb-3">
+              <h3 className="font-semibold group-hover:text-[#FF0081] transition-colors">
+                WhatsApp MCP Server
+              </h3>
+              <span className="text-xs text-gray-600 dark:text-gray-400 px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded">Active</span>
+            </div>
+
+            <p className="text-gray-600 dark:text-gray-400 text-sm mb-3">
+              Created an MCP server that turns WhatsApp exports into insights.
+              Turns out I was missing patterns in thousands of client messages.
+            </p>
+
+            <p className="text-xs text-[var(--deep-purple)] mb-3">
+              <span className="font-medium">Discovery:</span> Most valuable insights came from messages
+              I thought weren&apos;t important at the time.
+            </p>
+
+            <div className="flex flex-wrap gap-2 text-xs">
+              <span className="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded">Python</span>
+              <span className="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded">MCP Protocol</span>
+              <span className="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded">Claude API</span>
             </div>
           </Card>
-          
-          <Card className="p-6 hover:shadow-lg transition-shadow group md:col-span-2">
-            <div className="flex items-start justify-between">
-              <div>
-                <h3 className="font-semibold mb-2 group-hover:text-[#F8B400] transition-colors">
-                  Email Automation System
-                </h3>
-                <p className="text-gray-600 dark:text-gray-400 text-sm mb-2">
-                  Industry: SaaS<br/>
-                  Result: <span className="text-[#F8B400] font-semibold">1000+ emails</span> processed daily<br/>
-                  Stack: Google Scripts, AI Classification
-                </p>
-                <p className="text-xs text-[var(--deep-purple)] mt-2">
-                  <span className="font-semibold">Pattern discovered:</span> AI can classify intent 50x faster than rules-based systems
-                </p>
-              </div>
-              <span className="text-xs text-gray-500 dark:text-gray-400 px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded">Under NDA</span>
+
+          {/* Client Projects - Honest */}
+          <Card className="p-6 hover:shadow-lg transition-shadow group">
+            <div className="flex items-start justify-between mb-3">
+              <h3 className="font-semibold group-hover:text-[#F8B400] transition-colors">
+                3 Client Projects
+              </h3>
+              <span className="text-xs text-[#F8B400] px-2 py-1 bg-[#F8B400]/10 rounded font-medium">Learning Mode</span>
             </div>
+
+            <p className="text-gray-600 dark:text-gray-400 text-sm mb-3">
+              Working with 3 businesses on AI-powered automation. Can&apos;t share details yet,
+              but here&apos;s what I&apos;m discovering:
+            </p>
+
+            <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-2 mb-3">
+              <li>• Most &quot;AI projects&quot; fail because they automate the wrong things</li>
+              <li>• Time-to-first-success &lt; 2 minutes is make-or-break</li>
+              <li>• Simpler systems win, even when they feel too simple</li>
+            </ul>
+
+            <p className="text-xs text-[var(--deep-purple)] italic">
+              Each project teaches me something for the next one. Still figuring out the patterns.
+            </p>
           </Card>
         </div>
-        
-        <p className="text-center mt-8 text-sm text-gray-500 dark:text-gray-400">
-          Discoveries and patterns emerging from active research
+
+        <p className="text-center mt-8 text-sm text-gray-600 dark:text-gray-400">
+          Building and learning in public. If something I&apos;m exploring helps you, that&apos;s enough for me.
         </p>
       </motion.section>
 
