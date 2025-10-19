@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Card, SectionHeader, PageLayout } from '@/components/common';
 import { sectionAnimation } from '@/utils/animations';
 

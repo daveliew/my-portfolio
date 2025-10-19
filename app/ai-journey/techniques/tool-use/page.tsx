@@ -541,8 +541,8 @@ claude.messages.create({
             <div className="p-4 bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500 rounded">
               <h5 className="font-semibold text-yellow-800 dark:text-yellow-300 mb-2">⚡ Best Practices</h5>
               <ul className="space-y-1 text-sm text-yellow-700 dark:text-yellow-400">
-                <li>• Use <code>"auto"</code> for conversational interfaces where flexibility is desired</li>
-                <li>• Use <code>"any"</code> for workflows that require tool execution (e.g., data pipelines)</li>
+                <li>• Use <code>&quot;auto&quot;</code> for conversational interfaces where flexibility is desired</li>
+                <li>• Use <code>&quot;any&quot;</code> for workflows that require tool execution (e.g., data pipelines)</li>
                 <li>• Use specific tool forcing sparingly - reduces Claude&apos;s flexibility and reasoning</li>
                 <li>• If forcing specific tools, ensure the request actually needs that tool</li>
               </ul>
@@ -893,13 +893,13 @@ final_response = claude.messages.create({
                   </div>
                   <div className="flex items-start">
                     <span className="text-green-500 mr-2 mt-0.5">✓</span>
-                    <span>Use tool_choice: "any" only when necessary</span>
+                    <span>Use tool_choice: &quot;any&quot; only when necessary</span>
                   </div>
                 </div>
                 <div className="space-y-2 text-sm">
                   <div className="flex items-start">
                     <span className="text-red-500 mr-2 mt-0.5">✗</span>
-                    <span>Don&apos;t send 50+ tools "just in case"</span>
+                    <span>Don&apos;t send 50+ tools &quot;just in case&quot;</span>
                   </div>
                   <div className="flex items-start">
                     <span className="text-red-500 mr-2 mt-0.5">✗</span>
