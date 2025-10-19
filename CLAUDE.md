@@ -9,6 +9,25 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 **Path Alias**: `@/*` → root directory
 **Critical**: Always run `npm run pre-deploy` before committing
 
+## Site Purpose & Positioning
+
+**What This Is**: Portfolio exploring human-AI collaboration through the Fitzgerald Principle - "Most people use AI to do more. I'm exploring how to do less—systematically."
+
+**Core Thesis**: Time compounds faster than money. AI as complementarity (amplifies human capabilities) not replacement.
+
+**Target Audiences**:
+- **Beginners**: Philosophy → Three-Hat Framework → LLM fundamentals → Claude Mastery
+- **Technical Professionals**: Fast-track through Technical Leadership → Claude Mastery → Advanced Systems
+
+**Key Differentiators**:
+- **Three-Hat Framework**: Rapid context switching (Systems Architect / Product Manager / Implementation)
+- **Context Engineering**: Not prompts, but architecting informational environments where understanding emerges
+- **ADHD-Optimized Workflows**: Neurodivergent patterns as AI-collaboration advantage
+- **Sustainability Convergence**: AI + Climate + Robotics intersection ($50T+ opportunity)
+- **Living Laboratory**: Every framework validated across 3 active client projects
+
+**Strategic Priorities**: Portfolio activation (case studies exist but not visible), SEO/AIEO optimization, 2026 predictions content
+
 ## Development Commands
 
 - `npm run dev` - Start development server (http://localhost:3000)
@@ -21,21 +40,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Pre-Deployment Validation
 
-**CRITICAL: Always check for build errors before making changes or committing code.**
+**CRITICAL**: Always run `npm run pre-deploy` before committing. Check for existing errors FIRST, make changes, validate again, fix ESLint quote escaping (`'` → `&apos;`, `"` → `&quot;`), then deploy.
 
-**Workflow:**
-1. Run `npm run pre-deploy` FIRST to identify existing errors
-2. Make your changes
-3. Run `npm run pre-deploy` again before committing
-4. Fix any errors (typically ESLint quote escaping: `'` → `&apos;`, `"` → `&quot;`)
-5. Deploy only when validation passes
+**Scripts**: `pre-deploy.js` (full), `validate-philosophy.js` (Fitzgerald scoring), `quick-check.js` (fast, no build)
 
-**Validation Scripts:**
-- `scripts/pre-deploy.js` - Runs all checks sequentially, stops on critical failures
-- `scripts/validate-philosophy.js` - Scans components for Fitzgerald Principle patterns
-- `scripts/quick-check.js` - Fast validation without build step
-
-**Note**: The prebuild script runs type-check + lint automatically before build. ESLint errors WILL block Netlify deployments.
+**Note**: ESLint errors WILL block Netlify deployments.
 
 ## Project Structure
 
@@ -53,11 +62,63 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 /ai_docs          - Comprehensive documentation
 ```
 
-**App Router Structure:**
-- Main pages at `/app/page.tsx`, `/app/philosophy/page.tsx`, `/app/contact/page.tsx`
-- AI Journey nested routes: `/app/ai-journey/[section]/page.tsx`
-  - Examples: `/ai-journey/portfolio`, `/ai-journey/how-to-learn/claude-mastery/tool-use`
-- Laboratory at `/app/laboratory/page.tsx`
+**Complete Site Map:**
+
+*Main Routes:*
+- `/` - Home (hero, virtuous cycle, Three-Hat Framework, projects)
+- `/philosophy` - Fitzgerald Principle deep dive (9 sections)
+- `/about` - Professional journey, achievements, value proposition
+- `/laboratory` - Innovation experiments (AI/Sustainability/Robotics convergence)
+- `/contact` - Links to LinkedIn, GitHub, Agentic Brewery
+
+*AI Journey Structure:*
+- `/ai-journey/why-ai` - Foundation: Why human-AI collaboration matters
+- `/ai-journey/overview` - AI journey introduction
+- `/ai-journey/portfolio` - Case studies (growth opportunity: data exists, not activated)
+- `/ai-journey/how-to-learn/` - Learning hub with sub-paths:
+  - `overview` - Three-Hat Framework philosophy + general resources
+  - `technical-leadership` - 3-client project validation
+  - `llm-handling` - Practical LLM implementation
+- `/ai-journey/how-to-learn/claude-mastery/` - **Most complete content** (8 modules):
+  - Hands-on: `prompt-engineering`, `cookbook-examples`, `developer-console`, `claude-code`
+  - Advanced: `tool-use`, `computer-use`, `vision-multimodal`, `model-context-protocol`, `retrieval-augmented-generation`
+  - Future: `2026-predictions` (recent addition with research-backed trajectory)
+- `/ai-journey/techniques/` - Technical implementation paths
+
+**Key Data Files** (`/data/` - never hardcode content):
+- `ai-journey.json` - S-curve phases, foundation skills, roadmap, **case studies** (hidden gems)
+- `ai-journey-portfolio.json` - Portfolio structure (currently "coming soon")
+- `ai-journey-learning-paths.json` - Structured learning curriculum
+- `sustainability.json` - Lab details, experiments, investment thesis
+- `skills.json`, `experiences.json`, `personal.json`, `now.json` - Professional background
+
+## Key Frameworks & Concepts
+
+**Three-Hat Framework** - Rapid context switching validated across 3 client projects:
+- Systems Architect: High-level design, dependencies, trade-offs
+- Product Manager: User needs, feature prioritization, business value
+- Implementation: Technical execution, code quality, testing
+
+**Context Engineering** (not "Prompt Engineering"):
+- Architecting informational environments where understanding emerges
+- Prompts are subset of broader environmental design
+- Focus: What context enables AI to reason effectively?
+
+**Complementarity Principle**:
+- AI amplifies human capabilities (moral agency, creativity, embodied wisdom)
+- Not replacement narrative, but augmentation
+- Memory trigger: "AI handles what scales, humans handle what matters"
+
+**ADHD-AI Optimization**:
+- Neurodivergent patterns as collaboration advantage
+- Rapid context switching = natural Three-Hat operation
+- Hyperfocus + AI execution = competitive edge
+
+**Fitzgerald Principle Applications**:
+- Simple surfaces with rich depth
+- Technical rigor with human warmth
+- AI augmentation preserving human agency
+- Automated scoring: `npm run philosophy-check`
 
 ## Architecture Essentials
 
@@ -75,11 +136,33 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Never hardcode content directly in components
 
 **Component Organization**:
-- `/components/layout/` - Navbar, Footer (site-wide)
-- `/components/common/` - Reusable UI (Card, CTAButton, PageLayout, etc.) with barrel exports
-- `/components/skills/` - Skills visualizations (charts, matrices, cards)
-- `/components/ai-journey/` - AI journey layouts (SubpageLayout)
-- `/components/experience/` - Experience section components
+- `/components/layout/` - Navbar, Footer (4-column comprehensive navigation)
+- `/components/common/` - Reusable UI with barrel exports: Card, PageLayout, SubpageLayout, BackLink, SectionHeader, CTAButton
+- `/components/skills/` - SkillsMatrix, CaseStudyCard, PhaseProgressBar, RoadmapTimeline
+- `/components/ai-journey/` - SubpageLayout for hierarchical navigation, breadcrumbs
+- `/components/experience/` - ExperienceSection, CategorySection
+
+## Strategic Context & Content Priorities
+
+**Recent Direction** (Last 5 commits):
+- URL flattening for SEO/AIEO optimization (improved discoverability)
+- Footer redesign: 4-column comprehensive navigation
+- 2026 predictions content (research-backed AI trajectory)
+- Claude Mastery focus (8 modules, 2025 breakthroughs)
+- Portfolio section prep (data exists, awaiting activation)
+
+**Content Maturity Map** (guides development focus):
+- ✅ **Most Complete**: Claude Mastery (8 modules), Philosophy (deeply articulated)
+- ✅ **Well Developed**: About, Laboratory, AI Journey structure, Home
+- 🚀 **High-Impact Growth**: Portfolio activation (case studies in JSON, not visible on site)
+- 📊 **Opportunities**: Testimonials from 3 client projects, Three-Hat metrics, visual representations
+
+**Development Priorities**:
+1. Portfolio page activation (highest ROI: credibility + SEO)
+2. SEO/AIEO metadata optimization (ongoing)
+3. Case study detail pages (data ready, needs UI)
+4. Testimonials/social proof integration
+5. Three-Hat Framework metrics visualization
 
 ## Theme System
 
@@ -131,17 +214,26 @@ import { fadeInUp, containerVariants, itemVariants } from '@/utils/animations';
 - Strict TypeScript with `noEmit` flag
 - Standalone output mode (next.config.mjs)
 
-## Dave's Voice Guidelines
+## Dave's Voice & Terminology
 
-When writing content for this site:
+**Voice Guidelines**:
 - **Humble explorer**: "Still figuring it out", "happy to share what I've learned"
 - **Direct but warm**: Clear insights without aggressive claims or sales language
 - **Lead with contrarian insights**: "Most people use AI to do more. I use it to do less."
 - **Gentle invitations**: "Happy to chat" not "Book a call now!"
 - **Proper sentence case**: Web content, not WhatsApp casual
+- **Research-backed**: Cite sources for claims (e.g., "SWE-bench scores", "Coatue S-curve")
 - **Virtuous cycle**: Build time → Capture knowledge → Create value → Share freely
 
-**Avoid**: Corporate speak, aggressive claims ("10x your productivity!"), achievement focus, overly casual tone
+**Terminology Preferences** (use these framings):
+- ✅ "Context Engineering" (not "Prompt Engineering") - broader, more accurate
+- ✅ "Complementarity" (not "replacement") - AI-human relationship
+- ✅ "ADHD-optimized workflows" (not "despite ADHD") - advantage framing
+- ✅ "Three-Hat Framework" (not "wearing multiple hats") - specific methodology
+- ✅ "Fitzgerald Principle applications" - when explaining design decisions
+- ✅ "Living laboratory" (not "case studies") - ongoing validation vs past work
+
+**Avoid**: Corporate speak, aggressive claims ("10x your productivity!"), achievement focus, overly casual tone, replacement narratives, limitation framing of neurodivergence
 
 ## Comprehensive Documentation
 

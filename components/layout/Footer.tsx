@@ -89,6 +89,12 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
+                <Link href="/about" className="text-sm text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 inline-flex items-center group">
+                  <span className="mr-2 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                  About
+                </Link>
+              </li>
+              <li>
                 <Link href="/contact" className="text-sm text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 inline-flex items-center group">
                   <span className="mr-2 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
                   Contact

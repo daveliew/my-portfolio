@@ -138,9 +138,107 @@ export default function PhilosophyPage() {
         </Card>
       </motion.section>
 
-      {/* Guiding Philosophy */}
+      {/* Philosophy in Practice */}
       <motion.section
         {...sectionAnimation(4)}
+        className="mb-12"
+      >
+        <SectionHeader title="Philosophy in Practice" />
+        <Card className="p-6 mb-6">
+          <p className="text-gray-600 dark:text-gray-400 mb-6">
+            The Fitzgerald Principle isn&apos;t just philosophy—it&apos;s a working methodology tested across real projects.
+            Here&apos;s how holding opposing ideas in productive tension creates actual value:
+          </p>
+
+          <div className="space-y-6">
+            {/* Three-Hat Framework */}
+            <div className="border-l-4 border-blue-500 pl-4 py-2">
+              <Link href="/laboratory" className="block hover:opacity-80 transition-opacity">
+                <h4 className="font-semibold text-blue-600 dark:text-blue-400 mb-2">
+                  Three-Hat Framework → Laboratory
+                </h4>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
+                  <strong>Opposing Forces:</strong> Systems Architect (think holistically) ↔ Product Manager (ship quickly) ↔ Implementation (code it yourself)
+                </p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  <strong>Productive Tension:</strong> Context switching between these opposing perspectives in &lt;15 minutes creates better decisions
+                  than staying in any single mode. Currently testing across 3 client projects.
+                </p>
+              </Link>
+            </div>
+
+            {/* ADHD-AI Workflows */}
+            <div className="border-l-4 border-teal-500 pl-4 py-2">
+              <Link href="/laboratory" className="block hover:opacity-80 transition-opacity">
+                <h4 className="font-semibold text-teal-600 dark:text-teal-400 mb-2">
+                  ADHD as Feature, Not Bug → Laboratory
+                </h4>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
+                  <strong>Opposing Forces:</strong> Neurodivergent cognitive patterns (rapid context switching, hyperfocus cycles) ↔ Traditional productivity systems (linear workflows)
+                </p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  <strong>Productive Tension:</strong> AI agents designed to work WITH ADHD patterns actually outperform neurotypical workflows.
+                  The &quot;bug&quot; becomes a speed advantage in human-AI collaboration.
+                </p>
+              </Link>
+            </div>
+
+            {/* Sustainable AI */}
+            <div className="border-l-4 border-green-500 pl-4 py-2">
+              <Link href="/laboratory" className="block hover:opacity-80 transition-opacity">
+                <h4 className="font-semibold text-green-600 dark:text-green-400 mb-2">
+                  Sustainability as Innovation Driver → Laboratory
+                </h4>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
+                  <strong>Opposing Forces:</strong> AI capability (more compute = better results) ↔ Environmental constraints (limited energy budgets)
+                </p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  <strong>Productive Tension:</strong> Energy constraints force breakthrough innovations in model efficiency.
+                  Our constrained models now outperform larger models on specific tasks (87% energy reduction, +15% performance).
+                </p>
+              </Link>
+            </div>
+
+            {/* This Website */}
+            <div className="border-l-4 border-purple-500 pl-4 py-2">
+              <h4 className="font-semibold text-purple-600 dark:text-purple-400 mb-2">
+                This Portfolio Website
+              </h4>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
+                <strong>Opposing Forces:</strong> Simple, clean surface ↔ Rich technical depth and philosophy scoring
+              </p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                <strong>Productive Tension:</strong> Automated philosophy validation scripts score design decisions against
+                the Fitzgerald Principle. The tension between &quot;keep it simple&quot; and &quot;show technical depth&quot;
+                creates better outcomes than choosing either extreme.
+              </p>
+            </div>
+
+            {/* Mortality & Meaning */}
+            <div className="border-l-4 border-orange-500 pl-4 py-2">
+              <h4 className="font-semibold text-orange-600 dark:text-orange-400 mb-2">
+                Mortality as Competitive Advantage
+              </h4>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
+                <strong>Opposing Forces:</strong> Human mortality (finite time) ↔ AI immortality (infinite processing)
+              </p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                <strong>Productive Tension:</strong> Our awareness of death creates urgency and meaning that immortal systems
+                cannot replicate. This &quot;limitation&quot; is actually our greatest asset for creative decision-making
+                and long-term thinking. Building for my children&apos;s future matters precisely because it&apos;s finite.
+              </p>
+            </div>
+          </div>
+        </Card>
+
+        <p className="text-center text-sm text-gray-500 dark:text-gray-400 italic">
+          Visit the <Link href="/laboratory" className="text-blue-600 dark:text-blue-400 hover:underline">Laboratory</Link> to see these experiments in detail.
+        </p>
+      </motion.section>
+
+      {/* Guiding Philosophy */}
+      <motion.section
+        {...sectionAnimation(5)}
         className="mb-12"
       >
         <SectionHeader title="Guiding Philosophy for an AI Age" />
@@ -181,7 +279,7 @@ export default function PhilosophyPage() {
 
       {/* What I'm Building */}
       <motion.section
-        {...sectionAnimation(5)}
+        {...sectionAnimation(6)}
         className="mb-12"
       >
         <SectionHeader title="What I'm Building" />
