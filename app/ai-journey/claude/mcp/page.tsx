@@ -49,6 +49,11 @@ export default function MCPPage() {
     <AIJourneySubpageLayout
       title="Model Context Protocol (MCP)"
       description="Build advanced applications using the Model Context Protocol for enhanced AI workflows"
+      breadcrumbs={[
+        { href: '/', label: 'Home' },
+        { href: '/ai-journey', label: 'AI Journey' },
+        { href: '/ai-journey/claude', label: 'Claude' },
+      ]}
     >
       {/* Introduction */}
       <motion.section

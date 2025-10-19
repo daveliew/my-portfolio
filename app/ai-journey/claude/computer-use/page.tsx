@@ -10,6 +10,11 @@ export default function ComputerUsePage() {
     <AIJourneySubpageLayout
       title="Computer Use Capabilities"
       description="Explore Claude's groundbreaking computer use features for desktop automation and interaction"
+      breadcrumbs={[
+        { href: '/', label: 'Home' },
+        { href: '/ai-journey', label: 'AI Journey' },
+        { href: '/ai-journey/claude', label: 'Claude' },
+      ]}
     >
       <motion.section
         {...sectionAnimation(0)}

@@ -17,6 +17,11 @@ export default function LLMHandlingPage() {
     <AIJourneySubpageLayout
       title={llmPath.title}
       description={llmPath.description}
+      breadcrumbs={[
+        { href: '/', label: 'Home' },
+        { href: '/ai-journey', label: 'AI Journey' },
+        { href: '/ai-journey/techniques', label: 'Techniques' },
+      ]}
     >
       {/* Learning Objectives */}
       <motion.section

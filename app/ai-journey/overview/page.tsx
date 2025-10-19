@@ -12,6 +12,10 @@ export default function LearningOverviewPage() {
     <AIJourneySubpageLayout
       title="AI Learning Overview"
       description="Structured paths to develop practical AI skills without getting lost in the hype"
+      breadcrumbs={[
+        { href: '/', label: 'Home' },
+        { href: '/ai-journey', label: 'AI Journey' },
+      ]}
     >
       {/* Introduction */}
       <motion.section
@@ -65,8 +69,8 @@ export default function LearningOverviewPage() {
               For those who want to understand the technical foundations of how LLMs work, 
               from the mathematical foundations to implementation details.
             </p>
-            <Link 
-              href="/ai-journey/how-to-learn/technical-leadership" 
+            <Link
+              href="/ai-journey/technical-leadership"
               className="inline-block px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded transition-colors"
             >
               Start Technical Path
@@ -79,8 +83,8 @@ export default function LearningOverviewPage() {
               Learn how to handle, deploy, and scale language models in production environments 
               with real-world constraints and considerations.
             </p>
-            <Link 
-              href="/ai-journey/how-to-learn/llm-handling" 
+            <Link
+              href="/ai-journey/techniques/llm-handling"
               className="inline-block px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded transition-colors"
             >
               Start Implementation Path
@@ -93,8 +97,8 @@ export default function LearningOverviewPage() {
               Master Claude&apos;s advanced capabilities including prompt engineering, tool use, 
               computer use, vision, and RAG implementations.
             </p>
-            <Link 
-              href="/ai-journey/how-to-learn/claude-mastery" 
+            <Link
+              href="/ai-journey/claude/overview"
               className="inline-block px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded transition-colors"
             >
               Start Claude Path
@@ -107,8 +111,8 @@ export default function LearningOverviewPage() {
               Build sophisticated AI agents and RAG systems that can interact with external 
               tools, databases, and APIs to solve complex real-world problems.
             </p>
-            <Link 
-              href="/ai-journey/how-to-learn/agent-rag" 
+            <Link
+              href="/ai-journey/techniques/agent-rag"
               className="inline-block px-4 py-2 bg-orange-600 hover:bg-orange-700 text-white rounded transition-colors"
             >
               Start Agent Path

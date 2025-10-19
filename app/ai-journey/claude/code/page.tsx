@@ -10,6 +10,11 @@ export default function ClaudeCodePage() {
     <AIJourneySubpageLayout
       title="Claude Code"
       description="Agentic coding with Claude from your terminal and IDE - autonomous multi-hour development tasks"
+      breadcrumbs={[
+        { href: '/', label: 'Home' },
+        { href: '/ai-journey', label: 'AI Journey' },
+        { href: '/ai-journey/claude', label: 'Claude' },
+      ]}
     >
       {/* Introduction */}
       <motion.section

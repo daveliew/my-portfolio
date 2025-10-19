@@ -10,6 +10,11 @@ export default function CookbookExamplesPage() {
     <AIJourneySubpageLayout
       title="Anthropic Cookbook Examples"
       description="Explore working code examples and implementations from Anthropic's comprehensive cookbook"
+      breadcrumbs={[
+        { href: '/', label: 'Home' },
+        { href: '/ai-journey', label: 'AI Journey' },
+        { href: '/ai-journey/claude', label: 'Claude' },
+      ]}
     >
       {/* Introduction */}
       <motion.section

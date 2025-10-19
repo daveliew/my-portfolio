@@ -17,6 +17,11 @@ export default function AgentRagPage() {
     <AIJourneySubpageLayout
       title={agentRagPath.title}
       description={agentRagPath.description}
+      breadcrumbs={[
+        { href: '/', label: 'Home' },
+        { href: '/ai-journey', label: 'AI Journey' },
+        { href: '/ai-journey/techniques', label: 'Techniques' },
+      ]}
     >
       {/* Learning Objectives */}
       <motion.section

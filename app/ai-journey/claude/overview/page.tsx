@@ -12,7 +12,7 @@ export default function ClaudeMasteryPage() {
       title: 'Prompt Engineering',
       description: 'Master the art of crafting effective prompts for Claude, including advanced techniques and best practices.',
       skills: ['Prompt Structure', 'Few-shot Learning', 'Chain of Thought', 'Prompt Optimization'],
-      href: '/ai-journey/how-to-learn/claude-mastery/prompt-engineering',
+      href: '/ai-journey/techniques/prompt-engineering',
       level: 'Beginner to Intermediate',
       time: '2-3 hours'
     },
@@ -20,7 +20,7 @@ export default function ClaudeMasteryPage() {
       title: 'Anthropic Cookbook Examples',
       description: 'Explore working code examples and implementations from Anthropic\'s comprehensive cookbook.',
       skills: ['Code Patterns', 'API Integration', 'Real-world Applications', 'Best Practices'],
-      href: '/ai-journey/how-to-learn/claude-mastery/cookbook-examples',
+      href: '/ai-journey/claude/cookbook',
       level: 'Intermediate',
       time: '3-4 hours'
     },
@@ -28,7 +28,7 @@ export default function ClaudeMasteryPage() {
       title: 'Developer Console & Workbench',
       description: 'Learn to use Anthropic\'s Developer Console and Workbench for experimentation and development.',
       skills: ['Console Navigation', 'Workbench Features', 'Testing & Evaluation', 'Prompt Testing'],
-      href: '/ai-journey/how-to-learn/claude-mastery/developer-console',
+      href: '/ai-journey/claude/console',
       level: 'Beginner',
       time: '1-2 hours'
     },
@@ -36,7 +36,7 @@ export default function ClaudeMasteryPage() {
       title: 'Claude Code',
       description: 'Agentic coding with Claude from your terminal and IDE - build features autonomously with 30+ hour operation.',
       skills: ['Autonomous Coding', 'IDE Integration', 'Multi-file Editing', 'Checkpoints & Rollback'],
-      href: '/ai-journey/how-to-learn/claude-mastery/claude-code',
+      href: '/ai-journey/claude/code',
       level: 'Intermediate to Advanced',
       time: '3-4 hours'
     }
@@ -47,7 +47,7 @@ export default function ClaudeMasteryPage() {
       title: 'Tool Use & Function Calling',
       description: 'Implement Claude\'s tool use capabilities to extend functionality with external APIs and functions.',
       skills: ['Function Calling', 'API Integration', 'Tool Definition', 'Error Handling'],
-      href: '/ai-journey/how-to-learn/claude-mastery/tool-use',
+      href: '/ai-journey/techniques/tool-use',
       level: 'Intermediate to Advanced',
       time: '4-5 hours'
     },
@@ -55,7 +55,7 @@ export default function ClaudeMasteryPage() {
       title: 'Computer Use Capabilities',
       description: 'Explore Claude\'s groundbreaking computer use features for desktop automation and interaction.',
       skills: ['Desktop Automation', 'UI Interaction', 'Computer Vision', 'Action Planning'],
-      href: '/ai-journey/how-to-learn/claude-mastery/computer-use',
+      href: '/ai-journey/claude/computer-use',
       level: 'Advanced',
       time: '3-4 hours'
     },
@@ -63,7 +63,7 @@ export default function ClaudeMasteryPage() {
       title: 'Vision & Multimodal Inputs',
       description: 'Harness Claude\'s vision capabilities to process and analyze visual information alongside text.',
       skills: ['Image Analysis', 'Chart Reading', 'Document Processing', 'Visual Question Answering'],
-      href: '/ai-journey/how-to-learn/claude-mastery/vision-multimodal',
+      href: '/ai-journey/claude/vision',
       level: 'Intermediate',
       time: '2-3 hours'
     },
@@ -71,7 +71,7 @@ export default function ClaudeMasteryPage() {
       title: 'Model Context Protocol (MCP)',
       description: 'Build advanced applications using the Model Context Protocol for enhanced AI workflows.',
       skills: ['MCP Architecture', 'Context Management', 'Workflow Integration', 'Server Setup'],
-      href: '/ai-journey/how-to-learn/claude-mastery/model-context-protocol',
+      href: '/ai-journey/claude/mcp',
       level: 'Advanced',
       time: '4-6 hours'
     },
@@ -79,7 +79,7 @@ export default function ClaudeMasteryPage() {
       title: 'Retrieval Augmented Generation (RAG)',
       description: 'Implement RAG systems to enhance Claude\'s responses with external knowledge bases.',
       skills: ['Vector Databases', 'Embedding Models', 'Retrieval Systems', 'Context Integration'],
-      href: '/ai-journey/how-to-learn/claude-mastery/retrieval-augmented-generation',
+      href: '/ai-journey/techniques/rag',
       level: 'Intermediate to Advanced',
       time: '5-6 hours'
     }
@@ -89,6 +89,11 @@ export default function ClaudeMasteryPage() {
     <AIJourneySubpageLayout
       title="Claude Mastery"
       description="Comprehensive learning path for mastering Claude's capabilities and Anthropic's ecosystem"
+      breadcrumbs={[
+        { href: '/', label: 'Home' },
+        { href: '/ai-journey', label: 'AI Journey' },
+        { href: '/ai-journey/claude', label: 'Claude' },
+      ]}
     >
       {/* Introduction */}
       <motion.section
@@ -234,7 +239,7 @@ export default function ClaudeMasteryPage() {
                 multi-agent coordination, see what the data suggests.
               </p>
               <Link
-                href="/ai-journey/how-to-learn/claude-mastery/2026-predictions"
+                href="/ai-journey/claude/2026-predictions"
                 className="inline-block px-4 py-2 bg-teal-600 hover:bg-teal-700 text-white rounded transition-colors text-sm font-medium"
               >
                 Read 2026 Predictions →

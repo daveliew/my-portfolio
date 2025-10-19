@@ -10,6 +10,11 @@ export default function PromptEngineeringPage() {
     <AIJourneySubpageLayout
       title="Prompt Engineering for Claude"
       description="Master the art of crafting effective prompts for Claude, including advanced techniques and best practices"
+      breadcrumbs={[
+        { href: '/', label: 'Home' },
+        { href: '/ai-journey', label: 'AI Journey' },
+        { href: '/ai-journey/techniques', label: 'Techniques' },
+      ]}
     >
       {/* Introduction */}
       <motion.section

@@ -18,6 +18,10 @@ export default function TechnicalLeadershipPage() {
   return (
     <AIJourneySubpageLayout
       title={techLeadershipPath.title}
+      breadcrumbs={[
+        { href: '/', label: 'Home' },
+        { href: '/ai-journey', label: 'AI Journey' },
+      ]}
       description={techLeadershipPath.description}
     >
       {/* Overview Section */}

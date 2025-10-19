@@ -13,8 +13,7 @@ export default function Claude2026PredictionsPage() {
       breadcrumbs={[
         { href: '/', label: 'Home' },
         { href: '/ai-journey', label: 'AI Journey' },
-        { href: '/ai-journey/how-to-learn', label: 'How to Learn' },
-        { href: '/ai-journey/how-to-learn/claude-mastery', label: 'Claude Mastery' },
+        { href: '/ai-journey/claude', label: 'Claude' },
       ]}
     >
       {/* TL;DR Quick Summary */}

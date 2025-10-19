@@ -10,6 +10,11 @@ export default function VisionMultimodalPage() {
     <AIJourneySubpageLayout
       title="Vision & Multimodal Inputs"
       description="Harness Claude's vision capabilities to process and analyze visual information alongside text"
+      breadcrumbs={[
+        { href: '/', label: 'Home' },
+        { href: '/ai-journey', label: 'AI Journey' },
+        { href: '/ai-journey/claude', label: 'Claude' },
+      ]}
     >
       <motion.section
         {...sectionAnimation(0)}

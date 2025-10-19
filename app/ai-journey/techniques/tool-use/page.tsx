@@ -10,6 +10,11 @@ export default function ToolUsePage() {
     <AIJourneySubpageLayout
       title="Tool Use & Function Calling"
       description="Implement Claude's tool use capabilities to extend functionality with external APIs and functions"
+      breadcrumbs={[
+        { href: '/', label: 'Home' },
+        { href: '/ai-journey', label: 'AI Journey' },
+        { href: '/ai-journey/techniques', label: 'Techniques' },
+      ]}
     >
       {/* Introduction */}
       <motion.section

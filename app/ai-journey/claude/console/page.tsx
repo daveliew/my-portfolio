@@ -10,6 +10,11 @@ export default function DeveloperConsolePage() {
     <AIJourneySubpageLayout
       title="Developer Console & Workbench"
       description="Learn to use Anthropic's Developer Console and Workbench for experimentation and development"
+      breadcrumbs={[
+        { href: '/', label: 'Home' },
+        { href: '/ai-journey', label: 'AI Journey' },
+        { href: '/ai-journey/claude', label: 'Claude' },
+      ]}
     >
       <motion.section
         {...sectionAnimation(0)}

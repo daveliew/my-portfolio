@@ -10,6 +10,11 @@ export default function RAGPage() {
     <AIJourneySubpageLayout
       title="Retrieval Augmented Generation (RAG)"
       description="Implement RAG systems to enhance Claude's responses with external knowledge bases"
+      breadcrumbs={[
+        { href: '/', label: 'Home' },
+        { href: '/ai-journey', label: 'AI Journey' },
+        { href: '/ai-journey/techniques', label: 'Techniques' },
+      ]}
     >
       {/* Introduction */}
       <motion.section
