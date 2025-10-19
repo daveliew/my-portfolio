@@ -60,95 +60,97 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     },
 
-    // AI Journey - How to Learn
+    // AI Journey - Top Level
     {
-      url: `${baseUrl}/ai-journey/how-to-learn/overview`,
+      url: `${baseUrl}/ai-journey/overview`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
-      url: `${baseUrl}/ai-journey/how-to-learn/llm-handling`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/ai-journey/how-to-learn/agent-rag`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/ai-journey/how-to-learn/technical-leadership`,
+      url: `${baseUrl}/ai-journey/technical-leadership`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,
     },
 
-    // AI Journey - Claude Mastery Hub
+    // AI Journey - Techniques (Cross-tool AI/LLM Skills)
     {
-      url: `${baseUrl}/ai-journey/how-to-learn/claude-mastery`,
+      url: `${baseUrl}/ai-journey/techniques/prompt-engineering`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
-      url: `${baseUrl}/ai-journey/how-to-learn/claude-mastery/prompt-engineering`,
+      url: `${baseUrl}/ai-journey/techniques/tool-use`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
-      url: `${baseUrl}/ai-journey/how-to-learn/claude-mastery/claude-code`,
+      url: `${baseUrl}/ai-journey/techniques/rag`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/ai-journey/techniques/agent-rag`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/ai-journey/techniques/llm-handling`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+
+    // AI Journey - Claude (Claude-specific features)
+    {
+      url: `${baseUrl}/ai-journey/claude/overview`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/ai-journey/claude/code`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.6,
     },
     {
-      url: `${baseUrl}/ai-journey/how-to-learn/claude-mastery/2026-predictions`,
+      url: `${baseUrl}/ai-journey/claude/2026-predictions`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
-      url: `${baseUrl}/ai-journey/how-to-learn/claude-mastery/tool-use`,
+      url: `${baseUrl}/ai-journey/claude/computer-use`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
-      url: `${baseUrl}/ai-journey/how-to-learn/claude-mastery/computer-use`,
+      url: `${baseUrl}/ai-journey/claude/vision`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
-      url: `${baseUrl}/ai-journey/how-to-learn/claude-mastery/vision-multimodal`,
+      url: `${baseUrl}/ai-journey/claude/mcp`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
-      url: `${baseUrl}/ai-journey/how-to-learn/claude-mastery/retrieval-augmented-generation`,
+      url: `${baseUrl}/ai-journey/claude/console`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
-      url: `${baseUrl}/ai-journey/how-to-learn/claude-mastery/model-context-protocol`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/ai-journey/how-to-learn/claude-mastery/developer-console`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/ai-journey/how-to-learn/claude-mastery/cookbook-examples`,
+      url: `${baseUrl}/ai-journey/claude/cookbook`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,
