@@ -12,22 +12,26 @@ const navLinks = [
 const aiJourneyMenu = {
   gettingStarted: [
     { href: '/ai-journey/why-ai', label: 'Why Human-AI Collaboration', description: 'The case for complementarity over replacement' },
-    { href: '/ai-journey/how-to-learn/overview', label: 'Three-Hat Framework', description: 'Systems Architect → Product Manager → Implementation' },
+    { href: '/ai-journey/overview', label: 'Three-Hat Framework', description: 'Systems Architect → Product Manager → Implementation' },
     { href: '/ai-journey', label: 'Learning Path Selector', description: 'Find your optimal learning journey' },
   ],
   learningPaths: [
-    { href: '/ai-journey/how-to-learn/technical-leadership', label: 'Technical Leadership', description: 'Integrate all three hats for comprehensive AI solutions' },
-    { href: '/ai-journey/how-to-learn/llm-handling', label: 'LLM Implementation', description: 'Human-AI communication and prompt engineering' },
-    { href: '/ai-journey/how-to-learn/agent-rag', label: 'Agent & RAG Systems', description: 'Complementary intelligence architectures' },
-    { href: '/ai-journey/how-to-learn/claude-mastery', label: 'Claude Mastery', description: 'Deep dive into Claude\'s advanced capabilities' },
+    { href: '/ai-journey/technical-leadership', label: 'Technical Leadership', description: 'Integrate all three hats for comprehensive AI solutions' },
+    { href: '/ai-journey/techniques/llm-handling', label: 'LLM Implementation', description: 'Human-AI communication and prompt engineering' },
+    { href: '/ai-journey/techniques/agent-rag', label: 'Agent & RAG Systems', description: 'Complementary intelligence architectures' },
+    { href: '/ai-journey/claude/overview', label: 'Claude Mastery', description: 'Deep dive into Claude\'s advanced capabilities' },
   ],
-  claudeDeepDive: [
-    { href: '/ai-journey/how-to-learn/claude-mastery/prompt-engineering', label: 'Prompt Engineering', description: 'Advanced prompting techniques and patterns' },
-    { href: '/ai-journey/how-to-learn/claude-mastery/tool-use', label: 'Tool Use & Function Calling', description: 'Integrate Claude with external systems' },
-    { href: '/ai-journey/how-to-learn/claude-mastery/computer-use', label: 'Computer Use Capabilities', description: 'Claude\'s computer interaction features' },
-    { href: '/ai-journey/how-to-learn/claude-mastery/vision-multimodal', label: 'Vision & Multimodal', description: 'Working with images and mixed content' },
-    { href: '/ai-journey/how-to-learn/claude-mastery/claude-code', label: 'Claude Code', description: 'Agentic coding from terminal & IDE' },
-    { href: '/ai-journey/how-to-learn/claude-mastery/model-context-protocol', label: 'Model Context Protocol', description: 'Enhanced AI workflows with MCP' },
+  claudeFeatures: [
+    { href: '/ai-journey/claude/code', label: 'Claude Code', description: 'Agentic coding from terminal & IDE' },
+    { href: '/ai-journey/claude/mcp', label: 'Model Context Protocol', description: 'Enhanced AI workflows with MCP' },
+    { href: '/ai-journey/claude/computer-use', label: 'Computer Use', description: 'Claude\'s computer interaction features' },
+    { href: '/ai-journey/claude/vision', label: 'Vision & Multimodal', description: 'Working with images and mixed content' },
+    { href: '/ai-journey/claude/2026-predictions', label: '2026 Predictions', description: 'Future trajectory of Claude capabilities' },
+  ],
+  techniques: [
+    { href: '/ai-journey/techniques/prompt-engineering', label: 'Prompt Engineering', description: 'Advanced prompting techniques and patterns' },
+    { href: '/ai-journey/techniques/tool-use', label: 'Tool Use & Function Calling', description: 'Integrate AI with external systems' },
+    { href: '/ai-journey/techniques/rag', label: 'RAG (Retrieval-Augmented Generation)', description: 'Enhance AI with external knowledge' },
   ],
   livingLab: [
     { href: '/ai-journey/portfolio', label: 'Portfolio Results', description: 'Living lab implementations and case studies' },
@@ -165,13 +169,13 @@ const Navbar: React.FC = () => {
                     </ul>
                   </div>
 
-                  {/* Claude Deep Dive */}
+                  {/* Claude Features */}
                   <div>
-                    <h3 className="font-semibold text-purple-600 dark:text-purple-400 mb-3">Claude Deep Dive</h3>
+                    <h3 className="font-semibold text-purple-600 dark:text-purple-400 mb-3">Claude Features</h3>
                     <ul className="space-y-2">
-                      {aiJourneyMenu.claudeDeepDive.map(item => (
+                      {aiJourneyMenu.claudeFeatures.map(item => (
                         <li key={item.href}>
-                          <Link 
+                          <Link
                             href={item.href}
                             className="block hover:text-purple-600 dark:hover:text-purple-400 transition-colors group"
                             onClick={() => setShowAIJourneyMenu(false)}
@@ -183,13 +187,33 @@ const Navbar: React.FC = () => {
                         </li>
                       ))}
                     </ul>
-                    <Link 
-                      href="/ai-journey/how-to-learn/claude-mastery"
+                    <Link
+                      href="/ai-journey/claude/overview"
                       className="block mt-2 text-xs text-purple-600 dark:text-purple-400 hover:underline"
                       onClick={() => setShowAIJourneyMenu(false)}
                     >
                       View All Claude Features →
                     </Link>
+                  </div>
+
+                  {/* AI Techniques */}
+                  <div>
+                    <h3 className="font-semibold text-teal-600 dark:text-teal-400 mb-3">AI Techniques</h3>
+                    <ul className="space-y-2">
+                      {aiJourneyMenu.techniques.map(item => (
+                        <li key={item.href}>
+                          <Link
+                            href={item.href}
+                            className="block hover:text-teal-600 dark:hover:text-teal-400 transition-colors group"
+                            onClick={() => setShowAIJourneyMenu(false)}
+                          >
+                            <div className="text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:text-teal-600 dark:group-hover:text-teal-400">
+                              {item.label}
+                            </div>
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
 
                   {/* Living Lab */}
@@ -336,8 +360,8 @@ const Navbar: React.FC = () => {
                 </Link>
               ))}
               
-              <div className="text-sm font-medium text-gray-500 dark:text-gray-400 mt-4">Claude Deep Dive</div>
-              {aiJourneyMenu.claudeDeepDive.map(item => (
+              <div className="text-sm font-medium text-gray-500 dark:text-gray-400 mt-4">Claude Features</div>
+              {aiJourneyMenu.claudeFeatures.map(item => (
                 <Link
                   key={item.href}
                   href={item.href}
@@ -348,12 +372,24 @@ const Navbar: React.FC = () => {
                 </Link>
               ))}
               <Link
-                href="/ai-journey/how-to-learn/claude-mastery"
+                href="/ai-journey/claude/overview"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="block py-1 text-xs text-blue-600 dark:text-blue-400"
               >
                 View All Claude Features →
               </Link>
+
+              <div className="text-sm font-medium text-gray-500 dark:text-gray-400 mt-4">AI Techniques</div>
+              {aiJourneyMenu.techniques.map(item => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="block py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-teal-600 dark:hover:text-teal-400"
+                >
+                  {item.label}
+                </Link>
+              ))}
             </div>
           </div>
         </div>
