@@ -278,9 +278,203 @@ export default function PhilosophyPage() {
         </div>
       </motion.section>
 
-      {/* What I'm Building */}
+      {/* Seeking Truth in the AI Age */}
       <motion.section
         {...sectionAnimation(6)}
+        className="mb-12"
+      >
+        <SectionHeader title="Seeking Truth in the AI Age" />
+        <Card className="p-6 mb-6">
+          <p className="text-gray-600 dark:text-gray-400 mb-6">
+            As a parent navigating an AI-integrated childhood, I face a question deeper than &quot;how do my kids use AI safely?&quot;
+            The real question is: <strong>How do we seek truth when AI hallucinates confidently, algorithms radicalize subtly,
+            and information moves faster than human verification?</strong>
+          </p>
+
+          <div className="bg-indigo-50 dark:bg-indigo-900/20 rounded-lg p-6 mb-8 border-l-4 border-indigo-500">
+            <p className="text-gray-700 dark:text-gray-300 mb-3">
+              <strong className="text-indigo-600 dark:text-indigo-400">The Fitzgerald Challenge:</strong>
+            </p>
+            <p className="text-gray-600 dark:text-gray-400 italic">
+              Hold &quot;AI is revolutionary&quot; AND &quot;AI hallucinates confidently&quot; simultaneously—while still
+              retaining the ability to function. This requires systematic epistemology, not just intuition.
+            </p>
+          </div>
+
+          {/* Three Productive Tensions */}
+          <div className="mb-8">
+            <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-200">Three Productive Tensions in Truth-Seeking</h3>
+
+            <div className="space-y-4">
+              <div className="border-l-4 border-blue-500 pl-4 py-2 bg-blue-50 dark:bg-blue-900/20 rounded-r-lg">
+                <h4 className="font-semibold text-blue-600 dark:text-blue-400 mb-1">Speed ↔ Accuracy</h4>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  <strong>Opposing Forces:</strong> AI gives instant answers ↔ Truth requires verification and time
+                </p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                  <strong>Productive Tension:</strong> Teach kids to value &quot;I don&apos;t know yet, let&apos;s verify&quot;
+                  over instant certainty. Speed for exploration, accuracy for decisions.
+                </p>
+              </div>
+
+              <div className="border-l-4 border-purple-500 pl-4 py-2 bg-purple-50 dark:bg-purple-900/20 rounded-r-lg">
+                <h4 className="font-semibold text-purple-600 dark:text-purple-400 mb-1">Authority ↔ Verification</h4>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  <strong>Opposing Forces:</strong> Expert consensus matters ↔ Independent thinking is essential
+                </p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                  <strong>Productive Tension:</strong> Default to established knowledge while maintaining intellectual independence.
+                  &quot;Smart people can be wrong, but I should understand why they believe it before dismissing it.&quot;
+                </p>
+              </div>
+
+              <div className="border-l-4 border-teal-500 pl-4 py-2 bg-teal-50 dark:bg-teal-900/20 rounded-r-lg">
+                <h4 className="font-semibold text-teal-600 dark:text-teal-400 mb-1">Confidence ↔ Calibration</h4>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  <strong>Opposing Forces:</strong> AI outputs with certainty ↔ Expressing probabilistic uncertainty
+                </p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                  <strong>Productive Tension:</strong> Model calibrated confidence: &quot;I&apos;m 95% sure Earth is round vs.
+                  30% sure this approach will work.&quot; Changing your mind based on evidence is strength, not weakness.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Seven-Layer Framework */}
+          <div className="mb-8">
+            <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-200">The Seven-Layer Truth-Seeking Framework</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 italic">
+              A living artifact: This framework evolves as the world changes and my children grow. It synthesizes
+              Charlie Munger&apos;s epistemic humility, Nassim Taleb&apos;s antifragility, and Karl Popper&apos;s
+              falsifiability—made practical for the AI age.
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="border border-indigo-200 dark:border-indigo-800 rounded-lg p-4 bg-white dark:bg-gray-800">
+                <h4 className="font-semibold text-indigo-600 dark:text-indigo-400 mb-2">1. Epistemic Humility</h4>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  Start with &quot;What do I NOT know?&quot; Rate confidence explicitly. Update when proven wrong.
+                </p>
+              </div>
+
+              <div className="border border-indigo-200 dark:border-indigo-800 rounded-lg p-4 bg-white dark:bg-gray-800">
+                <h4 className="font-semibold text-indigo-600 dark:text-indigo-400 mb-2">2. Bayesian Updating</h4>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  Truth is probabilistic. Prior belief + new evidence → updated belief. Weight by quality.
+                </p>
+              </div>
+
+              <div className="border border-indigo-200 dark:border-indigo-800 rounded-lg p-4 bg-white dark:bg-gray-800">
+                <h4 className="font-semibold text-indigo-600 dark:text-indigo-400 mb-2">3. Source Triangulation</h4>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  One source = hypothesis. Three independent quality sources = probably true. Treat AI as quaternary until verified.
+                </p>
+              </div>
+
+              <div className="border border-indigo-200 dark:border-indigo-800 rounded-lg p-4 bg-white dark:bg-gray-800">
+                <h4 className="font-semibold text-indigo-600 dark:text-indigo-400 mb-2">4. Falsifiability Test</h4>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  Ask: &quot;What evidence would change my mind?&quot; If a claim can&apos;t be proven wrong, it&apos;s not useful.
+                </p>
+              </div>
+
+              <div className="border border-indigo-200 dark:border-indigo-800 rounded-lg p-4 bg-white dark:bg-gray-800">
+                <h4 className="font-semibold text-indigo-600 dark:text-indigo-400 mb-2">5. Cui Bono Analysis</h4>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  Who benefits if I believe this? Follow the incentives. LLMs optimized for engagement, not truth.
+                </p>
+              </div>
+
+              <div className="border border-indigo-200 dark:border-indigo-800 rounded-lg p-4 bg-white dark:bg-gray-800">
+                <h4 className="font-semibold text-indigo-600 dark:text-indigo-400 mb-2">6. Steel Man Test</h4>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  Explain opposing views so well their proponents would accept it. If you can&apos;t, you don&apos;t understand it.
+                </p>
+              </div>
+
+              <div className="border border-indigo-200 dark:border-indigo-800 rounded-lg p-4 bg-white dark:bg-gray-800">
+                <h4 className="font-semibold text-indigo-600 dark:text-indigo-400 mb-2">7. Antifragile Information Diet</h4>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  Read what survives time. Follow people who change their minds. Seek disconfirming evidence deliberately.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Teaching Framework for Kids */}
+          <div className="mb-8 bg-gradient-to-r from-yellow-50 to-orange-50 dark:from-yellow-900/20 dark:to-orange-900/20 rounded-lg p-6 border border-yellow-200 dark:border-yellow-800">
+            <h3 className="text-xl font-semibold mb-3 text-gray-800 dark:text-gray-200">For My Kids: The Three-Question Protocol</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+              The seven layers distilled into three simple questions they can ask about any claim—from AI outputs to playground rumors:
+            </p>
+
+            <div className="space-y-3">
+              <div className="bg-white dark:bg-gray-800 rounded-lg p-4">
+                <p className="font-semibold text-yellow-700 dark:text-yellow-400 mb-1">1. Who said it?</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  (Source quality: Is it someone who studies this? How do they make money?)
+                </p>
+              </div>
+
+              <div className="bg-white dark:bg-gray-800 rounded-lg p-4">
+                <p className="font-semibold text-yellow-700 dark:text-yellow-400 mb-1">2. How do they know?</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  (Evidence check: Can they show proof? Do others say the same thing?)
+                </p>
+              </div>
+
+              <div className="bg-white dark:bg-gray-800 rounded-lg p-4">
+                <p className="font-semibold text-yellow-700 dark:text-yellow-400 mb-1">3. What if they&apos;re wrong?</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  (Falsifiability: How could we test it? What would prove it false?)
+                </p>
+              </div>
+            </div>
+
+            <p className="text-sm text-gray-600 dark:text-gray-400 mt-4 italic">
+              We practice on low-stakes topics first. The goal isn&apos;t perfect answers—it&apos;s building the habit of systematic questioning.
+            </p>
+          </div>
+
+          {/* Digital AI Guardian Vision */}
+          <div className="border-l-4 border-indigo-500 pl-4 py-3">
+            <Link href="/laboratory" className="block hover:opacity-80 transition-opacity">
+              <h4 className="font-semibold text-indigo-600 dark:text-indigo-400 mb-2">
+                Future Direction: The Digital AI Guardian → Laboratory
+              </h4>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
+                <strong>Vision:</strong> A master-of-experts agentic system—like Big Hero 6&apos;s Baymax for information verification—that
+                families can pilot together. Not replacing parental judgment, but augmenting truth-seeking with real-time epistemic tools.
+              </p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                <strong>Why:</strong> The world evolves too quickly for humans to make sense of alone. We need collaborative AI systems
+                that help us refine our epistemology as fast as the information environment changes.
+              </p>
+            </Link>
+          </div>
+
+          {/* Meta-Teaching Moment */}
+          <div className="mt-8 p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
+            <p className="text-gray-700 dark:text-gray-300 mb-3">
+              <strong>The Framework IS the Love:</strong>
+            </p>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+              Building this systematic approach isn&apos;t cold or overly rational—it&apos;s how I love my children through complexity.
+              When they encounter information (from AI, from peers, from family members with different beliefs), they&apos;ll have
+              a framework that helps them navigate with both confidence and humility.
+            </p>
+            <p className="text-sm text-gray-600 dark:text-gray-400 italic">
+              This is living documentation. As the world changes and they grow, we&apos;ll refine these tools together.
+              No one has the answers, but we can all improve our way of seeking truth.
+            </p>
+          </div>
+        </Card>
+      </motion.section>
+
+      {/* What I'm Building */}
+      <motion.section
+        {...sectionAnimation(7)}
         className="mb-12"
       >
         <SectionHeader title="What I'm Building" />

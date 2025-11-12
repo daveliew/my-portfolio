@@ -92,6 +92,28 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `sustainability.json` - Lab details, experiments, investment thesis
 - `skills.json`, `experiences.json`, `personal.json`, `now.json` - Professional background
 
+## Content Architecture (Decoupled Surfaces)
+
+**This portfolio (daveliew.com) and GitHub profile (github.com/daveliew) are intentionally separate:**
+
+### Portfolio (daveliew.com) - Personal Philosophy & Journey
+- **Narrative**: "Time compounds faster than money" + virtuous cycle
+- **Audience**: Explorers, learners, potential collaborators
+- **Content**: AI journey, learning paths, philosophical exploration
+- **Tone**: Personal, exploratory, educational
+- **Data Source**: `/data/*.json` files in this repo
+
+### GitHub Profile (github.com/daveliew) - Professional Positioning
+- **Narrative**: Context Engineering + Three-Hat Framework
+- **Audience**: Hiring managers, technical peers, consulting prospects
+- **Content**: Agentic Engineer positioning, validated outcomes, metrics
+- **Tone**: Professional, credible, technically competent
+- **Data Source**: `daveliew/daveliew` repo `/data/professional-summary.json`
+
+**Why Separate**: Each surface serves a different purpose. Forcing sync would dilute both messages.
+
+**If Shared Data Needed**: Future consideration - create `shared-data.json` with only contact/project lists while keeping hero/narrative content separate.
+
 ## Key Frameworks & Concepts
 
 **Three-Hat Framework** - Rapid context switching validated across 3 client projects:
