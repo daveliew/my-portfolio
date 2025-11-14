@@ -29,7 +29,7 @@ export default function LaboratoryPage() {
   return (
     <PageLayout
       title="Innovation Laboratory"
-      description="Where the unstoppable forces of AI, sustainability, and robotics converge: Experiments in technology that creates value while preserving our future."
+      description="Most businesses don't know where AI is heading or how to use it effectively. This laboratory builds the literacy and frameworks to navigate that complexity."
     >
       <div className="lg:grid lg:grid-cols-[250px_1fr] lg:gap-12">
         {/* Table of Contents - Desktop Sidebar */}

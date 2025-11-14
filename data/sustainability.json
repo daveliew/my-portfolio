@@ -1,37 +1,38 @@
 {
-  "mission": "To leverage agentic AI in creating sustainable solutions that address environmental challenges and promote responsible resource usage.",
-  "vision": "A world where technology and sustainability work in harmony, with AI systems that help us make better environmental decisions and optimize resource allocation.",
+  "mission": "To track AI convergence trends (AI, energy, robotics) and translate them into practical guidance for businesses developing AI literacy and navigating complexity.",
+  "vision": "Helping businesses understand where AI is heading and make informed decisions about implementation, without needing advanced technical expertise or massive infrastructure investments.",
   "currentProjects": [
     {
-      "title": "Resource Matching Agent",
-      "description": "An AI system that connects excess resources from one organization with the needs of another, reducing waste and promoting circular economy principles.",
-      "status": "Research Phase",
+      "title": "AI-Powered Grid Optimization",
+      "description": "Understanding how AI systems can optimize energy distribution and datacenter power consumption. Research project to develop expertise in AI infrastructure energy requirements.",
+      "status": "Exploring 2025 Q1",
       "image": "/images/resource-matching.jpg"
     },
     {
-      "title": "Environmental Impact Dashboard",
-      "description": "A real-time data visualization tool that helps organizations understand and reduce their environmental footprint.",
-      "status": "Planning",
+      "title": "AI Infrastructure Carbon Tracking",
+      "description": "Tracking the carbon footprint of different AI model choices to help businesses make informed trade-offs between capability, cost, and environmental impact.",
+      "status": "Exploring 2025 Q1",
       "image": "/images/impact-dashboard.jpg"
     }
   ],
   "keyLearnings": [
     {
-      "title": "AI Model Efficiency",
-      "description": "Discovered that fine-tuning smaller models for specific sustainability tasks often yields better results than using general-purpose large models, while consuming less energy."
+      "title": "AI Scaling Constraints Matter",
+      "description": "Understanding energy, chip, and data constraints helps businesses make better model selection decisions. Smaller specialized models often outperform larger ones for specific tasks while using 90% less power."
     },
     {
-      "title": "Data Challenges",
-      "description": "Environmental data is often siloed, inconsistent, or incomplete. Building reliable data pipelines is crucial for effective sustainability AI applications."
+      "title": "AI Literacy Gaps Are Real",
+      "description": "Most businesses lack fundamental computational thinking to make informed AI decisions. The gap isn't technical knowledge—it's strategic frameworks for navigating complexity."
     },
     {
-      "title": "Stakeholder Engagement",
-      "description": "Technology alone isn't enough – successful sustainability initiatives require early and continuous engagement with all stakeholders to ensure adoptions and impact."
+      "title": "Trend Navigation Creates Value",
+      "description": "Businesses need interpreters who understand where AI is heading (nuclear, chips, efficiency innovations) and can translate that into actionable guidance for their specific context."
     }
   ],
   "nextSteps": [
-    "Build a proof-of-concept for the Resource Matching Agent",
-    "Establish partnerships with 2-3 organizations for initial testing",
-    "Develop a sustainability AI assessment framework to evaluate impact"
+    "Develop AI scaling literacy curriculum for businesses",
+    "Build frameworks for model selection trade-off analysis",
+    "Create practical guides for navigating AI infrastructure decisions",
+    "Document ADHD-AI workflow patterns for rapid trend navigation"
   ]
 }
