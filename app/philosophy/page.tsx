@@ -27,7 +27,14 @@ export default function PhilosophyPage() {
       title="The Fitzgerald Principle"
       description="First-rate intelligence through productive tensions: My operating system for pioneering human-AI collaboration"
     >
-      <div className="lg:grid lg:grid-cols-[1fr_250px] lg:gap-12">
+      <div className="lg:grid lg:grid-cols-[250px_1fr] lg:gap-12">
+        {/* Table of Contents - Desktop Sidebar */}
+        <div className="hidden lg:block">
+          <div className="sticky top-24">
+            <TableOfContents headings={headings} />
+          </div>
+        </div>
+
         {/* Main Content */}
         <div>
           {/* CHAPTER 1: THE FOUNDATION */}
@@ -479,13 +486,6 @@ export default function PhilosophyPage() {
                 </div>
               </Card>
             </motion.section>
-          </div>
-        </div>
-
-        {/* Table of Contents - Desktop Sidebar */}
-        <div className="hidden lg:block">
-          <div className="sticky top-24">
-            <TableOfContents headings={headings} />
           </div>
         </div>
       </div>

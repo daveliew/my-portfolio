@@ -20,7 +20,16 @@ export default function BlogPostLayout({ post, children, tableOfContents }: Blog
     >
       <div className="max-w-7xl mx-auto">
 
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-8 mt-8">
+        <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-8 mt-8">
+          {/* Sidebar with TOC */}
+          {tableOfContents && (
+            <aside className="hidden lg:block">
+              <div className="sticky top-24">
+                {tableOfContents}
+              </div>
+            </aside>
+          )}
+
           {/* Main content */}
           <article className="max-w-3xl">
             {/* Metadata header */}
@@ -73,15 +82,6 @@ export default function BlogPostLayout({ post, children, tableOfContents }: Blog
               {children}
             </div>
           </article>
-
-          {/* Sidebar with TOC */}
-          {tableOfContents && (
-            <aside className="hidden lg:block">
-              <div className="sticky top-24">
-                {tableOfContents}
-              </div>
-            </aside>
-          )}
         </div>
       </div>
     </PageLayout>

@@ -51,7 +51,7 @@ export default function TableOfContents({ headings }: TableOfContentsProps) {
   return (
     <>
       {/* Mobile: Floating button + drawer */}
-      <div className="lg:hidden fixed bottom-4 right-4 z-50">
+      <div className="lg:hidden fixed bottom-4 left-4 z-50">
         <button
           onClick={() => setIsMobileOpen(!isMobileOpen)}
           className="bg-[var(--color-knowledge)] text-white p-3 rounded-full shadow-lg hover:bg-[var(--color-knowledge)]/90 transition-colors"
@@ -82,7 +82,7 @@ export default function TableOfContents({ headings }: TableOfContentsProps) {
             />
 
             {/* Drawer */}
-            <div className="fixed inset-y-0 right-0 w-80 bg-white dark:bg-gray-900 shadow-xl z-50 overflow-y-auto">
+            <div className="fixed inset-y-0 left-0 w-80 bg-white dark:bg-gray-900 shadow-xl z-50 overflow-y-auto">
               <div className="p-6">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
@@ -132,25 +132,27 @@ export default function TableOfContents({ headings }: TableOfContentsProps) {
 
       {/* Desktop: Sticky sidebar */}
       <nav className="hidden lg:block" aria-label="Table of contents">
-        <div className="sticky top-24 max-h-[calc(100vh-8rem)] overflow-y-auto">
-          <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-3 uppercase tracking-wider">
-            On This Page
-          </h3>
+        <div className="bg-gray-50/80 dark:bg-gray-800/50 rounded-lg p-4 backdrop-blur-sm">
+          <div className="sticky top-24 max-h-[calc(100vh-8rem)] overflow-y-auto">
+            <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-3 uppercase tracking-wider">
+              On This Page
+            </h3>
 
-          <div className="space-y-1">
-            {headings.map((heading) => (
-              <button
-                key={heading.id}
-                onClick={() => scrollToHeading(heading.id)}
-                className={`block w-full text-left py-1.5 px-3 text-sm transition-all border-l-2 ${
-                  activeId === heading.id
-                    ? 'border-[var(--color-knowledge)] bg-[var(--color-knowledge)]/10 font-semibold text-gray-900 dark:text-gray-100'
-                    : 'border-transparent hover:border-gray-300 dark:hover:border-gray-600 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100'
-                } ${heading.level === 3 ? 'pl-6' : ''}`}
-              >
-                {heading.text}
-              </button>
-            ))}
+            <div className="space-y-1">
+              {headings.map((heading) => (
+                <button
+                  key={heading.id}
+                  onClick={() => scrollToHeading(heading.id)}
+                  className={`block w-full text-left py-1.5 px-3 text-sm transition-all border-l-2 ${
+                    activeId === heading.id
+                      ? 'border-[var(--color-knowledge)] bg-[var(--color-knowledge)]/10 font-semibold text-gray-900 dark:text-gray-100'
+                      : 'border-transparent hover:border-gray-300 dark:hover:border-gray-600 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100'
+                  } ${heading.level === 3 ? 'pl-6' : ''}`}
+                >
+                  {heading.text}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </nav>
