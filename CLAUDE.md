@@ -44,7 +44,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 **Scripts**: `pre-deploy.js` (full), `validate-philosophy.js` (Fitzgerald scoring), `quick-check.js` (fast, no build)
 
-**Note**: ESLint errors WILL block Netlify deployments.
+**Note**: ESLint errors WILL block Vercel deployments.
 
 ## Project Structure
 
@@ -212,7 +212,7 @@ import { fadeInUp, containerVariants, itemVariants } from '@/utils/animations';
 3. Components automatically reflect changes
 
 ### ESLint Quote Escaping (Common Deployment Blocker)
-**These errors WILL block Netlify deployments:**
+**These errors WILL block Vercel deployments:**
 - Replace `'` with `&apos;`
 - Replace `"` with `&quot;`
 - Always run `npm run lint` before committing

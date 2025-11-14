@@ -60,7 +60,7 @@ const currentStack = {
   web: ["Next.js 15","React 19","TypeScript","Tailwind"],
   backend: ["Supabase","PostgreSQL","Airtable"],
   automation: ["n8n","CrewAI","LangChain"],
-  deployment: ["Vercel","Netlify"]
+  deployment: ["Vercel"]
 }
 
 const philosophy = "Validated patterns over theoretical frameworks. Ship, measure, iterate."
