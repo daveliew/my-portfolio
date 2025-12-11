@@ -84,8 +84,6 @@ export function getColorMeaning(pillar: ThemeColorKey) {
 
 // Validation helper for ensuring consistent theming
 export function validateThemeUsage(pillar: ThemeColorKey, context: string): boolean {
-  const meaning = colorMeanings[pillar];
-  
   // Simple context validation - can be expanded
   const timeContexts = ['deadline', 'action', 'energy', 'time', 'human', 'agency'];
   const knowledgeContexts = ['learning', 'ai', 'growth', 'insight', 'education', 'data'];
