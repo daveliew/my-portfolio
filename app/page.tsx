@@ -23,8 +23,8 @@ export default function HomePage() {
             <h1 className="text-4xl md:text-5xl font-bold">Dave Liew</h1>
             
             <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 font-medium">
-              Most people use AI to do more.<br className="hidden md:block" />
-              I&apos;m exploring how to do less—systematically.
+              Most people use AI tools.<br className="hidden md:block" />
+              I build AI teams.
             </p>
             
             {/* Key insight as visual callout */}
@@ -32,23 +32,23 @@ export default function HomePage() {
               <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[var(--deep-purple)] to-[var(--teal)]" />
               <blockquote className="pl-6">
                 <p className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-[var(--deep-purple)] to-[var(--teal)] bg-clip-text text-transparent">
-                  Time compounds faster than money.
+                  Software now has agency and personality.
                 </p>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
-                  — learned after Meta, Unity, and a few ventures
+                  The paradigm shift: from tools to colleagues
                 </p>
               </blockquote>
             </div>
             
             <div className="flex flex-wrap gap-3 text-sm">
-              <span className="px-3 py-1 bg-[var(--hot-pink)]/10 text-[var(--hot-pink)] rounded-full">WhatsApp insights</span>
-              <span className="px-3 py-1 bg-[var(--teal)]/10 text-[var(--teal)] rounded-full">Self-thinking dashboards</span>
-              <span className="px-3 py-1 bg-[var(--gold)]/10 text-[var(--gold)] rounded-full">Smart email systems</span>
+              <span className="px-3 py-1 bg-[var(--hot-pink)]/10 text-[var(--hot-pink)] rounded-full">Claude Code orchestration</span>
+              <span className="px-3 py-1 bg-[var(--teal)]/10 text-[var(--teal)] rounded-full">MCP-powered agents</span>
+              <span className="px-3 py-1 bg-[var(--gold)]/10 text-[var(--gold)] rounded-full">Trust engineering</span>
             </div>
-            
+
             <p className="text-gray-700 dark:text-gray-300">
-              Currently testing these approaches with 3 businesses.<br/>
-              Here&apos;s what I&apos;m discovering.
+              Building AI systems that work like capable colleagues—<br/>
+              with context, initiative, and boundaries.
             </p>
           </motion.div>
           
@@ -132,43 +132,43 @@ export default function HomePage() {
       </section>
 
       <div className="max-w-4xl mx-auto px-4">
-      {/* Combined 3-Hat Method & Framework */}
-      <motion.section 
+      {/* Context Engineering Section */}
+      <motion.section
         {...sectionAnimation(0)}
         className="py-8 border-t border-gray-200 dark:border-gray-700"
       >
         <h2 className="text-2xl font-semibold mb-2 text-center">
-          How We Think Together: <span className="text-[var(--deep-purple)]">A Human-AI Framework</span>
+          <span className="text-[var(--deep-purple)]">Context Engineering</span>
         </h2>
         <p className="text-center text-gray-600 dark:text-gray-400 mb-8">
-          Context Engineering through the <span className="text-[#F8B400]">3-Hat Method</span>
+          Architecting what AI knows <span className="text-[#0CC0DF]">before</span> it reasons
         </p>
-        
+
         <div className="grid md:grid-cols-3 gap-6">
           <Card className="p-6 border-2 border-[#0CC0DF]/30 bg-gradient-to-br from-[#0CC0DF]/5 to-transparent hover:border-[#0CC0DF]/60 transition-all">
-            <div className="text-2xl mb-3">🏗️</div>
-            <h3 className="text-lg font-semibold mb-3 text-[#0CC0DF]">Systems Architect Hat</h3>
+            <div className="text-2xl mb-3">📋</div>
+            <h3 className="text-lg font-semibold mb-3 text-[#0CC0DF]">System Prompts</h3>
             <p className="text-gray-600 dark:text-gray-400 text-sm">
-              Step back to see patterns<br/>
-              Build something simple
+              CLAUDE.md files<br/>
+              The AI&apos;s persistent memory
             </p>
           </Card>
 
           <Card className="p-6 border-2 border-[#FF0081]/30 bg-gradient-to-br from-[#FF0081]/5 to-transparent hover:border-[#FF0081]/60 transition-all">
-            <div className="text-2xl mb-3">📊</div>
-            <h3 className="text-lg font-semibold mb-3 text-[#FF0081]">Product Manager Hat</h3>
+            <div className="text-2xl mb-3">🔧</div>
+            <h3 className="text-lg font-semibold mb-3 text-[#FF0081]">Tools & MCP</h3>
             <p className="text-gray-600 dark:text-gray-400 text-sm">
-              Figure out what matters<br/>
-              Ship something useful
+              External capabilities<br/>
+              What the AI can do
             </p>
           </Card>
 
           <Card className="p-6 border-2 border-[#F8B400]/30 bg-gradient-to-br from-[#F8B400]/5 to-transparent hover:border-[#F8B400]/60 transition-all">
-            <div className="text-2xl mb-3">💻</div>
-            <h3 className="text-lg font-semibold mb-3 text-[#F8B400]">Implementation Hat</h3>
+            <div className="text-2xl mb-3">💬</div>
+            <h3 className="text-lg font-semibold mb-3 text-[#F8B400]">Conversation Design</h3>
             <p className="text-gray-600 dark:text-gray-400 text-sm">
-              Code it myself<br/>
-              See if it actually helps
+              Information flow<br/>
+              How understanding emerges
             </p>
           </Card>
         </div>
@@ -177,11 +177,11 @@ export default function HomePage() {
         <div className="max-w-3xl mx-auto mt-8">
           <Card className="p-5 bg-gradient-to-r from-[var(--deep-purple)]/5 to-transparent">
             <p className="text-sm text-gray-600 dark:text-gray-400 text-center mb-3">
-              I&apos;m systematically exploring how to create spaces where human intuition and AI capabilities work together naturally.
+              Prompts are just one part of context. The real skill is designing the entire informational environment.
             </p>
-            
+
             <p className="text-xs text-center text-gray-500 dark:text-gray-400 italic">
-              Context Engineering is the art of designing the informational environment where human intuition and AI capabilities converge.
+              I don&apos;t write prompts. I architect the context where AI insight emerges.
             </p>
           </Card>
         </div>

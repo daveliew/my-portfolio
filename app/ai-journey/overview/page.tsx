@@ -34,22 +34,22 @@ export default function LearningOverviewPage() {
             real-world projects that demonstrate your capabilities.
           </p>
           <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
-            <h4 className="font-semibold text-blue-800 dark:text-blue-300 mb-2">The Three-Hat Framework</h4>
+            <h4 className="font-semibold text-blue-800 dark:text-blue-300 mb-2">Context Engineering</h4>
             <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">
-              A key insight from my journey: successful AI implementation requires wearing three distinct hats:
+              A key insight from my journey: the real skill isn&apos;t prompting—it&apos;s architecting what AI knows before it reasons.
             </p>
             <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
               <li className="flex items-start">
-                <span className="font-medium text-blue-700 dark:text-blue-400 mr-2">🏗️ Systems Architect:</span>
-                <span>Think big picture, prevent technical debt, design for 10x scale</span>
+                <span className="font-medium text-blue-700 dark:text-blue-400 mr-2">📋 System Prompts:</span>
+                <span>CLAUDE.md files that give AI persistent memory and project context</span>
               </li>
               <li className="flex items-start">
-                <span className="font-medium text-green-700 dark:text-green-400 mr-2">📊 Product Manager:</span>
-                <span>Optimize for user value, data-driven decisions, business impact</span>
+                <span className="font-medium text-pink-700 dark:text-pink-400 mr-2">🔧 Tools & MCP:</span>
+                <span>External capabilities that extend what AI can do</span>
               </li>
               <li className="flex items-start">
-                <span className="font-medium text-purple-700 dark:text-purple-400 mr-2">💻 Implementation:</span>
-                <span>Quality gates, developer experience, continuous improvement</span>
+                <span className="font-medium text-amber-700 dark:text-amber-400 mr-2">💬 Conversation Design:</span>
+                <span>Information flow that shapes how understanding emerges</span>
               </li>
             </ul>
           </div>

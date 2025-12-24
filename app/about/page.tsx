@@ -64,10 +64,10 @@ export default function AboutPage() {
               </p>
             </div>
             <div>
-              <h3 className="font-semibold mb-3 text-lg">Three-Hat Framework</h3>
+              <h3 className="font-semibold mb-3 text-lg">Voice-First AI</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-4">
-                Rapid context switching between Systems Architect, Product Manager, and Implementation roles.
-                Currently testing across 3 client projects with measurable improvements in decision quality and delivery speed.
+                Exploring voice interfaces paired with real-time reasoning.
+                2nd place at ElevenLabs hackathon. Building toward latency-optimized SME applications.
               </p>
             </div>
           </div>

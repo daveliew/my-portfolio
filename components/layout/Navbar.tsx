@@ -12,11 +12,11 @@ const navLinks = [
 const aiJourneyMenu = {
   gettingStarted: [
     { href: '/ai-journey/why-ai', label: 'Why Human-AI Collaboration', description: 'The case for complementarity over replacement' },
-    { href: '/ai-journey/overview', label: 'Three-Hat Framework', description: 'Systems Architect → Product Manager → Implementation' },
+    { href: '/ai-journey/overview', label: 'Context Engineering', description: 'Architecting what AI knows before it reasons' },
     { href: '/ai-journey', label: 'Learning Path Selector', description: 'Find your optimal learning journey' },
   ],
   learningPaths: [
-    { href: '/ai-journey/technical-leadership', label: 'Technical Leadership', description: 'Integrate all three hats for comprehensive AI solutions' },
+    { href: '/ai-journey/technical-leadership', label: 'Technical Leadership', description: 'Comprehensive AI solutions for real projects' },
     { href: '/ai-journey/techniques/llm-handling', label: 'LLM Implementation', description: 'Human-AI communication and prompt engineering' },
     { href: '/ai-journey/techniques/agent-rag', label: 'Agent & RAG Systems', description: 'Complementary intelligence architectures' },
     { href: '/ai-journey/claude/overview', label: 'Claude Mastery', description: 'Deep dive into Claude\'s advanced capabilities' },
@@ -240,6 +240,19 @@ const Navbar: React.FC = () => {
             )}
           </div>
 
+          {/* Agents - 2026 Focus */}
+          <Link
+            href="/agents"
+            className={`relative transition-colors duration-200 px-1 py-2 flex items-center
+              hover:text-[var(--deep-purple)]
+              ${pathname.startsWith('/agents')
+                ? 'text-[var(--deep-purple)] font-medium after:absolute after:left-0 after:right-0 after:-bottom-1 after:h-0.5 after:bg-[var(--deep-purple)] after:rounded-full after:content-[""]'
+                : 'text-gray-700 dark:text-gray-300'}
+            `}
+          >
+            <span className="text-sm md:text-base">Agents</span>
+          </Link>
+
           {/* Right side navigation */}
           <Link
             href="/laboratory"
@@ -330,7 +343,18 @@ const Navbar: React.FC = () => {
           >
             Contact
           </Link>
-          
+
+          <Link
+            href="/agents"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className={`py-2 ${pathname.startsWith('/agents')
+              ? 'text-[var(--deep-purple)] font-medium'
+              : 'text-gray-700 dark:text-gray-300'
+            }`}
+          >
+            AI Agents
+          </Link>
+
           {/* Mobile AI Journey Section */}
           <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
             <div className="font-semibold text-blue-600 dark:text-blue-400 mb-3">AI Journey</div>

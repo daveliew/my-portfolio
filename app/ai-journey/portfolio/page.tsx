@@ -15,11 +15,6 @@ interface CaseStudy {
   technologies: string[];
   demoUrl?: string;
   foundationSkillsApplied: string[];
-  threeHatFramework?: {
-    systemsArchitect: string;
-    productManager: string;
-    implementation: string;
-  };
 }
 
 export default function AIPortfolioPage() {
@@ -132,40 +127,6 @@ export default function AIPortfolioPage() {
                 </ul>
               </div>
 
-              {/* Three-Hat Framework */}
-              {project.threeHatFramework && (
-                <div className="p-6 border-t border-gray-200 dark:border-gray-700">
-                  <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-4 uppercase tracking-wide">
-                    Three-Hat Framework Applied
-                  </h4>
-                  <div className="grid md:grid-cols-3 gap-4">
-                    <div className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-                      <h5 className="text-sm font-medium text-blue-800 dark:text-blue-200 mb-2">
-                        🏗️ Systems Architect
-                      </h5>
-                      <p className="text-sm text-blue-700 dark:text-blue-300">
-                        {project.threeHatFramework.systemsArchitect}
-                      </p>
-                    </div>
-                    <div className="p-4 bg-green-50 dark:bg-green-900/20 rounded-lg">
-                      <h5 className="text-sm font-medium text-green-800 dark:text-green-200 mb-2">
-                        📋 Product Manager
-                      </h5>
-                      <p className="text-sm text-green-700 dark:text-green-300">
-                        {project.threeHatFramework.productManager}
-                      </p>
-                    </div>
-                    <div className="p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
-                      <h5 className="text-sm font-medium text-purple-800 dark:text-purple-200 mb-2">
-                        💻 Implementation
-                      </h5>
-                      <p className="text-sm text-purple-700 dark:text-purple-300">
-                        {project.threeHatFramework.implementation}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              )}
             </motion.div>
           ))}
         </div>
