@@ -289,8 +289,49 @@
     ],
     "casestudies": [
         {
+            "title": "Jazz Scat - Voice AI Music Generator",
+            "date": "2024-12-15",
+            "category": "hackathon",
+            "status": "Completed",
+            "description": "Voice AI that allows users to sing and generates matching backing tracks in real-time. 2nd place winner at ElevenLabs Hackathon.",
+            "outcomes": [
+                "2nd place at ElevenLabs Global Hackathon",
+                "Demonstrated voice-first AI interaction patterns",
+                "Explored real-time reasoning with voice synthesis"
+            ],
+            "technologies": ["Next.js 16", "ElevenLabs", "AI Music Generation", "React 19", "TypeScript"],
+            "demoUrl": "https://jazz-scat.vercel.app",
+            "foundationSkillsApplied": ["Technical Skills", "AI Implementation", "Creative Problem Solving"],
+            "threeHatFramework": {
+                "systemsArchitect": "Designed low-latency voice pipeline integrating ElevenLabs with AI music generation",
+                "productManager": "Focused on immediate user delight - sing → hear backing track in seconds",
+                "implementation": "Built responsive UI with real-time audio visualization and seamless voice capture"
+            }
+        },
+        {
+            "title": "Nansen Voice - Conversational AI Foundation",
+            "date": "2024-12-20",
+            "category": "exploration",
+            "status": "Active",
+            "description": "Reusable voice-first conversational AI webapp. Exploring ElevenLabs + mem0 memory for persistent context across conversations.",
+            "outcomes": [
+                "Created modular voice agent architecture",
+                "Integrated conversation memory with mem0",
+                "Established patterns for voice-first SME applications"
+            ],
+            "technologies": ["Next.js 15", "ElevenLabs", "mem0", "TypeScript", "Tailwind CSS 4"],
+            "demoUrl": "https://nansen-voice.vercel.app",
+            "foundationSkillsApplied": ["Technical Skills", "AI Implementation", "Pattern Recognition"],
+            "threeHatFramework": {
+                "systemsArchitect": "Designed modular architecture for reusable voice agent components",
+                "productManager": "Prioritized iOS compatibility and conversation continuity",
+                "implementation": "Clean separation of voice UI, agent logic, and memory persistence"
+            }
+        },
+        {
             "title": "Autonomous Research Team for Market Analysis",
             "date": "2025-01-15",
+            "category": "client",
             "description": "Built a CrewAI-based system of agents that collaboratively performed market research and trend analysis",
             "outcomes": [
                 "Delivered comprehensive market reports in 1/3 of the time",
@@ -308,6 +349,7 @@
         {
           "title": "Marketing & Operations Automation - Ray of Joy Therapy",
           "date": "2025-02-01",
+          "category": "client",
           "description": "Implementing comprehensive automation solutions for therapy practice management, marketing operations, and client engagement at rayofjoytherapy.com",
           "outcomes": [
             "Streamlined client onboarding and scheduling processes",
@@ -325,6 +367,7 @@
         {
             "title": "B2B Corporate Gift Platform Transformation",
             "date": "2025-04-01",
+            "category": "client",
             "status": "Planned",
             "description": "Website rebuild and business intelligence implementation for leading Singapore corporate gift company",
             "outcomes": [
