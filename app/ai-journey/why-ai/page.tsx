@@ -101,8 +101,8 @@ export default function WhyAIPage() {
         transition={{ duration: 0.5, delay: 0.4 }}
         className="mt-12 flex justify-center"
       >
-        <Link 
-          href="/ai-journey/how-to-learn/overview" 
+        <Link
+          href="/ai-journey/overview"
           className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors shadow-md"
         >
           Learn How to Master AI →

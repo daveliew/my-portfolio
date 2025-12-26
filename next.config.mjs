@@ -16,7 +16,13 @@ const nextConfig = {
       // Top-level pages
       {
         source: '/ai-journey/how-to-learn/overview',
-        destination: '/ai-journey/overview',
+        destination: '/ai-journey',
+        permanent: true,
+      },
+      // Old overview page now redirects to main AI Journey hub
+      {
+        source: '/ai-journey/overview',
+        destination: '/ai-journey',
         permanent: true,
       },
       {
@@ -91,6 +97,18 @@ const nextConfig = {
       {
         source: '/ai-journey/how-to-learn/claude-mastery/2026-predictions',
         destination: '/ai-journey/claude/2026-predictions',
+        permanent: true,
+      },
+
+      // RAG content consolidated into agents patterns
+      {
+        source: '/ai-journey/techniques/rag',
+        destination: '/agents/patterns',
+        permanent: true,
+      },
+      {
+        source: '/ai-journey/techniques/agent-rag',
+        destination: '/agents/learning-path',
         permanent: true,
       },
     ];

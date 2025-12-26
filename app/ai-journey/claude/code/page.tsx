@@ -701,13 +701,13 @@ claude --version`}
             <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
               <h5 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">Related Topics</h5>
               <div className="flex flex-wrap gap-2">
-                <a href="/ai-journey/how-to-learn/claude-mastery/model-context-protocol" className="text-sm px-3 py-1 bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-300 rounded hover:bg-teal-200 dark:hover:bg-teal-800 transition-colors">
+                <a href="/ai-journey/claude/mcp" className="text-sm px-3 py-1 bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-300 rounded hover:bg-teal-200 dark:hover:bg-teal-800 transition-colors">
                   MCP Integration →
                 </a>
-                <a href="/ai-journey/how-to-learn/claude-mastery/tool-use" className="text-sm px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-300 rounded hover:bg-purple-200 dark:hover:bg-purple-800 transition-colors">
+                <a href="/ai-journey/techniques/tool-use" className="text-sm px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-300 rounded hover:bg-purple-200 dark:hover:bg-purple-800 transition-colors">
                   Tool Use →
                 </a>
-                <a href="/ai-journey/how-to-learn/claude-mastery/prompt-engineering" className="text-sm px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-300 rounded hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors">
+                <a href="/ai-journey/techniques/prompt-engineering" className="text-sm px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-300 rounded hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors">
                   Prompt Engineering →
                 </a>
               </div>

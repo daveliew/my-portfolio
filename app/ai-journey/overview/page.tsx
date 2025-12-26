@@ -106,16 +106,16 @@ export default function LearningOverviewPage() {
           </Card>
           
           <Card className="p-6">
-            <h3 className="text-xl font-semibold text-orange-600 dark:text-orange-400 mb-3">Agent & RAG Systems</h3>
+            <h3 className="text-xl font-semibold text-[var(--deep-purple)] mb-3">AI Agents (2026 Focus)</h3>
             <p className="text-gray-600 dark:text-gray-300 mb-4">
-              Build sophisticated AI agents and RAG systems that can interact with external 
-              tools, databases, and APIs to solve complex real-world problems.
+              Build autonomous agent systems with trust engineering, multi-agent orchestration,
+              and knowledge patterns like RAG. The future of AI collaboration.
             </p>
             <Link
-              href="/ai-journey/techniques/agent-rag"
-              className="inline-block px-4 py-2 bg-orange-600 hover:bg-orange-700 text-white rounded transition-colors"
+              href="/agents"
+              className="inline-block px-4 py-2 bg-[var(--deep-purple)] hover:opacity-90 text-white rounded transition-opacity"
             >
-              Start Agent Path
+              Explore Agents
             </Link>
           </Card>
         </div>
