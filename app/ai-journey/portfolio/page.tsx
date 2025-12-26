@@ -18,15 +18,18 @@ interface CaseStudy {
 }
 
 export default function AIPortfolioPage() {
-  // Filter to show only hackathon and exploration projects (not client work)
-  const voiceProjects = ((aiJourneyData.journey as { casestudies?: CaseStudy[] }).casestudies || []).filter(
+  const allProjects = (aiJourneyData.journey as { casestudies?: CaseStudy[] }).casestudies || [];
+
+  // Group by category
+  const voiceProjects = allProjects.filter(
     (cs) => cs.category === 'hackathon' || cs.category === 'exploration'
   );
+  const clientProjects = allProjects.filter((cs) => cs.category === 'client');
 
   return (
     <AIJourneySubpageLayout
-      title="Voice AI Experiments"
-      description="Exploring voice-first AI interaction patterns through hackathons and build-in-public projects. See how real-time reasoning meets voice synthesis."
+      title="Portfolio & Results"
+      description="Real projects demonstrating AI implementation across hackathons, experiments, and client work. These aren&apos;t theoretical—they&apos;re battle-tested solutions."
     >
       {/* Hero Section */}
       <motion.section
@@ -35,16 +38,15 @@ export default function AIPortfolioPage() {
         transition={{ duration: 0.5, delay: 0.1 }}
         className="mb-12"
       >
-        <div className="bg-gradient-to-r from-pink-50 to-blue-50 dark:from-pink-900/20 dark:to-blue-900/20 p-6 rounded-lg border border-pink-200 dark:border-pink-800">
+        <div className="bg-gradient-to-r from-[var(--deep-purple)]/10 to-[var(--teal)]/10 p-6 rounded-lg border border-[var(--deep-purple)]/30">
           <p className="text-gray-700 dark:text-gray-300">
-            Voice interfaces become powerful when paired with real-time reasoning.
-            These projects explore how ElevenLabs voice synthesis combined with AI can create
-            intuitive, human-centered applications for SMEs.
+            Every project here represents applied learning—from hackathon wins to production client systems.
+            The Three-Hat Framework (Systems Architect → Product Manager → Implementation) runs through each one.
           </p>
         </div>
       </motion.section>
 
-      {/* Projects Grid */}
+      {/* Voice AI Projects */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -52,8 +54,11 @@ export default function AIPortfolioPage() {
         className="mb-12"
       >
         <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-6">
-          Featured Projects
+          Voice AI Experiments
         </h2>
+        <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+          Hackathon wins and explorations in voice-first AI interaction.
+        </p>
 
         <div className="space-y-8">
           {voiceProjects.map((project, index) => (
@@ -132,6 +137,81 @@ export default function AIPortfolioPage() {
         </div>
       </motion.section>
 
+      {/* Client Work Section */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        className="mb-12"
+      >
+        <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-6">
+          Client Work
+        </h2>
+        <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+          Production systems delivering real business outcomes.
+        </p>
+
+        <div className="space-y-8">
+          {clientProjects.map((project, index) => (
+            <motion.div
+              key={project.title}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+              className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden border-l-4 border-[var(--teal)]"
+            >
+              {/* Project Header */}
+              <div className="p-6 border-b border-gray-200 dark:border-gray-700">
+                <div className="flex items-start justify-between mb-3">
+                  <div>
+                    <div className="flex items-center gap-3 mb-2">
+                      <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200">
+                        {project.title}
+                      </h3>
+                      {project.status === 'Planned' && (
+                        <span className="px-2 py-1 text-xs font-medium bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded">
+                          Planned
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-gray-600 dark:text-gray-300">
+                      {project.description}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Tech Stack */}
+                <div className="flex flex-wrap gap-2 mt-4">
+                  {project.technologies.map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-2 py-1 text-xs bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Outcomes */}
+              <div className="p-6 bg-gray-50 dark:bg-gray-800/50">
+                <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3 uppercase tracking-wide">
+                  Outcomes
+                </h4>
+                <ul className="space-y-2">
+                  {project.outcomes.map((outcome, i) => (
+                    <li key={i} className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
+                      <span className="text-[var(--teal)] mt-1">✓</span>
+                      {outcome}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </motion.section>
+
       {/* What&apos;s Next Section */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
@@ -139,15 +219,20 @@ export default function AIPortfolioPage() {
         transition={{ duration: 0.5, delay: 0.4 }}
         className="mb-12"
       >
-        <div className="bg-gradient-to-r from-teal-50 to-blue-50 dark:from-teal-900/20 dark:to-blue-900/20 p-6 rounded-lg border border-teal-200 dark:border-teal-800">
-          <h3 className="text-lg font-semibold text-teal-800 dark:text-teal-200 mb-2">
-            What&apos;s Next: Gemini + Voice
+        <div className="bg-gradient-to-r from-[var(--deep-purple)]/10 to-[var(--gold)]/10 p-6 rounded-lg border border-[var(--deep-purple)]/30">
+          <h3 className="text-lg font-semibold text-[var(--deep-purple)] mb-2">
+            2026 Focus: AI Agents
           </h3>
-          <p className="text-teal-700 dark:text-teal-300">
-            Exploring how Gemini Flash&apos;s speed and multimodal capabilities can enhance voice agent
-            architectures. Combining ElevenLabs voice synthesis with Gemini&apos;s reasoning for
-            SME applications like customer service, sales qualification, and operational workflows.
+          <p className="text-gray-700 dark:text-gray-300 mb-3">
+            Moving from AI tools to autonomous agent systems. Multi-agent orchestration, trust engineering,
+            and knowledge patterns (RAG, MCP) are the next frontier.
           </p>
+          <Link
+            href="/agents"
+            className="inline-block px-4 py-2 bg-[var(--deep-purple)] text-white rounded-md hover:opacity-90 transition-opacity text-sm"
+          >
+            Explore AI Agents →
+          </Link>
         </div>
       </motion.section>
 
@@ -159,7 +244,7 @@ export default function AIPortfolioPage() {
         className="flex justify-between mt-12"
       >
         <Link
-          href="/ai-journey/how-to-learn/claude-mastery"
+          href="/ai-journey/claude/overview"
           className="px-4 py-2 border border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 rounded-md hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500 transition-colors"
         >
           ← Claude Mastery
