@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { Card, SectionHeader, PageLayout } from '@/components/common';
@@ -18,10 +19,22 @@ export default function AboutPage() {
         className="mb-12"
       >
         <Card className="p-8 bg-gradient-to-r from-blue-50 to-teal-50 dark:from-blue-900/20 dark:to-teal-900/20">
-          <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-            I&apos;m David Liew—an AI Engineer and Builder exploring how humans and AI can work together naturally,
-            not through replacement, but through thoughtful collaboration that amplifies what makes us uniquely human.
-          </p>
+          <div className="flex flex-col md:flex-row gap-8 items-center mb-6">
+            <div className="flex-shrink-0">
+              <Image
+                src="/images/headshot.jpg"
+                alt="David Liew - Agentic AI Architect"
+                width={160}
+                height={160}
+                className="rounded-full shadow-lg"
+                priority
+              />
+            </div>
+            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+              I&apos;m David Liew—an AI Engineer and Builder exploring how humans and AI can work together naturally,
+              not through replacement, but through thoughtful collaboration that amplifies what makes us uniquely human.
+            </p>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-6">
             <div className="text-center">
