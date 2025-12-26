@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
           {/* Column 1: About & Social */}
           <div>
             <h3 className="text-xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-teal-600 dark:from-blue-400 dark:to-teal-400 bg-clip-text text-transparent">
-              Dave Liew
+              David Liew
             </h3>
             <p className="text-sm text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
               AI Engineer & Builder fusing human creativity with tomorrow&apos;s technology.
@@ -116,7 +116,7 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/ai-journey/overview" className="text-sm text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 inline-flex items-center group">
+                <Link href="/ai-journey/context-engineering" className="text-sm text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 inline-flex items-center group">
                   <span className="mr-2 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
                   Context Engineering
                 </Link>
@@ -186,7 +186,7 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-300 dark:border-gray-700 pt-8 mt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm text-gray-600 dark:text-gray-400">
-              &copy; {currentYear} Dave Liew. All rights reserved.
+              &copy; {currentYear} David Liew. All rights reserved.
             </p>
             <div className="flex items-center space-x-4 text-xs text-gray-500 dark:text-gray-400">
               <span>Built with Next.js 15 & Claude Code</span>

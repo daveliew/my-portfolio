@@ -1,10 +1,10 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Blog - Dave Liew',
+  title: 'Blog - David Liew',
   description: 'Exploring agentic engineering, AI-human collaboration, and systematic approaches to becoming a better AI engineer.',
   openGraph: {
-    title: 'Blog - Dave Liew',
+    title: 'Blog - David Liew',
     description: 'Exploring agentic engineering, AI-human collaboration, and systematic approaches to becoming a better AI engineer.',
     type: 'website',
   },

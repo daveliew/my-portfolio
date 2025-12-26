@@ -5,30 +5,30 @@ import Footer from '../components/layout/Footer';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://daveliew.dev'),
-  title: "Dave Liew - Agentic AI Architect for Purpose-Driven Leaders",
+  title: "David Liew - Agentic AI Architect for Purpose-Driven Leaders",
   description: "Building intelligent systems that amplify human potential. Expert in agentic AI, automation, and sustainable technology solutions for purpose-driven businesses.",
   keywords: "agentic AI architect, AI automation, intelligent systems, purpose-driven technology, sustainable AI, AI consultant Singapore",
-  authors: [{ name: "Dave Liew" }],
-  creator: "Dave Liew",
+  authors: [{ name: "David Liew" }],
+  creator: "David Liew",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://daveliew.dev",
-    siteName: "Dave Liew - Agentic AI Architect",
-    title: "Dave Liew - Agentic AI Architect for Purpose-Driven Leaders",
+    siteName: "David Liew - Agentic AI Architect",
+    title: "David Liew - Agentic AI Architect for Purpose-Driven Leaders",
     description: "Building intelligent systems that amplify human potential. Expert in agentic AI, automation, and sustainable technology solutions.",
     images: [
       {
         url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Dave Liew - Agentic AI Architect"
+        alt: "David Liew - Agentic AI Architect"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dave Liew - Agentic AI Architect for Purpose-Driven Leaders",
+    title: "David Liew - Agentic AI Architect for Purpose-Driven Leaders",
     description: "Building intelligent systems that amplify human potential through purposeful technology.",
     images: ["/images/og-image.jpg"]
   },
@@ -64,7 +64,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Person",
-              "name": "Dave Liew",
+              "name": "David Liew",
               "jobTitle": "Agentic AI Architect",
               "description": "Building intelligent systems that amplify human potential through purposeful technology",
               "url": "https://daveliew.dev",

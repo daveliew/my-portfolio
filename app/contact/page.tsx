@@ -12,6 +12,7 @@ export default function ContactPage() {
     <PageLayout
       title="Connect"
       description="Let's build something meaningful together"
+      gradientTitle
     >
       {/* Simple Contact Options */}
       <motion.section

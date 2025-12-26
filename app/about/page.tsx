@@ -8,7 +8,7 @@ import { sectionAnimation } from '@/utils/animations';
 export default function AboutPage() {
   return (
     <PageLayout
-      title="About Dave Liew"
+      title="About David Liew"
       description="AI Engineer & Builder with 10+ years building ventures from 0→1, implementing AI solutions, and scaling operations"
       gradientTitle
     >
@@ -19,7 +19,7 @@ export default function AboutPage() {
       >
         <Card className="p-8 bg-gradient-to-r from-blue-50 to-teal-50 dark:from-blue-900/20 dark:to-teal-900/20">
           <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-            I&apos;m Dave Liew—an AI Engineer and Builder exploring how humans and AI can work together naturally,
+            I&apos;m David Liew—an AI Engineer and Builder exploring how humans and AI can work together naturally,
             not through replacement, but through thoughtful collaboration that amplifies what makes us uniquely human.
           </p>
 

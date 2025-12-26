@@ -42,7 +42,7 @@ export function getPostBySlug(slug: string): BlogPost | null {
       date: data.date || new Date().toISOString(),
       readTime: data.readTime || '5 min read',
       category: data.category || 'agentic-engineering',
-      author: data.author || 'Dave Liew',
+      author: data.author || 'David Liew',
       featured: data.featured || false,
       tags: data.tags || [],
       seriesPosition: data.seriesPosition,

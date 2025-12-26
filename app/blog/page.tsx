@@ -8,6 +8,7 @@ export default function BlogPage() {
       title="Blog"
       description="Exploring agentic engineering, AI-human collaboration, and systematic approaches to becoming a better AI engineer"
       backLink={{ href: '/', text: 'Back to home' }}
+      gradientTitle
     >
       <div className="max-w-4xl mx-auto">
         <SectionHeader title="Agentic Engineering Series" />

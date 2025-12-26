@@ -20,7 +20,7 @@ export default function HomePage() {
             {...fadeInUp()}
             className="space-y-6"
           >
-            <h1 className="text-4xl md:text-5xl font-bold">Dave Liew</h1>
+            <h1 className="text-4xl md:text-5xl font-bold">David Liew</h1>
             
             <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 font-medium">
               Most people use AI tools.<br className="hidden md:block" />
