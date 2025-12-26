@@ -1,11 +1,27 @@
 'use client';
 
-import React from 'react';
+import React, { Suspense } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { PageLayout, CTAButton } from '@/components/common';
 import { fadeInUp, sectionAnimation } from '@/utils/animations';
 import AIJourneyTabs from '@/components/ai-journey/AIJourneyTabs';
+
+// Loading fallback for tabs that use useSearchParams
+function TabsLoading() {
+  return (
+    <div className="py-8 flex justify-center">
+      <div className="animate-pulse space-y-4 w-full max-w-2xl">
+        <div className="flex justify-center gap-4">
+          <div className="h-10 w-24 bg-gray-200 dark:bg-gray-700 rounded"></div>
+          <div className="h-10 w-24 bg-gray-200 dark:bg-gray-700 rounded"></div>
+          <div className="h-10 w-24 bg-gray-200 dark:bg-gray-700 rounded"></div>
+        </div>
+        <div className="h-64 bg-gray-100 dark:bg-gray-800 rounded"></div>
+      </div>
+    </div>
+  );
+}
 
 export default function AIJourneyPage() {
   return (
@@ -35,7 +51,9 @@ export default function AIJourneyPage() {
         {...sectionAnimation(0)}
         className="border-t border-gray-200 dark:border-gray-700"
       >
-        <AIJourneyTabs />
+        <Suspense fallback={<TabsLoading />}>
+          <AIJourneyTabs />
+        </Suspense>
       </motion.section>
 
       {/* CTA */}
