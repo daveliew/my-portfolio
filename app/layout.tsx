@@ -19,9 +19,9 @@ export const metadata: Metadata = {
     description: "Building intelligent systems that amplify human potential. Expert in agentic AI, automation, and sustainable technology solutions.",
     images: [
       {
-        url: "/images/og-image.jpg",
-        width: 1200,
-        height: 630,
+        url: "/images/logo.png",
+        width: 512,
+        height: 512,
         alt: "David Liew - Agentic AI Architect"
       }
     ]
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "David Liew - Agentic AI Architect for Purpose-Driven Leaders",
     description: "Building intelligent systems that amplify human potential through purposeful technology.",
-    images: ["/images/og-image.jpg"]
+    images: ["/images/logo.png"]
   },
   robots: {
     index: true,

@@ -11,7 +11,7 @@ import type { MetadataRoute } from 'next'
  */
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://daveliew.com'
+  const baseUrl = 'https://daveliew.dev'
 
   return [
     // Main Pages
@@ -62,7 +62,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // AI Journey - Top Level
     {
-      url: `${baseUrl}/ai-journey/overview`,
+      url: `${baseUrl}/ai-journey/context-engineering`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,
