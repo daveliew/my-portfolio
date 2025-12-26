@@ -1,0 +1,183 @@
+{
+  "tabs": [
+    {
+      "id": "why",
+      "label": "WHY",
+      "icon": "🎯",
+      "color": "blue",
+      "headline": "Foundation & Philosophy",
+      "sections": [
+        {
+          "type": "insight-box",
+          "quote": "Applying the Fitzgerald Principle to AI: holding the opposing ideas of human irreplaceability AND AI capabilities simultaneously."
+        },
+        {
+          "type": "feature-card",
+          "title": "Why Human-AI Collaboration",
+          "description": "Understanding the AI S-Curve: We're at the inflection point where AI transitions from novelty to necessity. The question isn't whether to collaborate with AI, but how to do it in ways that amplify rather than diminish human agency.",
+          "cta": {
+            "label": "Explore the S-Curve Framework",
+            "href": "/ai-journey/why-ai"
+          }
+        },
+        {
+          "type": "feature-card",
+          "title": "Context Engineering",
+          "description": "The real skill isn't prompting—it's architecting what AI knows before it reasons. Three pillars: System Prompts (persistent memory), Tools & MCP (extended capabilities), and Conversation Architecture (information flow).",
+          "cta": {
+            "label": "Master Context Engineering",
+            "href": "/ai-journey/context-engineering"
+          }
+        },
+        {
+          "type": "feature-card",
+          "title": "The Fitzgerald Principle",
+          "description": "Most people use AI to do more. I'm exploring how to do less—systematically. AI as complementarity, not replacement. Time compounds faster than money.",
+          "cta": {
+            "label": "Read Full Philosophy",
+            "href": "/philosophy"
+          }
+        }
+      ]
+    },
+    {
+      "id": "how",
+      "label": "HOW",
+      "icon": "⚡",
+      "color": "purple",
+      "headline": "Implementation & Techniques",
+      "sections": [
+        {
+          "type": "grid",
+          "title": "Three-Hat Framework",
+          "description": "Rapid context switching validated across 3+ client projects",
+          "items": [
+            {
+              "icon": "🏗️",
+              "title": "Systems Architect",
+              "description": "High-level design, dependencies, trade-offs"
+            },
+            {
+              "icon": "📊",
+              "title": "Product Manager",
+              "description": "User needs, feature prioritization, business value"
+            },
+            {
+              "icon": "💻",
+              "title": "Implementation",
+              "description": "Technical execution, code quality, testing"
+            }
+          ],
+          "cta": {
+            "label": "See Framework in Action",
+            "href": "/ai-journey/technical-leadership"
+          }
+        },
+        {
+          "type": "feature-card",
+          "title": "Claude Mastery Program",
+          "description": "8 comprehensive modules covering everything from prompt engineering to computer use capabilities. Includes 2025 breakthroughs: Claude Opus 4.5, Claude Code, Extended Thinking, and Prompt Caching.",
+          "cta": {
+            "label": "Start Claude Mastery",
+            "href": "/ai-journey/claude/overview"
+          }
+        },
+        {
+          "type": "grid",
+          "title": "Techniques Reference",
+          "items": [
+            {
+              "icon": "📝",
+              "title": "Prompt Engineering",
+              "description": "Effective communication patterns",
+              "href": "/ai-journey/techniques/prompt-engineering"
+            },
+            {
+              "icon": "🛠️",
+              "title": "Tool Use",
+              "description": "Extending AI capabilities",
+              "href": "/ai-journey/techniques/tool-use"
+            },
+            {
+              "icon": "🔍",
+              "title": "RAG Systems",
+              "description": "Retrieval-augmented generation",
+              "href": "/ai-journey/techniques/rag"
+            },
+            {
+              "icon": "🤖",
+              "title": "Agent Systems",
+              "description": "Autonomous AI workflows",
+              "href": "/ai-journey/techniques/agent-rag"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "what",
+      "label": "WHAT",
+      "icon": "🎨",
+      "color": "teal",
+      "headline": "Outcomes & Validation",
+      "sections": [
+        {
+          "type": "grid",
+          "title": "Portfolio Highlights",
+          "description": "Real implementations proving human-AI collaboration creates value greater than the sum of parts",
+          "items": [
+            {
+              "icon": "🎵",
+              "title": "Jazz Scat",
+              "description": "2nd place ElevenLabs Hackathon - Voice AI music generator",
+              "href": "/ai-journey/portfolio"
+            },
+            {
+              "icon": "🎙️",
+              "title": "Nansen Voice",
+              "description": "Voice-first conversational AI with persistent memory",
+              "href": "/ai-journey/portfolio"
+            },
+            {
+              "icon": "📊",
+              "title": "Market Research Agent",
+              "description": "CrewAI system delivering reports 3x faster",
+              "href": "/ai-journey/portfolio"
+            }
+          ],
+          "cta": {
+            "label": "View Full Portfolio",
+            "href": "/ai-journey/portfolio"
+          }
+        },
+        {
+          "type": "experiments",
+          "title": "Current Experiments",
+          "experiments": [
+            {
+              "title": "ADHD-AI Optimization",
+              "description": "Hypothesis: ADHD cognitive patterns provide natural advantages for AI collaboration speed and context switching.",
+              "status": "Active research with preliminary validation",
+              "statusColor": "orange"
+            },
+            {
+              "title": "2-Minute Rule for AI",
+              "description": "If users can't achieve first success within 2 minutes, the AI architecture has failed.",
+              "status": "Proven in 3 implementations",
+              "statusColor": "green"
+            }
+          ]
+        },
+        {
+          "type": "feature-card",
+          "title": "Living Laboratory",
+          "description": "Every framework is tested in real implementations. Proof over promises, experiments over theories. Exploring the convergence of AI, Sustainability, and Robotics.",
+          "cta": {
+            "label": "Explore the Lab",
+            "href": "/laboratory"
+          }
+        }
+      ]
+    }
+  ]
+}

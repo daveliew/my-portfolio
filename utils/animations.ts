@@ -61,3 +61,33 @@ export const sectionAnimation = (index: number) => fadeInUp(0.2 + (index * 0.1))
  * Footer/back link animation (typically last element)
  */
 export const footerAnimation = fadeInUp(0.5);
+
+/**
+ * Tab content transition variants for AI Journey tabs
+ * Used with AnimatePresence for smooth content swapping
+ */
+export const tabContentVariants: Variants = {
+  initial: {
+    opacity: 0,
+    y: 20,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.3, ease: 'easeOut' }
+  },
+  exit: {
+    opacity: 0,
+    y: -10,
+    transition: { duration: 0.2, ease: 'easeIn' }
+  }
+};
+
+/**
+ * Tab button variants for hover and active states
+ */
+export const tabButtonVariants: Variants = {
+  inactive: { scale: 1 },
+  active: { scale: 1.02 },
+  tap: { scale: 0.98 }
+};
