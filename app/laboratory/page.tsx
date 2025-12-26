@@ -29,6 +29,7 @@ export default function LaboratoryPage() {
       title="Innovation Laboratory"
       description="Most businesses don't know where AI is heading or how to use it effectively. This laboratory builds the literacy and frameworks to navigate that complexity."
       maxWidth="6xl"
+      gradientTitle
     >
       <div className="lg:grid lg:grid-cols-[250px_1fr] lg:gap-12">
         {/* Table of Contents - Desktop Sidebar */}

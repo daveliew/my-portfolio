@@ -10,6 +10,7 @@ export default function AboutPage() {
     <PageLayout
       title="About Dave Liew"
       description="AI Engineer & Builder with 10+ years building ventures from 0→1, implementing AI solutions, and scaling operations"
+      gradientTitle
     >
       {/* Hero Section */}
       <motion.section

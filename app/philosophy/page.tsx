@@ -27,6 +27,7 @@ export default function PhilosophyPage() {
       title="The Fitzgerald Principle"
       description="First-rate intelligence through productive tensions: My operating system for pioneering human-AI collaboration"
       maxWidth="6xl"
+      gradientTitle
     >
       <div className="lg:grid lg:grid-cols-[250px_1fr] lg:gap-12">
         {/* Table of Contents - Desktop Sidebar */}

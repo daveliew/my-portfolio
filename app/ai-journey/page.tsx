@@ -12,6 +12,7 @@ export default function AIJourneyPage() {
       title="AI Journey"
       description="Pioneering Human-AI Collaboration for the Next Generation"
       maxWidth="4xl"
+      gradientTitle
     >
       {/* Hero Section */}
       <section className="py-12 md:py-20">
@@ -96,14 +97,14 @@ export default function AIJourneyPage() {
                   >
                     1. Why Human-AI Collaboration →
                   </Link>
-                  <Link 
-                    href="/ai-journey/how-to-learn/overview" 
+                  <Link
+                    href="/ai-journey/overview"
                     className="block text-sm text-blue-600 dark:text-blue-400 hover:underline"
                   >
                     2. Three-Hat Framework Overview →
                   </Link>
-                  <Link 
-                    href="/ai-journey/how-to-learn/llm-handling" 
+                  <Link
+                    href="/ai-journey/techniques/llm-handling"
                     className="block text-sm text-blue-600 dark:text-blue-400 hover:underline"
                   >
                     3. Start with LLM Communication →
@@ -123,20 +124,20 @@ export default function AIJourneyPage() {
                   Jump straight into advanced implementations and leadership frameworks.
                 </p>
                 <div className="space-y-2">
-                  <Link 
-                    href="/ai-journey/how-to-learn/technical-leadership" 
+                  <Link
+                    href="/ai-journey/technical-leadership"
                     className="block text-sm text-green-600 dark:text-green-400 hover:underline"
                   >
                     1. Three-Hat Technical Leadership →
                   </Link>
-                  <Link 
-                    href="/ai-journey/how-to-learn/claude-mastery" 
+                  <Link
+                    href="/ai-journey/claude/overview"
                     className="block text-sm text-green-600 dark:text-green-400 hover:underline"
                   >
                     2. Claude Mastery Deep Dive →
                   </Link>
-                  <Link 
-                    href="/ai-journey/how-to-learn/agent-rag" 
+                  <Link
+                    href="/ai-journey/techniques/agent-rag"
                     className="block text-sm text-green-600 dark:text-green-400 hover:underline"
                   >
                     3. Agent & RAG Systems →
@@ -166,8 +167,8 @@ export default function AIJourneyPage() {
             <div className="text-xs text-gray-500 dark:text-gray-400 mb-3">
               📚 Prompt Engineering • 🛠️ Tool Use • 🖥️ Computer Use • 👁️ Vision & Multimodal
             </div>
-            <Link 
-              href="/ai-journey/how-to-learn/claude-mastery" 
+            <Link
+              href="/ai-journey/claude/overview"
               className="text-purple-600 dark:text-purple-400 hover:underline text-sm font-medium"
             >
               Explore Claude Mastery →
@@ -184,8 +185,8 @@ export default function AIJourneyPage() {
             <div className="text-xs text-gray-500 dark:text-gray-400 mb-3">
               🏗️ Systems Architecture • 📊 Product Management • 💻 Implementation
             </div>
-            <Link 
-              href="/ai-journey/how-to-learn/technical-leadership" 
+            <Link
+              href="/ai-journey/technical-leadership"
               className="text-orange-600 dark:text-orange-400 hover:underline text-sm font-medium"
             >
               See Framework in Action →
@@ -257,8 +258,8 @@ export default function AIJourneyPage() {
           <CTAButton href="/ai-journey/why-ai">
             Start with Why AI
           </CTAButton>
-          <Link 
-            href="/ai-journey/how-to-learn/claude-mastery"
+          <Link
+            href="/ai-journey/claude/overview"
             className="inline-flex items-center justify-center px-6 py-3 text-base font-medium rounded-md border-2 border-blue-600 text-blue-600 bg-transparent hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors"
           >
             Dive into Claude Mastery
