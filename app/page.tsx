@@ -20,7 +20,7 @@ export default function HomePage() {
             {...fadeInUp()}
             className="space-y-6"
           >
-            <h1 className="text-4xl md:text-5xl font-bold">David Liew</h1>
+            <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[var(--deep-purple)] to-[var(--teal)] bg-clip-text text-transparent">David Liew</h1>
             
             <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 font-medium">
               Most people use AI tools.<br className="hidden md:block" />
@@ -299,32 +299,33 @@ export default function HomePage() {
         </p>
       </motion.section>
 
-      {/* Gentle CTA */}
-      <motion.section 
+      {/* CTA Section */}
+      <motion.section
         {...sectionAnimation(3)}
-        className="py-12 border-t border-gray-200 dark:border-gray-700 text-center"
+        className="py-12 border-t border-gray-200 dark:border-gray-700"
       >
-        <h2 className="text-2xl font-semibold mb-4">
-          Got a task that takes too long?
-        </h2>
-        <p className="text-lg mb-8 text-gray-600 dark:text-gray-400">
-          I&apos;m exploring how AI can help delete it from your day.<br/>
-          If something I&apos;m discovering might help, let&apos;s compare notes.
-        </p>
-        <Link 
-          href="/contact"
-          className="inline-flex items-center justify-center px-6 py-2.5 text-base font-medium rounded-md text-gray-700 bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700 transition-colors"
-        >
-          Compare Notes
-        </Link>
-        
-        <div className="mt-8">
-          <Link 
-            href="/philosophy" 
-            className="text-sm text-gray-500 dark:text-gray-400 hover:text-[#0CC0DF] transition-colors"
-          >
-            Or explore what I&apos;m discovering →
-          </Link>
+        <div className="bg-gradient-to-r from-[var(--deep-purple)]/10 via-transparent to-[var(--teal)]/10 rounded-2xl p-8 text-center">
+          <h2 className="text-2xl font-semibold mb-4">
+            Got a task that takes too long?
+          </h2>
+          <p className="text-lg mb-8 text-gray-600 dark:text-gray-400 max-w-xl mx-auto">
+            I&apos;m exploring how AI can help delete it from your day.
+            If something I&apos;m discovering might help, let&apos;s compare notes.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center px-6 py-3 text-base font-medium rounded-md text-white bg-gradient-to-r from-[var(--deep-purple)] to-[var(--teal)] hover:opacity-90 transition-opacity shadow-lg"
+            >
+              Let&apos;s Talk
+            </Link>
+            <Link
+              href="/philosophy"
+              className="inline-flex items-center justify-center px-6 py-3 text-base font-medium rounded-md border-2 border-[var(--deep-purple)] text-[var(--deep-purple)] hover:bg-[var(--deep-purple)]/10 transition-colors"
+            >
+              Explore My Approach →
+            </Link>
+          </div>
         </div>
       </motion.section>
       </div>
