@@ -19,17 +19,16 @@ export default function LaboratoryPage() {
     { id: 'thesis', text: 'The Thesis', level: 3 },
     { id: 'cross-pollination', text: 'Cross-Pollination Studio', level: 3 },
     { id: 'experiments', text: 'Active Experiments', level: 2 },
-    { id: 'three-hat', text: 'Three-Hat Framework', level: 3 },
-    { id: 'adhd-ai', text: 'ADHD-AI Workflows', level: 3 },
     { id: 'sustainable-ai', text: 'AI Scaling Literacy', level: 3 },
     { id: 'sustainability-lab', text: 'Sustainability Laboratory', level: 3 },
-    { id: 'attention', text: 'Where I\'m Directing Attention', level: 2 },
+    { id: 'attention', text: 'Where I\'m Building Expertise', level: 2 },
   ];
 
   return (
     <PageLayout
       title="Innovation Laboratory"
       description="Most businesses don't know where AI is heading or how to use it effectively. This laboratory builds the literacy and frameworks to navigate that complexity."
+      maxWidth="6xl"
     >
       <div className="lg:grid lg:grid-cols-[250px_1fr] lg:gap-12">
         {/* Table of Contents - Desktop Sidebar */}
@@ -41,17 +40,8 @@ export default function LaboratoryPage() {
 
         {/* Main Content */}
         <div>
-          {/* CHAPTER 1: THE CONVERGENCE */}
+          {/* The Convergence */}
           <div id="convergence" className="mb-12">
-            <div className="bg-gradient-to-r from-blue-50 to-teal-50 dark:from-blue-900/20 dark:to-teal-900/20 rounded-lg p-6 mb-8 border border-blue-200 dark:border-blue-800">
-              <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-2">
-                CHAPTER 1: THE CONVERGENCE
-              </h2>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                Three unstoppable trends reshaping everything
-              </p>
-            </div>
-
             {/* Hero Section - The Three Unstoppable Trends */}
             <motion.section
               {...sectionAnimation(0)}
@@ -165,206 +155,8 @@ export default function LaboratoryPage() {
             </motion.section>
           </div>
 
-          {/* CHAPTER 2: ACTIVE EXPERIMENTS */}
+          {/* Active Experiments */}
           <div id="experiments" className="mb-12">
-            <div className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-lg p-6 mb-8 border border-purple-200 dark:border-purple-800">
-              <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-2">
-                CHAPTER 2: ACTIVE EXPERIMENTS
-              </h2>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                Real-world testing of frameworks and hypotheses
-              </p>
-            </div>
-
-            <p className="text-center text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
-              Real-world testing of the <Link href="/philosophy" className="text-blue-600 dark:text-blue-400 hover:underline">Fitzgerald Principle</Link> and
-              human-AI collaboration frameworks.
-            </p>
-
-            {/* Three-Hat Framework */}
-            <motion.section
-              id="three-hat"
-              {...sectionAnimation(3)}
-              className="mb-12"
-            >
-              <SectionHeader title="Three-Hat Framework Implementation" />
-              <Card className="p-6 border-l-4 border-purple-500">
-                <p className="text-[var(--text-secondary)] mb-4 text-base leading-relaxed">
-                  Testing rapid context switching between Systems Architect, Product Manager, and Implementation roles
-                  in real client projects. Measuring decision quality and delivery speed.
-                </p>
-                <div className="grid md:grid-cols-3 gap-4 mb-4">
-                  <div className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-                    <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">Status</p>
-                    <p className={`font-semibold text-lg ${themeColors.text.time}`}>Active Testing</p>
-                  </div>
-                  <div className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-                    <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">Projects</p>
-                    <p className="font-semibold text-lg text-[var(--text-primary)]">3 Client Engagements</p>
-                  </div>
-                  <div className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-                    <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">Key Metric</p>
-                    <p className="font-semibold text-lg text-[var(--text-primary)]">Context switch &lt;15min</p>
-                  </div>
-                </div>
-                <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
-                  <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">
-                    <strong>Hypothesis:</strong> Rapid role-switching creates better decisions than staying in a single perspective.
-                  </p>
-                  <p className="text-xs text-gray-600 dark:text-gray-400 italic">
-                    Validated across Foundation Labs projects: ROJ (healthcare), TSS (sustainability), Winborne (local business).
-                  </p>
-                </div>
-              </Card>
-            </motion.section>
-
-            {/* ADHD-AI Workflows - EXPANDED SECTION */}
-            <motion.section
-              id="adhd-ai"
-              {...sectionAnimation(4)}
-              className="mb-12"
-            >
-              <SectionHeader title="ADHD-Optimized AI Workflows" />
-              <Card className="p-6 mb-6 border-l-4 border-purple-500">
-                <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
-                  <strong>Strong Opinion:</strong> ADHD cognitive patterns + AI augmentation = competitive advantage in the information age.
-                </p>
-
-                {/* The Productive Tension */}
-                <div className="mb-8 bg-gradient-to-r from-pink-50 to-purple-50 dark:from-pink-900/20 dark:to-purple-900/20 rounded-lg p-6">
-                  <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-200">The Fitzgerald Tension</h3>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <h4 className="font-semibold text-pink-600 dark:text-pink-400 mb-2">Opposing Force 1: Neurodivergent Patterns</h4>
-                      <ul className="text-sm space-y-1 text-gray-600 dark:text-gray-400">
-                        <li>• Hyperfocus cycles (2-4 hour deep work bursts)</li>
-                        <li>• Rapid context switching (5-15 min transitions)</li>
-                        <li>• Working memory limits (3-4 concurrent concepts)</li>
-                        <li>• Dopamine-driven curiosity (explore &gt; exploit)</li>
-                        <li>• Non-linear thinking (parallel pattern recognition)</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-purple-600 dark:text-purple-400 mb-2">Opposing Force 2: Traditional Productivity</h4>
-                      <ul className="text-sm space-y-1 text-gray-600 dark:text-gray-400">
-                        <li>• Sustained linear focus (8-hour workdays)</li>
-                        <li>• Single-task completion before switching</li>
-                        <li>• Memory-based task management</li>
-                        <li>• Planned schedules (resist exploration)</li>
-                        <li>• Sequential reasoning (step-by-step logic)</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="mt-4 p-4 bg-white dark:bg-gray-800 rounded-lg">
-                    <p className="text-sm text-gray-700 dark:text-gray-300">
-                      <strong className="text-purple-600 dark:text-purple-400">Productive Tension:</strong> AI systems designed to work WITH neurodivergent patterns
-                      rather than forcing neurotypical workflows. The &quot;bug&quot; becomes a feature when AI handles memory, context preservation, and task resumption.
-                    </p>
-                  </div>
-                </div>
-
-                {/* Core Hypothesis */}
-                <div className="mb-8">
-                  <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-200">The Hypothesis</h3>
-                  <div className="border-l-4 border-pink-500 pl-6 py-4 bg-pink-50 dark:bg-pink-900/20">
-                    <p className="text-lg font-medium text-gray-800 dark:text-gray-200 mb-2">
-                      ADHD brains + AI augmentation outperform neurotypical productivity systems in knowledge work.
-                    </p>
-                    <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                      Why? Because the future of work increasingly resembles ADHD cognitive patterns:
-                    </p>
-                    <ul className="text-sm space-y-2">
-                      <li className="flex items-start">
-                        <span className="text-pink-600 dark:text-pink-400 mr-2">✓</span>
-                        <span><strong>Rapid context switching:</strong> Modern work requires jumping between projects, clients, technologies. ADHD brains do this naturally.</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-pink-600 dark:text-pink-400 mr-2">✓</span>
-                        <span><strong>Pattern recognition over memorization:</strong> AI handles recall; humans provide connections. Non-linear thinking is an asset.</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-pink-600 dark:text-pink-400 mr-2">✓</span>
-                        <span><strong>Hyperfocus as competitive advantage:</strong> When AI removes friction, ADHD hyperfocus produces 4-hour deep work sessions that rival 8-hour neurotypical days.</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-pink-600 dark:text-pink-400 mr-2">✓</span>
-                        <span><strong>Curiosity-driven exploration:</strong> Dopamine-seeking becomes research superpower when AI can track, synthesize, and retrieve explorations.</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-                {/* Specific Patterns Being Explored */}
-                <div className="mb-8">
-                  <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-200">Specific Patterns I&apos;m Exploring</h3>
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div className="p-4 border border-purple-200 dark:border-purple-800 rounded-lg">
-                      <h4 className="font-semibold text-purple-600 dark:text-purple-400 mb-2">1. Hyperfocus + AI Task Batching</h4>
-                      <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
-                        <strong>Pattern:</strong> Use AI to batch similar cognitive tasks into 2-4 hour blocks that align with natural hyperfocus cycles.
-                      </p>
-                      <p className="text-xs text-gray-500 dark:text-gray-500">
-                        Testing: Claude Code for code sessions, Claude Desktop for research synthesis, separate context windows for different energy states.
-                      </p>
-                    </div>
-
-                    <div className="p-4 border border-purple-200 dark:border-purple-800 rounded-lg">
-                      <h4 className="font-semibold text-purple-600 dark:text-purple-400 mb-2">2. Context Switching as Three-Hat Superpower</h4>
-                      <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
-                        <strong>Pattern:</strong> Rapid role switching (Architect → PM → Implementation) isn&apos;t a bug—it&apos;s the ADHD workflow made systematic.
-                      </p>
-                      <p className="text-xs text-gray-500 dark:text-gray-500">
-                        Testing: 15-minute sprints with AI handling context preservation between switches. Each role gets dedicated tools and prompts.
-                      </p>
-                    </div>
-
-                    <div className="p-4 border border-purple-200 dark:border-purple-800 rounded-lg">
-                      <h4 className="font-semibold text-purple-600 dark:text-purple-400 mb-2">3. Working Memory Limits + External Cognition</h4>
-                      <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
-                        <strong>Pattern:</strong> Offload ALL memory to AI systems. Use ADHD strength (pattern recognition) while AI handles ADHD weakness (recall).
-                      </p>
-                      <p className="text-xs text-gray-500 dark:text-gray-500">
-                        Testing: Living documentation (CLAUDE.md), protocol libraries, automated memory triggers. Never rely on biological memory for retrievable information.
-                      </p>
-                    </div>
-
-                    <div className="p-4 border border-purple-200 dark:border-purple-800 rounded-lg">
-                      <h4 className="font-semibold text-purple-600 dark:text-purple-400 mb-2">4. Dopamine-Driven Exploration + AI Research Acceleration</h4>
-                      <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
-                        <strong>Pattern:</strong> Follow curiosity rabbit holes but use AI to synthesize, track, and connect explorations into actionable insights.
-                      </p>
-                      <p className="text-xs text-gray-500 dark:text-gray-500">
-                        Testing: Web search + AI synthesis workflows, research session summaries, automated connection-finding across disparate topics.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Living Experiment Status */}
-                <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
-                  <h3 className="text-lg font-semibold mb-4 text-gray-800 dark:text-gray-200">Living Experiment Status</h3>
-                  <div className="grid md:grid-cols-3 gap-4 mb-4">
-                    <div>
-                      <p className="text-xs text-gray-500 dark:text-gray-500 mb-1">Exploration Phase</p>
-                      <p className="font-semibold text-purple-600 dark:text-purple-400">2025 Q1-Q2</p>
-                    </div>
-                    <div>
-                      <p className="text-xs text-gray-500 dark:text-gray-500 mb-1">Daily Testing</p>
-                      <p className="font-semibold text-purple-600 dark:text-purple-400">Personal workflows + 3 client projects</p>
-                    </div>
-                    <div>
-                      <p className="text-xs text-gray-500 dark:text-gray-500 mb-1">Next Milestone</p>
-                      <p className="font-semibold text-purple-600 dark:text-purple-400">Publish findings 2025 Q3</p>
-                    </div>
-                  </div>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 italic">
-                    <strong>Note:</strong> This is exploratory research grounded in daily practice. I&apos;m not claiming proven results—I&apos;m documenting
-                    an active experiment in neurodivergent-AI collaboration that might transform how ADHD professionals work.
-                  </p>
-                </div>
-              </Card>
-            </motion.section>
-
             {/* AI Scaling Literacy */}
             <motion.section
               id="sustainable-ai"
@@ -455,17 +247,8 @@ export default function LaboratoryPage() {
             </motion.section>
           </div>
 
-          {/* CHAPTER 3: WHERE I'M DIRECTING ATTENTION */}
+          {/* Where I'm Building Expertise */}
           <div id="attention" className="mb-12">
-            <div className="bg-gradient-to-r from-orange-50 to-yellow-50 dark:from-orange-900/20 dark:to-yellow-900/20 rounded-lg p-6 mb-8 border border-orange-200 dark:border-orange-800">
-              <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-2">
-                CHAPTER 3: WHERE I&apos;M BUILDING EXPERTISE
-              </h2>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                The capabilities I&apos;m developing to help businesses navigate AI convergence
-              </p>
-            </div>
-
             <motion.section
               {...sectionAnimation(7)}
               className="mb-12"
@@ -504,8 +287,8 @@ export default function LaboratoryPage() {
                   <div className={`p-4 rounded-lg border-2 ${themeColors.border.wealth} ${themeColors.background.wealth}`}>
                     <h4 className={`font-semibold ${themeColors.text.wealth} mb-2 text-lg`}>3. Practical Implementation</h4>
                     <ul className="text-sm space-y-2 text-[var(--text-primary)]">
-                      <li>• Three-Hat Framework application</li>
-                      <li>• ADHD-optimized workflows</li>
+                      <li>• Context Engineering implementation</li>
+                      <li>• Voice-first AI applications</li>
                       <li>• Systems thinking + execution</li>
                     </ul>
                     <p className="text-xs text-[var(--text-secondary)] mt-3 italic">
@@ -522,15 +305,15 @@ export default function LaboratoryPage() {
                     <div className="flex items-start">
                       <span className={`mr-2 ${themeColors.text.knowledge}`}>🧠</span>
                       <div>
-                        <p className="font-medium text-sm">Three-Hat Framework</p>
-                        <p className="text-xs text-[var(--text-secondary)]">Rapid context switching: Systems → Product → Implementation</p>
+                        <p className="font-medium text-sm">Context Engineering</p>
+                        <p className="text-xs text-[var(--text-secondary)]">Architecting what AI knows before it reasons</p>
                       </div>
                     </div>
                     <div className="flex items-start">
                       <span className={`mr-2 ${themeColors.text.time}`}>⚡</span>
                       <div>
-                        <p className="font-medium text-sm">ADHD-Optimized Workflows</p>
-                        <p className="text-xs text-[var(--text-secondary)]">Neurodivergent patterns as collaboration advantage</p>
+                        <p className="font-medium text-sm">Voice-First AI</p>
+                        <p className="text-xs text-[var(--text-secondary)]">Real-time reasoning with voice synthesis</p>
                       </div>
                     </div>
                     <div className="flex items-start">

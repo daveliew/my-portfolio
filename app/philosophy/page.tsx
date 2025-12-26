@@ -26,6 +26,7 @@ export default function PhilosophyPage() {
     <PageLayout
       title="The Fitzgerald Principle"
       description="First-rate intelligence through productive tensions: My operating system for pioneering human-AI collaboration"
+      maxWidth="6xl"
     >
       <div className="lg:grid lg:grid-cols-[250px_1fr] lg:gap-12">
         {/* Table of Contents - Desktop Sidebar */}
@@ -37,17 +38,8 @@ export default function PhilosophyPage() {
 
         {/* Main Content */}
         <div>
-          {/* CHAPTER 1: THE FOUNDATION */}
+          {/* The Foundation */}
           <div id="foundation" className="mb-12">
-            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-lg p-6 mb-8 border border-blue-200 dark:border-blue-800">
-              <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-2">
-                CHAPTER 1: THE FOUNDATION
-              </h2>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                Core philosophy and mission
-              </p>
-            </div>
-
             {/* The Fitzgerald Principle - Core Operating System */}
             <motion.section
               id="operating-system"
@@ -98,17 +90,8 @@ export default function PhilosophyPage() {
             </motion.section>
           </div>
 
-          {/* CHAPTER 2: THE FRAMEWORKS */}
+          {/* The Frameworks */}
           <div id="frameworks" className="mb-12">
-            <div className="bg-gradient-to-r from-purple-50 to-teal-50 dark:from-purple-900/20 dark:to-teal-900/20 rounded-lg p-6 mb-8 border border-purple-200 dark:border-purple-800">
-              <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-2">
-                CHAPTER 2: THE FRAMEWORKS
-              </h2>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                Structured methodologies for navigating complexity
-              </p>
-            </div>
-
             {/* The Triangle Foundation - A Fitzgerald Application */}
             <motion.section
               id="triangle"
@@ -118,21 +101,8 @@ export default function PhilosophyPage() {
               <SectionHeader title="Triangle Foundation" />
               <Card className="p-6 mb-6 border-l-4 border-purple-500">
                 <p className="text-gray-600 dark:text-gray-400 mb-6 text-center">
-                  The Triangle Foundation is the Fitzgerald Principle applied to life design: three opposing forces that strengthen each other.
+                  The Fitzgerald Principle applied to life design: three forces in productive tension.
                 </p>
-
-                <div className="text-center mb-8">
-                  <div className="inline-block">
-                    <div className="text-lg font-mono mb-4">
-                      <div className="mb-2">Self-Discovery</div>
-                      <div className="mb-2">/\</div>
-                      <div className="mb-2">/  \</div>
-                      <div className="mb-2">/    \</div>
-                      <div>Family ——— Wealth</div>
-                      <div className="mt-2">Generation</div>
-                    </div>
-                  </div>
-                </div>
 
                 <div className="grid md:grid-cols-3 gap-6">
                   <div className="text-center">
@@ -172,76 +142,15 @@ export default function PhilosophyPage() {
               <SectionHeader title="Truth-Seeking Framework" />
               <Card className="p-6 mb-6 border-l-4 border-purple-500">
                 <p className="text-gray-600 dark:text-gray-400 mb-6">
-                  As a parent navigating an AI-integrated childhood, I face a question deeper than &quot;how do my kids use AI safely?&quot;
-                  The real question is: <strong>How do we seek truth when AI hallucinates confidently, algorithms radicalize subtly,
-                  and information moves faster than human verification?</strong>
+                  As a parent navigating an AI-integrated childhood, the real question isn&apos;t &quot;how do my kids use AI safely?&quot;
+                  It&apos;s: <strong>How do we seek truth when AI hallucinates confidently and information moves faster than human verification?</strong>
                 </p>
 
-                {/* Three Productive Tensions */}
-                <div className="mb-6">
-                  <h3 className="text-lg font-semibold mb-3 text-gray-800 dark:text-gray-200">Three Productive Tensions in Truth-Seeking</h3>
-
-                  <div className="space-y-3">
-                    <div className="border-l-4 border-blue-500 pl-4 py-2 bg-blue-50 dark:bg-blue-900/20 rounded-r-lg">
-                      <h4 className="font-semibold text-blue-600 dark:text-blue-400 text-sm mb-1">Speed ↔ Accuracy</h4>
-                      <p className="text-xs text-gray-600 dark:text-gray-400">
-                        AI gives instant answers ↔ Truth requires verification. Teach kids to value &quot;I don&apos;t know yet, let&apos;s verify&quot;.
-                      </p>
-                    </div>
-
-                    <div className="border-l-4 border-purple-500 pl-4 py-2 bg-purple-50 dark:bg-purple-900/20 rounded-r-lg">
-                      <h4 className="font-semibold text-purple-600 dark:text-purple-400 text-sm mb-1">Authority ↔ Verification</h4>
-                      <p className="text-xs text-gray-600 dark:text-gray-400">
-                        Expert consensus matters ↔ Independent thinking is essential. Default to established knowledge while maintaining intellectual independence.
-                      </p>
-                    </div>
-
-                    <div className="border-l-4 border-teal-500 pl-4 py-2 bg-teal-50 dark:bg-teal-900/20 rounded-r-lg">
-                      <h4 className="font-semibold text-teal-600 dark:text-teal-400 text-sm mb-1">Confidence ↔ Calibration</h4>
-                      <p className="text-xs text-gray-600 dark:text-gray-400">
-                        AI outputs with certainty ↔ Expressing probabilistic uncertainty. Model calibrated confidence and update beliefs with evidence.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Seven-Layer Framework - Condensed */}
-                <div className="mb-6">
-                  <h3 className="text-lg font-semibold mb-2 text-gray-800 dark:text-gray-200">Seven-Layer Framework</h3>
-                  <p className="text-xs text-gray-600 dark:text-gray-400 mb-3 italic">
-                    Synthesizing Munger&apos;s epistemic humility, Taleb&apos;s antifragility, and Popper&apos;s falsifiability for the AI age.
-                  </p>
-
-                  <div className="grid md:grid-cols-2 gap-3 text-sm">
-                    <div className="border-l-2 border-indigo-300 pl-3 py-1">
-                      <strong className="text-indigo-600 dark:text-indigo-400">1. Epistemic Humility</strong> — Start with uncertainty, update with evidence
-                    </div>
-                    <div className="border-l-2 border-indigo-300 pl-3 py-1">
-                      <strong className="text-indigo-600 dark:text-indigo-400">2. Bayesian Updating</strong> — Prior + Evidence → Updated belief
-                    </div>
-                    <div className="border-l-2 border-indigo-300 pl-3 py-1">
-                      <strong className="text-indigo-600 dark:text-indigo-400">3. Source Triangulation</strong> — 3+ independent sources = likely true
-                    </div>
-                    <div className="border-l-2 border-indigo-300 pl-3 py-1">
-                      <strong className="text-indigo-600 dark:text-indigo-400">4. Falsifiability Test</strong> — Can it be proven wrong?
-                    </div>
-                    <div className="border-l-2 border-indigo-300 pl-3 py-1">
-                      <strong className="text-indigo-600 dark:text-indigo-400">5. Cui Bono Analysis</strong> — Who benefits? Follow incentives
-                    </div>
-                    <div className="border-l-2 border-indigo-300 pl-3 py-1">
-                      <strong className="text-indigo-600 dark:text-indigo-400">6. Steel Man Test</strong> — Understand opposing views deeply
-                    </div>
-                    <div className="border-l-2 border-indigo-300 pl-3 py-1 md:col-span-2">
-                      <strong className="text-indigo-600 dark:text-indigo-400">7. Antifragile Information Diet</strong> — Read what survives time, seek disconfirming evidence
-                    </div>
-                  </div>
-                </div>
-
-                {/* Teaching Framework for Kids - KEPT IN FULL */}
+                {/* Teaching Framework for Kids */}
                 <div className="mb-6 bg-gradient-to-r from-yellow-50 to-orange-50 dark:from-yellow-900/20 dark:to-orange-900/20 rounded-lg p-4 border border-yellow-200 dark:border-yellow-800">
                   <h3 className="text-lg font-semibold mb-2 text-gray-800 dark:text-gray-200">For My Kids: The Three-Question Protocol</h3>
                   <p className="text-xs text-gray-600 dark:text-gray-400 mb-3">
-                    The seven layers distilled into three simple questions for any claim—from AI outputs to playground rumors:
+                    Three simple questions for any claim—from AI outputs to playground rumors:
                   </p>
 
                   <div className="space-y-2 text-sm">
@@ -259,45 +168,12 @@ export default function PhilosophyPage() {
                     </div>
                   </div>
                 </div>
-
-                {/* Digital AI Guardian Vision */}
-                <div className="border-l-4 border-indigo-500 pl-4 py-2 mb-4">
-                  <Link href="/laboratory" className="block hover:opacity-80 transition-opacity">
-                    <h4 className="font-semibold text-indigo-600 dark:text-indigo-400 mb-1 text-sm">
-                      Future Direction: The Digital AI Guardian → Laboratory
-                    </h4>
-                    <p className="text-xs text-gray-600 dark:text-gray-400">
-                      A master-of-experts agentic system—like Big Hero 6&apos;s Baymax for information verification—that
-                      families can pilot together. Not replacing parental judgment, but augmenting truth-seeking with real-time epistemic tools.
-                    </p>
-                  </Link>
-                </div>
-
-                {/* Meta-Teaching Moment */}
-                <div className="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
-                  <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">
-                    <strong>The Framework IS the Love:</strong>
-                  </p>
-                  <p className="text-xs text-gray-600 dark:text-gray-400 italic">
-                    This systematic approach isn&apos;t cold or overly rational—it&apos;s how I love my children through complexity.
-                    This is living documentation that evolves as the world changes and they grow.
-                  </p>
-                </div>
               </Card>
             </motion.section>
           </div>
 
-          {/* CHAPTER 3: PHILOSOPHY IN PRACTICE */}
+          {/* Philosophy in Practice */}
           <div id="practice" className="mb-12">
-            <div className="bg-gradient-to-r from-green-50 to-orange-50 dark:from-green-900/20 dark:to-orange-900/20 rounded-lg p-6 mb-8 border border-green-200 dark:border-green-800">
-              <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-2">
-                CHAPTER 3: PHILOSOPHY IN PRACTICE
-              </h2>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                Applications, positioning, and future directions
-              </p>
-            </div>
-
             {/* The Collaborator Model vs Others */}
             <motion.section
               id="collaborator"
@@ -371,54 +247,6 @@ export default function PhilosophyPage() {
                 </p>
 
                 <div className="space-y-6">
-                  {/* Three-Hat Framework */}
-                  <div className="border-l-4 border-blue-500 pl-4 py-2">
-                    <Link href="/laboratory" className="block hover:opacity-80 transition-opacity">
-                      <h4 className="font-semibold text-blue-600 dark:text-blue-400 mb-2">
-                        Three-Hat Framework → Laboratory
-                      </h4>
-                      <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
-                        <strong>Opposing Forces:</strong> Systems Architect (think holistically) ↔ Product Manager (ship quickly) ↔ Implementation (code it yourself)
-                      </p>
-                      <p className="text-sm text-gray-600 dark:text-gray-400">
-                        <strong>Productive Tension:</strong> Context switching between these opposing perspectives in &lt;15 minutes creates better decisions
-                        than staying in any single mode. Currently testing across 3 client projects.
-                      </p>
-                    </Link>
-                  </div>
-
-                  {/* ADHD-AI Workflows */}
-                  <div className="border-l-4 border-teal-500 pl-4 py-2">
-                    <Link href="/laboratory" className="block hover:opacity-80 transition-opacity">
-                      <h4 className="font-semibold text-teal-600 dark:text-teal-400 mb-2">
-                        ADHD as Feature, Not Bug → Laboratory
-                      </h4>
-                      <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
-                        <strong>Opposing Forces:</strong> Neurodivergent cognitive patterns (rapid context switching, hyperfocus cycles) ↔ Traditional productivity systems (linear workflows)
-                      </p>
-                      <p className="text-sm text-gray-600 dark:text-gray-400">
-                        <strong>Productive Tension:</strong> AI agents designed to work WITH ADHD patterns actually outperform neurotypical workflows.
-                        The &quot;bug&quot; becomes a speed advantage in human-AI collaboration.
-                      </p>
-                    </Link>
-                  </div>
-
-                  {/* Sustainable AI */}
-                  <div className="border-l-4 border-green-500 pl-4 py-2">
-                    <Link href="/laboratory" className="block hover:opacity-80 transition-opacity">
-                      <h4 className="font-semibold text-green-600 dark:text-green-400 mb-2">
-                        Sustainability as Innovation Driver → Laboratory
-                      </h4>
-                      <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
-                        <strong>Opposing Forces:</strong> AI capability (more compute = better results) ↔ Environmental constraints (limited energy budgets)
-                      </p>
-                      <p className="text-sm text-gray-600 dark:text-gray-400">
-                        <strong>Productive Tension:</strong> Energy constraints force breakthrough innovations in model efficiency.
-                        Our constrained models now outperform larger models on specific tasks (87% energy reduction, +15% performance).
-                      </p>
-                    </Link>
-                  </div>
-
                   {/* This Website */}
                   <div className="border-l-4 border-purple-500 pl-4 py-2">
                     <h4 className="font-semibold text-purple-600 dark:text-purple-400 mb-2">
