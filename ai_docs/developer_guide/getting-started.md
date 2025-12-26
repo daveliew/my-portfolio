@@ -83,7 +83,7 @@ npm run pre-deploy
 
 1. Create page in appropriate directory under `/app/`
 2. Use `PageLayout` component for consistency
-3. Follow Next.js 14 App Router conventions
+3. Follow Next.js 15 App Router conventions
 4. Add navigation entry if needed
 
 ## ESLint Quote Escaping
@@ -135,5 +135,5 @@ Run `npm run philosophy-check` to validate adherence.
 
 1. Check existing patterns in similar components
 2. Review type definitions in `/types/`
-3. Consult design system in `/ai_docs/developer_guide/design-system-reference.md`
+3. Consult design system in `/ai_docs/developer_guide/design-system.md`
 4. Run validation scripts for immediate feedback

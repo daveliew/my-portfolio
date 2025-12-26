@@ -16,12 +16,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 **Core Thesis**: Time compounds faster than money. AI as complementarity (amplifies human capabilities) not replacement.
 
 **Target Audiences**:
-- **Beginners**: Philosophy → Three-Hat Framework → LLM fundamentals → Claude Mastery
+- **Beginners**: Philosophy → Context Engineering → LLM fundamentals → Claude Mastery
 - **Technical Professionals**: Fast-track through Technical Leadership → Claude Mastery → Advanced Systems
 
 **Key Differentiators**:
-- **Three-Hat Framework**: Rapid context switching (Systems Architect / Product Manager / Implementation)
-- **Context Engineering**: Not prompts, but architecting informational environments where understanding emerges
+- **Context Engineering**: Architecting informational environments where understanding emerges (not just prompts)
+- **Multi-Role Fluency**: Rapid context switching (Systems Architect / Product Manager / Implementation)
 - **ADHD-Optimized Workflows**: Neurodivergent patterns as AI-collaboration advantage
 - **Sustainability Convergence**: AI + Climate + Robotics intersection ($50T+ opportunity)
 - **Living Laboratory**: Every framework validated across 3 active client projects
@@ -65,7 +65,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 **Complete Site Map:**
 
 *Main Routes:*
-- `/` - Home (hero, virtuous cycle, Three-Hat Framework, projects)
+- `/` - Home (hero, virtuous cycle, Context Engineering, projects)
 - `/philosophy` - Fitzgerald Principle deep dive (9 sections)
 - `/about` - Professional journey, achievements, value proposition
 - `/laboratory` - Innovation experiments (AI/Sustainability/Robotics convergence)
@@ -76,7 +76,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `/ai-journey/overview` - AI journey introduction
 - `/ai-journey/portfolio` - Case studies (growth opportunity: data exists, not activated)
 - `/ai-journey/how-to-learn/` - Learning hub with sub-paths:
-  - `overview` - Three-Hat Framework philosophy + general resources
+  - `overview` - Context Engineering philosophy + general resources
   - `technical-leadership` - 3-client project validation
   - `llm-handling` - Practical LLM implementation
 - `/ai-journey/how-to-learn/claude-mastery/` - **Most complete content** (8 modules):
@@ -104,7 +104,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Data Source**: `/data/*.json` files in this repo
 
 ### GitHub Profile (github.com/daveliew) - Professional Positioning
-- **Narrative**: Context Engineering + Three-Hat Framework
+- **Narrative**: Context Engineering + Multi-Role Fluency
 - **Audience**: Hiring managers, technical peers, consulting prospects
 - **Content**: Agentic Engineer positioning, validated outcomes, metrics
 - **Tone**: Professional, credible, technically competent
@@ -116,15 +116,15 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Key Frameworks & Concepts
 
-**Three-Hat Framework** - Rapid context switching validated across 3 client projects:
-- Systems Architect: High-level design, dependencies, trade-offs
-- Product Manager: User needs, feature prioritization, business value
-- Implementation: Technical execution, code quality, testing
-
-**Context Engineering** (not "Prompt Engineering"):
+**Context Engineering** - Validated across 3 client projects:
 - Architecting informational environments where understanding emerges
 - Prompts are subset of broader environmental design
 - Focus: What context enables AI to reason effectively?
+
+**Multi-Role Fluency** - Rapid context switching between:
+- Systems Architect: High-level design, dependencies, trade-offs
+- Product Manager: User needs, feature prioritization, business value
+- Implementation: Technical execution, code quality, testing
 
 **Complementarity Principle**:
 - AI amplifies human capabilities (moral agency, creativity, embodied wisdom)
@@ -133,7 +133,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 **ADHD-AI Optimization**:
 - Neurodivergent patterns as collaboration advantage
-- Rapid context switching = natural Three-Hat operation
+- Rapid context switching = natural multi-role operation
 - Hyperfocus + AI execution = competitive edge
 
 **Fitzgerald Principle Applications**:
@@ -177,14 +177,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - ✅ **Most Complete**: Claude Mastery (8 modules), Philosophy (deeply articulated)
 - ✅ **Well Developed**: About, Laboratory, AI Journey structure, Home
 - 🚀 **High-Impact Growth**: Portfolio activation (case studies in JSON, not visible on site)
-- 📊 **Opportunities**: Testimonials from 3 client projects, Three-Hat metrics, visual representations
+- 📊 **Opportunities**: Testimonials from 3 client projects, Context Engineering metrics, visual representations
 
 **Development Priorities**:
 1. Portfolio page activation (highest ROI: credibility + SEO)
 2. SEO/AIEO metadata optimization (ongoing)
 3. Case study detail pages (data ready, needs UI)
 4. Testimonials/social proof integration
-5. Three-Hat Framework metrics visualization
+5. Context Engineering metrics visualization
 
 ## Theme System
 
@@ -251,7 +251,7 @@ import { fadeInUp, containerVariants, itemVariants } from '@/utils/animations';
 - ✅ "Context Engineering" (not "Prompt Engineering") - broader, more accurate
 - ✅ "Complementarity" (not "replacement") - AI-human relationship
 - ✅ "ADHD-optimized workflows" (not "despite ADHD") - advantage framing
-- ✅ "Three-Hat Framework" (not "wearing multiple hats") - specific methodology
+- ✅ "Multi-Role Fluency" (not "wearing multiple hats") - rapid context switching methodology
 - ✅ "Fitzgerald Principle applications" - when explaining design decisions
 - ✅ "Living laboratory" (not "case studies") - ongoing validation vs past work
 

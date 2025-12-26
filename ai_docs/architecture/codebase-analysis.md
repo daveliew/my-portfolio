@@ -49,7 +49,7 @@ daveliew/
 ├── styles/               # Styling system
 │   ├── globals.css       # Global styles & CSS variables
 │   ├── theme.ts          # TypeScript theme utilities
-│   └── (moved to ai_docs/developer_guide/design-system-reference.md)
+│   └── (see ai_docs/developer_guide/design-system.md)
 ├── types/                # TypeScript interfaces
 ├── utils/                # Utility functions
 └── scripts/              # Build & validation scripts
