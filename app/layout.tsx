@@ -5,7 +5,10 @@ import Footer from '../components/layout/Footer';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://daveliew.dev'),
-  title: "David Liew - Agentic AI Architect for Purpose-Driven Leaders",
+  title: {
+    default: "David Liew",
+    template: "%s | David Liew"
+  },
   description: "Building intelligent systems that amplify human potential. Expert in agentic AI, automation, and sustainable technology solutions for purpose-driven businesses.",
   keywords: "agentic AI architect, AI automation, intelligent systems, purpose-driven technology, sustainable AI, AI consultant Singapore",
   authors: [{ name: "David Liew" }],
@@ -14,8 +17,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://daveliew.dev",
-    siteName: "David Liew - Agentic AI Architect",
-    title: "David Liew - Agentic AI Architect for Purpose-Driven Leaders",
+    siteName: "David Liew",
+    title: "David Liew - Agentic AI Architect",
     description: "Building intelligent systems that amplify human potential. Expert in agentic AI, automation, and sustainable technology solutions.",
     images: [
       {
@@ -28,7 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "David Liew - Agentic AI Architect for Purpose-Driven Leaders",
+    title: "David Liew - Agentic AI Architect",
     description: "Building intelligent systems that amplify human potential through purposeful technology.",
     images: ["/images/logo.png"]
   },
@@ -96,7 +99,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              "name": "David Liew - Agentic AI Architect",
+              "name": "David Liew",
               "url": "https://daveliew.dev",
               "potentialAction": {
                 "@type": "SearchAction",
