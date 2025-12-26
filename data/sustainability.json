@@ -1,38 +1,22 @@
 {
-  "mission": "To track AI convergence trends (AI, energy, robotics) and translate them into practical guidance for businesses developing AI literacy and navigating complexity.",
-  "vision": "Helping businesses understand where AI is heading and make informed decisions about implementation, without needing advanced technical expertise or massive infrastructure investments.",
-  "currentProjects": [
+  "pillar": "Sustainability",
+  "status": "Keeping Warm",
+  "tagline": "AI + Climate convergence - watching the space",
+  "summary": "Previously explored how AI scaling constraints (energy, chips, data) intersect with sustainability imperatives. Key insights now inform broader AI literacy work.",
+  "watchingAreas": [
+    "AI infrastructure energy efficiency",
+    "Model selection trade-offs (capability vs carbon)",
+    "Nuclear renaissance for AI datacenters"
+  ],
+  "keyInsights": [
     {
-      "title": "AI-Powered Grid Optimization",
-      "description": "Understanding how AI systems can optimize energy distribution and datacenter power consumption. Research project to develop expertise in AI infrastructure energy requirements.",
-      "status": "Exploring 2025 Q1",
-      "image": "/images/resource-matching.jpg"
+      "title": "Smaller Models, Smarter Choices",
+      "description": "Specialized models often outperform larger ones for specific tasks while using 90% less energy."
     },
     {
-      "title": "AI Infrastructure Carbon Tracking",
-      "description": "Tracking the carbon footprint of different AI model choices to help businesses make informed trade-offs between capability, cost, and environmental impact.",
-      "status": "Exploring 2025 Q1",
-      "image": "/images/impact-dashboard.jpg"
+      "title": "Constraints Drive Innovation",
+      "description": "Energy and chip constraints are forcing efficiency innovations that benefit everyone."
     }
   ],
-  "keyLearnings": [
-    {
-      "title": "AI Scaling Constraints Matter",
-      "description": "Understanding energy, chip, and data constraints helps businesses make better model selection decisions. Smaller specialized models often outperform larger ones for specific tasks while using 90% less power."
-    },
-    {
-      "title": "AI Literacy Gaps Are Real",
-      "description": "Most businesses lack fundamental computational thinking to make informed AI decisions. The gap isn't technical knowledge—it's strategic frameworks for navigating complexity."
-    },
-    {
-      "title": "Trend Navigation Creates Value",
-      "description": "Businesses need interpreters who understand where AI is heading (nuclear, chips, efficiency innovations) and can translate that into actionable guidance for their specific context."
-    }
-  ],
-  "nextSteps": [
-    "Develop AI scaling literacy curriculum for businesses",
-    "Build frameworks for model selection trade-off analysis",
-    "Create practical guides for navigating AI infrastructure decisions",
-    "Document ADHD-AI workflow patterns for rapid trend navigation"
-  ]
+  "futureExploration": "May revisit when Voice UI and AI Agents foundations are established. The convergence thesis remains valid - just deprioritized for now."
 }
