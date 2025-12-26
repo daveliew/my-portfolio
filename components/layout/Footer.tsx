@@ -103,34 +103,28 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Column 3: AI Journey */}
+          {/* Column 3: AI Journey - Why/How/What */}
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-900 dark:text-gray-100 mb-4 pb-2 border-b-2 border-teal-500">
               AI Journey
             </h4>
             <ul className="space-y-2.5">
               <li>
-                <Link href="/ai-journey" className="text-sm text-gray-600 dark:text-gray-300 hover:text-teal-600 dark:hover:text-teal-400 transition-colors duration-200 inline-flex items-center group">
+                <Link href="/ai-journey/why-ai" className="text-sm text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 inline-flex items-center group">
                   <span className="mr-2 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
-                  AI Journey Home
+                  Why Human-AI Collaboration
                 </Link>
               </li>
               <li>
-                <Link href="/ai-journey/why-ai" className="text-sm text-gray-600 dark:text-gray-300 hover:text-teal-600 dark:hover:text-teal-400 transition-colors duration-200 inline-flex items-center group">
+                <Link href="/ai-journey/overview" className="text-sm text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 inline-flex items-center group">
                   <span className="mr-2 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
-                  Why AI Matters
+                  Context Engineering
                 </Link>
               </li>
               <li>
-                <Link href="/ai-journey/how-to-learn/overview" className="text-sm text-gray-600 dark:text-gray-300 hover:text-teal-600 dark:hover:text-teal-400 transition-colors duration-200 inline-flex items-center group">
+                <Link href="/ai-journey/claude/overview" className="text-sm text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200 inline-flex items-center group">
                   <span className="mr-2 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
-                  Three-Hat Framework
-                </Link>
-              </li>
-              <li>
-                <Link href="/ai-journey/how-to-learn/technical-leadership" className="text-sm text-gray-600 dark:text-gray-300 hover:text-teal-600 dark:hover:text-teal-400 transition-colors duration-200 inline-flex items-center group">
-                  <span className="mr-2 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
-                  Technical Leadership
+                  Claude Mastery
                 </Link>
               </li>
               <li>
@@ -139,43 +133,49 @@ const Footer: React.FC = () => {
                   Portfolio & Results
                 </Link>
               </li>
+              <li>
+                <Link href="/laboratory" className="text-sm text-gray-600 dark:text-gray-300 hover:text-teal-600 dark:hover:text-teal-400 transition-colors duration-200 inline-flex items-center group">
+                  <span className="mr-2 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                  Laboratory
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* Column 4: Claude Mastery */}
+          {/* Column 4: AI Agents - 2026 Focus */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-900 dark:text-gray-100 mb-4 pb-2 border-b-2 border-purple-500">
-              Claude Mastery
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-900 dark:text-gray-100 mb-4 pb-2 border-b-2 border-[var(--deep-purple)]">
+              AI Agents
             </h4>
             <ul className="space-y-2.5">
               <li>
-                <Link href="/ai-journey/how-to-learn/claude-mastery" className="text-sm text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200 inline-flex items-center group">
+                <Link href="/agents" className="text-sm text-gray-600 dark:text-gray-300 hover:text-[var(--deep-purple)] transition-colors duration-200 inline-flex items-center group">
                   <span className="mr-2 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
-                  Claude Mastery Hub
+                  Agents Hub
                 </Link>
               </li>
               <li>
-                <Link href="/ai-journey/how-to-learn/claude-mastery/claude-code" className="text-sm text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200 inline-flex items-center group">
+                <Link href="/agents/personal-systems" className="text-sm text-gray-600 dark:text-gray-300 hover:text-[var(--hot-pink)] transition-colors duration-200 inline-flex items-center group">
                   <span className="mr-2 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
-                  Claude Code
+                  Personal Systems
                 </Link>
               </li>
               <li>
-                <Link href="/ai-journey/how-to-learn/claude-mastery/model-context-protocol" className="text-sm text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200 inline-flex items-center group">
+                <Link href="/agents/learning-path" className="text-sm text-gray-600 dark:text-gray-300 hover:text-[var(--teal)] transition-colors duration-200 inline-flex items-center group">
                   <span className="mr-2 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
-                  Model Context Protocol
+                  Learning Path
                 </Link>
               </li>
               <li>
-                <Link href="/ai-journey/how-to-learn/claude-mastery/prompt-engineering" className="text-sm text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200 inline-flex items-center group">
+                <Link href="/agents/patterns" className="text-sm text-gray-600 dark:text-gray-300 hover:text-[var(--gold)] transition-colors duration-200 inline-flex items-center group">
                   <span className="mr-2 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
-                  Prompt Engineering
+                  Patterns Library
                 </Link>
               </li>
               <li>
-                <Link href="/ai-journey/how-to-learn/claude-mastery/tool-use" className="text-sm text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200 inline-flex items-center group">
+                <Link href="/agents/trust-engineering" className="text-sm text-gray-600 dark:text-gray-300 hover:text-[var(--deep-purple)] transition-colors duration-200 inline-flex items-center group">
                   <span className="mr-2 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
-                  Tool Use
+                  Trust Engineering
                 </Link>
               </li>
             </ul>
