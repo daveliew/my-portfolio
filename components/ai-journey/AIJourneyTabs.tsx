@@ -1,12 +1,15 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
+import { useSearchParams, useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Card } from '@/components/common';
 import { tabContentVariants } from '@/utils/animations';
 import tabsData from '@/data/ai-journey-tabs.json';
 import type { TabId, TabData, TabSection } from '@/types/ai-journey-tabs';
+
+const validTabs: TabId[] = ['why', 'how', 'what'];
 
 // Color mapping for tab themes
 const colorClasses = {
@@ -207,9 +210,20 @@ function TabContent({ tab }: { tab: TabData }) {
 
 // Main Component
 export default function AIJourneyTabs() {
-  const [activeTab, setActiveTab] = useState<TabId>('why');
+  const searchParams = useSearchParams();
+  const router = useRouter();
   const tabs = tabsData.tabs as TabData[];
+
+  // Get tab from URL or default to 'why'
+  const tabParam = searchParams.get('tab') as TabId | null;
+  const activeTab: TabId = tabParam && validTabs.includes(tabParam) ? tabParam : 'why';
   const activeTabData = tabs.find(t => t.id === activeTab) || tabs[0];
+
+  const setActiveTab = (tab: TabId) => {
+    const params = new URLSearchParams(searchParams.toString());
+    params.set('tab', tab);
+    router.replace(`?${params.toString()}`, { scroll: false });
+  };
 
   return (
     <div className="py-8">
