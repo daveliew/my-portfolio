@@ -113,7 +113,7 @@ export default async function Image() {
             color: '#475569',
           }}
         >
-          daveliew.dev
+          daveliew.com
         </div>
       </div>
     ),

@@ -5,13 +5,13 @@ export const metadata: Metadata = {
   description:
     'Proven patterns for building effective AI agents. Delegation strategies, multi-agent orchestration, and cognitive architecture for autonomous systems.',
   alternates: {
-    canonical: 'https://daveliew.dev/agents/patterns',
+    canonical: 'https://daveliew.com/agents/patterns',
   },
   openGraph: {
     title: 'Agent Design Patterns - David Liew',
     description:
       'Proven patterns for building effective AI agents and multi-agent systems.',
-    url: 'https://daveliew.dev/agents/patterns',
+    url: 'https://daveliew.com/agents/patterns',
   },
 };
 

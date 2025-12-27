@@ -4,7 +4,7 @@ import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://daveliew.dev'),
+  metadataBase: new URL('https://daveliew.com'),
   title: {
     default: "David Liew",
     template: "%s | David Liew"
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://daveliew.dev",
+    url: "https://daveliew.com",
     siteName: "David Liew",
     title: "David Liew - Agentic AI Architect",
     description: "Building intelligent systems that amplify human potential. Expert in agentic AI, automation, and sustainable technology solutions.",
@@ -61,7 +61,7 @@ export default function RootLayout({
               "name": "David Liew",
               "jobTitle": "Agentic AI Architect",
               "description": "Building intelligent systems that amplify human potential through purposeful technology",
-              "url": "https://daveliew.dev",
+              "url": "https://daveliew.com",
               "sameAs": [
                 "https://linkedin.com/in/daveliew",
                 "https://github.com/daveliew"
@@ -91,12 +91,12 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               "name": "David Liew",
-              "url": "https://daveliew.dev",
+              "url": "https://daveliew.com",
               "potentialAction": {
                 "@type": "SearchAction",
                 "target": {
                   "@type": "EntryPoint",
-                  "urlTemplate": "https://daveliew.dev/ai-journey?q={search_term_string}"
+                  "urlTemplate": "https://daveliew.com/ai-journey?q={search_term_string}"
                 },
                 "query-input": "required name=search_term_string"
               }

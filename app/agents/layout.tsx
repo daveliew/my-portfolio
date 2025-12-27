@@ -5,13 +5,13 @@ export const metadata: Metadata = {
   description:
     'The year AI agents become colleagues. Explore trust engineering, agent patterns, and personal AI systems that amplify human capabilities.',
   alternates: {
-    canonical: 'https://daveliew.dev/agents',
+    canonical: 'https://daveliew.com/agents',
   },
   openGraph: {
     title: 'AI Agents 2026 - David Liew',
     description:
       'The year AI agents become colleagues. Explore trust engineering and agent patterns.',
-    url: 'https://daveliew.dev/agents',
+    url: 'https://daveliew.com/agents',
   },
 };
 

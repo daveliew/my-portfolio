@@ -23,7 +23,7 @@ David Liew is an AI engineer and builder based in Singapore, pioneering practica
 Most AI tutorials teach prompt tricks. This site teaches how to architect entire AI collaboration systems—from CLAUDE.md files that give AI persistent memory, to MCP tools that extend capabilities, to conversation design that shapes understanding.
 
 ## Contact
-- Website: https://daveliew.dev
+- Website: https://daveliew.com
 - LinkedIn: https://linkedin.com/in/daveliew
 - GitHub: https://github.com/daveliew
 - Agentic Brewery: https://agenticbrewery.ai

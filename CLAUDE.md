@@ -28,6 +28,22 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 **Strategic Priorities**: Portfolio activation (case studies exist but not visible), SEO/AIEO optimization, 2026 predictions content
 
+## Career Positioning & Branding
+
+**Current Bio**: "business leader who builds AI solutions—ex-Meta"
+
+**Enterprise Experience** (2022-2026):
+- Meta: 2 years Technical Solutions Consultant
+- Google: 4-month Advertising SA contract (enterprise clients)
+- AWS: SG Code Campus partnership (Bedrock reselling + AI tool building)
+
+**Branding Strategy**:
+- **Now**: Keep current bio, mention Meta+Google conversationally when relevant
+- **After Google**: If work substantial, consider "ex-Meta, ex-Google"
+- **AWS angle**: Lead with "building AI tools" not "AWS partner"
+
+**What's rare**: Meta + Google ads insider + can build. Business bridging tech/non-tech.
+
 ## Development Commands
 
 - `npm run dev` - Start development server (http://localhost:3000)

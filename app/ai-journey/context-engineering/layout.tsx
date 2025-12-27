@@ -5,13 +5,13 @@ export const metadata: Metadata = {
   description:
     'Beyond prompt engineering: architecting informational environments where understanding emerges. The discipline of designing what AI knows before it reasons.',
   alternates: {
-    canonical: 'https://daveliew.dev/ai-journey/context-engineering',
+    canonical: 'https://daveliew.com/ai-journey/context-engineering',
   },
   openGraph: {
     title: 'Context Engineering - David Liew',
     description:
       'Beyond prompt engineering: architecting informational environments where understanding emerges.',
-    url: 'https://daveliew.dev/ai-journey/context-engineering',
+    url: 'https://daveliew.com/ai-journey/context-engineering',
   },
 };
 

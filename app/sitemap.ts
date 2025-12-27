@@ -11,7 +11,7 @@ import type { MetadataRoute } from 'next'
  */
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://daveliew.dev'
+  const baseUrl = 'https://daveliew.com'
 
   return [
     // Main Pages

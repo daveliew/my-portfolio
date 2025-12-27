@@ -5,13 +5,13 @@ export const metadata: Metadata = {
   description:
     'Singapore-based Agentic AI Architect pioneering human-AI collaboration. Building intelligent systems that amplify human potential through the Three-Hat Framework.',
   alternates: {
-    canonical: 'https://daveliew.dev/about',
+    canonical: 'https://daveliew.com/about',
   },
   openGraph: {
     title: 'About David Liew - Agentic AI Architect',
     description:
       'Singapore-based Agentic AI Architect pioneering human-AI collaboration.',
-    url: 'https://daveliew.dev/about',
+    url: 'https://daveliew.com/about',
   },
 };
 

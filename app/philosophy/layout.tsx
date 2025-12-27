@@ -5,13 +5,13 @@ export const metadata: Metadata = {
   description:
     'Holding two opposed ideas in productive tension. A philosophy for human-AI collaboration that embraces complexity without seeking premature resolution.',
   alternates: {
-    canonical: 'https://daveliew.dev/philosophy',
+    canonical: 'https://daveliew.com/philosophy',
   },
   openGraph: {
     title: 'The Fitzgerald Principle - David Liew',
     description:
       'Holding two opposed ideas in productive tension. A philosophy for human-AI collaboration.',
-    url: 'https://daveliew.dev/philosophy',
+    url: 'https://daveliew.com/philosophy',
   },
 };
 
@@ -25,13 +25,13 @@ const articleSchema = {
   author: {
     '@type': 'Person',
     name: 'David Liew',
-    url: 'https://daveliew.dev',
+    url: 'https://daveliew.com',
   },
   publisher: {
     '@type': 'Person',
     name: 'David Liew',
   },
-  mainEntityOfPage: 'https://daveliew.dev/philosophy',
+  mainEntityOfPage: 'https://daveliew.com/philosophy',
   datePublished: '2024-01-01',
   dateModified: '2025-12-01',
 };
