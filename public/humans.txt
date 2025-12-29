@@ -1,0 +1,26 @@
+/* TEAM */
+Builder: David Liew
+Site: https://daveliew.com
+Location: Singapore
+Contact: https://linkedin.com/in/daveliew
+
+/* THANKS */
+Claude - AI collaboration partner
+Anthropic - For building helpful AI
+Vercel - For excellent hosting
+Next.js team - For the framework
+
+/* SITE */
+Last update: 2025-12-29
+Standards: HTML5, CSS3, ES2022
+Components: Next.js 16, React 19, Tailwind CSS
+Software: Claude Code, VS Code
+
+/* PHILOSOPHY */
+"The test of a first-rate intelligence is the ability to hold two opposed ideas in mind at the same time and still retain the ability to function."
+- F. Scott Fitzgerald
+
+This site embodies the Fitzgerald Principle through productive tensions:
+- Simple surfaces with technical depth
+- AI augmentation preserving human agency
+- Consistency enabling flexibility

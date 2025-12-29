@@ -20,11 +20,13 @@ export const metadata: Metadata = {
     siteName: "David Liew",
     title: "David Liew - Agentic AI Architect",
     description: "Building intelligent systems that amplify human potential. Expert in agentic AI, automation, and sustainable technology solutions.",
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'David Liew - Agentic AI Architect' }],
   },
   twitter: {
     card: "summary_large_image",
     title: "David Liew - Agentic AI Architect",
     description: "Building intelligent systems that amplify human potential through purposeful technology.",
+    images: ['/twitter-image'],
   },
   robots: {
     index: true,
