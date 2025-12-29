@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Card, SectionHeader, PageLayout } from '@/components/common';
 import TableOfContents from '@/components/common/TableOfContents';
 import { sectionAnimation } from '@/utils/animations';
-import type { TOCHeading } from '@/types/blog';
+import type { TOCHeading } from '@/types/content';
 
 export default function PhilosophyPage() {
   // Table of Contents structure

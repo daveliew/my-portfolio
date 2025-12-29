@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Quick Reference
 
-**Stack**: Next.js 15.5 + React 19 + TypeScript + Tailwind + Framer Motion
+**Stack**: Next.js 16 + React 19 + TypeScript + Tailwind + Framer Motion
 **Philosophy**: Fitzgerald Principle (opposing forces in productive tension)
 **Path Alias**: `@/*` → root directory
 **Critical**: Always run `npm run pre-deploy` before committing
@@ -88,18 +88,21 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `/contact` - Links to LinkedIn, GitHub, Agentic Brewery
 
 *AI Journey Structure:*
-- `/ai-journey/why-ai` - Foundation: Why human-AI collaboration matters
-- `/ai-journey/overview` - AI journey introduction
-- `/ai-journey/portfolio` - Case studies (growth opportunity: data exists, not activated)
-- `/ai-journey/how-to-learn/` - Learning hub with sub-paths:
-  - `overview` - Context Engineering philosophy + general resources
-  - `technical-leadership` - 3-client project validation
-  - `llm-handling` - Practical LLM implementation
-- `/ai-journey/how-to-learn/claude-mastery/` - **Most complete content** (8 modules):
-  - Hands-on: `prompt-engineering`, `cookbook-examples`, `developer-console`, `claude-code`
-  - Advanced: `tool-use`, `computer-use`, `vision-multimodal`, `model-context-protocol`, `retrieval-augmented-generation`
-  - Future: `2026-predictions` (recent addition with research-backed trajectory)
-- `/ai-journey/techniques/` - Technical implementation paths
+- `/ai-journey` - Hub with tab navigation
+- `/ai-journey/overview` - Learning philosophy & path options
+- `/ai-journey/why-ai` - S-curve framework (Coatue research)
+- `/ai-journey/context-engineering` - Context Engineering framework
+- `/ai-journey/technical-leadership` - 3-client validation learnings
+- `/ai-journey/portfolio` - Case studies (data exists, awaiting activation)
+- `/ai-journey/claude/*` - Claude Mastery (8 modules):
+  - `overview`, `code`, `cookbook`, `console`, `vision`, `computer-use`, `mcp`, `2026-predictions`
+- `/ai-journey/techniques/*` - Technical paths:
+  - `prompt-engineering`, `tool-use`, `llm-handling`, `rag`, `agent-rag`
+
+*Agents Section:*
+- `/agents` - Agent development hub
+- `/agents/overview`, `/agents/learning-path`, `/agents/patterns`
+- `/agents/trust-engineering`, `/agents/personal-systems`
 
 **Key Data Files** (`/data/` - never hardcode content):
 - `ai-journey.json` - S-curve phases, foundation skills, roadmap, **case studies** (hidden gems)
@@ -165,7 +168,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 2. **Sustainability Imperatives** - Climate urgency driving green tech
 3. **Robotic Systems** - Physical automation reaching cost parity
 
-**Tech Stack**: Next.js 15.5 with React 19, leveraging App Router, Turbopack dev builds, and React 19's improved hydration.
+**Tech Stack**: Next.js 16 with React 19, leveraging App Router, Turbopack dev builds, and React 19's improved hydration.
 
 **Data-Driven Content Pattern** (CRITICAL):
 - Content lives in `/data/*.json` files, NOT hardcoded in components
@@ -240,7 +243,7 @@ import { fadeInUp, containerVariants, itemVariants } from '@/utils/animations';
 
 ## Key Dependencies
 
-- **next** (^15.5.5) - React framework with App Router and Turbopack
+- **next** (16.0.10) - React framework with App Router and Turbopack
 - **react** (^19.2.0) - React 19 with improved hydration and Actions
 - **typescript** (^5) - Strict type checking
 - **tailwindcss** (^3.4.18) - Utility-first CSS
@@ -273,12 +276,12 @@ import { fadeInUp, containerVariants, itemVariants } from '@/utils/animations';
 
 **Avoid**: Corporate speak, aggressive claims ("10x your productivity!"), achievement focus, overly casual tone, replacement narratives, limitation framing of neurodivergence
 
-## Comprehensive Documentation
+## Detailed Documentation
 
-Detailed documentation available in `/ai_docs/`:
-- `developer_guide/` - Architecture, getting started, design system reference
-- `quick_start/` - 15-minute setup procedures
-- `technical/` - Complete references
+For deep dives, see `/ai_docs/`:
+- `developer_guide/getting-started.md` - Setup, debugging tips
+- `developer_guide/design-system.md` - Fitzgerald design system, philosophy workflow
+- `architecture/codebase-analysis.md` - Full site map, tech stack, patterns
 
 ---
 

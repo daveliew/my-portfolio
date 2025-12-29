@@ -7,7 +7,7 @@ import { Card, SectionHeader, PageLayout, CrossPollinationStudio } from '@/compo
 import TableOfContents from '@/components/common/TableOfContents';
 import { sectionAnimation } from '@/utils/animations';
 import { themeColors, themeUtilities } from '@/styles/theme';
-import type { TOCHeading } from '@/types/blog';
+import type { TOCHeading } from '@/types/content';
 
 // Import data
 import voiceData from '@/data/voice-experiments.json';

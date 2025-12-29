@@ -2,12 +2,12 @@
 
 ## Overview
 
-This is a modern Next.js 15 portfolio website that embodies the **Fitzgerald Principle** - the ability to hold two opposed ideas in mind simultaneously while still functioning. The site demonstrates human-AI collaboration through a philosophy-driven design system.
+This is a modern Next.js 16 portfolio website that embodies the **Fitzgerald Principle** - the ability to hold two opposed ideas in mind simultaneously while still functioning. The site demonstrates human-AI collaboration through a philosophy-driven design system.
 
 ## Tech Stack & Architecture
 
 ### Core Technologies
-- **Framework**: Next.js 15.5 with App Router & Turbopack
+- **Framework**: Next.js 16 with App Router & Turbopack
 - **React**: React 19 with improved hydration
 - **Language**: TypeScript (strict mode)
 - **Styling**: Tailwind CSS with custom design system
@@ -106,40 +106,48 @@ npm run philosophy-check  # Philosophy adherence check
 
 ## Navigation Structure
 
-### Complete Site Map (19 Routes)
+### Complete Site Map (~30 Routes)
 
-**Main Pages (5):**
-- `/` - Homepage: Philosophy introduction & 3-Hat Framework
-- `/philosophy` - Fitzgerald Principle framework deep dive
-- `/laboratory` - Live experiments & professional background
-- `/contact` - Connection point & collaboration
-- `/ai-journey` - AI learning hub with comprehensive paths
+**Main Pages (6):**
+- `/` - Homepage: Philosophy + Virtuous Cycle + Context Engineering
+- `/about` - Professional journey & value proposition
+- `/philosophy` - Fitzgerald Principle deep dive (9 sections)
+- `/laboratory` - Innovation experiments (Voice AI, Agents, Sustainability)
+- `/contact` - Links to LinkedIn, GitHub, Agentic Brewery
+- `/ai-journey` - AI learning hub
 
-**AI Journey Routes (14):**
+**AI Journey Routes (~15):**
 
 *Core Sections:*
-- `/ai-journey/why-ai` - Why human-AI collaboration matters
-- `/ai-journey/portfolio` - Portfolio & active projects
-- `/ai-journey/how-to-learn/overview` - Three-Hat Framework overview
+- `/ai-journey/overview` - Learning philosophy & path options
+- `/ai-journey/why-ai` - S-curve framework (Coatue research)
+- `/ai-journey/context-engineering` - Context Engineering framework
+- `/ai-journey/technical-leadership` - 3-client validation learnings
+- `/ai-journey/portfolio` - Case studies & projects
 
-*Learning Paths:*
-- `/ai-journey/how-to-learn/llm-handling` - LLM communication fundamentals
-- `/ai-journey/how-to-learn/agent-rag` - Agent & RAG systems
-- `/ai-journey/how-to-learn/technical-leadership` - 3-Hat technical leadership
+*Claude Mastery (/ai-journey/claude/*):*
+- `overview` - 8-module curriculum hub
+- `code` - Claude Code capabilities
+- `cookbook` - Anthropic cookbook examples
+- `console` - Developer console features
+- `vision` - Vision & multimodal
+- `computer-use` - Desktop automation
+- `mcp` - Model Context Protocol
+- `2026-predictions` - Research-backed trajectory
 
-*Claude Mastery (8 modules):*
-- `/ai-journey/how-to-learn/claude-mastery` - Claude Mastery hub
-- `/ai-journey/how-to-learn/claude-mastery/prompt-engineering` - Prompting techniques
-- `/ai-journey/how-to-learn/claude-mastery/tool-use` - Tool use implementation
-- `/ai-journey/how-to-learn/claude-mastery/computer-use` - Computer use capabilities
-- `/ai-journey/how-to-learn/claude-mastery/vision-multimodal` - Vision & multimodal
-- `/ai-journey/how-to-learn/claude-mastery/retrieval-augmented-generation` - RAG systems
-- `/ai-journey/how-to-learn/claude-mastery/model-context-protocol` - MCP integration
-- `/ai-journey/how-to-learn/claude-mastery/developer-console` - Developer tools
-- `/ai-journey/how-to-learn/claude-mastery/cookbook-examples` - Practical examples
+*Techniques (/ai-journey/techniques/*):*
+- `prompt-engineering`, `tool-use`, `llm-handling`, `rag`, `agent-rag`
+
+**Agents Section (6):**
+- `/agents` - Agent development hub
+- `/agents/overview` - Agent definitions & timeline
+- `/agents/learning-path` - 4-phase learning curriculum
+- `/agents/patterns` - Orchestration & safety patterns
+- `/agents/trust-engineering` - Trust calibration framework
+- `/agents/personal-systems` - MCP stack showcase
 
 **SEO:**
-- Sitemap available at `/sitemap.xml` (auto-generated via `app/sitemap.ts`)
+- Sitemap: `/sitemap.xml` (auto-generated via `app/sitemap.ts`)
 
 ## Content Management
 

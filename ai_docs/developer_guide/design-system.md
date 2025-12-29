@@ -198,3 +198,23 @@ Maintain core tensions as the system evolves:
 - Design systems that feel human while being systematic
 
 *The goal isn't perfection—it's productive tension that creates value.*
+
+---
+
+## Philosophy Workflow
+
+### Before Major Releases
+
+1. **`npm run philosophy-check`** - Automated Fitzgerald Principle scoring
+2. **Review Component Patterns** - Ensure new additions follow established tensions
+3. **Test User Journey** - Verify philosophy is clear throughout experience
+4. **Document Changes** - Explain how changes advance or refine philosophy
+
+### Contributing to Philosophy Evolution
+
+When proposing design system changes, answer:
+
+1. **Identify the Tension** - What opposing forces does this balance?
+2. **Serve the Mission** - How does this advance human-AI collaboration?
+3. **Show Don't Tell** - Can this demonstrate rather than just describe?
+4. **Maintain Coherence** - Does this fit with existing philosophy?

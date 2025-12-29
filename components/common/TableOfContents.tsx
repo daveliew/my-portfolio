@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import type { TOCHeading } from '@/types/blog';
+import type { TOCHeading } from '@/types/content';
 
 interface TableOfContentsProps {
   headings: TOCHeading[];
