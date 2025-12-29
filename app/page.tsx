@@ -24,7 +24,8 @@ export default function HomePage() {
             
             <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 font-medium">
               Most people use AI tools.<br className="hidden md:block" />
-              I build AI teams.
+              I build AI teams.<br className="hidden md:block" />
+              <span className="text-lg text-gray-600 dark:text-gray-400">Each project teaches me something new.</span>
             </p>
             
             {/* Key insight as visual callout */}
