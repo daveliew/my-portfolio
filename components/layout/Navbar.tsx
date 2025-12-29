@@ -3,16 +3,17 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
+import { SkillTreeMenu } from '@/components/navigation';
 
 const navLinks = [
   { href: '/about', label: 'About', id: 'about' },
 ];
 
-// 3-Theme Structure: WHY → HOW → WHAT (Golden Circle for tech professionals)
+// Mobile menu still uses WHY → HOW → WHAT structure
 const aiJourneyMenu = {
   why: [
     { href: '/ai-journey/why-ai', label: 'Why Human-AI Collaboration' },
-    { href: '/ai-journey/context-engineering', label: 'Context Engineering' },
+    { href: '/context-engineering', label: 'Context Engineering' },
     { href: '/philosophy', label: 'Philosophy & Principles' },
   ],
   how: [
@@ -119,86 +120,11 @@ const Navbar: React.FC = () => {
               </svg>
             </Link>
 
-            {/* Mega Menu Dropdown - 3 Themes: WHY → HOW → WHAT */}
-            {showAIJourneyMenu && (
-              <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-[600px] bg-white dark:bg-gray-900 shadow-2xl border-t-2 border-blue-600 dark:border-blue-400 z-50 mt-0">
-                {/* Overview Link Header */}
-                <Link
-                  href="/ai-journey"
-                  className="block px-6 py-3 bg-gradient-to-r from-blue-50 to-teal-50 dark:from-blue-900/30 dark:to-teal-900/30 border-b border-gray-200 dark:border-gray-700 hover:from-blue-100 hover:to-teal-100 dark:hover:from-blue-900/50 dark:hover:to-teal-900/50 transition-colors"
-                  onClick={() => setShowAIJourneyMenu(false)}
-                >
-                  <div className="flex items-center">
-                    <span className="text-lg mr-2">📍</span>
-                    <div>
-                      <div className="font-semibold text-gray-900 dark:text-gray-100">AI Journey Overview</div>
-                      <div className="text-xs text-gray-500 dark:text-gray-400">Start here for the big picture</div>
-                    </div>
-                  </div>
-                </Link>
-                <div className="grid grid-cols-3 gap-6 p-6">
-                  {/* WHY - Foundation */}
-                  <div>
-                    <h3 className="font-semibold text-blue-600 dark:text-blue-400 mb-3 text-sm uppercase tracking-wide">Why</h3>
-                    <ul className="space-y-2">
-                      {aiJourneyMenu.why.map(item => (
-                        <li key={item.href}>
-                          <Link
-                            href={item.href}
-                            className="block hover:text-blue-600 dark:hover:text-blue-400 transition-colors group"
-                            onClick={() => setShowAIJourneyMenu(false)}
-                          >
-                            <div className="text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400">
-                              {item.label}
-                            </div>
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* HOW - Skills */}
-                  <div>
-                    <h3 className="font-semibold text-purple-600 dark:text-purple-400 mb-3 text-sm uppercase tracking-wide">How</h3>
-                    <ul className="space-y-2">
-                      {aiJourneyMenu.how.map(item => (
-                        <li key={item.href}>
-                          <Link
-                            href={item.href}
-                            className="block hover:text-purple-600 dark:hover:text-purple-400 transition-colors group"
-                            onClick={() => setShowAIJourneyMenu(false)}
-                          >
-                            <div className="text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:text-purple-600 dark:group-hover:text-purple-400">
-                              {item.label}
-                            </div>
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* WHAT - Results */}
-                  <div>
-                    <h3 className="font-semibold text-teal-600 dark:text-teal-400 mb-3 text-sm uppercase tracking-wide">What</h3>
-                    <ul className="space-y-2">
-                      {aiJourneyMenu.what.map(item => (
-                        <li key={item.href}>
-                          <Link
-                            href={item.href}
-                            className="block hover:text-teal-600 dark:hover:text-teal-400 transition-colors group"
-                            onClick={() => setShowAIJourneyMenu(false)}
-                          >
-                            <div className="text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:text-teal-600 dark:group-hover:text-teal-400">
-                              {item.label}
-                            </div>
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            )}
+            {/* Skill Tree Dropdown */}
+            <SkillTreeMenu
+              isOpen={showAIJourneyMenu}
+              onClose={() => setShowAIJourneyMenu(false)}
+            />
           </div>
 
           {/* Agents - 2026 Focus */}
