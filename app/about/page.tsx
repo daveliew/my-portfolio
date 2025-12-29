@@ -31,8 +31,8 @@ export default function AboutPage() {
               />
             </div>
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-              I&apos;m David Liew—an AI Engineer and Builder exploring how humans and AI can work together naturally,
-              not through replacement, but through thoughtful collaboration that amplifies what makes us uniquely human.
+              I&apos;m Dave—exploring how humans and AI work together. 10+ years of building taught me patterns that work.
+              But I&apos;m still discovering new ones. Each project teaches me something for the next.
             </p>
           </div>
 
