@@ -18,13 +18,22 @@ Lean documentation following "Extract Wisdom, Delete Workspace" principle.
 | File | Purpose |
 |------|---------|
 | [`codebase-analysis.md`](./architecture/codebase-analysis.md) | Comprehensive codebase reference |
-| [`design-system-version.md`](./architecture/design-system-version.md) | Design system evolution |
+| [`philosophy-patterns.md`](./architecture/philosophy-patterns.md) | Philosophy consistency checks, contribution framework |
 
 ### 📚 Lessons
 
 | File | Purpose |
 |------|---------|
 | [`2025-01-agentic-engineering-blog-planning.md`](./lessons/2025-01-agentic-engineering-blog-planning.md) | Blog schema, MDX decisions, TOC patterns |
+
+### 📦 Archive
+
+Historical docs moved here after extracting useful patterns:
+
+| Folder | Contents |
+|--------|----------|
+| [`2025-08-notion-cms-planning/`](./archive/2025-08-notion-cms-planning/) | Notion CMS integration (planned, not implemented) |
+| [`2025-06-design-system-versioning/`](./archive/2025-06-design-system-versioning/) | Original versioning approach |
 
 ---
 
@@ -36,4 +45,4 @@ Lean documentation following "Extract Wisdom, Delete Workspace" principle.
 
 ---
 
-*5 files, ~28KB | Last cleaned: December 2025*
+*5 active files + 2 archive folders | Last cleaned: December 2025*
