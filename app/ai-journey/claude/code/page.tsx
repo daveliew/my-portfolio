@@ -701,6 +701,9 @@ claude --version`}
             <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
               <h5 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">Related Topics</h5>
               <div className="flex flex-wrap gap-2">
+                <a href="/ai-journey/claude/code-hooks" className="text-sm px-3 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-300 rounded hover:bg-orange-200 dark:hover:bg-orange-800 transition-colors">
+                  Claude Code Hooks →
+                </a>
                 <a href="/ai-journey/claude/mcp" className="text-sm px-3 py-1 bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-300 rounded hover:bg-teal-200 dark:hover:bg-teal-800 transition-colors">
                   MCP Integration →
                 </a>

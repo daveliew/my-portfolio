@@ -69,24 +69,58 @@ const nextConfig = {
         destination: '/ai-journey/claude/code',
         permanent: true,
       },
+      // Legacy placeholder redirects → Capabilities Reference
       {
         source: '/ai-journey/how-to-learn/claude-mastery/computer-use',
-        destination: '/ai-journey/claude/computer-use',
+        destination: '/ai-journey/claude/capabilities',
         permanent: true,
       },
       {
         source: '/ai-journey/how-to-learn/claude-mastery/developer-console',
-        destination: '/ai-journey/claude/console',
+        destination: '/ai-journey/claude/capabilities',
         permanent: true,
       },
       {
         source: '/ai-journey/how-to-learn/claude-mastery/cookbook-examples',
-        destination: '/ai-journey/claude/cookbook',
+        destination: '/ai-journey/claude/capabilities',
         permanent: true,
       },
       {
         source: '/ai-journey/how-to-learn/claude-mastery/vision-multimodal',
-        destination: '/ai-journey/claude/vision',
+        destination: '/ai-journey/claude/capabilities',
+        permanent: true,
+      },
+      // Deleted placeholder pages → Capabilities Reference
+      {
+        source: '/ai-journey/claude/computer-use',
+        destination: '/ai-journey/claude/capabilities',
+        permanent: true,
+      },
+      {
+        source: '/ai-journey/claude/console',
+        destination: '/ai-journey/claude/capabilities',
+        permanent: true,
+      },
+      {
+        source: '/ai-journey/claude/cookbook',
+        destination: '/ai-journey/claude/capabilities',
+        permanent: true,
+      },
+      {
+        source: '/ai-journey/claude/vision',
+        destination: '/ai-journey/claude/capabilities',
+        permanent: true,
+      },
+      // Hooks moved to Context Engineering
+      {
+        source: '/ai-journey/claude/code-hooks',
+        destination: '/context-engineering/hooks',
+        permanent: true,
+      },
+      // Context Engineering promoted to top-level
+      {
+        source: '/ai-journey/context-engineering',
+        destination: '/context-engineering',
         permanent: true,
       },
       {

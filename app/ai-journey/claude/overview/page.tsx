@@ -17,20 +17,12 @@ export default function ClaudeMasteryPage() {
       time: '2-3 hours'
     },
     {
-      title: 'Anthropic Cookbook Examples',
-      description: 'Explore working code examples and implementations from Anthropic\'s comprehensive cookbook.',
-      skills: ['Code Patterns', 'API Integration', 'Real-world Applications', 'Best Practices'],
-      href: '/ai-journey/claude/cookbook',
-      level: 'Intermediate',
-      time: '3-4 hours'
-    },
-    {
-      title: 'Developer Console & Workbench',
-      description: 'Learn to use Anthropic\'s Developer Console and Workbench for experimentation and development.',
-      skills: ['Console Navigation', 'Workbench Features', 'Testing & Evaluation', 'Prompt Testing'],
-      href: '/ai-journey/claude/console',
-      level: 'Beginner',
-      time: '1-2 hours'
+      title: 'Capabilities Reference',
+      description: 'Quick reference for Claude\'s key capabilities including Vision, Computer Use, Console, and Cookbook with links to official docs.',
+      skills: ['Vision', 'Computer Use', 'Console', 'Cookbook Examples'],
+      href: '/ai-journey/claude/capabilities',
+      level: 'All Levels',
+      time: '30 min'
     },
     {
       title: 'Claude Code',
@@ -52,20 +44,12 @@ export default function ClaudeMasteryPage() {
       time: '4-5 hours'
     },
     {
-      title: 'Computer Use Capabilities',
-      description: 'Explore Claude\'s groundbreaking computer use features for desktop automation and interaction.',
-      skills: ['Desktop Automation', 'UI Interaction', 'Computer Vision', 'Action Planning'],
-      href: '/ai-journey/claude/computer-use',
-      level: 'Advanced',
-      time: '3-4 hours'
-    },
-    {
-      title: 'Vision & Multimodal Inputs',
-      description: 'Harness Claude\'s vision capabilities to process and analyze visual information alongside text.',
-      skills: ['Image Analysis', 'Chart Reading', 'Document Processing', 'Visual Question Answering'],
-      href: '/ai-journey/claude/vision',
-      level: 'Intermediate',
-      time: '2-3 hours'
+      title: 'Context Engineering',
+      description: 'Architect the informational environment where Claude\'s understanding emerges. CLAUDE.md files, Skills, Hooks, and Archetypes.',
+      skills: ['CLAUDE.md', 'Skills', 'Hooks', 'Archetypes'],
+      href: '/context-engineering',
+      level: 'Beginner to Advanced',
+      time: '2-4 hours'
     },
     {
       title: 'Model Context Protocol (MCP)',
@@ -82,6 +66,14 @@ export default function ClaudeMasteryPage() {
       href: '/ai-journey/techniques/rag',
       level: 'Intermediate to Advanced',
       time: '5-6 hours'
+    },
+    {
+      title: 'Hooks (Deep Dive)',
+      description: 'Event-based automation that encodes your judgment into executable code. Part of the Context Engineering stack.',
+      skills: ['Hook Architecture', 'Context Injection', 'Workflow Automation', 'HITL Reduction'],
+      href: '/context-engineering/hooks',
+      level: 'Advanced',
+      time: '2-3 hours'
     }
   ];
 
