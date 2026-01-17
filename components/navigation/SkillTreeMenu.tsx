@@ -1,5 +1,6 @@
 'use client';
 
+import { useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 import { SkillTreeNode } from './SkillTreeNode';
@@ -22,6 +23,14 @@ const difficultyLegend: { level: DifficultyLevel; label: string; color: string }
 export function SkillTreeMenu({ isOpen, onClose }: SkillTreeMenuProps) {
   const pathname = usePathname();
   const data = skillTreeData as SkillTreeData;
+
+  // Precompute active node ID once instead of checking each node during render
+  const activeNodeId = useMemo(() => {
+    const activeNode = data.nodes.find(
+      (node) => pathname === node.href || pathname.startsWith(node.href + '/')
+    );
+    return activeNode?.id ?? null;
+  }, [pathname, data.nodes]);
 
   return (
     <AnimatePresence>
@@ -81,7 +90,7 @@ export function SkillTreeMenu({ isOpen, onClose }: SkillTreeMenuProps) {
                 <SkillTreeNode
                   key={node.id}
                   node={node}
-                  isActive={pathname === node.href || pathname.startsWith(node.href + '/')}
+                  isActive={node.id === activeNodeId}
                   onNavigate={onClose}
                 />
               ))}
