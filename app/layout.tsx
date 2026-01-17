@@ -1,13 +1,7 @@
 import type { Metadata } from "next";
-import dynamic from 'next/dynamic';
+import { Analytics } from '@vercel/analytics/react';
 import { Jura, Work_Sans } from 'next/font/google';
 import '../styles/globals.css';
-
-// Defer analytics to after hydration (Vercel best practice)
-const Analytics = dynamic(
-  () => import('@vercel/analytics/react').then((mod) => mod.Analytics),
-  { ssr: false }
-);
 
 // Self-hosted fonts with automatic font-display: swap
 const jura = Jura({

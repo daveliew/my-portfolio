@@ -51,7 +51,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `npm run type-check` - TypeScript validation only
 - `npm run lint` - ESLint validation only
 - `npm run philosophy-check` - Fitzgerald Principle adherence scoring
-- `npm run pre-deploy` - Full validation (TypeScript + ESLint + Philosophy + Build)
+- `npm run seo-check` - SEO validation (meta tags, sitemap, Schema.org)
+- `npm run pre-deploy` - Full validation (TypeScript + ESLint + Philosophy + SEO + Build)
 - `npm run quick-check` - Fast validation (TypeScript + ESLint + Philosophy, no build)
 
 ## Pre-Deployment Validation
@@ -61,6 +62,30 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 **Scripts**: `pre-deploy.js` (full), `validate-philosophy.js` (Fitzgerald scoring), `quick-check.js` (fast, no build)
 
 **Note**: ESLint errors WILL block Vercel deployments.
+
+## SEO Process
+
+**Memory triggers:**
+- "Deploy = SEO check runs automatically"
+- "15th of month = Search Console quick review"
+- "New page = add to sitemap.ts + seo-tracker.json"
+
+**Automated Checks** (run via `npm run seo-check`):
+- Meta tag coverage (title, description per route)
+- Sitemap completeness (compare /app routes vs sitemap.ts)
+- Schema.org JSON-LD validation
+- Image alt attribute presence
+
+**Analytics**: Vercel Analytics (privacy-first, auto-configured)
+
+**Tracking**: `data/seo-tracker.json` - page priorities, target keywords, optimization status
+
+**Recurring Tasks**:
+| Task | Frequency | Trigger |
+|------|-----------|---------|
+| SEO validation | Every deploy | `npm run pre-deploy` |
+| Search Console review | Monthly | Calendar: 15th |
+| Full SEO audit | Quarterly | Jan/Apr/Jul/Oct |
 
 ## Project Structure
 

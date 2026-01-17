@@ -24,6 +24,11 @@ const CHECKS = {
     name: 'Philosophy Validation',
     critical: false
   },
+  seo: {
+    command: 'npm run seo-check',
+    name: 'SEO Validation',
+    critical: false
+  },
   build: {
     command: 'npm run build',
     name: 'Production Build',

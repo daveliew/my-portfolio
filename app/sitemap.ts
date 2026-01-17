@@ -46,6 +46,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
 
+    // Vibe Coding - Entry-level context engineering
+    {
+      url: `${baseUrl}/vibe-coding`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/vibe-coding/handout`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.6,
+    },
+
     // AI Agents - 2026 Focus
     {
       url: `${baseUrl}/agents`,
@@ -98,13 +112,39 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     },
 
-    // AI Journey - Top Level
+    // Context Engineering - Top Level (promoted from ai-journey)
     {
-      url: `${baseUrl}/ai-journey/context-engineering`,
+      url: `${baseUrl}/context-engineering`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/context-engineering/claude-md`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,
     },
+    {
+      url: `${baseUrl}/context-engineering/skills`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/context-engineering/hooks`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/context-engineering/archetypes`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+
+    // AI Journey - Top Level
     {
       url: `${baseUrl}/ai-journey/technical-leadership`,
       lastModified: new Date(),
@@ -158,37 +198,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     },
     {
+      url: `${baseUrl}/ai-journey/claude/capabilities`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
       url: `${baseUrl}/ai-journey/claude/2026-predictions`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
-      url: `${baseUrl}/ai-journey/claude/computer-use`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/ai-journey/claude/vision`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
-    {
       url: `${baseUrl}/ai-journey/claude/mcp`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/ai-journey/claude/console`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/ai-journey/claude/cookbook`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,

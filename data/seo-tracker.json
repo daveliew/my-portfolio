@@ -1,0 +1,83 @@
+{
+  "pages": [
+    {
+      "route": "/",
+      "priority": "high",
+      "targetKeywords": ["agentic AI architect", "AI consultant Singapore"],
+      "lastOptimized": "2025-01-17",
+      "status": "optimized"
+    },
+    {
+      "route": "/context-engineering",
+      "priority": "high",
+      "targetKeywords": ["context engineering", "AI context architecture"],
+      "lastOptimized": "2025-01-17",
+      "status": "optimized"
+    },
+    {
+      "route": "/ai-journey",
+      "priority": "high",
+      "targetKeywords": ["AI learning path", "AI skills development"],
+      "lastOptimized": "2025-01-17",
+      "status": "optimized"
+    },
+    {
+      "route": "/agents",
+      "priority": "high",
+      "targetKeywords": ["AI agents", "agentic systems"],
+      "lastOptimized": "2025-01-17",
+      "status": "optimized"
+    },
+    {
+      "route": "/philosophy",
+      "priority": "medium",
+      "targetKeywords": ["Fitzgerald Principle", "AI philosophy"],
+      "lastOptimized": "2025-01-17",
+      "status": "optimized"
+    },
+    {
+      "route": "/laboratory",
+      "priority": "medium",
+      "targetKeywords": ["AI experiments", "sustainability technology"],
+      "lastOptimized": "2025-01-17",
+      "status": "optimized"
+    },
+    {
+      "route": "/about",
+      "priority": "medium",
+      "targetKeywords": ["David Liew", "AI consultant"],
+      "lastOptimized": "2025-01-17",
+      "status": "optimized"
+    },
+    {
+      "route": "/ai-journey/claude/code",
+      "priority": "high",
+      "targetKeywords": ["Claude Code", "AI coding assistant"],
+      "lastOptimized": "2025-01-17",
+      "status": "optimized"
+    },
+    {
+      "route": "/ai-journey/claude/2026-predictions",
+      "priority": "medium",
+      "targetKeywords": ["AI predictions 2026", "Claude roadmap"],
+      "lastOptimized": "2025-01-17",
+      "status": "optimized"
+    },
+    {
+      "route": "/ai-journey/portfolio",
+      "priority": "high",
+      "targetKeywords": ["AI portfolio", "case studies"],
+      "lastOptimized": "2025-01-17",
+      "status": "needs-content"
+    }
+  ],
+  "lastFullAudit": "2025-01-17",
+  "nextScheduledAudit": "2025-02-17",
+  "auditHistory": [
+    {
+      "date": "2025-01-17",
+      "type": "initial-setup",
+      "notes": "Implemented automated SEO validation, added Vercel Analytics"
+    }
+  ]
+}
