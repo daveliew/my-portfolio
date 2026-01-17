@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap');
+/* Fonts loaded via next/font in layout.tsx for optimal performance */
 
 @tailwind base;
 @tailwind components;
@@ -47,7 +46,7 @@
 @layer base {
   body {
     @apply bg-[var(--background-primary)] text-[var(--text-primary)];
-    font-family: 'Work Sans', sans-serif;
+    font-family: var(--font-work-sans), 'Work Sans', sans-serif;
   }
 
   /* Typography */
@@ -101,12 +100,12 @@
   }
   
   .font-heading {
-    font-family: 'Jura', sans-serif;
+    font-family: var(--font-jura), 'Jura', sans-serif;
     letter-spacing: 0.02em;
   }
 
   .font-navbar {
-    font-family: 'Jura', sans-serif;
+    font-family: var(--font-jura), 'Jura', sans-serif;
     letter-spacing: 0.03em;
     font-weight: 500;
   }

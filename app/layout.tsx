@@ -1,5 +1,26 @@
 import type { Metadata } from "next";
+import dynamic from 'next/dynamic';
+import { Jura, Work_Sans } from 'next/font/google';
 import '../styles/globals.css';
+
+// Defer analytics to after hydration (Vercel best practice)
+const Analytics = dynamic(
+  () => import('@vercel/analytics/react').then((mod) => mod.Analytics),
+  { ssr: false }
+);
+
+// Self-hosted fonts with automatic font-display: swap
+const jura = Jura({
+  subsets: ['latin'],
+  variable: '--font-jura',
+  display: 'swap',
+});
+
+const workSans = Work_Sans({
+  subsets: ['latin'],
+  variable: '--font-work-sans',
+  display: 'swap',
+});
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 
@@ -52,7 +73,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">  
+    <html lang="en" className={`${jura.variable} ${workSans.variable}`}>  
       <head>
         <script
           type="application/ld+json"
@@ -114,6 +135,7 @@ export default function RootLayout({
           </main>
           <Footer />
         </div>
+        <Analytics />
       </body>
     </html>
   );
