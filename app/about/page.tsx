@@ -88,116 +88,42 @@ export default function AboutPage() {
         </Card>
       </motion.section>
 
-      {/* Professional Journey Timeline */}
+      {/* Background */}
       <motion.section
         {...sectionAnimation(2)}
         className="mb-12"
       >
-        <SectionHeader title="Professional Journey" />
-
-        <div className="space-y-6">
-          {/* Technology & AI Implementation */}
-          <Card className="p-6">
-            <div className="flex items-start">
-              <div className="flex-shrink-0 w-2 h-full bg-blue-500 rounded-full mr-4"></div>
-              <div className="flex-1">
-                <h3 className="text-lg font-semibold mb-4 text-blue-600 dark:text-blue-400">Technology & AI Implementation</h3>
-                <div className="space-y-6">
-                  <div>
-                    <div className="flex justify-between items-start mb-2">
-                      <h4 className="font-medium text-gray-900 dark:text-gray-100">Technical Solutions Consultant</h4>
-                      <span className="text-sm text-gray-500 dark:text-gray-400">2022-2024</span>
-                    </div>
-                    <p className="text-sm text-blue-600 dark:text-blue-400 mb-2">Meta</p>
-                    <p className="text-sm text-gray-600 dark:text-gray-300">
-                      Implemented AdTech solutions for enterprise clients, developed technical solutions for complex business challenges.
-                      Bridged gap between product teams and client needs.
-                    </p>
-                  </div>
-                  <div>
-                    <div className="flex justify-between items-start mb-2">
-                      <h4 className="font-medium text-gray-900 dark:text-gray-100">Full Stack Developer Bootcamp</h4>
-                      <span className="text-sm text-gray-500 dark:text-gray-400">2021</span>
-                    </div>
-                    <p className="text-sm text-blue-600 dark:text-blue-400 mb-2">General Assembly</p>
-                    <p className="text-sm text-gray-600 dark:text-gray-300">
-                      480-hour intensive program. Mastered JavaScript, Python, React, Node.js, and modern web technologies.
-                      Career pivot from business operations to hands-on technical implementation.
-                    </p>
-                  </div>
-                </div>
-              </div>
+        <SectionHeader title="Background" />
+        <Card className="p-6">
+          <p className="text-gray-600 dark:text-gray-400 mb-4">
+            10+ years across tech, ventures, and operations. The thread: building systems that work.
+          </p>
+          <div className="grid md:grid-cols-3 gap-4 text-sm">
+            <div className="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+              <span className="font-medium text-blue-700 dark:text-blue-300">Tech</span>
+              <p className="text-gray-600 dark:text-gray-400 mt-1">Meta, Unity, Nansen</p>
             </div>
-          </Card>
-
-          {/* Venture Building & Operations */}
-          <Card className="p-6">
-            <div className="flex items-start">
-              <div className="flex-shrink-0 w-2 h-full bg-green-500 rounded-full mr-4"></div>
-              <div className="flex-1">
-                <h3 className="text-lg font-semibold mb-4 text-green-600 dark:text-green-400">Venture Building & Operations</h3>
-                <div className="space-y-6">
-                  <div>
-                    <div className="flex justify-between items-start mb-2">
-                      <h4 className="font-medium text-gray-900 dark:text-gray-100">Co-Founder</h4>
-                      <span className="text-sm text-gray-500 dark:text-gray-400">2013-present</span>
-                    </div>
-                    <p className="text-sm text-green-600 dark:text-green-400 mb-2">Labyrinth Restaurant</p>
-                    <p className="text-sm text-gray-600 dark:text-gray-300">
-                      Built from concept to Michelin recognition. Led team through rapid growth phase and successful COVID pivot.
-                      Experience in operations, team management, and resilient business systems.
-                    </p>
-                  </div>
-                  <div>
-                    <div className="flex justify-between items-start mb-2">
-                      <h4 className="font-medium text-gray-900 dark:text-gray-100">Head of Business</h4>
-                      <span className="text-sm text-gray-500 dark:text-gray-400">2017-2020</span>
-                    </div>
-                    <p className="text-sm text-green-600 dark:text-green-400 mb-2">SG Code Campus</p>
-                    <p className="text-sm text-gray-600 dark:text-gray-300">
-                      Early team member during critical growth phase. Contributed to revenue growth from S$100K to S$1M+ in three years.
-                      Built operations systems and business development processes.
-                    </p>
-                  </div>
-                </div>
-              </div>
+            <div className="p-3 bg-green-50 dark:bg-green-900/20 rounded-lg">
+              <span className="font-medium text-green-700 dark:text-green-300">Ventures</span>
+              <p className="text-gray-600 dark:text-gray-400 mt-1">4 co-founded, Michelin recognition</p>
             </div>
-          </Card>
-
-          {/* Strategic Growth & Analytics */}
-          <Card className="p-6">
-            <div className="flex items-start">
-              <div className="flex-shrink-0 w-2 h-full bg-purple-500 rounded-full mr-4"></div>
-              <div className="flex-1">
-                <h3 className="text-lg font-semibold mb-4 text-purple-600 dark:text-purple-400">Strategic Growth & Analytics</h3>
-                <div className="space-y-6">
-                  <div>
-                    <div className="flex justify-between items-start mb-2">
-                      <h4 className="font-medium text-gray-900 dark:text-gray-100">Alpha Growth Ops Associate</h4>
-                      <span className="text-sm text-gray-500 dark:text-gray-400">2021-2022</span>
-                    </div>
-                    <p className="text-sm text-purple-600 dark:text-purple-400 mb-2">Nansen</p>
-                    <p className="text-sm text-gray-600 dark:text-gray-300">
-                      Early employee in web3 analytics platform. Contributed to 35% revenue growth through operational improvements
-                      and growth initiatives. Exposure to data-driven decision making.
-                    </p>
-                  </div>
-                  <div>
-                    <div className="flex justify-between items-start mb-2">
-                      <h4 className="font-medium text-gray-900 dark:text-gray-100">Business Analyst</h4>
-                      <span className="text-sm text-gray-500 dark:text-gray-400">2013-2014</span>
-                    </div>
-                    <p className="text-sm text-purple-600 dark:text-purple-400 mb-2">Unity Technologies</p>
-                    <p className="text-sm text-gray-600 dark:text-gray-300">
-                      Developed strategic transition to SaaS revenue model. Collaborated with global stakeholders across
-                      product, engineering, and business teams. First exposure to tech at scale.
-                    </p>
-                  </div>
-                </div>
-              </div>
+            <div className="p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
+              <span className="font-medium text-purple-700 dark:text-purple-300">Now</span>
+              <p className="text-gray-600 dark:text-gray-400 mt-1">AI-first engineering</p>
             </div>
-          </Card>
-        </div>
+          </div>
+          <p className="text-sm text-gray-500 dark:text-gray-500 mt-4">
+            Full history on{' '}
+            <a
+              href="https://linkedin.com/in/daveliew"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 dark:text-blue-400 hover:underline"
+            >
+              LinkedIn
+            </a>
+          </p>
+        </Card>
       </motion.section>
 
       {/* Key Achievements */}
