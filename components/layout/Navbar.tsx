@@ -7,6 +7,7 @@ import { SkillTreeMenu } from '@/components/navigation';
 
 const navLinks = [
   { href: '/about', label: 'About', id: 'about' },
+  { href: '/vibe-coding', label: 'Vibe Coding', id: 'vibe-coding' },
 ];
 
 // Mobile menu still uses WHY → HOW → WHAT structure
@@ -193,6 +194,18 @@ const Navbar: React.FC = () => {
             }`}
           >
             About
+          </Link>
+
+          {/* Vibe Coding */}
+          <Link
+            href="/vibe-coding"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className={`py-2 ${pathname.startsWith('/vibe-coding')
+              ? 'text-purple-600 dark:text-purple-400 font-medium'
+              : 'text-gray-700 dark:text-gray-300'
+            }`}
+          >
+            Vibe Coding
           </Link>
 
           {/* Agents - 2026 Focus */}
