@@ -1,4 +1,5 @@
 'use client';
+// Vibe Coding: Entry-level context engineering for beginners
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
