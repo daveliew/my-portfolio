@@ -206,7 +206,7 @@ export default function AboutPage() {
         className="mb-12"
       >
         <SectionHeader title="Key Achievements" />
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
           <Card className="p-6 text-center bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-900/20 dark:to-orange-900/20 border-amber-200 dark:border-amber-800">
             <div className="text-3xl mb-3">💰</div>
             <h3 className="text-2xl font-bold text-amber-700 dark:text-amber-300 mb-2">S$1M+</h3>
@@ -230,12 +230,66 @@ export default function AboutPage() {
             <h3 className="text-2xl font-bold text-purple-700 dark:text-purple-300 mb-2">35%</h3>
             <p className="text-sm text-gray-600 dark:text-gray-400">Revenue growth in web3 analytics platform</p>
           </Card>
+
+          <Card className="p-6 text-center bg-gradient-to-br from-teal-50 to-cyan-50 dark:from-teal-900/20 dark:to-cyan-900/20 border-teal-200 dark:border-teal-800">
+            <div className="text-3xl mb-3">🏆</div>
+            <h3 className="text-2xl font-bold text-teal-700 dark:text-teal-300 mb-2">2nd Place</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400">
+              <Link href="/ai-journey/portfolio" className="hover:underline">
+                ElevenLabs Global Hackathon
+              </Link>
+            </p>
+          </Card>
         </div>
+      </motion.section>
+
+      {/* Growth Philosophy */}
+      <motion.section
+        {...sectionAnimation(4)}
+        className="mb-12"
+      >
+        <SectionHeader title="Growth Philosophy" />
+        <Card className="p-6">
+          <div className="mb-6">
+            <blockquote className="text-xl italic text-gray-700 dark:text-gray-300 border-l-4 border-purple-500 pl-4 mb-4">
+              &quot;Strong opinions, loosely held.&quot;
+            </blockquote>
+            <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">— Paul Saffo, Stanford futurist</p>
+          </div>
+          <p className="text-gray-600 dark:text-gray-400 mb-4">
+            This principle guides how I approach learning and building. I commit fully to current best understanding,
+            but remain ready to update when new evidence arrives. It&apos;s the difference between being confident and being stubborn.
+          </p>
+          <div className="grid md:grid-cols-2 gap-6 mt-6">
+            <div className="p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
+              <h4 className="font-semibold text-purple-700 dark:text-purple-300 mb-2">Pivots I&apos;ve Made</h4>
+              <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-2">
+                <li>• Business operations → Full-stack development (2021)</li>
+                <li>• AdTech consulting → AI-first engineering (2024)</li>
+                <li>• Solo building → Human-AI collaboration (ongoing)</li>
+              </ul>
+            </div>
+            <div className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+              <h4 className="font-semibold text-blue-700 dark:text-blue-300 mb-2">What Each Taught Me</h4>
+              <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-2">
+                <li>• Every skill compounds into the next chapter</li>
+                <li>• The best time to learn is when you&apos;re scared to start</li>
+                <li>• Being wrong quickly beats being right slowly</li>
+              </ul>
+            </div>
+          </div>
+          <div className="mt-6 p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg border border-amber-200 dark:border-amber-800">
+            <p className="text-sm text-gray-700 dark:text-gray-300">
+              <strong>For students:</strong> You don&apos;t need to have it all figured out. What you need is the willingness to
+              keep learning, keep building, and keep updating your mental models. That&apos;s the real competitive advantage in an AI world.
+            </p>
+          </div>
+        </Card>
       </motion.section>
 
       {/* What I Bring */}
       <motion.section
-        {...sectionAnimation(4)}
+        {...sectionAnimation(5)}
         className="mb-12"
       >
         <SectionHeader title="What I Bring" />
@@ -274,7 +328,7 @@ export default function AboutPage() {
 
       {/* Call to Action */}
       <motion.section
-        {...sectionAnimation(5)}
+        {...sectionAnimation(6)}
         className="bg-gradient-to-r from-blue-50 to-teal-50 dark:from-blue-900/20 dark:to-teal-900/20 rounded-lg p-8 text-center"
       >
         <h2 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-gray-100">Let&apos;s Collaborate</h2>
