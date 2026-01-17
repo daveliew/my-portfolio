@@ -16,7 +16,7 @@ export default function CTAButton({
   className = '',
   external = false
 }: CTAButtonProps) {
-  const baseClasses = 'inline-flex items-center justify-center px-6 py-3 text-base font-medium rounded-md shadow-sm transition duration-300';
+  const baseClasses = 'inline-flex items-center justify-center px-6 py-3 text-base font-medium rounded-md shadow-sm transition duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900';
   
   const variantClasses = {
     primary: 'border border-transparent text-white bg-blue-600 hover:bg-blue-700',
