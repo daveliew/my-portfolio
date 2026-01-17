@@ -112,7 +112,7 @@ export default function VibeCodingPage() {
               <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
                 Tell AI what you want in plain English. Include your field, personality, and what makes you unique.
               </p>
-              <p className="text-xs text-gray-500 dark:text-gray-500">Claude or ChatGPT</p>
+              <p className="text-xs text-gray-600 dark:text-gray-400">Claude or ChatGPT</p>
             </div>
             <div className="text-center">
               <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold text-xl mx-auto mb-3">
@@ -122,7 +122,7 @@ export default function VibeCodingPage() {
               <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
                 Paste your prompt, get a working preview. Start simple—you can always add more.
               </p>
-              <p className="text-xs text-gray-500 dark:text-gray-500">
+              <p className="text-xs text-gray-600 dark:text-gray-400">
                 <a href="https://v0.dev" target="_blank" rel="noopener noreferrer" className="hover:underline">v0.dev</a>
               </p>
             </div>
@@ -134,7 +134,7 @@ export default function VibeCodingPage() {
               <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
                 Chat with AI to refine. Small changes work better than trying to change everything at once.
               </p>
-              <p className="text-xs text-gray-500 dark:text-gray-500">Deploy on Vercel</p>
+              <p className="text-xs text-gray-600 dark:text-gray-400">Deploy on Vercel</p>
             </div>
           </div>
         </Card>
