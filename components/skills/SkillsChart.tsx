@@ -1,6 +1,6 @@
 'use client';
 
-import React, { MouseEvent } from 'react';
+import React, { MouseEvent, useMemo, useCallback } from 'react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, Tooltip } from 'recharts';
 import { SkillsChartProps, CustomTooltipProps } from '@/types/skills';
 
@@ -23,26 +23,27 @@ interface ChartDataPoint {
 }
 
 const SkillsChart: React.FC<SkillsChartProps> = ({ skills, onSkillClick, selectedSkill }) => {
-  const chartData: ChartDataPoint[] = skills.map(skill => {
-    const subskills = skill.subskills ?? {};
-    const values = Object.values(subskills) as number[];
-    const average = values.length ? values.reduce((sum, val) => sum + val, 0) / values.length : 0;
+  // Memoize chart data to avoid recomputing averages on every render
+  const chartData = useMemo<ChartDataPoint[]>(() =>
+    skills.map(skill => {
+      const subskills = skill.subskills ?? {};
+      const values = Object.values(subskills) as number[];
+      const average = values.length ? values.reduce((sum, val) => sum + val, 0) / values.length : 0;
 
-    return {
-      name: skill.name,
-      value: Math.round(average),
-      originalSkill: skill
-    };
-  });
+      return {
+        name: skill.name,
+        value: Math.round(average),
+        originalSkill: skill
+      };
+    }), [skills]);
 
-  // Update the handler with proper typing
-  const handleClick = (event: MouseEvent<SVGElement>) => {
-    // Use proper typing for Recharts event target
+  // Stable callback reference for click handler
+  const handleClick = useCallback((event: MouseEvent<SVGElement>) => {
     const target = event.target as SVGElement & { payload?: ChartDataPoint };
     if (target?.payload?.originalSkill) {
       onSkillClick(target.payload.originalSkill);
     }
-  };
+  }, [onSkillClick]);
 
   return (
     <div className="w-full h-[400px] relative">

@@ -4,6 +4,11 @@ import createMDX from '@next/mdx';
 const nextConfig = {
   pageExtensions: ['ts', 'tsx', 'md', 'mdx'],
 
+  // Optimize barrel imports for faster builds and cold starts
+  experimental: {
+    optimizePackageImports: ['recharts', 'framer-motion', 'lucide-react'],
+  },
+
   async redirects() {
     return [
       // Main how-to-learn page redirect
