@@ -1,6 +1,157 @@
 {
   "learningPaths": [
     {
+      "id": "no-code-ai-branding",
+      "title": "No-Code AI Branding",
+      "description": "Build your professional presence with AI - no coding required",
+      "overview": "This beginner-friendly path teaches you to leverage AI tools to create a professional online presence. Perfect for students, career changers, and anyone who wants to build their personal brand without learning to code.",
+      "objectives": [
+        "Create a professional personal website using AI tools like v0.dev",
+        "Write compelling bios and content with AI assistance",
+        "Optimize your LinkedIn profile for AI-enhanced discovery",
+        "Develop a consistent personal brand across platforms",
+        "Understand the 'vibe coding' approach to building with AI"
+      ],
+      "metadata": {
+        "level": "Absolute Beginner",
+        "duration": "4 weeks",
+        "prerequisites": ["Basic computer literacy", "A desire to build your professional presence"],
+        "targetAudience": ["Students", "Career changers", "Non-technical professionals", "Anyone building their personal brand"]
+      },
+      "phases": [
+        {
+          "title": "Week 1: AI Bio Writing",
+          "description": "Master the art of using AI to write compelling professional content about yourself.",
+          "modules": [
+            {
+              "title": "Understanding AI Writing Tools",
+              "topics": [
+                "Introduction to ChatGPT and Claude",
+                "How to communicate effectively with AI",
+                "The difference between vague and specific prompts"
+              ]
+            },
+            {
+              "title": "Crafting Your Professional Bio",
+              "topics": [
+                "Writing prompts for bio generation",
+                "Iterating and refining AI output",
+                "Adapting your bio for different contexts"
+              ]
+            },
+            {
+              "title": "Week 1 Project",
+              "topics": [
+                "Create 3 versions of your bio (short, medium, long)",
+                "Get feedback from peers",
+                "Finalize your core professional narrative"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Week 2: Portfolio with v0.dev",
+          "description": "Build and deploy your personal website without writing any code.",
+          "modules": [
+            {
+              "title": "Introduction to v0.dev",
+              "topics": [
+                "How AI-powered website builders work",
+                "Creating your first page with natural language",
+                "Understanding what v0.dev generates"
+              ]
+            },
+            {
+              "title": "Building Your Personal Site",
+              "topics": [
+                "Structuring prompts for website generation",
+                "Adding sections: About, Skills, Contact",
+                "Customizing colors, fonts, and layout"
+              ]
+            },
+            {
+              "title": "Deploying to Vercel",
+              "topics": [
+                "One-click deployment process",
+                "Getting your free .vercel.app URL",
+                "Connecting a custom domain (optional)"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Week 3: LinkedIn Optimization",
+          "description": "Leverage AI to enhance your LinkedIn presence and professional network.",
+          "modules": [
+            {
+              "title": "AI-Enhanced Profile",
+              "topics": [
+                "Using AI to write headline and summary",
+                "Describing experience with AI assistance",
+                "Keywords and discoverability"
+              ]
+            },
+            {
+              "title": "Content Strategy",
+              "topics": [
+                "Using AI to generate post ideas",
+                "Maintaining authenticity with AI assistance",
+                "Building a consistent posting habit"
+              ]
+            },
+            {
+              "title": "Networking with AI Support",
+              "topics": [
+                "Drafting connection messages",
+                "Preparing for interviews with AI practice",
+                "Research assistance for target companies"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Week 4: Your AI-Native Voice",
+          "description": "Integrate all skills into a cohesive personal brand strategy.",
+          "modules": [
+            {
+              "title": "Brand Consistency",
+              "topics": [
+                "Aligning website, LinkedIn, and other platforms",
+                "Creating brand guidelines with AI",
+                "Visual consistency across platforms"
+              ]
+            },
+            {
+              "title": "Advanced AI Collaboration",
+              "topics": [
+                "Using AI for ongoing content creation",
+                "Building a prompt library for your brand",
+                "When to use which AI tool"
+              ]
+            },
+            {
+              "title": "Final Project",
+              "topics": [
+                "Complete personal brand audit",
+                "Present your AI-built portfolio",
+                "Plan for ongoing brand development"
+              ]
+            }
+          ]
+        }
+      ],
+      "process": [
+        "Spend 2-3 hours per week on focused learning",
+        "Complete each week's project before moving on",
+        "Share your progress with a friend or mentor for feedback",
+        "Focus on authenticity - AI enhances your voice, doesn't replace it"
+      ],
+      "links": {
+        "previous": "/ai-journey/overview",
+        "next": "/ai-journey/techniques/llm-handling"
+      }
+    },
+    {
       "id": "llm-handling",
       "title": "LLM Handling Learning Path",
       "description": "A comprehensive roadmap for mastering large language models in practical applications",
