@@ -62,7 +62,7 @@ export default function VibeCodingHandout() {
         {/* QR Code Section */}
         <div className="flex items-center gap-6 mb-8 p-4 bg-gray-50 rounded-lg">
           <div className="flex-shrink-0 w-24 h-24 bg-gray-200 border-2 border-gray-300 rounded flex items-center justify-center">
-            <div className="text-center text-xs text-gray-500">
+            <div className="text-center text-xs text-gray-600">
               <div className="text-2xl mb-1">📱</div>
               QR Code
             </div>
@@ -149,22 +149,22 @@ export default function VibeCodingHandout() {
             <div className="p-3 border border-gray-200 rounded-lg">
               <p className="font-semibold text-gray-800">v0.dev</p>
               <p className="text-sm text-gray-600 font-mono">v0.dev</p>
-              <p className="text-xs text-green-600 mt-1">AI website builder</p>
+              <p className="text-xs text-green-700 mt-1">AI website builder</p>
             </div>
             <div className="p-3 border border-gray-200 rounded-lg">
               <p className="font-semibold text-gray-800">Vercel</p>
               <p className="text-sm text-gray-600 font-mono">vercel.com</p>
-              <p className="text-xs text-green-600 mt-1">Free hosting</p>
+              <p className="text-xs text-green-700 mt-1">Free hosting</p>
             </div>
             <div className="p-3 border border-gray-200 rounded-lg">
               <p className="font-semibold text-gray-800">Claude</p>
               <p className="text-sm text-gray-600 font-mono">claude.ai</p>
-              <p className="text-xs text-green-600 mt-1">AI assistant</p>
+              <p className="text-xs text-green-700 mt-1">AI assistant</p>
             </div>
             <div className="p-3 border border-gray-200 rounded-lg">
               <p className="font-semibold text-gray-800">ChatGPT</p>
               <p className="text-sm text-gray-600 font-mono">chat.openai.com</p>
-              <p className="text-xs text-green-600 mt-1">AI assistant</p>
+              <p className="text-xs text-green-700 mt-1">AI assistant</p>
             </div>
           </div>
         </div>
@@ -244,28 +244,28 @@ export default function VibeCodingHandout() {
               <span className="w-8 h-8 bg-purple-100 text-purple-700 rounded-full flex items-center justify-center font-bold">1</span>
               <div>
                 <p className="font-medium">AI Bio Writing</p>
-                <p className="text-xs text-gray-600">Master prompts for professional bios</p>
+                <p className="text-xs text-gray-700">Master prompts for professional bios</p>
               </div>
             </div>
             <div className="flex items-center gap-3 p-3 border border-gray-200 rounded">
               <span className="w-8 h-8 bg-purple-100 text-purple-700 rounded-full flex items-center justify-center font-bold">2</span>
               <div>
                 <p className="font-medium">Portfolio with v0.dev</p>
-                <p className="text-xs text-gray-600">Build and deploy your complete portfolio</p>
+                <p className="text-xs text-gray-700">Build and deploy your complete portfolio</p>
               </div>
             </div>
             <div className="flex items-center gap-3 p-3 border border-gray-200 rounded">
               <span className="w-8 h-8 bg-purple-100 text-purple-700 rounded-full flex items-center justify-center font-bold">3</span>
               <div>
                 <p className="font-medium">LinkedIn Optimization</p>
-                <p className="text-xs text-gray-600">AI-enhanced profile and content</p>
+                <p className="text-xs text-gray-700">AI-enhanced profile and content</p>
               </div>
             </div>
             <div className="flex items-center gap-3 p-3 border border-gray-200 rounded">
               <span className="w-8 h-8 bg-purple-100 text-purple-700 rounded-full flex items-center justify-center font-bold">4</span>
               <div>
                 <p className="font-medium">Your AI-Native Voice</p>
-                <p className="text-xs text-gray-600">Develop your unique professional brand</p>
+                <p className="text-xs text-gray-700">Develop your unique professional brand</p>
               </div>
             </div>
           </div>
@@ -276,9 +276,9 @@ export default function VibeCodingHandout() {
 
         {/* Footer */}
         <div className="mt-8 pt-6 border-t-2 border-gray-200 text-center">
-          <p className="text-gray-600 mb-2">Questions? Connect with David Liew</p>
-          <p className="text-sm text-gray-500">linkedin.com/in/daveliew • daveliew.com</p>
-          <p className="text-xs text-gray-400 mt-4">
+          <p className="text-gray-700 mb-2">Questions? Connect with David Liew</p>
+          <p className="text-sm text-gray-600">linkedin.com/in/daveliew • daveliew.com</p>
+          <p className="text-xs text-gray-600 mt-4">
             &quot;Most people use AI to do more. I&apos;m exploring how to do less—systematically.&quot;
           </p>
         </div>
