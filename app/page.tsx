@@ -69,7 +69,7 @@ export default function HomePage() {
           </p>
 
           <div className="grid md:grid-cols-3 gap-6">
-            <Card className="p-6 border-2 border-[#0CC0DF]/30 bg-gradient-to-br from-[#0CC0DF]/5 to-transparent hover:border-[#0CC0DF]/60 transition-all">
+            <Card className="p-6 border-2 border-[#0CC0DF]/30 bg-gradient-to-br from-[#0CC0DF]/5 to-transparent hover:border-[#0CC0DF]/60 transition-colors">
               <div className="text-2xl mb-3">📋</div>
               <h3 className="text-lg font-semibold mb-3 text-[#0CC0DF]">System Prompts</h3>
               <p className="text-gray-600 dark:text-gray-400 text-sm">
@@ -78,7 +78,7 @@ export default function HomePage() {
               </p>
             </Card>
 
-            <Card className="p-6 border-2 border-[#FF0081]/30 bg-gradient-to-br from-[#FF0081]/5 to-transparent hover:border-[#FF0081]/60 transition-all">
+            <Card className="p-6 border-2 border-[#FF0081]/30 bg-gradient-to-br from-[#FF0081]/5 to-transparent hover:border-[#FF0081]/60 transition-colors">
               <div className="text-2xl mb-3">🔧</div>
               <h3 className="text-lg font-semibold mb-3 text-[#FF0081]">Tools & MCP</h3>
               <p className="text-gray-600 dark:text-gray-400 text-sm">
@@ -87,7 +87,7 @@ export default function HomePage() {
               </p>
             </Card>
 
-            <Card className="p-6 border-2 border-[#F8B400]/30 bg-gradient-to-br from-[#F8B400]/5 to-transparent hover:border-[#F8B400]/60 transition-all">
+            <Card className="p-6 border-2 border-[#F8B400]/30 bg-gradient-to-br from-[#F8B400]/5 to-transparent hover:border-[#F8B400]/60 transition-colors">
               <div className="text-2xl mb-3">💬</div>
               <h3 className="text-lg font-semibold mb-3 text-[#F8B400]">Conversation Design</h3>
               <p className="text-gray-600 dark:text-gray-400 text-sm">

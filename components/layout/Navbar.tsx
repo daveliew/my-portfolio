@@ -65,7 +65,7 @@ const Navbar: React.FC = () => {
       h-16
       flex items-center
       ${isScrolled ? 'bg-white dark:bg-gray-900 shadow-md' : 'bg-transparent'}
-      transition-all duration-300
+      transition-[background-color,box-shadow] duration-300
       sticky top-0 z-50
       px-4 md:px-6
     `}>
