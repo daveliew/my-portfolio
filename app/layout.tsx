@@ -4,6 +4,7 @@ import { Jura, Work_Sans } from 'next/font/google';
 import '../styles/globals.css';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
+import { MotionProvider } from '@/components/common';
 
 // Defer analytics to after hydration (Vercel best practice)
 const Analytics = dynamic(
@@ -137,13 +138,15 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 flex flex-col">
-          <Navbar />
-          <main className="flex-grow">
-            {children}
-          </main>
-          <Footer />
-        </div>
+        <MotionProvider>
+          <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 flex flex-col">
+            <Navbar />
+            <main className="flex-grow">
+              {children}
+            </main>
+            <Footer />
+          </div>
+        </MotionProvider>
         <Analytics />
       </body>
     </html>

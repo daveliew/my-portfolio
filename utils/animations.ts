@@ -1,7 +1,19 @@
 import { Variants } from 'framer-motion';
 
 /**
+ * Reduced motion configuration
+ * When true, animations use opacity-only transitions (no transform)
+ * Framer Motion automatically respects prefers-reduced-motion via MotionConfig
+ */
+export const reducedMotionConfig = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  transition: { duration: 0.2 }
+};
+
+/**
  * Standard fade-in animation with upward motion
+ * Framer Motion v10+ automatically respects prefers-reduced-motion
  * @param delay - Delay in seconds before animation starts
  * @returns Animation configuration object for framer-motion
  */
