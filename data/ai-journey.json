@@ -345,17 +345,17 @@
           "foundationSkillsApplied": ["Technical Skills", "AI Implementation", "Business Development"]
         },
         {
-            "title": "B2B Corporate Gift Platform Transformation",
-            "date": "2025-04-01",
+            "title": "E-commerce Platform AI Enhancement",
+            "date": "2025-01-10",
             "category": "client",
-            "status": "Planned",
-            "description": "Website rebuild and business intelligence implementation for leading Singapore corporate gift company",
+            "status": "Active",
+            "description": "Shopify customization with AI-powered features: gift wizard, tiered pricing automation, and MOQ management for Singapore B2B corporate gift company.",
             "outcomes": [
-            "Enhanced digital presence and user experience",
-            "Integrated business intelligence for data-driven decisions",
-            "Automated inventory and order management"
+                "Reduced manual order processing by 60%",
+                "Automated tiered pricing calculations",
+                "Integrated gift recommendation system"
             ],
-            "technologies": ["Next.js", "AI Analytics", "Business Intelligence Tools"],
+            "technologies": ["Shopify Liquid", "JavaScript", "AI Integration", "Custom Theme Development"],
             "foundationSkillsApplied": ["Technical Skills", "Strategic Thinking", "Business Development"]
         }
     ]

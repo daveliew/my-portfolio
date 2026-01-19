@@ -87,6 +87,9 @@ export default function PortfolioContent() {
                           🔬 Exploration
                         </span>
                       )}
+                      <span className="text-xs text-gray-500 dark:text-gray-400">
+                        {new Date(project.date).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}
+                      </span>
                     </div>
                     <p className="text-gray-600 dark:text-gray-300">
                       {project.description}
@@ -168,11 +171,19 @@ export default function PortfolioContent() {
                       <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200">
                         {project.title}
                       </h3>
-                      {project.status === 'Planned' && (
-                        <span className="px-2 py-1 text-xs font-medium bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded">
-                          Planned
+                      {project.status === 'Active' && (
+                        <span className="px-2 py-1 text-xs font-medium bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded">
+                          Active
                         </span>
                       )}
+                      {project.status === 'Completed' && (
+                        <span className="px-2 py-1 text-xs font-medium bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded">
+                          Completed
+                        </span>
+                      )}
+                      <span className="text-xs text-gray-500 dark:text-gray-400">
+                        {new Date(project.date).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}
+                      </span>
                     </div>
                     <p className="text-gray-600 dark:text-gray-300">
                       {project.description}
