@@ -293,11 +293,11 @@
             "date": "2024-12-15",
             "category": "hackathon",
             "status": "Completed",
-            "description": "Voice AI that allows users to sing and generates matching backing tracks in real-time. 2nd place winner at ElevenLabs Hackathon.",
+            "description": "Voice AI that lets you sing and generates matching backing tracks in real-time. Built in 48 hours with no prior voice AI experience—2nd place at ElevenLabs Global Hackathon.",
             "outcomes": [
-                "2nd place at ElevenLabs Global Hackathon",
-                "Demonstrated voice-first AI interaction patterns",
-                "Explored real-time reasoning with voice synthesis"
+                "2nd place at ElevenLabs Global Hackathon (500+ participants)",
+                "First voice AI project—learned the entire stack during the hackathon",
+                "Proved that curiosity + AI tools beats years of specialized experience"
             ],
             "technologies": ["Next.js 16", "ElevenLabs", "AI Music Generation", "React 19", "TypeScript"],
             "demoUrl": "https://jazz-scat.vercel.app",
@@ -308,11 +308,11 @@
             "date": "2024-12-20",
             "category": "exploration",
             "status": "Active",
-            "description": "Reusable voice-first conversational AI webapp. Exploring ElevenLabs + mem0 memory for persistent context across conversations.",
+            "description": "Voice-first AI assistant that remembers past conversations. Started as 'what if AI could have a real conversation?' and evolved into a reusable foundation for client projects.",
             "outcomes": [
-                "Created modular voice agent architecture",
-                "Integrated conversation memory with mem0",
-                "Established patterns for voice-first SME applications"
+                "Built a working voice AI in one weekend",
+                "Learned mem0 memory system from scratch",
+                "Now reusing this pattern across 2 client projects"
             ],
             "technologies": ["Next.js 15", "ElevenLabs", "mem0", "TypeScript", "Tailwind CSS 4"],
             "demoUrl": "https://nansen-voice.vercel.app",

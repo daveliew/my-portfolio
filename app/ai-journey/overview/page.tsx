@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 import OverviewContent from './OverviewContent';
 
 export const metadata: Metadata = {
-  title: 'AI Learning Overview',
-  description: 'Structured paths to develop practical AI skills: philosophy-driven learning approach with immediate value and long-term foundation building.',
-  keywords: 'AI learning, AI skills, learning path, AI journey, practical AI, AI education, skill development',
+  title: 'Learn AI Your Way',
+  description: 'Start building with AI today—no coding required. Two paths: beginners start with Vibe Coding (30 min to first project), technical professionals fast-track deeper.',
+  keywords: 'learn AI, AI for beginners, no-code AI, AI learning path, vibe coding, AI skills, practical AI',
   openGraph: {
-    title: 'AI Learning Overview - Structured Skills Development',
-    description: 'Develop practical AI skills with structured learning paths focused on immediate value.',
+    title: 'Learn AI Your Way - Start Building Today',
+    description: 'No coding required to start. Build your first AI project in 30 minutes.',
   },
 };
 

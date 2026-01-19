@@ -220,8 +220,28 @@ export default function HomePage() {
           </p>
         </SectionAnimation>
 
+        {/* Beginner CTA */}
+        <SectionAnimation index={3} className="py-8 border-t border-gray-200 dark:border-gray-700">
+          <div className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-xl p-6 text-center">
+            <p className="text-sm text-purple-600 dark:text-purple-400 font-medium mb-2">New to AI?</p>
+            <h3 className="text-xl font-semibold mb-3 text-gray-800 dark:text-gray-200">
+              Start with Vibe Coding
+            </h3>
+            <p className="text-gray-600 dark:text-gray-400 mb-4 max-w-lg mx-auto">
+              Build your first AI-powered project in 30 minutes—no coding required.
+              This is how I introduce everyone to AI collaboration.
+            </p>
+            <Link
+              href="/vibe-coding"
+              className="inline-flex items-center justify-center px-5 py-2 text-sm font-medium rounded-md bg-purple-600 text-white hover:bg-purple-700 transition-colors"
+            >
+              Get Started →
+            </Link>
+          </div>
+        </SectionAnimation>
+
         {/* CTA Section */}
-        <SectionAnimation index={3} className="py-12 border-t border-gray-200 dark:border-gray-700">
+        <SectionAnimation index={4} className="py-12 border-t border-gray-200 dark:border-gray-700">
           <div className="bg-gradient-to-r from-[var(--deep-purple)]/10 via-transparent to-[var(--teal)]/10 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-semibold mb-4">
               Got a task that takes too long?

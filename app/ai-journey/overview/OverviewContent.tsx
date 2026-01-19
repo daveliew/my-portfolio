@@ -10,8 +10,8 @@ export default function OverviewContent() {
 
   return (
     <AIJourneySubpageLayout
-      title="AI Learning Overview"
-      description="Structured paths to develop practical AI skills without getting lost in the hype"
+      title="Learn AI Your Way"
+      description="Start building with AI today—no coding required. Pick your path based on where you are."
       breadcrumbs={[
         { href: '/', label: 'Home' },
         { href: '/ai-journey', label: 'AI Journey' },
@@ -22,16 +22,15 @@ export default function OverviewContent() {
         {...sectionAnimation(0)}
         className="mb-12"
       >
-        <SectionHeader title="Learning Philosophy" />
+        <SectionHeader title="Two Paths, Same Destination" />
         <Card className="p-6">
           <p className="text-gray-600 dark:text-gray-300 mb-4">
-            My approach to learning AI focuses on building practical capabilities that deliver immediate value while 
-            developing a foundation for long-term growth. Rather than trying to master everything at once, I&apos;ve created 
-            focused learning paths that build complementary skills.
+            You don&apos;t need to understand how AI works to start using it effectively.
+            I learned by building first and understanding later—and that&apos;s the approach I recommend.
           </p>
           <p className="text-gray-600 dark:text-gray-300 mb-4">
-            Each path is designed to take you from theory to practical implementation, with an emphasis on building 
-            real-world projects that demonstrate your capabilities.
+            <strong>Choose your starting point:</strong> Complete beginners start with Vibe Coding (30 minutes to your first project).
+            Technical professionals can fast-track through the deeper material.
           </p>
           <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
             <h4 className="font-semibold text-blue-800 dark:text-blue-300 mb-2">Context Engineering</h4>
