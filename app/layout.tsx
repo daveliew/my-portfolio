@@ -1,16 +1,10 @@
 import type { Metadata } from "next";
-import dynamic from 'next/dynamic';
 import { Jura, Work_Sans } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/react';
 import '../styles/globals.css';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import { MotionProvider } from '@/components/common';
-
-// Defer analytics to after hydration (Vercel best practice)
-const Analytics = dynamic(
-  () => import('@vercel/analytics/react').then((mod) => mod.Analytics),
-  { ssr: false }
-);
 
 // Optimized font loading:
 // - preload: true adds <link rel="preload"> for critical fonts
