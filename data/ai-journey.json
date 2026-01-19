@@ -314,7 +314,7 @@
                 "Learned mem0 memory system from scratch",
                 "Now reusing this pattern across 2 client projects"
             ],
-            "technologies": ["Next.js 15", "ElevenLabs", "mem0", "TypeScript", "Tailwind CSS 4"],
+            "technologies": ["Next.js 16", "ElevenLabs", "mem0", "TypeScript", "Tailwind CSS 4"],
             "demoUrl": "https://nansen-voice.vercel.app",
             "foundationSkillsApplied": ["Technical Skills", "AI Implementation", "Pattern Recognition"]
         },

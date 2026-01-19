@@ -127,7 +127,7 @@ export default function ClaudeMdContent() {
               <pre>{`# CLAUDE.md
 
 ## Quick Reference
-**Stack**: Next.js 15 + React 19 + TypeScript + Tailwind + Framer Motion
+**Stack**: Next.js 16 + React 19 + TypeScript + Tailwind + Framer Motion
 **Philosophy**: Fitzgerald Principle (opposing forces in productive tension)
 **Path Alias**: \`@/*\` → root directory
 **Critical**: Always run \`npm run pre-deploy\` before committing
@@ -189,7 +189,7 @@ export default function ClaudeMdContent() {
                 Project-specific context. Tech stack, commands, patterns, pitfalls unique to this codebase.
               </p>
               <p className="text-xs text-gray-500 dark:text-gray-400">
-                Example: &quot;Stack: Next.js 15 + React 19&quot;, &quot;Run npm run pre-deploy before commits&quot;
+                Example: &quot;Stack: Next.js 16 + React 19&quot;, &quot;Run npm run pre-deploy before commits&quot;
               </p>
             </Card>
           </div>

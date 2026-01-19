@@ -189,7 +189,7 @@ const Footer: React.FC = () => {
               &copy; {currentYear} David Liew. All rights reserved.
             </p>
             <div className="flex items-center space-x-4 text-xs text-gray-500 dark:text-gray-400">
-              <span>Built with Next.js 15 & Claude Code</span>
+              <span>Built with Next.js 16 & Claude Code</span>
               <span className="hidden md:inline">•</span>
               <button
                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}

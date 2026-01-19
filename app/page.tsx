@@ -138,7 +138,7 @@ export default function HomePage() {
                 <div>
                   <p className="text-sm font-medium mb-2 text-[var(--deep-purple)]">What&apos;s Interesting:</p>
                   <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-1">
-                    <li>• Next.js 15 + React 19 (upgraded today!)</li>
+                    <li>• Next.js 16 + React 19 (upgraded today!)</li>
                     <li>• Philosophy validation scripts that score design decisions</li>
                     <li>• Zero hardcoded content (all JSON-driven)</li>
                     <li>• Automated quality gates before deploy</li>
@@ -147,7 +147,7 @@ export default function HomePage() {
                 <div>
                   <p className="text-sm font-medium mb-2 text-[var(--teal)]">Still Figuring Out:</p>
                   <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-1">
-                    <li>• How to improve philosophy score (currently 7%)</li>
+                    <li>• How to improve philosophy score (currently 6%)</li>
                     <li>• Better ways to showcase technical depth</li>
                     <li>• Balance between showing code and keeping it clean</li>
                   </ul>
@@ -155,7 +155,7 @@ export default function HomePage() {
               </div>
 
               <div className="flex flex-wrap gap-2 text-xs">
-                <span className="px-2 py-1 bg-[#0CC0DF]/10 text-[#0CC0DF] rounded">Next.js 15</span>
+                <span className="px-2 py-1 bg-[#0CC0DF]/10 text-[#0CC0DF] rounded">Next.js 16</span>
                 <span className="px-2 py-1 bg-[#0CC0DF]/10 text-[#0CC0DF] rounded">React 19</span>
                 <span className="px-2 py-1 bg-[#0CC0DF]/10 text-[#0CC0DF] rounded">TypeScript</span>
                 <span className="px-2 py-1 bg-[#0CC0DF]/10 text-[#0CC0DF] rounded">Framer Motion</span>

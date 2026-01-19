@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next'
 
 /**
- * Next.js 15 Sitemap Generation
+ * Next.js 16 Sitemap Generation
  * Automatically generates sitemap.xml at /sitemap.xml
  *
  * Priority Guidelines:
