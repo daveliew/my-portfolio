@@ -54,10 +54,10 @@ export default function ClaudeCodeContent() {
           </div>
 
           <div className="mt-6 p-4 bg-gradient-to-r from-green-50 to-teal-50 dark:from-green-900/20 dark:to-teal-900/20 rounded-lg border border-green-200 dark:border-green-800">
-            <h4 className="font-semibold text-green-800 dark:text-green-300 mb-2">⚡ Powered by Sonnet 4.5</h4>
+            <h4 className="font-semibold text-green-800 dark:text-green-300 mb-2">⚡ Powered by Opus 4.5</h4>
             <p className="text-sm text-gray-700 dark:text-gray-300">
-              Claude Code uses Sonnet 4.5, the world&apos;s best coding model (77.2% SWE-bench, 82% with parallel compute).
-              It can maintain context and focus over extended sessions while making steady, incremental progress.
+              Claude Code uses Opus 4.5, the world&apos;s best coding model (~81% SWE-bench verified).
+              Extended thinking enables deeper reasoning chains over multi-hour autonomous sessions.
             </p>
           </div>
         </Card>
@@ -157,9 +157,51 @@ claude --version`}
         </div>
       </motion.section>
 
-      {/* Resources */}
+      {/* Claude Code 2.1 Features */}
       <motion.section
         {...sectionAnimation(3)}
+        className="mb-12"
+      >
+        <SectionHeader title="Claude Code 2.1 (January 2026)" />
+        <Card className="p-6">
+          <p className="text-gray-600 dark:text-gray-300 mb-4">
+            The latest Claude Code release brings significant workflow improvements:
+          </p>
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg border border-purple-200 dark:border-purple-800">
+              <h4 className="font-semibold text-purple-800 dark:text-purple-300 mb-2">🔄 Skill Hot-Reload</h4>
+              <p className="text-sm text-gray-600 dark:text-gray-300">
+                Edit skills without restarting sessions. Changes apply immediately for rapid iteration.
+              </p>
+            </div>
+            <div className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
+              <h4 className="font-semibold text-blue-800 dark:text-blue-300 mb-2">📱 Session Teleportation</h4>
+              <p className="text-sm text-gray-600 dark:text-gray-300">
+                Continue work seamlessly across devices. Start on desktop, continue on laptop.
+              </p>
+            </div>
+            <div className="p-4 bg-teal-50 dark:bg-teal-900/20 rounded-lg border border-teal-200 dark:border-teal-800">
+              <h4 className="font-semibold text-teal-800 dark:text-teal-300 mb-2">🪝 Hooks in Frontmatter</h4>
+              <p className="text-sm text-gray-600 dark:text-gray-300">
+                Add hooks directly to agents and skills via YAML frontmatter for cleaner configuration.
+              </p>
+            </div>
+            <div className="p-4 bg-green-50 dark:bg-green-900/20 rounded-lg border border-green-200 dark:border-green-800">
+              <h4 className="font-semibold text-green-800 dark:text-green-300 mb-2">🔌 25+ MCP Servers</h4>
+              <p className="text-sm text-gray-600 dark:text-gray-300">
+                Expanded ecosystem with LSP support and dozens of community MCP integrations.
+              </p>
+            </div>
+          </div>
+          <div className="mt-4 p-3 bg-gray-50 dark:bg-gray-800 rounded text-sm text-gray-600 dark:text-gray-400">
+            <strong>Update:</strong> Run <code className="px-1 bg-gray-200 dark:bg-gray-700 rounded">claude update</code> to get the latest version.
+          </div>
+        </Card>
+      </motion.section>
+
+      {/* Resources */}
+      <motion.section
+        {...sectionAnimation(4)}
         className="mb-12"
       >
         <SectionHeader title="Learn More" />
@@ -190,6 +232,12 @@ claude --version`}
             <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
               <h5 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">Related Topics</h5>
               <div className="flex flex-wrap gap-2">
+                <a href="/context-engineering/skills" className="text-sm px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-300 rounded hover:bg-purple-200 dark:hover:bg-purple-800 transition-colors">
+                  Skills →
+                </a>
+                <a href="/context-engineering/hooks" className="text-sm px-3 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-300 rounded hover:bg-orange-200 dark:hover:bg-orange-800 transition-colors">
+                  Hooks →
+                </a>
                 <a href="/ai-journey/claude/mcp" className="text-sm px-3 py-1 bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-300 rounded hover:bg-teal-200 dark:hover:bg-teal-800 transition-colors">
                   MCP Integration →
                 </a>

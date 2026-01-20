@@ -112,6 +112,53 @@ export default function PredictionsContent() {
         </Card>
       </motion.section>
 
+      {/* Looking Ahead: Opus 5 */}
+      <motion.section
+        id="opus-5"
+        {...sectionAnimation(0.08)}
+        className="mb-12"
+      >
+        <Card className="p-6 border-l-4 border-purple-500">
+          <div className="flex items-center mb-4">
+            <span className="text-3xl mr-3">🔮</span>
+            <div>
+              <h3 className="text-xl font-semibold text-purple-700 dark:text-purple-400">
+                Looking Ahead: Opus 5 / Claude 5
+              </h3>
+              <p className="text-sm text-gray-500 dark:text-gray-400">Expected Q2-Q3 2026</p>
+            </div>
+          </div>
+          <p className="text-gray-600 dark:text-gray-300 mb-4">
+            While Anthropic hasn&apos;t announced Opus 5, historical patterns suggest a major release every ~6 months:
+          </p>
+          <div className="grid md:grid-cols-2 gap-4 mb-4">
+            <div className="p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
+              <h5 className="font-semibold text-purple-800 dark:text-purple-300 text-sm mb-2">Release Pattern</h5>
+              <ul className="text-xs text-gray-600 dark:text-gray-300 space-y-1">
+                <li>• Claude 3 Opus → 3.5 Sonnet: ~4 months</li>
+                <li>• Claude 4 Sonnet → Opus 4.5: ~5 months</li>
+                <li>• Opus 4.5 (Nov 2025) → <strong>Opus 5: ~May-Jun 2026</strong></li>
+              </ul>
+            </div>
+            <div className="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+              <h5 className="font-semibold text-blue-800 dark:text-blue-300 text-sm mb-2">Expected Capabilities</h5>
+              <ul className="text-xs text-gray-600 dark:text-gray-300 space-y-1">
+                <li>• SWE-bench: 90%+ (approaching human-level)</li>
+                <li>• Context: 500K-1M tokens likely</li>
+                <li>• Multi-modal: Enhanced vision + audio</li>
+                <li>• Memory: Persistent cross-session learning</li>
+              </ul>
+            </div>
+          </div>
+          <div className="p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded border border-yellow-200 dark:border-yellow-800">
+            <p className="text-xs text-gray-700 dark:text-gray-300">
+              <strong>Speculation level:</strong> Medium confidence (60-70%). Based on release cadence patterns and competitive pressure from GPT-5.
+              Community prediction markets show 75-80% probability for Q1-Q2 2026 release.
+            </p>
+          </div>
+        </Card>
+      </motion.section>
+
       {/* Table of Contents */}
       <motion.section
         {...sectionAnimation(0.1)}
@@ -120,6 +167,7 @@ export default function PredictionsContent() {
         <Card className="p-6">
           <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-4">📑 Jump to Section</h3>
           <div className="grid md:grid-cols-2 gap-3 text-sm">
+            <a href="#opus-5" className="text-purple-600 dark:text-purple-400 hover:underline">🔮 Opus 5 / Claude 5</a>
             <a href="#trajectory" className="text-blue-600 dark:text-blue-400 hover:underline">📊 Performance Trajectory</a>
             <a href="#high-confidence" className="text-blue-600 dark:text-blue-400 hover:underline">🎯 High Confidence Predictions</a>
             <a href="#medium-confidence" className="text-blue-600 dark:text-blue-400 hover:underline">💡 Medium Confidence Predictions</a>
