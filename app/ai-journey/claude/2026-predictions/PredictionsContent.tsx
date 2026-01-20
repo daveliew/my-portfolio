@@ -56,7 +56,7 @@ export default function PredictionsContent() {
                 <ul className="text-sm text-gray-600 dark:text-gray-300 mt-1 space-y-1">
                   <li>• <strong>Opus 4.5 release</strong> — Current flagship, ~81% SWE-bench</li>
                   <li>• Extended thinking enables deeper reasoning chains</li>
-                  <li>• Infrastructure scaling (Google TPU, Azure capacity doubling)</li>
+                  <li>• <strong>AWS Trainium partnership</strong> — $8B investment, custom silicon optimization</li>
                 </ul>
               </div>
             </div>
@@ -391,6 +391,62 @@ export default function PredictionsContent() {
               <p className="text-sm text-gray-700 dark:text-gray-300">
                 <strong>Enabled by:</strong> Early Experience paradigm + verifiable feedback from tests/builds means
                 Claude learns from mistakes without human supervision at every step.
+              </p>
+            </div>
+          </Card>
+
+          {/* Effective Harnesses - Anthropic Engineering */}
+          <Card className="p-6 border-l-4 border-teal-500">
+            <div className="flex items-center mb-4">
+              <span className="text-3xl mr-3">🔧</span>
+              <div>
+                <h3 className="text-xl font-semibold text-teal-700 dark:text-teal-400">
+                  Effective Harnesses for Long-Running Agents
+                </h3>
+                <p className="text-sm text-gray-500 dark:text-gray-400">
+                  <a href="https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents" target="_blank" rel="noopener noreferrer" className="text-teal-600 dark:text-teal-400 hover:underline">
+                    Anthropic Engineering →
+                  </a>
+                </p>
+              </div>
+            </div>
+            <p className="text-gray-600 dark:text-gray-300 mb-4">
+              Anthropic&apos;s research on making agents work across multiple context windows reveals key patterns:
+            </p>
+            <div className="grid md:grid-cols-2 gap-3 mb-4">
+              <div className="p-3 bg-teal-50 dark:bg-teal-900/20 rounded text-sm">
+                <strong className="text-teal-800 dark:text-teal-300">Two-Agent Architecture</strong>
+                <ul className="mt-1 text-gray-600 dark:text-gray-300 text-xs space-y-1">
+                  <li>• <strong>Initializer</strong>: Sets up environment, creates progress files</li>
+                  <li>• <strong>Coding agent</strong>: Works incrementally, documents for next session</li>
+                </ul>
+              </div>
+              <div className="p-3 bg-blue-50 dark:bg-blue-900/20 rounded text-sm">
+                <strong className="text-blue-800 dark:text-blue-300">Incremental Progress</strong>
+                <ul className="mt-1 text-gray-600 dark:text-gray-300 text-xs space-y-1">
+                  <li>• Single features per session, not entire apps</li>
+                  <li>• Git commits enable rollback if needed</li>
+                </ul>
+              </div>
+              <div className="p-3 bg-purple-50 dark:bg-purple-900/20 rounded text-sm">
+                <strong className="text-purple-800 dark:text-purple-300">Structured State</strong>
+                <ul className="mt-1 text-gray-600 dark:text-gray-300 text-xs space-y-1">
+                  <li>• JSON over Markdown (prevents overwrites)</li>
+                  <li>• Progress tracking with checkbox format</li>
+                </ul>
+              </div>
+              <div className="p-3 bg-orange-50 dark:bg-orange-900/20 rounded text-sm">
+                <strong className="text-orange-800 dark:text-orange-300">Test-First Recovery</strong>
+                <ul className="mt-1 text-gray-600 dark:text-gray-300 text-xs space-y-1">
+                  <li>• Run sanity tests before new features</li>
+                  <li>• Browser automation (Puppeteer) for E2E</li>
+                </ul>
+              </div>
+            </div>
+            <div className="bg-yellow-50 dark:bg-yellow-900/20 p-3 rounded border border-yellow-200 dark:border-yellow-800">
+              <p className="text-xs text-gray-700 dark:text-gray-300">
+                <strong>Key insight:</strong> &quot;It is unacceptable to remove or edit tests because this could lead to missing or buggy functionality.&quot;
+                This constraint prevents agents from taking shortcuts.
               </p>
             </div>
           </Card>
@@ -860,7 +916,19 @@ export default function PredictionsContent() {
             <div className="flex items-start">
               <span className="font-bold text-blue-600 dark:text-blue-400 mr-2">4.</span>
               <div>
-                <strong>Theoretical foundations:</strong> Verifiable feedback enables scalable autonomous learning
+                <strong>Infrastructure partnerships:</strong>{' '}
+                <a href="https://www.anthropic.com/news/anthropic-amazon-trainium" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
+                  AWS Trainium ($8B investment)
+                </a>, custom silicon optimization
+              </div>
+            </div>
+            <div className="flex items-start">
+              <span className="font-bold text-blue-600 dark:text-blue-400 mr-2">5.</span>
+              <div>
+                <strong>Engineering research:</strong>{' '}
+                <a href="https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
+                  Effective harnesses for long-running agents
+                </a>
               </div>
             </div>
           </div>
