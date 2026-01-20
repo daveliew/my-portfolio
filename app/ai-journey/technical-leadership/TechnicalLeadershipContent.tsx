@@ -4,10 +4,10 @@ import { motion } from 'framer-motion';
 import AIJourneySubpageLayout from '@/components/ai-journey/SubpageLayout';
 import { Card, SectionHeader } from '@/components/common';
 import { sectionAnimation } from '@/utils/animations';
-import learningPathsData from '@/data/ai-journey-learning-paths.json';
+import aiJourneyData from '@/data/ai-journey.json';
 
 export default function TechnicalLeadershipContent() {
-  const techLeadershipPath = learningPathsData.learningPaths.find(
+  const techLeadershipPath = aiJourneyData.learningPaths.find(
     path => path.id === 'technical-leadership'
   );
 

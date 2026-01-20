@@ -288,76 +288,815 @@
       }
     ],
     "casestudies": [
-        {
-            "title": "Jazz Scat - Voice AI Music Generator",
-            "date": "2024-12-15",
-            "category": "hackathon",
-            "status": "Completed",
-            "description": "Voice AI that lets you sing and generates matching backing tracks in real-time. Built in 48 hours with no prior voice AI experience—2nd place at ElevenLabs Global Hackathon.",
-            "outcomes": [
-                "2nd place at ElevenLabs Global Hackathon (500+ participants)",
-                "First voice AI project—learned the entire stack during the hackathon",
-                "Proved that curiosity + AI tools beats years of specialized experience"
-            ],
-            "technologies": ["Next.js 16", "ElevenLabs", "AI Music Generation", "React 19", "TypeScript"],
-            "demoUrl": "https://jazz-scat.vercel.app",
-            "foundationSkillsApplied": ["Technical Skills", "AI Implementation", "Creative Problem Solving"]
-        },
-        {
-            "title": "Nansen Voice - Conversational AI Foundation",
-            "date": "2024-12-20",
-            "category": "exploration",
-            "status": "Active",
-            "description": "Voice-first AI assistant that remembers past conversations. Started as 'what if AI could have a real conversation?' and evolved into a reusable foundation for client projects.",
-            "outcomes": [
-                "Built a working voice AI in one weekend",
-                "Learned mem0 memory system from scratch",
-                "Now reusing this pattern across 2 client projects"
-            ],
-            "technologies": ["Next.js 16", "ElevenLabs", "mem0", "TypeScript", "Tailwind CSS 4"],
-            "demoUrl": "https://nansen-voice.vercel.app",
-            "foundationSkillsApplied": ["Technical Skills", "AI Implementation", "Pattern Recognition"]
-        },
-        {
-            "title": "Autonomous Research Team for Market Analysis",
-            "date": "2025-01-15",
-            "category": "client",
-            "description": "Built a CrewAI-based system of agents that collaboratively performed market research and trend analysis",
-            "outcomes": [
-                "Delivered comprehensive market reports in 1/3 of the time",
-                "Increased depth of analysis through systematic research patterns",
-                "Reduced costs of market intelligence gathering"
-            ],
-            "technologies": ["CrewAI", "LangChain", "OpenAI API", "Vector Databases"],
-            "foundationSkillsApplied": ["Pattern Recognition", "Strategic Thinking", "Technical Skills", "AI Implementation"]
-        },
-        {
-          "title": "Marketing & Operations Automation - Ray of Joy Therapy",
-          "date": "2025-02-01",
-          "category": "client",
-          "description": "Implementing comprehensive automation solutions for therapy practice management, marketing operations, and client engagement at rayofjoytherapy.com",
-          "outcomes": [
-            "Streamlined client onboarding and scheduling processes",
-            "Automated marketing content distribution and engagement",
-            "Enhanced operational efficiency through integrated systems"
-          ],
-          "technologies": ["n8n", "OpenAI API", "Airtable", "Website Integration"],
-          "foundationSkillsApplied": ["Technical Skills", "AI Implementation", "Business Development"]
-        },
-        {
-            "title": "E-commerce Platform AI Enhancement",
-            "date": "2025-01-10",
-            "category": "client",
-            "status": "Active",
-            "description": "Shopify customization with AI-powered features: gift wizard, tiered pricing automation, and MOQ management for Singapore B2B corporate gift company.",
-            "outcomes": [
-                "Reduced manual order processing by 60%",
-                "Automated tiered pricing calculations",
-                "Integrated gift recommendation system"
-            ],
-            "technologies": ["Shopify Liquid", "JavaScript", "AI Integration", "Custom Theme Development"],
-            "foundationSkillsApplied": ["Technical Skills", "Strategic Thinking", "Business Development"]
-        }
+      {
+        "title": "Jazz Scat - Voice AI Music Generator",
+        "date": "2024-12-15",
+        "category": "hackathon",
+        "status": "Completed",
+        "description": "Voice AI that lets you sing and generates matching backing tracks in real-time. Built in 48 hours with no prior voice AI experience—2nd place at ElevenLabs Global Hackathon.",
+        "outcomes": [
+          "2nd place at ElevenLabs Global Hackathon (500+ participants)",
+          "First voice AI project—learned the entire stack during the hackathon",
+          "Proved that curiosity + AI tools beats years of specialized experience"
+        ],
+        "technologies": ["Next.js 16", "ElevenLabs", "AI Music Generation", "React 19", "TypeScript"],
+        "demoUrl": "https://jazz-scat.vercel.app",
+        "foundationSkillsApplied": ["Technical Skills", "AI Implementation", "Creative Problem Solving"]
+      },
+      {
+        "title": "Nansen Voice - Conversational AI Foundation",
+        "date": "2024-12-20",
+        "category": "exploration",
+        "status": "Active",
+        "description": "Voice-first AI assistant that remembers past conversations. Started as 'what if AI could have a real conversation?' and evolved into a reusable foundation for client projects.",
+        "outcomes": [
+          "Built a working voice AI in one weekend",
+          "Learned mem0 memory system from scratch",
+          "Now reusing this pattern across 2 client projects"
+        ],
+        "technologies": ["Next.js 16", "ElevenLabs", "mem0", "TypeScript", "Tailwind CSS 4"],
+        "demoUrl": "https://nansen-voice.vercel.app",
+        "foundationSkillsApplied": ["Technical Skills", "AI Implementation", "Pattern Recognition"]
+      },
+      {
+        "title": "Autonomous Research Team for Market Analysis",
+        "date": "2025-01-15",
+        "category": "client",
+        "description": "Built a CrewAI-based system of agents that collaboratively performed market research and trend analysis",
+        "outcomes": [
+          "Delivered comprehensive market reports in 1/3 of the time",
+          "Increased depth of analysis through systematic research patterns",
+          "Reduced costs of market intelligence gathering"
+        ],
+        "technologies": ["CrewAI", "LangChain", "OpenAI API", "Vector Databases"],
+        "foundationSkillsApplied": ["Pattern Recognition", "Strategic Thinking", "Technical Skills", "AI Implementation"]
+      },
+      {
+        "title": "Marketing & Operations Automation - Ray of Joy Therapy",
+        "date": "2025-02-01",
+        "category": "client",
+        "description": "Implementing comprehensive automation solutions for therapy practice management, marketing operations, and client engagement at rayofjoytherapy.com",
+        "outcomes": [
+          "Streamlined client onboarding and scheduling processes",
+          "Automated marketing content distribution and engagement",
+          "Enhanced operational efficiency through integrated systems"
+        ],
+        "technologies": ["n8n", "OpenAI API", "Airtable", "Website Integration"],
+        "foundationSkillsApplied": ["Technical Skills", "AI Implementation", "Business Development"]
+      },
+      {
+        "title": "E-commerce Platform AI Enhancement",
+        "date": "2025-01-10",
+        "category": "client",
+        "status": "Active",
+        "description": "Shopify customization with AI-powered features: gift wizard, tiered pricing automation, and MOQ management for Singapore B2B corporate gift company.",
+        "outcomes": [
+          "Reduced manual order processing by 60%",
+          "Automated tiered pricing calculations",
+          "Integrated gift recommendation system"
+        ],
+        "technologies": ["Shopify Liquid", "JavaScript", "AI Integration", "Custom Theme Development"],
+        "foundationSkillsApplied": ["Technical Skills", "Strategic Thinking", "Business Development"]
+      }
     ]
-  }
-} 
+  },
+  "learningPaths": [
+    {
+      "id": "no-code-ai-branding",
+      "title": "No-Code AI Branding",
+      "description": "Build your professional presence with AI - no coding required",
+      "overview": "This beginner-friendly path teaches you to leverage AI tools to create a professional online presence. Perfect for students, career changers, and anyone who wants to build their personal brand without learning to code.",
+      "objectives": [
+        "Create a professional personal website using AI tools like v0.dev",
+        "Write compelling bios and content with AI assistance",
+        "Optimize your LinkedIn profile for AI-enhanced discovery",
+        "Develop a consistent personal brand across platforms",
+        "Understand the 'vibe coding' approach to building with AI"
+      ],
+      "metadata": {
+        "level": "Absolute Beginner",
+        "duration": "4 weeks",
+        "prerequisites": ["Basic computer literacy", "A desire to build your professional presence"],
+        "targetAudience": ["Students", "Career changers", "Non-technical professionals", "Anyone building their personal brand"]
+      },
+      "phases": [
+        {
+          "title": "Week 1: AI Bio Writing",
+          "description": "Master the art of using AI to write compelling professional content about yourself.",
+          "modules": [
+            {
+              "title": "Understanding AI Writing Tools",
+              "topics": [
+                "Introduction to ChatGPT and Claude",
+                "How to communicate effectively with AI",
+                "The difference between vague and specific prompts"
+              ]
+            },
+            {
+              "title": "Crafting Your Professional Bio",
+              "topics": [
+                "Writing prompts for bio generation",
+                "Iterating and refining AI output",
+                "Adapting your bio for different contexts"
+              ]
+            },
+            {
+              "title": "Week 1 Project",
+              "topics": [
+                "Create 3 versions of your bio (short, medium, long)",
+                "Get feedback from peers",
+                "Finalize your core professional narrative"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Week 2: Portfolio with v0.dev",
+          "description": "Build and deploy your personal website without writing any code.",
+          "modules": [
+            {
+              "title": "Introduction to v0.dev",
+              "topics": [
+                "How AI-powered website builders work",
+                "Creating your first page with natural language",
+                "Understanding what v0.dev generates"
+              ]
+            },
+            {
+              "title": "Building Your Personal Site",
+              "topics": [
+                "Structuring prompts for website generation",
+                "Adding sections: About, Skills, Contact",
+                "Customizing colors, fonts, and layout"
+              ]
+            },
+            {
+              "title": "Deploying to Vercel",
+              "topics": [
+                "One-click deployment process",
+                "Getting your free .vercel.app URL",
+                "Connecting a custom domain (optional)"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Week 3: LinkedIn Optimization",
+          "description": "Leverage AI to enhance your LinkedIn presence and professional network.",
+          "modules": [
+            {
+              "title": "AI-Enhanced Profile",
+              "topics": [
+                "Using AI to write headline and summary",
+                "Describing experience with AI assistance",
+                "Keywords and discoverability"
+              ]
+            },
+            {
+              "title": "Content Strategy",
+              "topics": [
+                "Using AI to generate post ideas",
+                "Maintaining authenticity with AI assistance",
+                "Building a consistent posting habit"
+              ]
+            },
+            {
+              "title": "Networking with AI Support",
+              "topics": [
+                "Drafting connection messages",
+                "Preparing for interviews with AI practice",
+                "Research assistance for target companies"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Week 4: Your AI-Native Voice",
+          "description": "Integrate all skills into a cohesive personal brand strategy.",
+          "modules": [
+            {
+              "title": "Brand Consistency",
+              "topics": [
+                "Aligning website, LinkedIn, and other platforms",
+                "Creating brand guidelines with AI",
+                "Visual consistency across platforms"
+              ]
+            },
+            {
+              "title": "Advanced AI Collaboration",
+              "topics": [
+                "Using AI for ongoing content creation",
+                "Building a prompt library for your brand",
+                "When to use which AI tool"
+              ]
+            },
+            {
+              "title": "Final Project",
+              "topics": [
+                "Complete personal brand audit",
+                "Present your AI-built portfolio",
+                "Plan for ongoing brand development"
+              ]
+            }
+          ]
+        }
+      ],
+      "process": [
+        "Spend 2-3 hours per week on focused learning",
+        "Complete each week's project before moving on",
+        "Share your progress with a friend or mentor for feedback",
+        "Focus on authenticity - AI enhances your voice, doesn't replace it"
+      ],
+      "links": {
+        "previous": "/ai-journey/overview",
+        "next": "/ai-journey/techniques/llm-handling"
+      }
+    },
+    {
+      "id": "llm-handling",
+      "title": "LLM Handling Learning Path",
+      "description": "A comprehensive roadmap for mastering large language models in practical applications",
+      "overview": "This learning path focuses on developing the skills needed to effectively utilize large language models across various applications and workflows.",
+      "objectives": [
+        "Effectively communicate with AI models through well-crafted prompts",
+        "Integrate AI capabilities into existing applications and workflows",
+        "Understand LLM limitations and implement appropriate guardrails",
+        "Design hybrid human-AI workflows that maximize the strengths of both",
+        "Evaluate and select the right models for specific use cases"
+      ],
+      "metadata": {
+        "level": "Beginner to Intermediate",
+        "duration": "4-6 weeks",
+        "prerequisites": ["Basic programming knowledge", "Familiarity with API concepts"],
+        "targetAudience": ["Developers", "Content creators", "Business analysts", "Product managers"]
+      },
+      "phases": [
+        {
+          "title": "Phase 1: Fundamentals",
+          "description": "Build a solid foundation in understanding how LLMs work and how to interact with them effectively.",
+          "modules": [
+            {
+              "title": "Understanding LLMs",
+              "topics": [
+                "Basic concepts: tokens, parameters, temperature, context window",
+                "Model capabilities and limitations",
+                "Different model architectures and their strengths"
+              ]
+            },
+            {
+              "title": "Prompt Engineering Basics",
+              "topics": [
+                "Crafting clear instructions",
+                "Using examples (few-shot learning)",
+                "Basic prompt patterns and templates"
+              ]
+            },
+            {
+              "title": "Suggested Resources",
+              "topics": [
+                "OpenAI Documentation",
+                "Prompt Engineering Guide by Anthropic",
+                "Learn Prompting website"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Phase 2: Integration & Application",
+          "description": "Learn how to incorporate LLMs into applications and existing workflows.",
+          "modules": [
+            {
+              "title": "API Integration",
+              "topics": [
+                "Setting up API access to various models",
+                "Managing API costs and rate limits",
+                "Error handling and fallback strategies"
+              ]
+            },
+            {
+              "title": "Building Basic AI Features",
+              "topics": [
+                "Content generation capabilities",
+                "Data extraction and summarization",
+                "Conversation management"
+              ]
+            },
+            {
+              "title": "Suggested Projects",
+              "topics": [
+                "Build a simple chatbot",
+                "Create a content summarization tool",
+                "Implement a simple data extraction system"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Phase 3: Advanced Techniques",
+          "description": "Master advanced techniques for optimizing LLM performance in complex scenarios.",
+          "modules": [
+            {
+              "title": "Advanced Prompt Engineering",
+              "topics": [
+                "Chain-of-thought prompting",
+                "ReAct pattern implementation",
+                "System and user message design"
+              ]
+            },
+            {
+              "title": "Enhancing Reliability",
+              "topics": [
+                "Output validation and correction",
+                "Implementing guardrails",
+                "Handling hallucinations and misinformation"
+              ]
+            },
+            {
+              "title": "Model Fine-tuning",
+              "topics": [
+                "When and why to fine-tune models",
+                "Creating effective training datasets",
+                "Evaluating fine-tuned models"
+              ]
+            }
+          ]
+        }
+      ],
+      "process": [
+        "Spend 1-2 weeks on each phase",
+        "Complete at least one project in each phase before moving on",
+        "Document your learnings and challenges",
+        "Join communities like Hugging Face and AI Discord servers to share experiences"
+      ],
+      "links": {
+        "previous": "/ai-journey/how-to-learn/overview",
+        "next": "/ai-journey/how-to-learn/agent-rag"
+      }
+    },
+    {
+      "id": "agent-rag",
+      "title": "Agent & RAG Learning Path",
+      "description": "Build intelligent agents and implement Retrieval Augmented Generation for more capable AI systems",
+      "overview": "This advanced learning path focuses on building autonomous agents and retrieval-augmented generation (RAG) systems for sophisticated AI applications.",
+      "objectives": [
+        "Build AI agents that can perform complex, multi-step tasks",
+        "Implement effective RAG systems for knowledge-intensive applications",
+        "Design and deploy multi-agent systems for collaborative tasks",
+        "Integrate external tools and APIs with agents",
+        "Create memory and knowledge retrieval systems for AI applications"
+      ],
+      "metadata": {
+        "level": "Intermediate to Advanced",
+        "duration": "6-8 weeks",
+        "prerequisites": [
+          "Solid understanding of LLM capabilities and limitations",
+          "Experience with API integration",
+          "Basic knowledge of vector databases",
+          "Programming proficiency in Python or JavaScript"
+        ],
+        "targetAudience": ["AI developers", "Data engineers", "Solution architects", "ML engineers"]
+      },
+      "phases": [
+        {
+          "title": "Phase 1: Agent Fundamentals",
+          "description": "Understand the core concepts of AI agents and their implementation.",
+          "modules": [
+            {
+              "title": "Agent Architecture",
+              "topics": [
+                "Core components of an AI agent",
+                "Agent models (reactive, goal-based, utility-based)",
+                "Planning and execution frameworks"
+              ]
+            },
+            {
+              "title": "Frameworks & Tools",
+              "topics": [
+                "LangChain vs. CrewAI",
+                "AutoGPT and BabyAGI",
+                "Setting up development environments"
+              ]
+            },
+            {
+              "title": "Basic Agent Implementation",
+              "topics": [
+                "Creating a single-task agent",
+                "Tool and API integration",
+                "Testing and debugging agents"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Phase 2: Retrieval Augmented Generation",
+          "description": "Master the techniques for augmenting LLMs with external knowledge.",
+          "modules": [
+            {
+              "title": "Knowledge Representation",
+              "topics": [
+                "Vector embeddings and semantic search",
+                "Document chunking strategies",
+                "Metadata and filtering"
+              ]
+            },
+            {
+              "title": "Vector Databases",
+              "topics": [
+                "Setting up Pinecone, Weaviate, or Chroma",
+                "Indexing and querying vector databases",
+                "Hybrid search techniques"
+              ]
+            },
+            {
+              "title": "RAG Implementation",
+              "topics": [
+                "Building a basic RAG pipeline",
+                "Query reformulation techniques",
+                "Evaluating RAG quality"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Phase 3: Advanced Agent Systems",
+          "description": "Build sophisticated multi-agent systems with memory and advanced capabilities.",
+          "modules": [
+            {
+              "title": "Multi-Agent Systems",
+              "topics": [
+                "Agent roles and specialization",
+                "Inter-agent communication",
+                "Orchestration and coordination"
+              ]
+            },
+            {
+              "title": "Memory Systems",
+              "topics": [
+                "Short-term and long-term memory",
+                "Contextual recall mechanisms",
+                "Memory indexing and retrieval"
+              ]
+            },
+            {
+              "title": "Capstone Project",
+              "topics": [
+                "Design a complex agent system with RAG capabilities",
+                "Implement evaluation metrics",
+                "Deploy and monitor the system"
+              ]
+            }
+          ]
+        }
+      ],
+      "process": [
+        "Complete each phase sequentially",
+        "Build increasingly complex projects as you progress",
+        "Focus on a specific domain application (e.g., customer service, research assistant)",
+        "Continuously evaluate and refine your implementations"
+      ],
+      "links": {
+        "previous": "/ai-journey/how-to-learn/llm-handling",
+        "next": "/ai-journey/portfolio"
+      }
+    },
+    {
+      "id": "technical-leadership",
+      "title": "Three-Hat Technical Leadership Framework",
+      "description": "Master the integration of systems architecture, product management, and hands-on implementation for comprehensive AI solutions",
+      "overview": "This advanced learning path teaches you to seamlessly switch between three critical perspectives: Systems Architect (big picture), Product Manager (value optimization), and Implementation (delivery excellence). Based on hard-won insights from real-world AI projects.",
+      "objectives": [
+        "Develop systems thinking to prevent technical debt and complexity explosion",
+        "Master data-driven product management for AI features",
+        "Build robust implementation practices with quality gates and monitoring",
+        "Learn to context-switch effectively between the three hats",
+        "Apply the framework to deliver fractional CTO-level value"
+      ],
+      "metadata": {
+        "level": "Intermediate to Advanced",
+        "duration": "8-10 weeks",
+        "prerequisites": [
+          "Experience building and deploying AI applications",
+          "Basic understanding of software architecture",
+          "Some exposure to product management concepts",
+          "Willingness to learn from failures and iterate"
+        ],
+        "targetAudience": ["Technical leaders", "Senior developers", "AI consultants", "Aspiring fractional CTOs"]
+      },
+      "phases": [
+        {
+          "title": "Phase 1: The Systems Architect Hat",
+          "description": "Learn to think in systems, architectures, and scalable designs that prevent future problems.",
+          "modules": [
+            {
+              "title": "Foundation First Thinking",
+              "topics": [
+                "The Pareto principle in architecture (80/20 rule)",
+                "Identifying the core 20% that delivers 80% value",
+                "Building modular, extensible systems from the start"
+              ]
+            },
+            {
+              "title": "Scalability & Complexity Management",
+              "topics": [
+                "The 10x scalability question framework",
+                "Monitoring complexity before it explodes (69→10 tools lesson)",
+                "Chaos engineering principles for AI systems"
+              ]
+            },
+            {
+              "title": "Technical Debt Prevention",
+              "topics": [
+                "Early warning signs of architectural problems",
+                "Protocol compliance as business risk (the $50K stdout lesson)",
+                "Building in flexibility without over-engineering"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Phase 2: The Product Manager Hat",
+          "description": "Optimize for user value, business impact, and data-driven decision making.",
+          "modules": [
+            {
+              "title": "User Journey Optimization",
+              "topics": [
+                "Time-to-first-success metrics (<2 min onboarding)",
+                "Identifying and removing friction points",
+                "Building user feedback loops into AI systems"
+              ]
+            },
+            {
+              "title": "Data-Driven AI Features",
+              "topics": [
+                "Usage analytics that drive architecture decisions",
+                "Feature lifecycle: Discovery → Experimentation → Optimization",
+                "Measuring actual vs perceived value"
+              ]
+            },
+            {
+              "title": "Business Impact Alignment",
+              "topics": [
+                "Translating technical capabilities to business outcomes",
+                "ROI measurement for AI implementations",
+                "Prioritization frameworks for AI features"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Phase 3: The Implementation Hat",
+          "description": "Excellence in delivery through quality gates, automation, and continuous improvement.",
+          "modules": [
+            {
+              "title": "Quality Gates & Testing",
+              "topics": [
+                "CI/CD pipelines for AI applications",
+                "Testing strategies for non-deterministic systems",
+                "Monitoring beyond uptime - the metrics that matter"
+              ]
+            },
+            {
+              "title": "Developer Experience",
+              "topics": [
+                "One-command setup philosophy",
+                "Hot reload and rapid iteration for AI development",
+                "Documentation that developers actually use"
+              ]
+            },
+            {
+              "title": "Continuous Improvement",
+              "topics": [
+                "Weekly metrics → monthly architecture reviews",
+                "Learning from production incidents",
+                "Building improvement culture in AI teams"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Phase 4: Framework Integration",
+          "description": "Apply all three hats together for comprehensive technical leadership.",
+          "modules": [
+            {
+              "title": "Context Switching Mastery",
+              "topics": [
+                "When to wear which hat",
+                "Rapid perspective switching in meetings",
+                "Balancing competing priorities across hats"
+              ]
+            },
+            {
+              "title": "Technical Leadership Audits",
+              "topics": [
+                "The comprehensive health check framework",
+                "Architecture assessment in Week 1-2",
+                "Operational excellence design in Week 3-4",
+                "Growth preparation in Week 5-6"
+              ]
+            },
+            {
+              "title": "Client Delivery Excellence",
+              "topics": [
+                "Positioning as a fractional CTO",
+                "Demonstrating value through the framework",
+                "Building long-term client relationships"
+              ]
+            }
+          ]
+        }
+      ],
+      "process": [
+        "Start with self-assessment: Which hat do you naturally wear most?",
+        "Focus on strengthening your weakest hat first",
+        "Apply the framework to a real project throughout the learning process",
+        "Document your 'hard lessons learned' as you go",
+        "Share insights with the community to reinforce learning"
+      ],
+      "links": {
+        "previous": "/ai-journey/how-to-learn/agent-rag",
+        "next": "/ai-journey/portfolio"
+      }
+    }
+  ],
+  "tabs": [
+    {
+      "id": "why",
+      "label": "WHY",
+      "icon": "🎯",
+      "color": "blue",
+      "headline": "Foundation & Philosophy",
+      "sections": [
+        {
+          "type": "insight-box",
+          "quote": "Applying the Fitzgerald Principle to AI: holding the opposing ideas of human irreplaceability AND AI capabilities simultaneously."
+        },
+        {
+          "type": "feature-card",
+          "title": "Why Human-AI Collaboration",
+          "description": "Understanding the AI S-Curve: We're at the inflection point where AI transitions from novelty to necessity. The question isn't whether to collaborate with AI, but how to do it in ways that amplify rather than diminish human agency.",
+          "cta": {
+            "label": "Explore the S-Curve Framework",
+            "href": "/ai-journey/why-ai"
+          }
+        },
+        {
+          "type": "feature-card",
+          "title": "Context Engineering",
+          "description": "The real skill isn't prompting—it's architecting what AI knows before it reasons. Three pillars: System Prompts (persistent memory), Tools & MCP (extended capabilities), and Conversation Architecture (information flow).",
+          "cta": {
+            "label": "Master Context Engineering",
+            "href": "/ai-journey/context-engineering"
+          }
+        },
+        {
+          "type": "feature-card",
+          "title": "The Fitzgerald Principle",
+          "description": "Most people use AI to do more. I'm exploring how to do less—systematically. AI as complementarity, not replacement. Time compounds faster than money.",
+          "cta": {
+            "label": "Read Full Philosophy",
+            "href": "/philosophy"
+          }
+        }
+      ]
+    },
+    {
+      "id": "how",
+      "label": "HOW",
+      "icon": "⚡",
+      "color": "purple",
+      "headline": "Implementation & Techniques",
+      "sections": [
+        {
+          "type": "grid",
+          "title": "Three-Hat Framework",
+          "description": "Rapid context switching validated across 3+ client projects",
+          "items": [
+            {
+              "icon": "🏗️",
+              "title": "Systems Architect",
+              "description": "High-level design, dependencies, trade-offs"
+            },
+            {
+              "icon": "📊",
+              "title": "Product Manager",
+              "description": "User needs, feature prioritization, business value"
+            },
+            {
+              "icon": "💻",
+              "title": "Implementation",
+              "description": "Technical execution, code quality, testing"
+            }
+          ],
+          "cta": {
+            "label": "See Framework in Action",
+            "href": "/ai-journey/technical-leadership"
+          }
+        },
+        {
+          "type": "feature-card",
+          "title": "Claude Mastery Program",
+          "description": "8 comprehensive modules covering everything from prompt engineering to computer use capabilities. Includes 2025 breakthroughs: Claude Opus 4.5, Claude Code, Extended Thinking, and Prompt Caching.",
+          "cta": {
+            "label": "Start Claude Mastery",
+            "href": "/ai-journey/claude/overview"
+          }
+        },
+        {
+          "type": "grid",
+          "title": "Techniques Reference",
+          "items": [
+            {
+              "icon": "📝",
+              "title": "Prompt Engineering",
+              "description": "Effective communication patterns",
+              "href": "/ai-journey/techniques/prompt-engineering"
+            },
+            {
+              "icon": "🛠️",
+              "title": "Tool Use",
+              "description": "Extending AI capabilities",
+              "href": "/ai-journey/techniques/tool-use"
+            },
+            {
+              "icon": "🔍",
+              "title": "RAG Systems",
+              "description": "Retrieval-augmented generation",
+              "href": "/ai-journey/techniques/rag"
+            },
+            {
+              "icon": "🤖",
+              "title": "Agent Systems",
+              "description": "Autonomous AI workflows",
+              "href": "/ai-journey/techniques/agent-rag"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "what",
+      "label": "WHAT",
+      "icon": "🎨",
+      "color": "teal",
+      "headline": "Outcomes & Validation",
+      "sections": [
+        {
+          "type": "grid",
+          "title": "Portfolio Highlights",
+          "description": "Real implementations proving human-AI collaboration creates value greater than the sum of parts",
+          "items": [
+            {
+              "icon": "🎵",
+              "title": "Jazz Scat",
+              "description": "2nd place ElevenLabs Hackathon - Voice AI music generator",
+              "href": "/ai-journey/portfolio"
+            },
+            {
+              "icon": "🎙️",
+              "title": "Nansen Voice",
+              "description": "Voice-first conversational AI with persistent memory",
+              "href": "/ai-journey/portfolio"
+            },
+            {
+              "icon": "📊",
+              "title": "Market Research Agent",
+              "description": "CrewAI system delivering reports 3x faster",
+              "href": "/ai-journey/portfolio"
+            }
+          ],
+          "cta": {
+            "label": "View Full Portfolio",
+            "href": "/ai-journey/portfolio"
+          }
+        },
+        {
+          "type": "experiments",
+          "title": "Current Experiments",
+          "experiments": [
+            {
+              "title": "ADHD-AI Optimization",
+              "description": "Hypothesis: ADHD cognitive patterns provide natural advantages for AI collaboration speed and context switching.",
+              "status": "Active research with preliminary validation",
+              "statusColor": "orange"
+            },
+            {
+              "title": "2-Minute Rule for AI",
+              "description": "If users can't achieve first success within 2 minutes, the AI architecture has failed.",
+              "status": "Proven in 3 implementations",
+              "statusColor": "green"
+            }
+          ]
+        },
+        {
+          "type": "feature-card",
+          "title": "Living Laboratory",
+          "description": "Every framework is tested in real implementations. Proof over promises, experiments over theories. Exploring the convergence of AI, Sustainability, and Robotics.",
+          "cta": {
+            "label": "Explore the Lab",
+            "href": "/laboratory"
+          }
+        }
+      ]
+    }
+  ]
+}

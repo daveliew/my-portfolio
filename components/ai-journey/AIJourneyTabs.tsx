@@ -6,7 +6,7 @@ import { useSearchParams, useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Card } from '@/components/common';
 import { tabContentVariants } from '@/utils/animations';
-import tabsData from '@/data/ai-journey-tabs.json';
+import aiJourneyData from '@/data/ai-journey.json';
 import type { TabId, TabData, TabSection } from '@/types/ai-journey-tabs';
 
 const validTabs: TabId[] = ['why', 'how', 'what'];
@@ -212,7 +212,7 @@ function TabContent({ tab }: { tab: TabData }) {
 export default function AIJourneyTabs() {
   const searchParams = useSearchParams();
   const router = useRouter();
-  const tabs = tabsData.tabs as TabData[];
+  const tabs = aiJourneyData.tabs as TabData[];
 
   // Get tab from URL or default to 'why'
   const tabParam = searchParams.get('tab') as TabId | null;

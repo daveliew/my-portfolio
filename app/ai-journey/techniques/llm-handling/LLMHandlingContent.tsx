@@ -3,11 +3,11 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import AIJourneySubpageLayout from '@/components/ai-journey/SubpageLayout';
-import learningPathsData from '@/data/ai-journey-learning-paths.json';
+import aiJourneyData from '@/data/ai-journey.json';
 
 export default function LLMHandlingContent() {
   // Find the LLM Handling learning path from the data
-  const llmPath = learningPathsData.learningPaths.find(path => path.id === 'llm-handling');
+  const llmPath = aiJourneyData.learningPaths.find(path => path.id === 'llm-handling');
 
   if (!llmPath) {
     return <div>Error loading learning path data</div>;

@@ -3,11 +3,11 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import AIJourneySubpageLayout from '@/components/ai-journey/SubpageLayout';
-import learningPathsData from '@/data/ai-journey-learning-paths.json';
+import aiJourneyData from '@/data/ai-journey.json';
 
 export default function AgentRagContent() {
   // Find the Agent & RAG learning path from the data
-  const agentRagPath = learningPathsData.learningPaths.find(path => path.id === 'agent-rag');
+  const agentRagPath = aiJourneyData.learningPaths.find(path => path.id === 'agent-rag');
 
   if (!agentRagPath) {
     return <div>Error loading learning path data</div>;

@@ -201,16 +201,40 @@ const Navbar: React.FC = () => {
           </Link>
 
           {/* Vibe Coding */}
-          <Link
-            href="/vibe-coding"
-            onClick={() => setIsMobileMenuOpen(false)}
-            className={`py-2 ${pathname.startsWith('/vibe-coding')
-              ? 'text-purple-600 dark:text-purple-400 font-medium'
-              : 'text-gray-700 dark:text-gray-300'
-            }`}
-          >
-            Vibe Coding
-          </Link>
+          <div className="py-2">
+            <Link
+              href="/vibe-coding"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={`${pathname === '/vibe-coding'
+                ? 'text-purple-600 dark:text-purple-400 font-medium'
+                : 'text-gray-700 dark:text-gray-300'
+              }`}
+            >
+              Vibe Coding
+            </Link>
+            <div className="pl-4 mt-2 space-y-1">
+              <Link
+                href="/vibe-coding/fundamentals"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`block text-sm ${pathname === '/vibe-coding/fundamentals'
+                  ? 'text-purple-600 dark:text-purple-400 font-medium'
+                  : 'text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400'
+                }`}
+              >
+                ⚡ Web Fundamentals
+              </Link>
+              <Link
+                href="/vibe-coding/handout"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`block text-sm ${pathname === '/vibe-coding/handout'
+                  ? 'text-purple-600 dark:text-purple-400 font-medium'
+                  : 'text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400'
+                }`}
+              >
+                📄 Workshop Handout
+              </Link>
+            </div>
+          </div>
 
           {/* Agents - 2026 Focus */}
           <Link
