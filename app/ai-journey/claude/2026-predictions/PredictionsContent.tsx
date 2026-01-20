@@ -38,6 +38,80 @@ export default function PredictionsContent() {
         </div>
       </motion.section>
 
+      {/* 2026 Quarterly Timeline */}
+      <motion.section
+        {...sectionAnimation(0.05)}
+        className="mb-12"
+      >
+        <Card className="p-6">
+          <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-4">📅 2026 Quarterly Roadmap</h3>
+          <div className="space-y-4">
+            {/* Q1 */}
+            <div className="flex items-start">
+              <div className="flex-shrink-0 w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mr-4">
+                <span className="text-sm font-bold text-blue-700 dark:text-blue-300">Q1</span>
+              </div>
+              <div className="flex-1 border-l-2 border-blue-300 dark:border-blue-700 pl-4">
+                <h4 className="font-semibold text-blue-700 dark:text-blue-400">Jan - Mar 2026</h4>
+                <ul className="text-sm text-gray-600 dark:text-gray-300 mt-1 space-y-1">
+                  <li>• <strong>Opus 4.5 release</strong> — Current flagship, ~81% SWE-bench</li>
+                  <li>• Extended thinking enables deeper reasoning chains</li>
+                  <li>• Infrastructure scaling (Google TPU, Azure capacity doubling)</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Q2 */}
+            <div className="flex items-start">
+              <div className="flex-shrink-0 w-16 h-16 bg-teal-100 dark:bg-teal-900/30 rounded-lg flex items-center justify-center mr-4">
+                <span className="text-sm font-bold text-teal-700 dark:text-teal-300">Q2</span>
+              </div>
+              <div className="flex-1 border-l-2 border-teal-300 dark:border-teal-700 pl-4">
+                <h4 className="font-semibold text-teal-700 dark:text-teal-400">Apr - Jun 2026</h4>
+                <ul className="text-sm text-gray-600 dark:text-gray-300 mt-1 space-y-1">
+                  <li>• <strong>Multi-agent coordination</strong> matures — specialized agents collaborate</li>
+                  <li>• MCP ecosystem expands to 50-100 servers</li>
+                  <li>• SWE-bench likely reaches 85%+ threshold</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Q3 */}
+            <div className="flex items-start">
+              <div className="flex-shrink-0 w-16 h-16 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center mr-4">
+                <span className="text-sm font-bold text-purple-700 dark:text-purple-300">Q3</span>
+              </div>
+              <div className="flex-1 border-l-2 border-purple-300 dark:border-purple-700 pl-4">
+                <h4 className="font-semibold text-purple-700 dark:text-purple-400">Jul - Sep 2026</h4>
+                <ul className="text-sm text-gray-600 dark:text-gray-300 mt-1 space-y-1">
+                  <li>• <strong>50+ hour autonomous operations</strong> — multi-day sprints</li>
+                  <li>• Domain expansion: legal, scientific, financial research</li>
+                  <li>• Dario Amodei&apos;s &quot;powerful AI&quot; predictions approaching</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Q4 */}
+            <div className="flex items-start">
+              <div className="flex-shrink-0 w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center mr-4">
+                <span className="text-sm font-bold text-green-700 dark:text-green-300">Q4</span>
+              </div>
+              <div className="flex-1 border-l-2 border-green-300 dark:border-green-700 pl-4">
+                <h4 className="font-semibold text-green-700 dark:text-green-400">Oct - Dec 2026</h4>
+                <ul className="text-sm text-gray-600 dark:text-gray-300 mt-1 space-y-1">
+                  <li>• <strong>SWE-bench ~90%</strong> — approaching human-level coding</li>
+                  <li>• 200+ MCP servers, enterprise &quot;AI employee&quot; deployments</li>
+                  <li>• Agent monitoring &amp; interpretability advances</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <p className="text-xs text-gray-500 dark:text-gray-400 mt-4 italic">
+            Based on Anthropic research direction, Dario Amodei&apos;s &quot;Machines of Loving Grace&quot; essay, and documented performance trends.
+          </p>
+        </Card>
+      </motion.section>
+
       {/* Table of Contents */}
       <motion.section
         {...sectionAnimation(0.1)}
@@ -88,7 +162,11 @@ export default function PredictionsContent() {
               </div>
               <div className="flex justify-between">
                 <span>Sep 2025: Claude Sonnet 4.5</span>
-                <span className="font-mono font-bold text-blue-600 dark:text-blue-400">82.0% SWE-bench</span>
+                <span className="font-mono">82.0% SWE-bench</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Jan 2026: Claude Opus 4.5</span>
+                <span className="font-mono font-bold text-blue-600 dark:text-blue-400">Current flagship model</span>
               </div>
               <div className="flex justify-between pt-2 border-t border-blue-300 dark:border-blue-700">
                 <span className="italic">Extrapolated Dec 2026:</span>
@@ -217,7 +295,7 @@ export default function PredictionsContent() {
               </div>
             </div>
             <p className="text-gray-600 dark:text-gray-300 mb-4">
-              Claude already has &quot;memory across conversations&quot; (Sonnet 4.5). Natural evolution is persistent,
+              Claude already has &quot;memory across conversations&quot; (Opus 4.5). Natural evolution is persistent,
               project-specific memory that improves with usage. Learns your coding style, project architecture, team conventions.
             </p>
             <div className="bg-green-50 dark:bg-green-900/20 p-3 rounded text-sm">
@@ -653,7 +731,7 @@ export default function PredictionsContent() {
 
           <div className="mt-6 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
             <p className="text-xs text-gray-600 dark:text-gray-400">
-              <strong>Last Updated:</strong> December 2025 | <strong>Confidence Levels:</strong> Very High (80%+),
+              <strong>Last Updated:</strong> January 2026 | <strong>Confidence Levels:</strong> Very High (80%+),
               High (60-80%), Medium (40-60%), Speculation (&lt;40%) | <strong>Data Sources:</strong> Anthropic public
               announcements, research papers, benchmark results, industry analysis
             </p>
