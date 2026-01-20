@@ -159,6 +159,102 @@ export default function PredictionsContent() {
         </Card>
       </motion.section>
 
+      {/* What AGI Actually Means */}
+      <motion.section
+        id="agi-reality"
+        {...sectionAnimation(0.09)}
+        className="mb-12"
+      >
+        <Card className="p-6">
+          <div className="flex items-center mb-4">
+            <span className="text-3xl mr-3">🎯</span>
+            <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200">
+              Cutting Through the AGI Hype
+            </h3>
+          </div>
+          <p className="text-gray-600 dark:text-gray-300 mb-4">
+            &quot;AGI by 2027&quot; headlines are everywhere. Here&apos;s what&apos;s actually being said vs. what&apos;s hype:
+          </p>
+
+          {/* What leaders say */}
+          <div className="overflow-x-auto mb-6">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="bg-gray-100 dark:bg-gray-800">
+                  <th className="text-left p-3 border border-gray-200 dark:border-gray-700">Who</th>
+                  <th className="text-left p-3 border border-gray-200 dark:border-gray-700">Timeline</th>
+                  <th className="text-left p-3 border border-gray-200 dark:border-gray-700">Term Used</th>
+                </tr>
+              </thead>
+              <tbody className="text-gray-600 dark:text-gray-300">
+                <tr>
+                  <td className="p-3 border border-gray-200 dark:border-gray-700">Dario Amodei (Anthropic)</td>
+                  <td className="p-3 border border-gray-200 dark:border-gray-700">Late 2026 / Early 2027</td>
+                  <td className="p-3 border border-gray-200 dark:border-gray-700 font-medium text-purple-600 dark:text-purple-400">&quot;Powerful AI&quot;</td>
+                </tr>
+                <tr>
+                  <td className="p-3 border border-gray-200 dark:border-gray-700">Sam Altman (OpenAI)</td>
+                  <td className="p-3 border border-gray-200 dark:border-gray-700">~2027-2028</td>
+                  <td className="p-3 border border-gray-200 dark:border-gray-700">AGI</td>
+                </tr>
+                <tr>
+                  <td className="p-3 border border-gray-200 dark:border-gray-700">Daniel Kokotajlo (ex-OpenAI)</td>
+                  <td className="p-3 border border-gray-200 dark:border-gray-700">Now &quot;somewhat slower&quot;</td>
+                  <td className="p-3 border border-gray-200 dark:border-gray-700 italic">Revised down</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          {/* Dario's distinction */}
+          <div className="grid md:grid-cols-2 gap-4 mb-6">
+            <div className="p-4 bg-green-50 dark:bg-green-900/20 rounded-lg border border-green-200 dark:border-green-800">
+              <h4 className="font-semibold text-green-800 dark:text-green-300 mb-2">✓ What &quot;Powerful AI&quot; Actually Means</h4>
+              <p className="text-xs text-gray-500 dark:text-gray-400 mb-2">(From Dario&apos;s &quot;Machines of Loving Grace&quot;)</p>
+              <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
+                <li>• Virtual colleague across many domains</li>
+                <li>• Accelerates research 10x</li>
+                <li>• Multi-day autonomous tasks</li>
+                <li>• Handles 80-90% of coding work</li>
+              </ul>
+            </div>
+            <div className="p-4 bg-red-50 dark:bg-red-900/20 rounded-lg border border-red-200 dark:border-red-800">
+              <h4 className="font-semibold text-red-800 dark:text-red-300 mb-2">✗ What It&apos;s NOT</h4>
+              <p className="text-xs text-gray-500 dark:text-gray-400 mb-2">(Despite the headlines)</p>
+              <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
+                <li>• Self-improving recursive AI</li>
+                <li>• &quot;The singularity&quot;</li>
+                <li>• Can do anything a human can</li>
+                <li>• Self-directed goal formation</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Ralph Loop example */}
+          <div className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800 mb-4">
+            <h4 className="font-semibold text-blue-800 dark:text-blue-300 mb-2">Example: The &quot;Ralph Loop&quot; (2026&apos;s Hot Pattern)</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">
+              A bash loop that feeds Claude Code a PRD with checkboxes, letting it work autonomously until done.
+              Getting called &quot;mini-AGI&quot; online, but it&apos;s really just clever automation:
+            </p>
+            <ul className="text-xs text-gray-500 dark:text-gray-400 space-y-1">
+              <li>✓ <strong>What it does:</strong> Autonomous coding for hours, session persistence, progress tracking</li>
+              <li>✗ <strong>What it doesn&apos;t:</strong> Set its own goals, handle unexpected domains, reason about novel problems</li>
+            </ul>
+          </div>
+
+          {/* Bottom line */}
+          <div className="p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg border border-yellow-200 dark:border-yellow-800">
+            <h4 className="font-semibold text-yellow-800 dark:text-yellow-300 mb-2">📌 The Honest Take</h4>
+            <p className="text-sm text-gray-700 dark:text-gray-300">
+              We&apos;re getting <strong>very capable narrow AI</strong> that can do more tasks for longer.
+              That&apos;s genuinely valuable and disruptive. But calling it &quot;AGI&quot; is marketing — the goalposts
+              move every time capabilities improve. Focus on what the tools can actually do today, not hypothetical futures.
+            </p>
+          </div>
+        </Card>
+      </motion.section>
+
       {/* Table of Contents */}
       <motion.section
         {...sectionAnimation(0.1)}
@@ -168,6 +264,7 @@ export default function PredictionsContent() {
           <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-4">📑 Jump to Section</h3>
           <div className="grid md:grid-cols-2 gap-3 text-sm">
             <a href="#opus-5" className="text-purple-600 dark:text-purple-400 hover:underline">🔮 Opus 5 / Claude 5</a>
+            <a href="#agi-reality" className="text-orange-600 dark:text-orange-400 hover:underline">🎯 AGI Reality Check</a>
             <a href="#trajectory" className="text-blue-600 dark:text-blue-400 hover:underline">📊 Performance Trajectory</a>
             <a href="#high-confidence" className="text-blue-600 dark:text-blue-400 hover:underline">🎯 High Confidence Predictions</a>
             <a href="#medium-confidence" className="text-blue-600 dark:text-blue-400 hover:underline">💡 Medium Confidence Predictions</a>
