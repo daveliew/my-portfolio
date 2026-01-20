@@ -54,9 +54,50 @@ export default function VibeCodingContent() {
         </Card>
       </motion.section>
 
-      {/* The Real Skill */}
+      {/* Web Fundamentals Section */}
       <motion.section
         {...sectionAnimation(1)}
+        className="mb-12"
+      >
+        <SectionHeader title="Understand the Basics" />
+        <Card className="p-6 bg-gradient-to-r from-blue-50 to-green-50 dark:from-blue-900/20 dark:to-green-900/20">
+          <div className="flex flex-col md:flex-row items-center gap-6">
+            <div className="flex-1">
+              <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-100">
+                The Only 3 Concepts You Need
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-4">
+                Before you start prompting, understand <strong>Events</strong>, <strong>State</strong>, and <strong>Conditionals</strong>.
+                These three concepts power every website — from simple buttons to complex apps like Instagram and ChatGPT.
+              </p>
+              <Link
+                href="/vibe-coding/fundamentals"
+                className="inline-flex items-center px-5 py-2 bg-teal-600 hover:bg-teal-700 text-white rounded-lg transition-colors text-sm font-medium"
+              >
+                Try the Interactive Demo →
+              </Link>
+            </div>
+            <div className="flex gap-4 text-center">
+              <div className="p-3 bg-blue-100 dark:bg-blue-900/40 rounded-lg">
+                <div className="text-2xl mb-1">🖱️</div>
+                <div className="text-xs font-medium text-blue-700 dark:text-blue-300">Events</div>
+              </div>
+              <div className="p-3 bg-green-100 dark:bg-green-900/40 rounded-lg">
+                <div className="text-2xl mb-1">🧠</div>
+                <div className="text-xs font-medium text-green-700 dark:text-green-300">State</div>
+              </div>
+              <div className="p-3 bg-purple-100 dark:bg-purple-900/40 rounded-lg">
+                <div className="text-2xl mb-1">🔀</div>
+                <div className="text-xs font-medium text-purple-700 dark:text-purple-300">Conditionals</div>
+              </div>
+            </div>
+          </div>
+        </Card>
+      </motion.section>
+
+      {/* The Real Skill */}
+      <motion.section
+        {...sectionAnimation(2)}
         className="mb-12"
       >
         <SectionHeader title="The Real Skill" />
@@ -98,7 +139,7 @@ export default function VibeCodingContent() {
 
       {/* 3-Step Process */}
       <motion.section
-        {...sectionAnimation(2)}
+        {...sectionAnimation(3)}
         className="mb-12"
       >
         <SectionHeader title="3-Step Process" />
@@ -142,7 +183,7 @@ export default function VibeCodingContent() {
 
       {/* Real Example */}
       <motion.section
-        {...sectionAnimation(3)}
+        {...sectionAnimation(4)}
         className="mb-12"
       >
         <SectionHeader title="Real Example: This Portfolio" />
@@ -167,7 +208,7 @@ export default function VibeCodingContent() {
 
       {/* Your Turn + Next Steps */}
       <motion.section
-        {...sectionAnimation(4)}
+        {...sectionAnimation(5)}
         className="mb-12"
       >
         <SectionHeader title="Your Turn" />
@@ -220,7 +261,7 @@ export default function VibeCodingContent() {
 
       {/* Continue Learning CTA */}
       <motion.section
-        {...sectionAnimation(5)}
+        {...sectionAnimation(6)}
         className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-lg p-8 text-center"
       >
         <h2 className="text-2xl font-semibold mb-3 text-gray-900 dark:text-gray-100">Ready to Go Deeper?</h2>
