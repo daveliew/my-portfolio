@@ -13,11 +13,12 @@ David Liew is an AI engineer and builder based in Singapore, pioneering practica
 
 ## Primary Content Areas
 - /ai-journey/ - Learning paths for AI collaboration (Why -> How -> What)
-- /ai-journey/context-engineering - Context Engineering methodology
+- /context-engineering/ - Context Engineering methodology (CLAUDE.md, skills, hooks, archetypes)
 - /ai-journey/claude/ - Claude mastery modules (8 comprehensive guides)
 - /agents/ - AI Agents 2026 focus (trust engineering, patterns, personal systems)
 - /philosophy/ - Fitzgerald Principle deep dive
 - /laboratory/ - Active experiments in voice AI, agents, sustainability
+- /vibe-coding/ - Entry-level AI collaboration for beginners
 
 ## Unique Value Proposition
 Most AI tutorials teach prompt tricks. This site teaches how to architect entire AI collaboration systems—from CLAUDE.md files that give AI persistent memory, to MCP tools that extend capabilities, to conversation design that shapes understanding.

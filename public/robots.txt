@@ -4,18 +4,43 @@ Allow: /
 # Sitemap
 Sitemap: https://daveliew.com/sitemap.xml
 
+# AI Discovery (llmstxt.org standard)
+# /llms.txt - Concise summary for AI agents
+# /llms-full.txt - Detailed documentation
+
 # Block admin/api paths
 Disallow: /api/
 
-# Allow AI crawlers explicitly
+# === AI Crawlers (verified Q1 2026) ===
+
+# OpenAI
 User-agent: GPTBot
 Allow: /
 
-User-agent: Claude-Web
+User-agent: OAI-SearchBot
 Allow: /
 
-User-agent: Anthropic-AI
+User-agent: ChatGPT-User
 Allow: /
 
+# Anthropic (Claude)
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+# Google AI
 User-agent: Google-Extended
+Allow: /
+
+User-agent: Gemini-Deep-Research
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Meta
+User-agent: Meta-ExternalAgent
 Allow: /
