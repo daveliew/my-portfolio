@@ -29,6 +29,13 @@ const techniques = [
     icon: '🔍',
   },
   {
+    title: 'SEO/GEO Audit Workflow',
+    href: '/ai-journey/techniques/seo-geo-audit',
+    description: 'AI-assisted auditing using Claude Code + Firecrawl + Context7. Continuous, research-backed SEO and AI discoverability optimization.',
+    level: 'Intermediate',
+    icon: '🔎',
+  },
+  {
     title: 'LLM Handling',
     href: '/ai-journey/techniques/llm-handling',
     description: 'Production deployment patterns: rate limiting, error handling, cost optimization, and scaling strategies.',

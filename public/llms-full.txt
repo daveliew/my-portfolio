@@ -72,6 +72,9 @@ Event-driven automation with Claude Code hooks. Trigger actions on tool calls an
 ### /context-engineering/archetypes
 Four operational modes: Strategist, Engineer, Operator, Advisor. Just-in-time activation based on task signals.
 
+### /context-engineering/seo-geo-audit
+AI-assisted SEO/GEO auditing workflow. Uses Claude Code + Firecrawl + Context7 MCP tools for continuous, research-backed optimization. Covers 7-checkpoint framework, case study, and living workflow methodology.
+
 ---
 
 ## /ai-journey/techniques/ - Cross-Tool AI Skills
@@ -90,6 +93,9 @@ Advanced RAG patterns for agentic systems.
 
 ### /ai-journey/techniques/llm-handling
 Error handling, rate limiting, and production patterns for LLM applications.
+
+### /ai-journey/techniques/seo-geo-audit
+Technical workflow for AI-assisted SEO and GEO (Generative Engine Optimization) auditing. Cross-posted from /context-engineering/seo-geo-audit.
 
 ---
 

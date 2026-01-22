@@ -155,6 +155,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.6,
     },
+    {
+      url: `${baseUrl}/context-engineering/seo-geo-audit`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
 
     // AI Journey - Top Level
     {
@@ -191,6 +197,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/ai-journey/techniques/llm-handling`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/ai-journey/techniques/seo-geo-audit`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,

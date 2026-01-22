@@ -13,8 +13,9 @@ David Liew is an AI engineer and builder based in Singapore, pioneering practica
 
 ## Primary Content Areas
 - /ai-journey/ - Learning paths for AI collaboration (Why -> How -> What)
-- /context-engineering/ - Context Engineering methodology (CLAUDE.md, skills, hooks, archetypes)
+- /context-engineering/ - Context Engineering methodology (CLAUDE.md, skills, hooks, archetypes, SEO/GEO audit)
 - /ai-journey/claude/ - Claude mastery modules (8 comprehensive guides)
+- /ai-journey/techniques/ - Technical patterns (prompt engineering, tool use, RAG, SEO/GEO audit)
 - /agents/ - AI Agents 2026 focus (trust engineering, patterns, personal systems)
 - /philosophy/ - Fitzgerald Principle deep dive
 - /laboratory/ - Active experiments in voice AI, agents, sustainability
