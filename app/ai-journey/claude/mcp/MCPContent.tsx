@@ -107,6 +107,12 @@ export default function MCPContent() {
         className="mb-12"
       >
         <SectionHeader title="Popular MCP Servers" />
+        <div className="mb-4 p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg border border-purple-200 dark:border-purple-800">
+          <p className="text-sm text-gray-700 dark:text-gray-300">
+            <strong>2026 Update:</strong> The MCP ecosystem has grown to 25+ community servers with
+            Claude Code 2.1 adding native LSP support. Here are the most widely used servers:
+          </p>
+        </div>
         <div className="grid md:grid-cols-2 gap-6">
           {popularServers.map((server) => (
             <Card key={server.name} className="p-6 border border-gray-200 dark:border-gray-700">

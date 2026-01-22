@@ -33,7 +33,7 @@ const articleSchema = {
   },
   mainEntityOfPage: 'https://daveliew.com/philosophy',
   datePublished: '2024-01-01',
-  dateModified: '2025-12-01',
+  dateModified: '2026-01-22',
 };
 
 const faqSchema = {

@@ -256,6 +256,12 @@ wc -l CLAUDE.md
                 </div>
               </li>
             </ol>
+            <div className="mt-4 p-3 bg-green-50 dark:bg-green-900/20 rounded-lg border border-green-200 dark:border-green-800">
+              <p className="text-sm text-gray-700 dark:text-gray-300">
+                <strong>Claude Code 2.1 Tip:</strong> Skills now support hot-reload - edit your SKILL.md file
+                and changes apply immediately without restarting your session.
+              </p>
+            </div>
           </Card>
         </motion.section>
 
