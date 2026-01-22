@@ -131,27 +131,27 @@ export default function OverviewContent() {
         </Card>
       </motion.section>
 
-      {/* 2025 Breakthroughs */}
+      {/* Latest Breakthroughs */}
       <motion.section
         {...sectionAnimation(0.5)}
         className="mb-12"
       >
-        <SectionHeader title="Latest Breakthroughs (2025)" />
+        <SectionHeader title="Latest Breakthroughs (2025-2026)" />
         <div className="grid md:grid-cols-2 gap-6">
           <Card className="p-6 border-2 border-purple-200 dark:border-purple-800">
             <div className="flex items-center mb-4">
               <span className="text-3xl mr-3">🚀</span>
               <div>
-                <h3 className="text-xl font-semibold text-purple-600 dark:text-purple-400">Claude Sonnet 4.5</h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">September 2025</p>
+                <h3 className="text-xl font-semibold text-purple-600 dark:text-purple-400">Claude Opus 4.5</h3>
+                <p className="text-sm text-gray-500 dark:text-gray-400">November 2025 → Current flagship</p>
               </div>
             </div>
             <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
-              <li>• Best coding model: 77.2% SWE-bench (82% with parallel compute)</li>
-              <li>• 30+ hour autonomous operation (vs 7 hours previously)</li>
-              <li>• 61.4% OSWorld computer use accuracy</li>
-              <li>• Enhanced parallel tool calling</li>
+              <li>• ~81% SWE-bench verified (world&apos;s best coding model)</li>
+              <li>• Extended thinking for deeper reasoning chains</li>
               <li>• Memory across conversations</li>
+              <li>• Enhanced parallel tool calling</li>
+              <li>• $8B AWS Trainium partnership for training</li>
             </ul>
           </Card>
 
@@ -159,16 +159,16 @@ export default function OverviewContent() {
             <div className="flex items-center mb-4">
               <span className="text-3xl mr-3">💻</span>
               <div>
-                <h3 className="text-xl font-semibold text-blue-600 dark:text-blue-400">Claude Code</h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">2025 - Now GA</p>
+                <h3 className="text-xl font-semibold text-blue-600 dark:text-blue-400">Claude Code 2.1</h3>
+                <p className="text-sm text-gray-500 dark:text-gray-400">January 2026</p>
               </div>
             </div>
             <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
-              <li>• Agentic coding from terminal & IDE</li>
+              <li>• Skill hot-reload (edit without restart)</li>
+              <li>• Session teleportation across devices</li>
+              <li>• Hooks in YAML frontmatter</li>
+              <li>• 25+ MCP servers, LSP support</li>
               <li>• VS Code, JetBrains, Xcode integration</li>
-              <li>• Checkpoints & instant rollback</li>
-              <li>• Multi-file autonomous editing</li>
-              <li>• Extended thinking integration</li>
             </ul>
           </Card>
 

@@ -85,7 +85,7 @@ claude --version`}
               </pre>
             </div>
             <p className="text-sm text-gray-600 dark:text-gray-400">
-              Requires an Anthropic API key with access to Claude Sonnet 4.5. Set via <code className="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded">ANTHROPIC_API_KEY</code> environment variable.
+              Requires an Anthropic API key. Set via <code className="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded">ANTHROPIC_API_KEY</code> environment variable.
             </p>
           </Card>
 
