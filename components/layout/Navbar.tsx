@@ -131,11 +131,11 @@ const Navbar: React.FC = () => {
 
           {/* Voice Agents - Specialization */}
           <Link
-            href="/agents"
+            href="/voice-agents"
             className={`relative transition-colors duration-200 px-1 py-2 flex items-center rounded-sm
               hover:text-[var(--deep-purple)]
               focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2
-              ${pathname.startsWith('/agents')
+              ${pathname.startsWith('/voice-agents')
                 ? 'text-[var(--deep-purple)] font-medium after:absolute after:left-0 after:right-0 after:-bottom-1 after:h-0.5 after:bg-[var(--deep-purple)] after:rounded-full after:content-[""]'
                 : 'text-gray-700 dark:text-gray-300'}
             `}
@@ -229,9 +229,9 @@ const Navbar: React.FC = () => {
 
           {/* Voice Agents */}
           <Link
-            href="/agents"
+            href="/voice-agents"
             onClick={() => setIsMobileMenuOpen(false)}
-            className={`py-2 ${pathname.startsWith('/agents')
+            className={`py-2 ${pathname.startsWith('/voice-agents')
               ? 'text-[var(--deep-purple)] font-medium'
               : 'text-gray-700 dark:text-gray-300'
             }`}
