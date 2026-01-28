@@ -7,7 +7,6 @@ import { SkillTreeMenu } from '@/components/navigation';
 
 const navLinks = [
   { href: '/about', label: 'About', id: 'about' },
-  { href: '/vibe-coding', label: 'Vibe Coding', id: 'vibe-coding' },
 ];
 
 // Mobile menu still uses WHY → HOW → WHAT structure
@@ -130,7 +129,7 @@ const Navbar: React.FC = () => {
             />
           </div>
 
-          {/* Agents - 2026 Focus */}
+          {/* Voice Agents - Specialization */}
           <Link
             href="/agents"
             className={`relative transition-colors duration-200 px-1 py-2 flex items-center rounded-sm
@@ -141,7 +140,35 @@ const Navbar: React.FC = () => {
                 : 'text-gray-700 dark:text-gray-300'}
             `}
           >
-            <span className="text-sm md:text-base">Agents</span>
+            <span className="text-sm md:text-base">Voice Agents</span>
+          </Link>
+
+          {/* Teaching */}
+          <Link
+            href="/teaching"
+            className={`relative transition-colors duration-200 px-1 py-2 flex items-center rounded-sm
+              hover:text-blue-600 dark:hover:text-blue-400
+              focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2
+              ${pathname.startsWith('/teaching')
+                ? 'text-blue-600 dark:text-blue-400 font-medium after:absolute after:left-0 after:right-0 after:-bottom-1 after:h-0.5 after:bg-blue-600 dark:after:bg-blue-400 after:rounded-full after:content-[""]'
+                : 'text-gray-700 dark:text-gray-300'}
+            `}
+          >
+            <span className="text-sm md:text-base">Teaching</span>
+          </Link>
+
+          {/* Hackathons */}
+          <Link
+            href="/hackathons"
+            className={`relative transition-colors duration-200 px-1 py-2 flex items-center rounded-sm
+              hover:text-teal-600 dark:hover:text-teal-400
+              focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2
+              ${pathname.startsWith('/hackathons')
+                ? 'text-teal-600 dark:text-teal-400 font-medium after:absolute after:left-0 after:right-0 after:-bottom-1 after:h-0.5 after:bg-teal-600 dark:after:bg-teal-400 after:rounded-full after:content-[""]'
+                : 'text-gray-700 dark:text-gray-300'}
+            `}
+          >
+            <span className="text-sm md:text-base">Hackathons</span>
           </Link>
 
           {/* Contact */}
@@ -200,43 +227,7 @@ const Navbar: React.FC = () => {
             About
           </Link>
 
-          {/* Vibe Coding */}
-          <div className="py-2">
-            <Link
-              href="/vibe-coding"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className={`${pathname === '/vibe-coding'
-                ? 'text-purple-600 dark:text-purple-400 font-medium'
-                : 'text-gray-700 dark:text-gray-300'
-              }`}
-            >
-              Vibe Coding
-            </Link>
-            <div className="pl-4 mt-2 space-y-1">
-              <Link
-                href="/vibe-coding/fundamentals"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className={`block text-sm ${pathname === '/vibe-coding/fundamentals'
-                  ? 'text-purple-600 dark:text-purple-400 font-medium'
-                  : 'text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400'
-                }`}
-              >
-                ⚡ Web Fundamentals
-              </Link>
-              <Link
-                href="/vibe-coding/handout"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className={`block text-sm ${pathname === '/vibe-coding/handout'
-                  ? 'text-purple-600 dark:text-purple-400 font-medium'
-                  : 'text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400'
-                }`}
-              >
-                📄 Workshop Handout
-              </Link>
-            </div>
-          </div>
-
-          {/* Agents - 2026 Focus */}
+          {/* Voice Agents */}
           <Link
             href="/agents"
             onClick={() => setIsMobileMenuOpen(false)}
@@ -245,7 +236,31 @@ const Navbar: React.FC = () => {
               : 'text-gray-700 dark:text-gray-300'
             }`}
           >
-            AI Agents
+            Voice Agents
+          </Link>
+
+          {/* Teaching */}
+          <Link
+            href="/teaching"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className={`py-2 ${pathname.startsWith('/teaching')
+              ? 'text-blue-600 dark:text-blue-400 font-medium'
+              : 'text-gray-700 dark:text-gray-300'
+            }`}
+          >
+            Teaching
+          </Link>
+
+          {/* Hackathons */}
+          <Link
+            href="/hackathons"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className={`py-2 ${pathname.startsWith('/hackathons')
+              ? 'text-teal-600 dark:text-teal-400 font-medium'
+              : 'text-gray-700 dark:text-gray-300'
+            }`}
+          >
+            Hackathons
           </Link>
 
           {/* Contact */}
