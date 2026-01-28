@@ -4,12 +4,22 @@ import Link from 'next/link';
 
 const hackathons = [
   {
-    title: 'Coming Soon',
-    date: '2026',
-    event: 'Hackathon Adventures',
-    description: 'Documenting my hackathon journey - rapid prototyping, AI projects, and lessons learned from building under pressure.',
+    title: 'Glimpse',
+    date: 'January 2026',
+    event: 'Gemini 3 Hackathon Singapore (Google DeepMind x 65labs)',
+    description: 'Context-aware AAC app for non-verbal children. Point camera at environment → relevant communication tiles surface instantly. "Communication at the speed of sight."',
     result: null,
-    tags: ['AI', 'Rapid Prototyping'],
+    tags: ['Gemini 2.5 Live', 'Multimodal', 'Accessibility', 'WebSocket'],
+    link: null,
+  },
+  {
+    title: 'Jazz Scat',
+    date: 'December 2025',
+    event: 'ElevenLabs Worldwide Hackathon - Singapore',
+    description: 'AI jam partner for vocal practice. Talk to an AI DJ, generate backing tracks, record your improv, get real-time coaching. No band needed.',
+    result: '2nd Place 🥈',
+    tags: ['ElevenLabs', 'Voice AI', 'Music', 'Conversational AI'],
+    link: 'https://gamma.app/docs/JazzScat-DJ--x5gse2gf7qr1wlo?mode=doc',
   },
 ];
 
@@ -81,6 +91,16 @@ export default function HackathonsContent() {
                     <span className="px-3 py-1 text-sm font-medium bg-teal-100 text-teal-700 dark:bg-teal-900 dark:text-teal-300 rounded-full">
                       {hackathon.result}
                     </span>
+                  )}
+                  {hackathon.link && (
+                    <a
+                      href={hackathon.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-3 py-1 text-sm font-medium bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300 rounded-full hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors"
+                    >
+                      View Deck →
+                    </a>
                   )}
                 </div>
               </div>
