@@ -13,11 +13,11 @@ const workshops = [
   },
   {
     title: 'RBN Vibe Coding',
-    date: 'Coming Soon',
+    date: 'August 2025',
     type: 'Community Workshop',
     description: 'Hands-on vibe coding session for the Rafflesian Business Network community.',
     link: 'https://rbn-coding.vercel.app',
-    status: 'planned',
+    status: 'completed',
   },
   {
     title: 'Rafflesian AI Community',
@@ -75,18 +75,23 @@ export default function TeachingContent() {
               >
                 <div className="flex flex-wrap items-start justify-between gap-4">
                   <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-2">
+                    <div className="flex flex-wrap items-baseline gap-2 mb-2">
                       <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
                         {workshop.title}
                       </h3>
                       {workshop.status === 'upcoming' && (
-                        <span className="px-2 py-0.5 text-xs font-medium bg-blue-600 text-white rounded-full">
+                        <span className="px-2 py-0.5 text-xs font-medium bg-blue-600 text-white rounded-full shrink-0">
                           Upcoming
                         </span>
                       )}
                       {workshop.status === 'active' && (
-                        <span className="px-2 py-0.5 text-xs font-medium bg-green-600 text-white rounded-full">
+                        <span className="px-2 py-0.5 text-xs font-medium bg-green-600 text-white rounded-full shrink-0">
                           Active
+                        </span>
+                      )}
+                      {workshop.status === 'completed' && (
+                        <span className="px-2 py-0.5 text-xs font-medium bg-gray-500 text-white rounded-full shrink-0">
+                          Completed
                         </span>
                       )}
                     </div>
