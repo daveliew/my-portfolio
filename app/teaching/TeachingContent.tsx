@@ -12,20 +12,20 @@ const workshops = [
     status: 'upcoming',
   },
   {
-    title: 'Rafflesian AI Workshop',
-    date: 'Coming Soon',
-    type: 'Alumni Workshop',
-    description: 'AI fundamentals and practical applications for Raffles alumni community.',
-    link: null,
-    status: 'planned',
-  },
-  {
     title: 'RBN Vibe Coding',
     date: 'Coming Soon',
     type: 'Community Workshop',
-    description: 'Hands-on vibe coding session for the RBN community.',
-    link: null,
+    description: 'Hands-on vibe coding session for the Rafflesian Business Network community.',
+    link: 'https://rbn-coding.vercel.app',
     status: 'planned',
+  },
+  {
+    title: 'Rafflesian AI Community',
+    date: 'Ongoing',
+    type: 'WhatsApp Community',
+    description: 'AI thought leadership and knowledge sharing for the Raffles alumni network. Discussions on AI trends, practical applications, and building with AI.',
+    link: 'https://rafflesian.ai',
+    status: 'active',
   },
 ];
 
@@ -68,6 +68,8 @@ export default function TeachingContent() {
                 className={`p-6 rounded-xl border ${
                   workshop.status === 'upcoming'
                     ? 'border-blue-200 bg-blue-50 dark:border-blue-800 dark:bg-blue-900/20'
+                    : workshop.status === 'active'
+                    ? 'border-green-200 bg-green-50 dark:border-green-800 dark:bg-green-900/20'
                     : 'border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800'
                 }`}
               >
@@ -80,6 +82,11 @@ export default function TeachingContent() {
                       {workshop.status === 'upcoming' && (
                         <span className="px-2 py-0.5 text-xs font-medium bg-blue-600 text-white rounded-full">
                           Upcoming
+                        </span>
+                      )}
+                      {workshop.status === 'active' && (
+                        <span className="px-2 py-0.5 text-xs font-medium bg-green-600 text-white rounded-full">
+                          Active
                         </span>
                       )}
                     </div>
