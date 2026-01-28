@@ -150,6 +150,18 @@ const nextConfig = {
         destination: '/agents/learning-path',
         permanent: true,
       },
+
+      // 4-pillar refactor redirects
+      {
+        source: '/laboratory',
+        destination: '/hackathons',
+        permanent: true,
+      },
+      {
+        source: '/philosophy',
+        destination: '/about',
+        permanent: true,
+      },
     ];
   },
 };

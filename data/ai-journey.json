@@ -1002,6 +1002,15 @@
           }
         },
         {
+          "type": "feature-card",
+          "title": "Agent Orchestration",
+          "description": "Multi-agent systems for complex workflows. From simple automation to full agentic AI: CrewAI, LangChain, Claude Code subagents, and custom orchestration patterns.",
+          "cta": {
+            "label": "Explore Agents",
+            "href": "/agents"
+          }
+        },
+        {
           "type": "grid",
           "title": "Techniques Reference",
           "items": [
@@ -1027,7 +1036,7 @@
               "icon": "🤖",
               "title": "Agent Systems",
               "description": "Autonomous AI workflows",
-              "href": "/ai-journey/techniques/agent-rag"
+              "href": "/agents"
             }
           ]
         }
